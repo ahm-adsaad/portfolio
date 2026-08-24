@@ -5,11 +5,11 @@ import { USER } from '@/config/user';
 export const DockConfig = {
   navbar: [
     { href: '/', icon: Icons.home, label: 'Home' },
-    { href: '/craft', icon: Icons.craft, label: 'Craft', new: true },
-    // { href: '/guestbook', icon: Icons.guestbook, label: 'Guestbook' },
-    { href: '/blog', icon: Icons.bookmark, label: 'Blog' },
-    { href: '/cal', icon: Icons.calendar, label: 'Book a Meeting' },
-    // { href: "/resume", icon: Icons.resume, label: "Resume" },
+    // Re-enable once real posts exist:
+    // { href: '/craft', icon: Icons.craft, label: 'Craft' },
+    // { href: '/blog', icon: Icons.bookmark, label: 'Blog' },
+    // Re-enable with your own cal.com link (features/cal):
+    // { href: '/cal', icon: Icons.calendar, label: 'Book a Meeting' },
   ],
   contact: {
     social: {
@@ -18,16 +18,17 @@ export const DockConfig = {
         url: SOURCE_CODE_GITHUB_URL,
         icon: Icons.github,
       },
-      LinkedIn: {
-        name: 'LinkedIn',
-        url: USER.social.linkedin,
-        icon: Icons.linkedin,
-      },
-      X: {
-        name: 'X',
-        url: USER.social.twitter,
-        icon: Icons.x,
-      },
+      // Re-enable once USER.social has the URLs:
+      // LinkedIn: {
+      //   name: 'LinkedIn',
+      //   url: USER.social.linkedin,
+      //   icon: Icons.linkedin,
+      // },
+      // X: {
+      //   name: 'X',
+      //   url: USER.social.twitter,
+      //   icon: Icons.x,
+      // },
       email: {
         name: 'Send Email',
         url: `mailto:${USER.email}`,

@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/split-text-effect-demo.tsx",
-      "content": "import { SplitTextEffect } from '@/registry/srisomanaath/split-text-effect';\n\nexport default function SplitTextEffectDemo() {\n  return (\n    <div className=\"relative w-full bg-black\">\n      <div className=\"h-72\">\n        <SplitTextEffect text=\"Grow Together\" fill={0.5} accent=\"#2ecc71\" />\n      </div>\n    </div>\n  );\n}\n",
+      "content": "import { SplitTextEffect } from '@/registry/srisomanaath/split-text-effect';\r\n\r\nexport default function SplitTextEffectDemo() {\r\n  return (\r\n    <div className=\"relative w-full bg-black\">\r\n      <div className=\"h-72\">\r\n        <SplitTextEffect text=\"Grow Together\" fill={0.5} accent=\"#2ecc71\" />\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:example"
     }
   ]

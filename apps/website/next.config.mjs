@@ -1,9 +1,14 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import bundleAnalyzer from '@next/bundle-analyzer';
 const withBundleAnalyzer = bundleAnalyzer;
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
+  outputFileTracingRoot: path.join(__dirname, '../../'),
   transpilePackages: ['@repo/design-system'],
   logging: {
     fetches: {
@@ -99,10 +104,6 @@ let nextConfig = {
       {
         source: '/craft/:slug.mdx',
         destination: '/blog.mdx/:slug',
-      },
-      {
-        source: '/stats/:match*',
-        destination: 'https://analytics.srisomanaath.in/:match*',
       },
     ];
   },

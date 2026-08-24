@@ -35,7 +35,7 @@ const USER: User = {
   domain: 'ahmadsaad.dev',
   jobTitle: 'Software Engineer',
   username: 'ahm-adsaad',
-  tagline: 'Ahmad Saad — Building software that feels effortless',
+  tagline: 'Building software that feels effortless',
   twitterHandle: '',
   location: '',
   description:

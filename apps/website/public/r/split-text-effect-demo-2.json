@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/split-text-effect-demo-2.tsx",
-      "content": "import { SplitTextEffect } from '@/registry/srisomanaath/split-text-effect';\n\nexport default function SplitTextEffectDemo() {\n  return (\n    <div className=\"relative w-full bg-black\">\n      <div className=\"h-96\">\n        <SplitTextEffect\n          text={\n            <>\n              MAKE AN\n              <br />\n              IMPACT\n            </>\n          }\n          accent=\"#ed8936\"\n          className=\"font-black tracking-tight\"\n        />\n      </div>\n    </div>\n  );\n}\n",
+      "content": "import { SplitTextEffect } from '@/registry/srisomanaath/split-text-effect';\r\n\r\nexport default function SplitTextEffectDemo() {\r\n  return (\r\n    <div className=\"relative w-full bg-black\">\r\n      <div className=\"h-96\">\r\n        <SplitTextEffect\r\n          text={\r\n            <>\r\n              MAKE AN\r\n              <br />\r\n              IMPACT\r\n            </>\r\n          }\r\n          accent=\"#ed8936\"\r\n          className=\"font-black tracking-tight\"\r\n        />\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:example"
     }
   ]

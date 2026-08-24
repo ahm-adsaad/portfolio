@@ -69,10 +69,9 @@ export const PROJECTS: Project[] = [
     period: {
       start: '08.2026',
     },
-    // Live demo. No `github` on purpose: github.com/ahm-adsaad/LocalAI returns
-    // 404 today, and neither anchors nor schema may point at a dead URL.
-    // Restore `github` once the repo is public under its real name.
+    // Live demo; the repo is public and stays on the github link.
     link: 'https://localai.ahmadsaad.dev',
+    github: 'https://github.com/ahm-adsaad/LocalAI',
     ctaLabel: 'Try the live demo',
     image: '/projects/localai.jpg',
     // First three surface as "Tech" in the carousel.

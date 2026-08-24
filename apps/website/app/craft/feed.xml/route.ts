@@ -16,7 +16,7 @@ export async function GET() {
     site_url: `https://${USER.domain}`,
     managingEditor: `${USER.email} (${USER.name})`,
     webMaster: `${USER.email} (${USER.name})`,
-    copyright: `Copyright ${new Date().getFullYear().toString()}, Ruixen`,
+    copyright: `Copyright ${new Date().getFullYear().toString()}, ${USER.name}`,
     language: 'en-US',
     pubDate: new Date().toUTCString(),
     ttl: 60,
@@ -26,8 +26,8 @@ export async function GET() {
     feed.item({
       title: post.metadata.title,
       description: post.metadata.description,
-      url: `https://portfolio-ruixens-projects.vercel.app/craft/${post.slug}`,
-      author: 'Ruixen',
+      url: `https://${USER.domain}/craft/${post.slug}`,
+      author: USER.name,
       date: new Date(post.metadata.date),
     });
   });

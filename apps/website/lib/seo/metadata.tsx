@@ -7,15 +7,15 @@ type MetadataGenerator = Omit<Metadata, 'description' | 'title'> & {
   image?: string;
 };
 
-const applicationName = 'Ruixen';
+const applicationName = 'Ahmad Saad';
 const author: Metadata['authors'] = {
-  name: 'Ruixen',
-  url: 'https://portfolio-ruixens-projects.vercel.app/',
+  name: 'Ahmad Saad',
+  url: 'https://ahmadsaad.dev/',
 };
-const publisher = 'Ruixen';
-const twitterHandle = '@ruixen_ui';
+const publisher = 'Ahmad Saad';
+const twitterHandle = '';
 const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
-const productionUrl = 'https://portfolio-ruixens-projects.vercel.app/';
+const productionUrl = 'https://ahmadsaad.dev/';
 
 export const createMetadata = ({
   title,

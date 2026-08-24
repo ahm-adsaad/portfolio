@@ -24,6 +24,10 @@ export type Project = {
   description?: string;
   /** Logo image URL (absolute or path under /public). */
   logo?: string;
+  /** Square cover image for the hero carousel (absolute or path under /public). */
+  image?: string;
+  /** One-line outcome or result, shown as "Impact" in the hero carousel. */
+  impact?: string;
   /** Whether the project card is expanded by default in the UI. */
   isExpanded?: boolean;
 };
@@ -37,6 +41,9 @@ export const PROJECTS: Project[] = [
     },
     link: 'https://palettebox.design/',
     logo: '/project_images/ruixen_ui_logo.jpeg',
+    image:
+      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=640&h=640&fit=crop&q=70&auto=format',
+    impact: 'Cut design-to-code handoff time in half',
     skills: [
       'Next.js',
       'TypeScript',
@@ -63,6 +70,9 @@ Features include:
     },
     link: 'https://hookshelf.dev/',
     logo: '/project_images/shadcnagents.png',
+    image:
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=640&fit=crop&q=70&auto=format',
+    impact: '10k+ weekly npm downloads',
     skills: ['React', 'TypeScript', 'Storybook', 'Vitest', 'npm'],
     shortDescription:
       'A curated collection of production-ready React hooks with interactive docs.',
@@ -76,6 +86,9 @@ Features include:
     },
     link: 'https://tablewise.app/',
     logo: '/project_images/source_of_truth.png',
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=640&fit=crop&q=70&auto=format',
+    impact: 'Adopted by 40+ non-technical teams',
     skills: [
       'Next.js',
       'PostgreSQL',

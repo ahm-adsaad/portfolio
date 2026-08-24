@@ -10,7 +10,6 @@ import DevTools from '@/components/dev-tools';
 import Navigation from '@/components/navigation';
 import { META_THEME_COLORS } from '@/config/site';
 import { USER } from '@/config/user';
-import { auth } from '@/lib/auth';
 import { Providers } from '@/lib/providers';
 import Script from 'next/script';
 
@@ -65,13 +64,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  let session = null;
-  try {
-    session = await auth();
-  } catch {
-    // Auth not configured - continue without session
-  }
-
   return (
     <html
       lang="en"
@@ -90,7 +82,7 @@ export default async function RootLayout({
         <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
       </head>
       <body suppressHydrationWarning>
-        <Providers session={session}>
+        <Providers>
           <Navigation />
           <main
             id="main-content"

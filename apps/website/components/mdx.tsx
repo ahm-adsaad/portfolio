@@ -1,8 +1,6 @@
 import type { MDXRemoteProps } from 'next-mdx-remote/rsc';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeExternalLinks from 'rehype-external-links';
-import type { LineElement } from 'rehype-pretty-code';
-import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import { visit } from 'unist-util-visit';
@@ -173,41 +171,9 @@ const options: MDXRemoteProps['options'] = {
           }
         });
       },
-      [
-        rehypePrettyCode,
-        {
-          theme: {
-            dark: 'github-dark',
-            light: 'github-light',
-          },
-          keepBackground: false,
-          onVisitLine(node: LineElement) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: 'text', value: ' ' }];
-            }
-          },
-        },
-      ],
-      () => (tree) => {
-        visit(tree, (node) => {
-          if (node?.type === 'element' && node?.tagName === 'figure') {
-            if (!('data-rehype-pretty-code-figure' in node.properties)) {
-              return;
-            }
-
-            const preElement = node.children.at(-1);
-            if (preElement.tagName !== 'pre') {
-              return;
-            }
-
-            preElement.properties.__withMeta__ =
-              node.children.at(0).tagName === 'figcaption';
-            preElement.properties.__rawString__ = node.__rawString__;
-          }
-        });
-      },
+      // NOTE: syntax highlighting (rehype-pretty-code/shiki) was removed to
+      // keep the Cloudflare Worker under the size limit — shiki inlines many
+      // MB of grammars. Re-add it here if the blog needs highlighting again.
       rehypeNpmCommand,
       [rehypeAddQueryParams, UTM_PARAMS],
     ],

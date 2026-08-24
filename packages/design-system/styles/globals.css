@@ -70,7 +70,7 @@
 
 :root {
   /* warm paper, softer than pure white to reduce glare */
-  --background: oklch(0.972 0.004 84);
+  --background: oklch(0.955 0.005 84);
 
   /* zinc-950 */
   --foreground: oklch(0.141 0.005 285.823);
@@ -88,19 +88,19 @@
   --secondary-foreground: oklch(0.141 0.005 285.823);
 
   /* a step below the paper background so chips still read */
-  --muted: oklch(0.938 0.004 84);
+  --muted: oklch(0.92 0.005 84);
 
   /* zinc-500 */
   --muted-foreground: oklch(0.552 0.016 285.938);
 
   /* matches the paper background */
-  --card: oklch(0.972 0.004 84);
+  --card: oklch(0.955 0.005 84);
 
   /* zinc-950 */
   --card-foreground: oklch(0.141 0.005 285.823);
 
   /* matches the paper background */
-  --popover: oklch(0.972 0.004 84);
+  --popover: oklch(0.955 0.005 84);
 
   /* zinc-950 */
   --popover-foreground: oklch(0.141 0.005 285.823);

@@ -1,6 +1,5 @@
 'use client';
 
-import { LoaderIcon } from 'lucide-react';
 import { use } from 'react';
 
 import type { Activity } from '@repo/design-system/components/ui/contribution-graph';
@@ -46,13 +45,5 @@ export function GitHubContributionGraph({
         <ContributionGraphLegend />
       </ContributionGraphFooter>
     </ContributionGraph>
-  );
-}
-
-export function GitHubContributionFallback() {
-  return (
-    <div className="flex h-[162px] items-center justify-center">
-      <LoaderIcon className="animate-spin text-foreground" />
-    </div>
   );
 }

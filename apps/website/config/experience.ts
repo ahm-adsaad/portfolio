@@ -35,8 +35,10 @@ export type Experience = {
   companyLogo?: string;
   /** Roles held at this company; keep newest first for display. */
   positions: ExperiencePosition[];
-  /** Marks the company as the current employer for highlighting. */
+  /** Marks the company as a current employer (open-ended role). */
   isCurrentEmployer?: boolean;
+  /** Expanded by default in the UI; all descriptions stay in the DOM either way. */
+  isExpanded?: boolean;
 };
 
 export const experiences: Experience[] = [
@@ -45,7 +47,8 @@ export const experiences: Experience[] = [
     companyName: 'Samsung Gulf Electronics',
     companyUrl: 'https://www.samsung.com/ae/',
     city: 'Dubai, UAE',
-    isCurrentEmployer: true,
+    // Role ended 08.2026; stays the flagship entry, so it opens by default.
+    isExpanded: true,
     positions: [
       {
         id: 'samsung-ai-ml-engineer',
@@ -95,6 +98,7 @@ export const experiences: Experience[] = [
     companyName: 'Chief Nest',
     companyUrl: 'https://chiefnest.com',
     city: 'Remote (Riyadh, Saudi Arabia)',
+    isCurrentEmployer: true,
     positions: [
       {
         id: 'chief-nest-account-manager',
@@ -133,6 +137,7 @@ export const experiences: Experience[] = [
     companyName: 'American University of Sharjah',
     companyUrl: 'https://www.aus.edu/',
     city: 'Sharjah, UAE',
+    isCurrentEmployer: true,
     positions: [
       {
         id: 'aus-ai-hub-assistant',

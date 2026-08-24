@@ -71,6 +71,10 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Cloudflare Web Analytics injects its beacon at the edge; warm the
+            connection so it stays off the LCP critical path. */}
+        <link rel="preconnect" href="https://static.cloudflareinsights.com" />
+        <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{ __html: darkModeScript }}
@@ -93,12 +97,16 @@ export default async function RootLayout({
           </main>
           <DevTools />
         </Providers>
-        <Script
-          defer
-          strategy="lazyOnload"
-          src="/stats/script.js"
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-        />
+        {/* Umami is only wired up when its website id is configured; otherwise
+            the tag would 404 on every page load. */}
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ? (
+          <Script
+            defer
+            strategy="lazyOnload"
+            src="/stats/script.js"
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          />
+        ) : null}
       </body>
     </html>
   );

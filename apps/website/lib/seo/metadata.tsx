@@ -14,8 +14,11 @@ const author: Metadata['authors'] = {
 };
 const publisher = 'Ahmad Saad';
 const twitterHandle = '';
-const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
 const productionUrl = 'https://ahmadsaad.dev/';
+
+/** `createOgImage` renders a 1600x836 canvas (see lib/createOgImage.ts). */
+const OG_IMAGE_WIDTH = 1600;
+const OG_IMAGE_HEIGHT = 836;
 
 export const createMetadata = ({
   title,
@@ -28,9 +31,9 @@ export const createMetadata = ({
     title: parsedTitle,
     description,
     applicationName,
-    metadataBase: productionUrl
-      ? new URL(`${protocol}://${productionUrl}`)
-      : undefined,
+    metadataBase: new URL(productionUrl),
+    // Relative on purpose: resolves against metadataBase to the apex URL.
+    alternates: { canonical: '/' },
     authors: [author],
     creator: author.name,
     formatDetection: {
@@ -47,6 +50,7 @@ export const createMetadata = ({
       type: 'website',
       siteName: applicationName,
       locale: 'en_US',
+      url: '/',
     },
     publisher,
     twitter: {
@@ -61,8 +65,8 @@ export const createMetadata = ({
     metadata.openGraph.images = [
       {
         url: image,
-        width: 1200,
-        height: 630,
+        width: OG_IMAGE_WIDTH,
+        height: OG_IMAGE_HEIGHT,
         alt: title,
       },
     ];

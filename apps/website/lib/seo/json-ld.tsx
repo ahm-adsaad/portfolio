@@ -1,7 +1,8 @@
-import type { Thing, WithContext } from 'schema-dts';
+import type { Graph, Thing, WithContext } from 'schema-dts';
 
 type JsonLdProps = {
-  code: WithContext<Thing>;
+  /** A single typed node, or a multi-node `@graph` (Graph carries its own `@context`). */
+  code: WithContext<Thing> | Graph;
 };
 
 export const JsonLd = ({ code }: JsonLdProps) => (

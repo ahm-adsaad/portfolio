@@ -23,7 +23,8 @@ export function Education() {
               href={EDUCATION.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              aria-label={`${EDUCATION.school} website`}
+              className="flex size-6 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <ArrowUpRightIcon className="size-4" />
             </Link>

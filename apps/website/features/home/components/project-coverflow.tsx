@@ -16,14 +16,21 @@ function periodLabel(period: Project['period']): string {
 }
 
 function toSlide(project: Project): CoverflowSlide {
+  // The filter below guarantees `image` is set.
+  const src = project.image as string;
+  // Every JPEG in public/projects has 640px and 320px WebP twins, generated
+  // by `pnpm images:projects` (scripts/build-project-images.mts).
+  const stem = src.replace(/\.jpe?g$/i, '');
+
   return {
-    // The filter below guarantees `image` is set.
-    src: project.image as string,
+    src,
+    webpSrcSet: `${stem}-320.webp 320w, ${stem}.webp 640w`,
     alt: `${project.title} cover`,
     title: project.title,
     subtitle: project.shortDescription,
     href: project.link,
     github: project.github,
+    ctaLabel: project.ctaLabel,
     meta: [
       { label: 'Tech', value: project.skills.slice(0, 3).join(' · ') },
       { label: 'Year', value: periodLabel(project.period) },
@@ -41,6 +48,7 @@ export function ProjectCoverflow({ className }: { className?: string }) {
     <CoverflowCarousel
       slides={slides}
       showCaption
+      showNavigation
       // With few slides the loop fold hides the neighbours (a card is faded
       // out by half a turn round the ring), so fall back to a bounded strip.
       loop={slides.length > 3}

@@ -5,6 +5,24 @@ const withBundleAnalyzer = bundleAnalyzer;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+// Baseline security headers for every response the Worker serves. Static
+// assets bypass the Worker, so public/_headers repeats these for them.
+// No full CSP yet: the inline theme script in app/layout.tsx is not nonce'd.
+const securityHeaders = [
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=31536000; includeSubDomains; preload',
+  },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=()',
+  },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'Content-Security-Policy', value: "frame-ancestors 'none'" },
+];
+
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
@@ -97,6 +115,24 @@ let nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+      {
+        // Content-hashed build output: safe to cache forever.
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
   async rewrites() {
     return [

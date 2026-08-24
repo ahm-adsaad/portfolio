@@ -9,6 +9,8 @@ export type User = {
   domain: string;
   website?: string;
   description: string;
+  /** SERP-length summary (<= 160 chars) for `<meta name="description">` / og:description. */
+  metaDescription: string;
   jobTitle: string;
   twitterHandle: string;
   namePronunciationUrl: string;
@@ -40,6 +42,8 @@ const USER: User = {
   location: 'Abu Dhabi / Sharjah, United Arab Emirates',
   description:
     'Computer Engineering senior at the American University of Sharjah shipping production AI systems: LLM pipelines with real cost governance, evaluation, and stakeholders. Forward deployed engineer: technical enough to build the system, comfortable enough to scope it. UAE Golden Visa holder, available January 2027.',
+  metaDescription:
+    'Computer Engineering senior building and scoping production AI systems as a forward deployed engineer. UAE Golden Visa holder, available January 2027.',
   namePronunciationUrl: '',
   social: {
     twitter: '',

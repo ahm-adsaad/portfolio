@@ -1,8 +1,8 @@
-import { MARKDOWN_HEADERS, formatExperienceMarkdown } from '@/lib/llms';
+import { MARKDOWN_HEADERS, formatProjectsMarkdown } from '@/lib/llms';
 
-const content = `# Experience
+const content = `# Projects
 
-${formatExperienceMarkdown(2)}
+${formatProjectsMarkdown(2)}
 `;
 
 export const dynamic = 'force-static';

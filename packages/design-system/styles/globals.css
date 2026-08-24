@@ -69,8 +69,8 @@
 }
 
 :root {
-  /* white */
-  --background: oklch(1 0 0);
+  /* warm paper, softer than pure white to reduce glare */
+  --background: oklch(0.972 0.004 84);
 
   /* zinc-950 */
   --foreground: oklch(0.141 0.005 285.823);
@@ -87,20 +87,20 @@
   /* zinc-950 */
   --secondary-foreground: oklch(0.141 0.005 285.823);
 
-  /* zinc-100 */
-  --muted: oklch(0.967 0.001 286.375);
+  /* a step below the paper background so chips still read */
+  --muted: oklch(0.938 0.004 84);
 
   /* zinc-500 */
   --muted-foreground: oklch(0.552 0.016 285.938);
 
-  /* white */
-  --card: oklch(1 0 0);
+  /* matches the paper background */
+  --card: oklch(0.972 0.004 84);
 
   /* zinc-950 */
   --card-foreground: oklch(0.141 0.005 285.823);
 
-  /* white */
-  --popover: oklch(1 0 0);
+  /* matches the paper background */
+  --popover: oklch(0.972 0.004 84);
 
   /* zinc-950 */
   --popover-foreground: oklch(0.141 0.005 285.823);

@@ -36,8 +36,8 @@ export function PronounceMyName({
     <button
       type="button"
       className={cn(
-        'relative text-muted-foreground transition-all hover:text-foreground active:scale-[0.9]',
-        'after:-inset-1 after:absolute',
+        // 24x24 minimum target (WCAG 2.5.8) around a 16px icon.
+        'relative flex size-6 items-center justify-center text-muted-foreground transition-all hover:text-foreground active:scale-[0.9]',
         className
       )}
       onClick={speak}

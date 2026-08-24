@@ -10,12 +10,16 @@ const useIsoLayoutEffect =
 
 export interface CoverflowSlide {
   src: string;
+  /** Optional WebP `srcset` (e.g. "a-320.webp 320w, a.webp 640w"), served through `<picture>`. */
+  webpSrcSet?: string;
   alt: string;
   title?: string;
   subtitle?: string;
   href?: string;
   /** GitHub repo URL, shown as an arrow next to the title. */
   github?: string;
+  /** Renders a call-to-action button pointing at `href`. */
+  ctaLabel?: string;
   meta?: { label: string; value: string }[];
 }
 
@@ -44,6 +48,11 @@ export interface CoverflowCarouselProps {
   className?: string;
   cardClassName?: string;
 }
+
+/** Intrinsic size of the cover assets in public/projects (square). */
+const COVER_SIZE = 640;
+/** Widest the card ever renders (see the `cardWidth` default), for `sizes`. */
+const COVER_MAX_CSS_PX = '260px';
 
 export function CoverflowCarousel({
   slides,
@@ -244,8 +253,6 @@ export function CoverflowCarousel({
     [],
   );
 
-  const active = slides[selected];
-
   return (
     <div
       className={cn('w-full', className)}
@@ -301,13 +308,30 @@ export function CoverflowCarousel({
                 )}
                 style={{ width: 'var(--cf-card)' }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  draggable={false}
-                  className="h-full w-full select-none object-cover"
-                />
+                <picture>
+                  {slide.webpSrcSet && (
+                    <source
+                      srcSet={slide.webpSrcSet}
+                      sizes={COVER_MAX_CSS_PX}
+                      type="image/webp"
+                    />
+                  )}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={slide.src}
+                    alt={slide.alt}
+                    width={COVER_SIZE}
+                    height={COVER_SIZE}
+                    draggable={false}
+                    decoding="async"
+                    // The carousel sits below the fold and the page's LCP is
+                    // text, so no slide earns a preload: the first slide loads
+                    // eagerly at low priority, the rest wait for the viewport.
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={index === 0 ? 'low' : undefined}
+                    className="h-full w-full select-none object-cover"
+                  />
+                </picture>
               </div>
             ))}
           </div>
@@ -335,60 +359,81 @@ export function CoverflowCarousel({
         )}
       </div>
 
-      {showCaption && active?.title && (
-        <div
-          key={selected}
-          className="mt-2 flex flex-col items-center px-6 duration-300 animate-in fade-in"
-        >
-          <div className="flex items-center gap-1">
-            {active.href ? (
-              <a
-                href={active.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[15px] font-semibold tracking-tight text-foreground hover:underline"
+      {/* Every slide's caption is in the markup so the project text is
+          crawlable; only the active one is displayed. The wrapper reserves
+          height so switching slides does not shift the page. */}
+      {showCaption && (
+        <div className="mt-2 min-h-44">
+          {slides.map((slide, index) =>
+            slide.title ? (
+              <div
+                key={index}
+                hidden={index !== selected}
+                className="flex flex-col items-center px-6 duration-300 animate-in fade-in"
               >
-                {active.title}
-              </a>
-            ) : (
-              <p className="text-[15px] font-semibold tracking-tight text-foreground">
-                {active.title}
-              </p>
-            )}
-            {active.github && (
-              <a
-                href={active.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${active.title} on GitHub`}
-                title="View on GitHub"
-                className="flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-              >
-                <ArrowUpRight className="size-4" />
-              </a>
-            )}
-          </div>
-          {active.subtitle && (
-            <p className="mt-1 text-center text-[13px] text-muted-foreground">
-              {active.subtitle}
-            </p>
-          )}
-          {active.meta && active.meta.length > 0 && (
-            <dl className="mt-6 w-full max-w-[320px] text-[12px]">
-              {active.meta.map((row) => (
-                <div
-                  key={row.label}
-                  className="flex justify-between gap-6 py-[5px]"
-                >
-                  <dt className="shrink-0 text-muted-foreground">
-                    {row.label}
-                  </dt>
-                  <dd className="text-right font-medium text-foreground">
-                    {row.value}
-                  </dd>
+                <div className="flex items-center gap-1">
+                  {slide.href ? (
+                    <a
+                      href={slide.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-0.5 text-[15px] font-semibold tracking-tight text-foreground hover:underline"
+                    >
+                      {slide.title}
+                    </a>
+                  ) : (
+                    <p className="py-0.5 text-[15px] font-semibold tracking-tight text-foreground">
+                      {slide.title}
+                    </p>
+                  )}
+                  {slide.github && (
+                    <a
+                      href={slide.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${slide.title} on GitHub`}
+                      title="View on GitHub"
+                      className="flex size-6 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    >
+                      <ArrowUpRight className="size-4" />
+                    </a>
+                  )}
                 </div>
-              ))}
-            </dl>
+                {slide.subtitle && (
+                  <p className="mt-1 text-center text-[13px] text-muted-foreground">
+                    {slide.subtitle}
+                  </p>
+                )}
+                {slide.ctaLabel && slide.href && (
+                  <a
+                    href={slide.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex min-h-8 items-center gap-1 rounded-full border border-border bg-background px-3.5 text-[13px] font-medium text-foreground transition-colors hover:bg-muted"
+                  >
+                    {slide.ctaLabel}
+                    <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                  </a>
+                )}
+                {slide.meta && slide.meta.length > 0 && (
+                  <dl className="mt-6 w-full max-w-[320px] text-[12px]">
+                    {slide.meta.map((row) => (
+                      <div
+                        key={row.label}
+                        className="flex justify-between gap-6 py-[5px]"
+                      >
+                        <dt className="shrink-0 text-muted-foreground">
+                          {row.label}
+                        </dt>
+                        <dd className="text-right font-medium text-foreground">
+                          {row.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+              </div>
+            ) : null,
           )}
         </div>
       )}

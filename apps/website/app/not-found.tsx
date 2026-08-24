@@ -1,5 +1,5 @@
 import { SnakeGame } from '@/features/game/snake-game';
-import Info from '@/features/home/components/info';
+import { InfoOverlay } from '@/components/info-overlay';
 import { GameOfLife } from '@/registry/srisomanaath/game-of-life';
 import { Button } from '@repo/design-system/components/ui/button';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ export default function NotFound() {
       />
       <p className="font-bold text-4xl">Oops!</p>
       <SnakeGame />
-      <Info show={['time', 'screen', 'llms']} />
+      <InfoOverlay show={['time', 'screen', 'llms']} />
       <Link href="/">
         <Button variant="outline">Go Home</Button>
       </Link>

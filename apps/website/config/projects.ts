@@ -16,6 +16,8 @@ export type Project = {
   link?: string;
   /** Github repository URL. */
   github?: string;
+  /** Label for a call-to-action pointing at `link` (e.g. a live demo). */
+  ctaLabel?: string;
   /** Tags/technologies for chips or filtering. */
   skills: string[];
   /** Short one-line description for list view. */
@@ -67,9 +69,11 @@ export const PROJECTS: Project[] = [
     period: {
       start: '08.2026',
     },
-    // Live demo; the repo stays on the github link.
+    // Live demo. No `github` on purpose: github.com/ahm-adsaad/LocalAI returns
+    // 404 today, and neither anchors nor schema may point at a dead URL.
+    // Restore `github` once the repo is public under its real name.
     link: 'https://localai.ahmadsaad.dev',
-    github: 'https://github.com/ahm-adsaad/LocalAI',
+    ctaLabel: 'Try the live demo',
     image: '/projects/localai.jpg',
     // First three surface as "Tech" in the carousel.
     skills: [
@@ -83,7 +87,7 @@ export const PROJECTS: Project[] = [
       'IndexedDB',
     ],
     shortDescription:
-      'On-device RAG document Q&A that runs entirely in the browser. Open the card to try it live.',
+      'On-device RAG document Q&A that runs entirely in the browser: PDF ingestion, embeddings, hybrid retrieval, and generation on WebGPU.',
     description:
       'Privacy-preserving RAG that runs PDF ingestion, embedding, retrieval, and generation entirely in the browser. No backend, no document data leaving the device.\n\nFull pipeline: layout-aware PDF extraction, overlapping chunking, MiniLM sentence embeddings (q8), and hybrid retrieval combining dense cosine similarity, BM25, and Reciprocal Rank Fusion. Streaming on-device generation with Qwen 2.5, Phi-4, and Llama 3.2 (Q4f16) on WebGPU; WebLLM and Transformers.js run in a Web Worker so model load, embedding, and token decode never block the UI.\n\nRetrieval tuning: query expansion, prose-density reranking, and intro-chunk pinning to fix weak overview queries and noisy dashboard PDFs. IndexedDB persistence with offline weight caching and a VRAM-aware multi-model catalog.',
     impact: 'No backend and no document data leaving the device.',

@@ -84,6 +84,7 @@ function BottomDock({ className }: { className: string }) {
           <DockIcon key={item.label} title={item.label}>
             <Link
               href={item.href}
+              aria-label={item.ariaLabel ?? item.label}
               onClick={() => analytics.trackNavClick(item.href, item.label)}
             >
               <item.icon className="size-4" />
@@ -100,6 +101,8 @@ function BottomDock({ className }: { className: string }) {
               href={social.url}
               prefetch={false}
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.ariaLabel ?? social.name}
               onClick={() => {
                 if (social.url.startsWith('mailto:')) {
                   const email = social.url.replace('mailto:', '');

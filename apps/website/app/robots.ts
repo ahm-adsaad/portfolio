@@ -1,18 +1,19 @@
+import { SITE_URL } from '@/lib/server-url';
 import type { MetadataRoute } from 'next';
-import { headers } from 'next/headers';
 
-export default async function robots(): Promise<MetadataRoute.Robots> {
-  const headersList = await headers();
-  const domain = headersList.get('host') as string;
+// Static: never echo the request host, always point at the canonical sitemap.
+export const dynamic = 'force-static';
 
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/public/', '/admin'],
+        // Never block /_next/: Googlebot needs the CSS/JS/font chunks to render.
+        disallow: ['/api/', '/admin'],
       },
     ],
-    sitemap: `https://${domain}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

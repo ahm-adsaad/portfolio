@@ -1,0 +1,15 @@
+# Applied by Workers Static Assets to files it serves directly (the Worker
+# never sees those requests, so next.config headers() cannot cover them).
+# Keep in sync with next.config.mjs.
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+
+# Content-hashed build output: safe to cache forever.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable

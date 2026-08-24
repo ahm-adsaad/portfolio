@@ -7,6 +7,7 @@ import Separator from '@/components/separator';
 import { USER } from '@/config/user';
 import { GitHubContribution } from '@/features/home/components/github-contribution';
 import Info from '@/features/home/components/info';
+import { ShootingStars } from '@/components/ui/shooting-stars';
 import { Education } from '@/features/home/components/education';
 import { Experiences } from '@/features/home/components/experiences';
 import { ProjectCoverflow } from '@/features/home/components/project-coverflow';
@@ -44,7 +45,29 @@ export default async function Page() {
     <>
       <JsonLd code={jsonLd} />
       <Info show={['time', 'screen', 'llms']} />
-      <ScrollArea useScrollAreaId className="">
+
+      {/* Shooting stars fill the empty margins; the opaque content column masks them. */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 opacity-70 motion-reduce:hidden"
+        aria-hidden="true"
+      >
+        <ShootingStars
+          starColor="#7C3AED"
+          trailColor="#2EB9DF"
+          minDelay={1200}
+          maxDelay={4200}
+        />
+        <ShootingStars
+          starColor="#2EB9DF"
+          trailColor="#7C3AED"
+          minSpeed={8}
+          maxSpeed={22}
+          minDelay={2400}
+          maxDelay={6000}
+        />
+      </div>
+
+      <ScrollArea useScrollAreaId className="relative z-10">
         <FloatingHeader scrollTitle={USER.name} />
 
         <Separator />

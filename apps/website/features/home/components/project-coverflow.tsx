@@ -40,6 +40,9 @@ export function ProjectCoverflow({ className }: { className?: string }) {
     <CoverflowCarousel
       slides={slides}
       showCaption
+      // With few slides the loop fold hides the neighbours (a card is faded
+      // out by half a turn round the ring), so fall back to a bounded strip.
+      loop={slides.length > 3}
       label="Featured projects"
       className={cn(className)}
     />

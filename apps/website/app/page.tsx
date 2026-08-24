@@ -10,7 +10,6 @@ import Info from '@/features/home/components/info';
 import { Experiences } from '@/features/home/components/experiences';
 import { ProjectCoverflow } from '@/features/home/components/project-coverflow';
 import { Projects } from '@/features/home/components/projects';
-import { Testimonials } from '@/features/home/components/testimonials';
 import { WordmarkFooter } from '@/components/wordmark-footer';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd, Organization, WithContext } from '@/lib/seo/json-ld';
@@ -84,13 +83,6 @@ export default async function Page() {
           <RevealOnLoad delay={0.3} duration={0.6}>
             <ProjectCoverflow className="mt-8" />
           </RevealOnLoad>
-        </Section>
-
-        <Separator />
-
-        {/* Testimonials Section */}
-        <Section>
-          <Testimonials />
         </Section>
 
         <Separator />

@@ -3,7 +3,7 @@
   "name": "utils",
   "type": "registry:lib",
   "title": "Utility Functions",
-  "author": "SriSomanaath <govindalapudisrinath@gmail.com>",
+  "author": "ahm-adsaad <mohammeddabbagh3@gmail.com>",
   "dependencies": [
     "clsx",
     "tailwind-merge"
@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/lib/utils.ts",
-      "content": "import { type ClassValue, clsx } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n",
+      "content": "import { type ClassValue, clsx } from 'clsx';\r\nimport { twMerge } from 'tailwind-merge';\r\n\r\nexport function cn(...inputs: ClassValue[]) {\r\n  return twMerge(clsx(inputs));\r\n}\r\n",
       "type": "registry:lib"
     }
   ]

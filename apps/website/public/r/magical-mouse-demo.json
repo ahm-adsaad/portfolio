@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/magical-mouse-demo.tsx",
-      "content": "import { MouseSparkles } from '@/registry/srisomanaath/magical-mouse';\n\nconst MagicalMouseDemo = () => {\n  return (\n    <div\n      className=\"h-[400px] w-full overflow-hidden rounded-xl bg-white\"\n      style={{\n        background:\n          'linear-gradient(145deg, rgb(119, 46, 195), rgb(58, 18, 153))',\n      }}\n    >\n      <MouseSparkles />\n    </div>\n  );\n};\n\nexport default MagicalMouseDemo;\n",
+      "content": "import { MouseSparkles } from '@/registry/srisomanaath/magical-mouse';\r\n\r\nconst MagicalMouseDemo = () => {\r\n  return (\r\n    <div\r\n      className=\"h-[400px] w-full overflow-hidden rounded-xl bg-white\"\r\n      style={{\r\n        background:\r\n          'linear-gradient(145deg, rgb(119, 46, 195), rgb(58, 18, 153))',\r\n      }}\r\n    >\r\n      <MouseSparkles />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default MagicalMouseDemo;\r\n",
       "type": "registry:example"
     }
   ]

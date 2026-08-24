@@ -34,69 +34,34 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    id: 'palettebox',
-    title: 'PaletteBox',
+    id: 'portfolio',
+    title: 'ahmadsaad.dev',
     period: {
-      start: '03.2025',
+      start: '08.2026',
     },
-    link: 'https://palettebox.design/',
-    logo: '/project_images/ruixen_ui_logo.jpeg',
+    link: 'https://ahmadsaad.dev',
+    github: 'https://github.com/ahm-adsaad/portfolio',
+    // TODO: replace with a real screenshot of the site
     image:
-      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=640&h=640&fit=crop&q=70&auto=format',
-    impact: 'Cut design-to-code handoff time in half',
-    skills: [
-      'Next.js',
-      'TypeScript',
-      'React',
-      'Tailwind CSS',
-      'Figma API',
-    ],
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=640&fit=crop&q=70&auto=format',
+    skills: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
     shortDescription:
-      'A design token manager that syncs Figma variables to code in real time.',
-    description: `A bridge between design and engineering workflows.
-
-Features include:
-- Two-way sync between Figma variables and CSS/Tailwind tokens
-- Visual diff viewer for design changes
-- CLI for CI/CD integration
-- Team collaboration with role-based access`,
+      'This site — a personal portfolio with a 3D coverflow project showcase.',
     isExpanded: true,
   },
   {
-    id: 'hookshelf',
-    title: 'HookShelf',
+    id: 'mano-computer-simulator',
+    title: 'Mano Basic Computer Simulator',
     period: {
-      start: '09.2024',
+      start: '02.2026',
     },
-    link: 'https://hookshelf.dev/',
-    logo: '/project_images/shadcnagents.png',
+    link: 'https://github.com/ahm-adsaad/manos-basic-computer-simulator',
+    github: 'https://github.com/ahm-adsaad/manos-basic-computer-simulator',
+    // TODO: replace with a real screenshot of the simulator
     image:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=640&fit=crop&q=70&auto=format',
-    impact: '10k+ weekly npm downloads',
-    skills: ['React', 'TypeScript', 'Storybook', 'Vitest', 'npm'],
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&h=640&fit=crop&q=70&auto=format',
+    skills: ['Python'],
     shortDescription:
-      'A curated collection of production-ready React hooks with interactive docs.',
-  },
-  {
-    id: 'tablewise',
-    title: 'Tablewise',
-    period: {
-      start: '01.2024',
-      end: '08.2024',
-    },
-    link: 'https://tablewise.app/',
-    logo: '/project_images/source_of_truth.png',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=640&fit=crop&q=70&auto=format',
-    impact: 'Adopted by 40+ non-technical teams',
-    skills: [
-      'Next.js',
-      'PostgreSQL',
-      'Prisma',
-      'tRPC',
-      'Stripe',
-    ],
-    shortDescription:
-      'A lightweight database explorer and query builder for non-technical teams.',
+      "A simulator for Mano's basic computer architecture — registers, memory, and instruction cycle.",
   },
 ];

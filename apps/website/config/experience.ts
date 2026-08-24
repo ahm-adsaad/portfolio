@@ -93,6 +93,7 @@ export const experiences: Experience[] = [
   {
     id: 'chief-nest',
     companyName: 'Chief Nest',
+    companyUrl: 'https://chiefnest.com',
     city: 'Remote (Riyadh, Saudi Arabia)',
     positions: [
       {

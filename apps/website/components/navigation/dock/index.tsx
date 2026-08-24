@@ -98,6 +98,7 @@ function BottomDock({ className }: { className: string }) {
           <DockIcon key={name} title={name}>
             <Link
               href={social.url}
+              prefetch={false}
               target="_blank"
               onClick={() => {
                 if (social.url.startsWith('mailto:')) {

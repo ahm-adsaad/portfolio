@@ -67,13 +67,20 @@ export default async function Page() {
           <RevealOnLoad delay={0.15} duration={0.5}>
             <div className="mt-6 space-y-3 text-foreground/70">
               <p className="leading-relaxed">
-                I&apos;m Ahmad — a software engineer who enjoys turning rough
-                ideas into polished products. I care about the details: clean
-                architecture, fast interfaces, and software that feels
-                effortless to use.
+                I&apos;m Ahmad, a Computer Engineering senior at the American
+                University of Sharjah who ships production systems. My work
+                centers on applied AI: LLM systems with real cost governance,
+                real evaluation, and real stakeholders. Most recently at
+                Samsung Gulf Electronics, I architected and solely built a
+                trend intelligence platform for the regional marketing team.
               </p>
               <p className="leading-relaxed">
-                Below is a selection of things I&apos;ve built — drag through
+                I hold a UAE Golden Visa, so no employer sponsorship is
+                required. I graduate in December 2026 and I am available to
+                start January 2027.
+              </p>
+              <p className="leading-relaxed">
+                Below is a selection of things I&apos;ve built. Drag through
                 the carousel to explore.
               </p>
             </div>

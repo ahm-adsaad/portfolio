@@ -18,17 +18,22 @@ export const DockConfig = {
         url: SOURCE_CODE_GITHUB_URL,
         icon: Icons.github,
       },
-      // Re-enable once USER.social has the URLs:
-      // LinkedIn: {
-      //   name: 'LinkedIn',
-      //   url: USER.social.linkedin,
-      //   icon: Icons.linkedin,
-      // },
+      LinkedIn: {
+        name: 'LinkedIn',
+        url: USER.social.linkedin,
+        icon: Icons.linkedin,
+      },
       // X: {
       //   name: 'X',
       //   url: USER.social.twitter,
       //   icon: Icons.x,
       // },
+      CV: {
+        name: 'CV',
+        // Opens the PDF in a new tab for viewing (no forced download).
+        url: '/Ahmad_Saad_CV.pdf',
+        icon: Icons.resume,
+      },
       email: {
         name: 'Send Email',
         url: `mailto:${USER.email}`,

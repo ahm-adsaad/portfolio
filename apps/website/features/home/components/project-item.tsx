@@ -104,16 +104,18 @@ export function ProjectItem({
                   </a>
                 </TooltipWrapper>
               )}
-              <TooltipWrapper content="Open Project Link">
-                <a
-                  className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                  href={addQueryParams(project.link, UTM_PARAMS)}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <LinkIcon className="pointer-events-none size-4" />
-                </a>
-              </TooltipWrapper>
+              {project.link && (
+                <TooltipWrapper content="Open Project Link">
+                  <a
+                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                    href={addQueryParams(project.link, UTM_PARAMS)}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <LinkIcon className="pointer-events-none size-4" />
+                  </a>
+                </TooltipWrapper>
+              )}
               <div
                 className="shrink-0 text-muted-foreground [&_svg]:size-4"
                 aria-hidden

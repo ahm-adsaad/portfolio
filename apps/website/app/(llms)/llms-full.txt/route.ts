@@ -13,7 +13,7 @@ function generateFullContent() {
       '',
       project.shortDescription ?? '',
       '',
-      `- Link: ${project.link}`,
+      ...(project.link ? [`- Link: ${project.link}`] : []),
       `- Tech: ${project.skills.join(', ')}`,
       `- Period: ${project.period.start}${project.period.end ? ` - ${project.period.end}` : ' - present'}`,
     ];

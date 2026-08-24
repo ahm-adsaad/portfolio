@@ -100,16 +100,18 @@ export function ExperienceItem({
                   </dd>
                 </dl>
               </div>
-              <TooltipWrapper content="Open Company Link">
-                <a
-                  className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                  href={addQueryParams(experience.companyUrl, UTM_PARAMS)}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <LinkIcon className="pointer-events-none size-4" />
-                </a>
-              </TooltipWrapper>
+              {experience.companyUrl && (
+                <TooltipWrapper content="Open Company Link">
+                  <a
+                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                    href={addQueryParams(experience.companyUrl, UTM_PARAMS)}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <LinkIcon className="pointer-events-none size-4" />
+                  </a>
+                </TooltipWrapper>
+              )}
               <div
                 className="shrink-0 text-muted-foreground [&_svg]:size-4"
                 aria-hidden

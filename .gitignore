@@ -44,3 +44,8 @@ next-env.d.ts
 # ide
 .idea
 .vscode
+
+# private source material, kept out of the public repo
+/portfolio-context.md
+/Ahmad_Saad_CV.docx
+/Ahmad_Saad_CV.pdf

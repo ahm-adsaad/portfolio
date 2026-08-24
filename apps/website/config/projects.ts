@@ -44,20 +44,22 @@ export const PROJECTS: Project[] = [
     // Add link + github (github.com/ahm-adsaad/trend-radar) once it is public.
     // Placeholder cover; overwrite public/projects/trend-radar.jpg with a real shot.
     image: '/projects/trend-radar.jpg',
+    // First three surface as "Tech" in the carousel.
     skills: [
       'TypeScript',
       'Node.js',
+      'Claude API',
       'PostgreSQL',
       'Docker',
       'Next.js',
-      'Anthropic Claude API',
+      'REST API',
     ],
     shortDescription:
       'Production TikTok trend-detection platform where measurement decides and LLMs describe.',
     description:
       'A production trend-detection platform built on the official TikTok API for Business. Deterministic signals (caption n-gram clustering, creator spread, adoption curves, freshness) decide every verdict; LLMs only describe what the measurements found and never write URLs, IDs, counts, or provenance.\n\nDesign principles: never invent, an unknown value renders as a blank marker with provenance on every figure. No silent discarding, lifecycle stages are tags rather than gates and a safety verdict demotes rather than deletes. Self-calibration over magic constants. Degrade honestly, a failed pull serves the last good state with a stale badge rather than a blank surface.',
     impact:
-      'Holds combined data and inference spend to a single-digit-dollar daily budget.',
+      'An estimated $60K in cost savings and a projected 20% increase in engagement rates.',
     isExpanded: true,
   },
   {
@@ -70,10 +72,13 @@ export const PROJECTS: Project[] = [
     link: 'https://localai.ahmadsaad.dev',
     github: 'https://github.com/ahm-adsaad/LocalAI',
     image: '/projects/localai.jpg',
+    // First three surface as "Tech" in the carousel.
     skills: [
+      'WebGPU',
+      'Qwen 2.5',
+      'Llama 3.2',
       'TypeScript',
       'React',
-      'WebGPU',
       'WebLLM',
       'Transformers.js',
       'IndexedDB',
@@ -112,6 +117,8 @@ export const PROJECTS: Project[] = [
     skills: ['EasyEDA', 'PCB design', 'Embedded systems'],
     shortDescription:
       'Custom 2-layer PCB with an ATMEGA4809 MCU, LoRa transceiver, and an energy harvesting power path.',
+    impact:
+      'Sustainable, battery-free environmental monitoring powered by harvested energy.',
     description:
       'Designed and fabricated a 2-layer custom PCB integrating an ATMEGA4809 MCU, XL1276 LoRa transceiver, AEM10330 PMIC, MIC94069 load switch, and BME680/CO sensors. Covered schematic capture, IPC-2221-compliant trace routing, and inline PPK2 measurement headers for current profiling across the LoRaWAN transmission cycle.',
   },

@@ -9,6 +9,7 @@ import { GitHubContribution } from '@/features/home/components/github-contributi
 import Info from '@/features/home/components/info';
 import { Experiences } from '@/features/home/components/experiences';
 import { ProjectCoverflow } from '@/features/home/components/project-coverflow';
+import { TechStack } from '@/features/home/components/tech-stack';
 import { WordmarkFooter } from '@/components/wordmark-footer';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd, Organization, WithContext } from '@/lib/seo/json-ld';
@@ -107,6 +108,13 @@ export default async function Page() {
             </p>
             <ProjectCoverflow />
           </div>
+        </Section>
+
+        <Separator />
+
+        {/* Tech Stack Section */}
+        <Section>
+          <TechStack />
         </Section>
 
         <Separator />

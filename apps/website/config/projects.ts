@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
     id: 'mano-computer-simulator',
     title: 'Mano Basic Computer Simulator',
     period: {
-      start: '02.2026',
+      start: '2025',
     },
     link: 'https://github.com/ahm-adsaad/manos-basic-computer-simulator',
     github: 'https://github.com/ahm-adsaad/manos-basic-computer-simulator',

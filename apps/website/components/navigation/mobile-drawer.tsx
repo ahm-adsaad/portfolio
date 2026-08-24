@@ -111,7 +111,8 @@ export const NavigationLink = memo(({ href, label, icon, onClose }: any) => {
   const pathname = usePathname();
   const iconCmp = icon ?? <AtSignIcon size={16} />;
 
-  const isInternal = href.startsWith('/');
+  // Static files (like the CV PDF) should open in a new tab, not client-navigate.
+  const isInternal = href.startsWith('/') && !href.endsWith('.pdf');
   if (!isInternal) {
     return (
       <Link

@@ -52,15 +52,17 @@ export function Experiences() {
                       <h3 className="font-medium text-foreground">
                         {experience.companyName}
                       </h3>
-                      <Link
-                        href={experience.companyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group/link flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ArrowUpRightIcon className="size-4" />
-                      </Link>
+                      {experience.companyUrl && (
+                        <Link
+                          href={experience.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/link flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <ArrowUpRightIcon className="size-4" />
+                        </Link>
+                      )}
                     </div>
                     <ChevronDownIcon className="size-4 text-muted-foreground transition-transform duration-200 [[data-state=open]_&]:rotate-180" />
                   </div>
@@ -88,7 +90,7 @@ export function Experiences() {
                         </p>
                       </div>
                       {position.description && (
-                        <p className="text-sm text-foreground/60 leading-relaxed">
+                        <p className="whitespace-pre-line text-sm text-foreground/60 leading-relaxed">
                           {position.description}
                         </p>
                       )}

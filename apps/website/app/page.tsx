@@ -7,6 +7,7 @@ import Separator from '@/components/separator';
 import { USER } from '@/config/user';
 import { GitHubContribution } from '@/features/home/components/github-contribution';
 import Info from '@/features/home/components/info';
+import { Education } from '@/features/home/components/education';
 import { Experiences } from '@/features/home/components/experiences';
 import { ProjectCoverflow } from '@/features/home/components/project-coverflow';
 import { TechStack } from '@/features/home/components/tech-stack';
@@ -112,6 +113,13 @@ export default async function Page() {
 
         <Separator />
 
+        {/* Education Section */}
+        <Section>
+          <Education />
+        </Section>
+
+        <Separator />
+
         {/* Tech Stack Section */}
         <Section>
           <TechStack />
@@ -129,6 +137,36 @@ export default async function Page() {
         {/* Wordmark Footer */}
         <Section className="px-0 py-0 sm:px-0 md:py-0">
           <WordmarkFooter brandName={USER.name} />
+        </Section>
+
+        <Separator />
+
+        {/* Contact CTA */}
+        <Section>
+          <div className="space-y-2 text-center">
+            <p className="text-foreground/70 leading-relaxed">
+              Graduating December 2026, available from January 2027.
+            </p>
+            <p className="text-foreground/70 leading-relaxed">
+              Reach me at{' '}
+              <a
+                href={`mailto:${USER.email}`}
+                className="font-medium text-foreground underline underline-offset-4 hover:text-foreground/80"
+              >
+                {USER.email}
+              </a>{' '}
+              or on{' '}
+              <a
+                href={USER.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground underline underline-offset-4 hover:text-foreground/80"
+              >
+                LinkedIn
+              </a>
+              .
+            </p>
+          </div>
         </Section>
 
         <Separator />

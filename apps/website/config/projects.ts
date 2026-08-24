@@ -66,9 +66,9 @@ export const PROJECTS: Project[] = [
     period: {
       start: '08.2026',
     },
-    link: 'https://github.com/ahm-adsaad/LocalAI',
+    // Live demo; the repo stays on the github link.
+    link: 'https://localai.ahmadsaad.dev',
     github: 'https://github.com/ahm-adsaad/LocalAI',
-    // Placeholder cover; overwrite public/projects/localai.jpg with a real shot.
     image: '/projects/localai.jpg',
     skills: [
       'TypeScript',
@@ -79,7 +79,7 @@ export const PROJECTS: Project[] = [
       'IndexedDB',
     ],
     shortDescription:
-      'On-device RAG document Q&A: PDF ingestion, hybrid retrieval, and generation entirely in the browser.',
+      'On-device RAG document Q&A that runs entirely in the browser. Open the card to try it live.',
     description:
       'Privacy-preserving RAG that runs PDF ingestion, embedding, retrieval, and generation entirely in the browser. No backend, no document data leaving the device.\n\nFull pipeline: layout-aware PDF extraction, overlapping chunking, MiniLM sentence embeddings (q8), and hybrid retrieval combining dense cosine similarity, BM25, and Reciprocal Rank Fusion. Streaming on-device generation with Qwen 2.5, Phi-4, and Llama 3.2 (Q4f16) on WebGPU; WebLLM and Transformers.js run in a Web Worker so model load, embedding, and token decode never block the UI.\n\nRetrieval tuning: query expansion, prose-density reranking, and intro-chunk pinning to fix weak overview queries and noisy dashboard PDFs. IndexedDB persistence with offline weight caching and a VRAM-aware multi-model catalog.',
     impact: 'No backend and no document data leaving the device.',

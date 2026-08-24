@@ -1,6 +1,6 @@
 # ahmadsaad.dev
 
-Personal portfolio of **Ahmad Saad** — live at [ahmadsaad.dev](https://ahmadsaad.dev).
+Personal portfolio of **Ahmad Saad**, live at [ahmadsaad.dev](https://ahmadsaad.dev).
 
 Based on the MIT-licensed [ruixenui/portfolio](https://github.com/ruixenui/portfolio) template, customized with a 3D coverflow project showcase and deployed to Cloudflare Workers.
 
@@ -28,13 +28,13 @@ pnpm run deploy   # build + deploy to Cloudflare Workers
 
 ## Structure
 
-- `apps/website` — the site itself
-  - `config/user.ts` — identity, socials, tagline
-  - `config/projects.ts` — projects (drives the hero carousel: cover `image`, `skills`, `period`, `impact`)
-  - `config/experience.ts` — work experience
-  - `components/ui/coverflow-carousel.tsx` — the 3D project carousel
-- `packages/design-system` — shared shadcn/ui components and styles
+- `apps/website`: the site itself
+  - `config/user.ts`: identity, socials, tagline
+  - `config/projects.ts`: projects (drives the hero carousel: cover `image`, `skills`, `period`, `impact`)
+  - `config/experience.ts`: work experience
+  - `components/ui/coverflow-carousel.tsx`: the 3D project carousel
+- `packages/design-system`: shared shadcn/ui components and styles
 
 ## License
 
-MIT — see [license.md](./license.md).
+MIT, see [license.md](./license.md).

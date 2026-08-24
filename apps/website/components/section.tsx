@@ -33,7 +33,8 @@ const CornerMark = ({
 export const Section = forwardRef<HTMLElement, SectionProps>(
   ({ children, sectionClassName, className, ...props }, ref) => (
     <section ref={ref} className={sectionClassName} {...props}>
-      <div className="relative mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8">
+      {/* bg-background masks fixed background effects behind the content column */}
+      <div className="relative mx-auto w-full max-w-3xl bg-background px-4 sm:px-6 lg:px-8">
         <div className={cn('relative py-3 sm:px-3 md:py-4', className)}>
           {/* Corner marks */}
           <CornerMark position="top-left" />

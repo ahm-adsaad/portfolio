@@ -40,9 +40,8 @@ export const PROJECTS: Project[] = [
       start: '06.2026',
       end: '08.2026',
     },
-    // Repo is private while it is prepared for public release.
-    // Add link + github (github.com/ahm-adsaad/trend-radar) once it is public.
-    // Placeholder cover; overwrite public/projects/trend-radar.jpg with a real shot.
+    link: 'https://github.com/ahm-adsaad/trend-radar',
+    github: 'https://github.com/ahm-adsaad/trend-radar',
     image: '/projects/trend-radar.jpg',
     // First three surface as "Tech" in the carousel.
     skills: [

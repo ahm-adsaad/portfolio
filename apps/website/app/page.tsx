@@ -4,11 +4,11 @@ import { RevealOnLoad } from '@/components/reveal-on-load';
 import { ScrollArea } from '@/components/scroll-area';
 import { Section } from '@/components/section';
 import Separator from '@/components/separator';
-import { SkillsVenn } from '@/components/skills-venn';
 import { USER } from '@/config/user';
 import { GitHubContribution } from '@/features/home/components/github-contribution';
 import Info from '@/features/home/components/info';
 import { Experiences } from '@/features/home/components/experiences';
+import { ProjectCoverflow } from '@/features/home/components/project-coverflow';
 import { Projects } from '@/features/home/components/projects';
 import { Testimonials } from '@/features/home/components/testimonials';
 import { WordmarkFooter } from '@/components/wordmark-footer';
@@ -45,7 +45,7 @@ export default async function Page() {
       <JsonLd code={jsonLd} />
       <Info show={['time', 'screen', 'llms']} />
       <ScrollArea useScrollAreaId className="">
-        <FloatingHeader scrollTitle="Ruixen" />
+        <FloatingHeader scrollTitle={USER.name} />
 
         <Separator />
 
@@ -55,8 +55,8 @@ export default async function Page() {
           <RevealOnLoad delay={0} duration={0.5}>
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <h1 className="font-semibold text-2xl">Ruixen</h1>
-                <PronounceMyName name="Ruixen" />
+                <h1 className="font-semibold text-2xl">{USER.name}</h1>
+                <PronounceMyName name={USER.name} />
               </div>
               <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
                 {USER.jobTitle}
@@ -68,30 +68,21 @@ export default async function Page() {
           <RevealOnLoad delay={0.15} duration={0.5}>
             <div className="mt-6 space-y-3 text-foreground/70">
               <p className="leading-relaxed">
-                Ruixen is a small UI engineering studio working at the
-                intersection of design and code. We turn rough ideas into
-                polished experiences that feel effortless.
+                I&apos;m Ahmad — a software engineer who enjoys turning rough
+                ideas into polished products. I care about the details: clean
+                architecture, fast interfaces, and software that feels
+                effortless to use.
               </p>
               <p className="leading-relaxed">
-                Our focus is on thoughtful interfaces, component libraries, and
-                developer tooling — with care for accessibility, performance,
-                and making software that respects people's time.
+                Below is a selection of things I&apos;ve built — drag through
+                the carousel to explore.
               </p>
             </div>
           </RevealOnLoad>
 
-          {/* Skills Venn Diagram */}
+          {/* Featured Projects Carousel */}
           <RevealOnLoad delay={0.3} duration={0.6}>
-            <SkillsVenn
-              profileImage={USER.image.profile}
-              skills={{
-                top: 'Frontend Architecture',
-                left: 'Design Systems',
-                right: 'Developer Tooling',
-                bottom: 'Product Thinking\n& User Research',
-              }}
-              className="mt-8"
-            />
+            <ProjectCoverflow className="mt-8" />
           </RevealOnLoad>
         </Section>
 

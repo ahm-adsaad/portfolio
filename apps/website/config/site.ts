@@ -5,12 +5,12 @@ export const META_THEME_COLORS = {
   dark: '#09090b',
 };
 
-export const SOURCE_CODE_GITHUB_REPO = 'ruixenui/portfolio';
+export const SOURCE_CODE_GITHUB_REPO = 'ahm-adsaad/portfolio';
 export const SOURCE_CODE_GITHUB_URL =
-  'https://github.com/ruixenui/portfolio';
+  'https://github.com/ahm-adsaad/portfolio';
 
 export const UTM_PARAMS = {
-  utm_source: 'ruixen',
+  utm_source: 'ahmadsaad',
   utm_medium: 'portfolio_website',
   utm_campaign: 'referral',
 };

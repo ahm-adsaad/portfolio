@@ -1,6 +1,5 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { getPlaiceholder } from 'plaiceholder';
 
 type MediaConfig = {
   quality?: number;
@@ -32,6 +31,10 @@ export async function generateBlurUrl(
       buffer = await fs.readFile(fullPath);
     }
 
+    // plaiceholder (and its sharp native dependency) was dropped to keep the
+    // Cloudflare Worker under the size limit — import it lazily so it only
+    // loads if a blur placeholder is ever actually requested at build time.
+    const { getPlaiceholder } = await import('plaiceholder');
     const { base64: blurDataURL } = await getPlaiceholder(buffer, {
       size: config.size?.width,
     });

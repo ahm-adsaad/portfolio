@@ -9,11 +9,10 @@
     "binding": "ASSETS"
   },
   "workers_dev": true,
-  // Enable once the ahmadsaad.dev zone is active on the Cloudflare account:
-  // "routes": [
-  //   { "pattern": "ahmadsaad.dev", "custom_domain": true },
-  //   { "pattern": "www.ahmadsaad.dev", "custom_domain": true }
-  // ],
+  "routes": [
+    { "pattern": "ahmadsaad.dev", "custom_domain": true },
+    { "pattern": "www.ahmadsaad.dev", "custom_domain": true }
+  ],
   "observability": {
     "enabled": true
   }

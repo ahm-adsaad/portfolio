@@ -16,7 +16,6 @@ let nextConfig = {
     },
   },
   devIndicators: false,
-  serverExternalPackages: ['shiki'],
   experimental: {
     optimizePackageImports: ['motion'],
     webVitalsAttribution: ['FCP', 'LCP', 'CLS', 'FID', 'TTFB', 'INP'],

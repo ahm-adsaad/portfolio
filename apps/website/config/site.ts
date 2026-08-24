@@ -1,7 +1,7 @@
 export const ENABLE_BUDDY = false;
 
 export const META_THEME_COLORS = {
-  light: '#f7f5f1',
+  light: '#f0ede7',
   dark: '#09090b',
 };
 

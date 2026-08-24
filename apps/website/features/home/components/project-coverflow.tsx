@@ -23,6 +23,7 @@ function toSlide(project: Project): CoverflowSlide {
     title: project.title,
     subtitle: project.shortDescription,
     href: project.link,
+    github: project.github,
     meta: [
       { label: 'Tech', value: project.skills.slice(0, 3).join(' · ') },
       { label: 'Year', value: periodLabel(project.period) },

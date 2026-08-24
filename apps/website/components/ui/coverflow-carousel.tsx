@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
@@ -14,6 +14,8 @@ export interface CoverflowSlide {
   title?: string;
   subtitle?: string;
   href?: string;
+  /** GitHub repo URL, shown as an arrow next to the title. */
+  github?: string;
   meta?: { label: string; value: string }[];
 }
 
@@ -338,20 +340,34 @@ export function CoverflowCarousel({
           key={selected}
           className="mt-2 flex flex-col items-center px-6 duration-300 animate-in fade-in"
         >
-          {active.href ? (
-            <a
-              href={active.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[15px] font-semibold tracking-tight text-foreground hover:underline"
-            >
-              {active.title}
-            </a>
-          ) : (
-            <p className="text-[15px] font-semibold tracking-tight text-foreground">
-              {active.title}
-            </p>
-          )}
+          <div className="flex items-center gap-1">
+            {active.href ? (
+              <a
+                href={active.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[15px] font-semibold tracking-tight text-foreground hover:underline"
+              >
+                {active.title}
+              </a>
+            ) : (
+              <p className="text-[15px] font-semibold tracking-tight text-foreground">
+                {active.title}
+              </p>
+            )}
+            {active.github && (
+              <a
+                href={active.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${active.title} on GitHub`}
+                title="View on GitHub"
+                className="flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                <ArrowUpRight className="size-4" />
+              </a>
+            )}
+          </div>
           {active.subtitle && (
             <p className="mt-1 text-center text-[13px] text-muted-foreground">
               {active.subtitle}

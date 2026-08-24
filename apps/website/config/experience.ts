@@ -158,18 +158,6 @@ export const experiences: Experience[] = [
           'Speech emotion recognition: classified emotion from audio snippets using log-mel spectrogram representations, fine-tuning ResNet and EfficientNet backbones in TensorFlow and Scikit-Learn. Reached roughly 75% accuracy after augmentation and hyperparameter tuning.',
         skills: ['TensorFlow', 'Scikit-Learn', 'Python'],
       },
-      {
-        id: 'aus-bsc-computer-engineering',
-        title: 'B.S. in Computer Engineering',
-        employmentPeriod: {
-          start: '08.2023',
-          end: '12.2026',
-        },
-        icon: 'education',
-        description:
-          'GPA 3.96 / 4.0. President of Tau Beta Pi, previously chapter Vice President, and Treasurer of the IEEE Solid-State Circuits Society. Academic Merit Scholarship, Dean\'s List (x6), Chancellor\'s List (x3).\n\nRelevant coursework: Machine Learning, Data Structures and Algorithms, Computer Architecture, Computer Networks, Wireless Communications.',
-        skills: [],
-      },
     ],
   },
 ];

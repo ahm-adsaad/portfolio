@@ -33,7 +33,7 @@ const USER: User = {
   name: 'Ahmad Saad',
   email: 'ahmadd.saad02@gmail.com',
   domain: 'ahmadsaad.dev',
-  jobTitle: 'AI Engineer · Forward Deployed · Computer Engineering @ AUS',
+  jobTitle: 'AI Engineer · Forward Deployed Engineer · Computer Engineering @ AUS',
   username: 'ahm-adsaad',
   tagline: 'Building production AI systems',
   twitterHandle: '',

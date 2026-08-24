@@ -42,7 +42,8 @@ export const PROJECTS: Project[] = [
     },
     // Repo is private while it is prepared for public release.
     // Add link + github (github.com/ahm-adsaad/trend-radar) once it is public.
-    // TODO: cover image pending
+    // Placeholder cover; overwrite public/projects/trend-radar.jpg with a real shot.
+    image: '/projects/trend-radar.jpg',
     skills: [
       'TypeScript',
       'Node.js',
@@ -67,7 +68,8 @@ export const PROJECTS: Project[] = [
     },
     link: 'https://github.com/ahm-adsaad/LocalAI',
     github: 'https://github.com/ahm-adsaad/LocalAI',
-    // TODO: cover image pending
+    // Placeholder cover; overwrite public/projects/localai.jpg with a real shot.
+    image: '/projects/localai.jpg',
     skills: [
       'TypeScript',
       'React',
@@ -90,9 +92,8 @@ export const PROJECTS: Project[] = [
     },
     link: 'https://github.com/ahm-adsaad/manos-basic-computer-simulator',
     github: 'https://github.com/ahm-adsaad/manos-basic-computer-simulator',
-    // TODO: replace with a real screenshot of the simulator
-    image:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&h=640&fit=crop&q=70&auto=format',
+    // Placeholder cover; overwrite public/projects/mano-computer-simulator.jpg with a real shot.
+    image: '/projects/mano-computer-simulator.jpg',
     skills: ['Python'],
     shortDescription:
       "Cycle-accurate CPU simulator of Mano's Basic Computer with full ISA support and a CLI debugger.",
@@ -103,11 +104,11 @@ export const PROJECTS: Project[] = [
     id: 'lorawan-sensor-node',
     title: 'Energy Harvesting LoRaWAN Sensor Node',
     period: {
-      // TODO: confirm the actual project date
-      start: '2025',
+      start: '2026',
     },
     // No public repo; best presented visually.
-    // TODO: board renders / schematic captures / current-profile plots pending
+    // Placeholder cover; overwrite public/projects/lorawan-sensor-node.jpg with a board render.
+    image: '/projects/lorawan-sensor-node.jpg',
     skills: ['EasyEDA', 'PCB design', 'Embedded systems'],
     shortDescription:
       'Custom 2-layer PCB with an ATMEGA4809 MCU, LoRa transceiver, and an energy harvesting power path.',
@@ -122,9 +123,8 @@ export const PROJECTS: Project[] = [
     },
     link: 'https://ahmadsaad.dev',
     github: 'https://github.com/ahm-adsaad/portfolio',
-    // TODO: replace with a real screenshot of the site
-    image:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=640&fit=crop&q=70&auto=format',
+    // Placeholder cover; overwrite public/projects/portfolio.jpg with a real screenshot.
+    image: '/projects/portfolio.jpg',
     skills: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
     shortDescription:
       'This site: a personal portfolio with a 3D coverflow project showcase, deployed on Cloudflare Workers.',

@@ -33,13 +33,13 @@ const USER: User = {
   name: 'Ahmad Saad',
   email: 'ahmadd.saad02@gmail.com',
   domain: 'ahmadsaad.dev',
-  jobTitle: 'AI Engineer · Computer Engineering @ AUS',
+  jobTitle: 'AI Engineer · Forward Deployed · Computer Engineering @ AUS',
   username: 'ahm-adsaad',
   tagline: 'Building production AI systems',
   twitterHandle: '',
   location: 'Abu Dhabi / Sharjah, United Arab Emirates',
   description:
-    'Computer Engineering senior at the American University of Sharjah shipping production AI systems: LLM pipelines with real cost governance, evaluation, and stakeholders. UAE Golden Visa holder, available January 2027.',
+    'Computer Engineering senior at the American University of Sharjah shipping production AI systems: LLM pipelines with real cost governance, evaluation, and stakeholders. Forward deployed engineer: technical enough to build the system, comfortable enough to scope it. UAE Golden Visa holder, available January 2027.',
   namePronunciationUrl: '',
   social: {
     twitter: '',
@@ -49,6 +49,7 @@ const USER: User = {
   },
   flipSentences: [
     'Building production AI systems.',
+    'Forward deployed: build it, scope it, ship it.',
     'Measurement decides, LLMs describe.',
     'From scoped idea to shipped system.',
   ],

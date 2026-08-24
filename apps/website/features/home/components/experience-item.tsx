@@ -38,7 +38,7 @@ export function ExperienceItem({
   const allSkills = experience.positions.flatMap((p) => p.skills ?? []);
   const allDescriptions = experience.positions
     .map((p) => {
-      const period = `**${p.title}** · ${p.employmentType ?? ''} (${p.employmentPeriod.start} — ${p.employmentPeriod.end ?? 'Present'})`;
+      const period = `**${p.title}** · ${p.employmentType ?? ''} (${p.employmentPeriod.start} - ${p.employmentPeriod.end ?? 'Present'})`;
       return p.description ? `${period}\n\n${p.description}` : period;
     })
     .join('\n\n');
@@ -83,7 +83,7 @@ export function ExperienceItem({
                     <span>{start}</span>
                     {!isSinglePeriod && (
                       <>
-                        <span className="font-mono">—</span>
+                        <span className="font-mono">-</span>
                         {isOngoing ? (
                           <>
                             <InfinityIcon

@@ -28,7 +28,7 @@ export function GitHubContributionGraph({
       blockSize={9}
       blockMargin={3}
       labels={{
-        totalCount: '{{count}} contributions in 2025-26',
+        totalCount: '{{count}} contributions in the last year',
       }}
     >
       <ContributionGraphCalendar className="no-scrollbar">

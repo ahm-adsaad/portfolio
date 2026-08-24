@@ -7,12 +7,12 @@ import {
 import { PROJECTS, type Project } from '@/config/projects';
 import { cn } from '@/lib/utils';
 
-/** "05.2025" → "2025"; with an end date, "2023–2025" (or just the year if equal). */
+/** "05.2025" → "2025"; with an end date, "2023-2025" (or just the year if equal). */
 function periodLabel(period: Project['period']): string {
   const startYear = period.start.slice(-4);
   const endYear = period.end?.slice(-4);
   if (!endYear || endYear === startYear) return startYear;
-  return `${startYear}–${endYear}`;
+  return `${startYear}-${endYear}`;
 }
 
 function toSlide(project: Project): CoverflowSlide {

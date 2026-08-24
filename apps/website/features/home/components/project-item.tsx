@@ -75,7 +75,7 @@ export function ProjectItem({
                     <span>{start}</span>
                     {!isSinglePeriod && (
                       <>
-                        <span className="font-mono">—</span>
+                        <span className="font-mono">-</span>
                         {isOngoing ? (
                           <>
                             <InfinityIcon

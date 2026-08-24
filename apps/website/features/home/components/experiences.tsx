@@ -68,7 +68,7 @@ export function Experiences() {
                   </div>
                   <p className="text-sm text-foreground/60 leading-relaxed">
                     {experience.positions[0]?.employmentPeriod.start}
-                    {' — '}
+                    {' - '}
                     {experience.positions[0]?.employmentPeriod.end || '∞'}
                   </p>
                 </div>

@@ -346,7 +346,7 @@
       "name": "utils",
       "type": "registry:lib",
       "title": "Utility Functions",
-      "author": "ahm-adsaad <mohammeddabbagh3@gmail.com>",
+      "author": "ahm-adsaad <ahmadd.saad02@gmail.com>",
       "dependencies": [
         "clsx",
         "tailwind-merge"

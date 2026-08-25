@@ -1,0 +1,967 @@
+{
+ "desktop-1440-light": {
+  "vitals": {
+   "lcp": 2488,
+   "lcpEl": "P .whitespace-pre-line text-sm text-foregro",
+   "cls": 0.07677468010545267,
+   "shifts": [
+    {
+     "v": 0.0689,
+     "t": 2449,
+     "nodes": [
+      "DIV.",
+      "DIV.",
+      "DIV."
+     ]
+    },
+    {
+     "v": 0.0079,
+     "t": 2469,
+     "nodes": [
+      "SECTION.",
+      "DIV.relative mx-auto w-full max-w-",
+      "DIV.absolute hidden h-1.5 w-1.5 bg"
+     ]
+    }
+   ],
+   "fcp": 2476,
+   "ttfb": 1921.6000000014901,
+   "domInteractive": 2451.800000000745,
+   "load": 2736.5,
+   "transfer": 953125,
+   "reqs": 39,
+   "byType": {
+    "link": {
+     "n": 15,
+     "bytes": 592557
+    },
+    "script": {
+     "n": 21,
+     "bytes": 316447
+    },
+    "xmlhttprequest": {
+     "n": 1,
+     "bytes": 300
+    },
+    "fetch": {
+     "n": 2,
+     "bytes": 21036
+    }
+   },
+   "docHeight": 900,
+   "overflowX": false
+  },
+  "a11y": {
+   "links": [
+    {
+     "tag": "A",
+     "href": "/",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/portfolio",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "/Ahmad_Saad_CV.pdf",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Mute sounds",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Scroll to top",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "/llms-full.txt",
+     "name": "llms-full.txt",
+     "w": 65,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "/llms.txt",
+     "name": "llms.txt",
+     "w": 42,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Toggle drawer",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Pronounce my name",
+     "w": 16,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Samsung Gulf Electronics06.2026 - 08.2026",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.samsung.com/ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Electro-Mechanical Company LLC12.2025 - 01.2026",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.elmec.ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Chief Nest09.2025 - \u221e",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://chiefnest.com",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "ONBRND09.2025 - 02.2026",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "American University of Sharjah11.2024 - \u221e",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar",
+     "w": 78,
+     "h": 23,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar on GitHub",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "ahmadd.saad02@gmail.com",
+     "w": 203,
+     "h": 22,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 62,
+     "h": 22,
+     "visible": true
+    }
+   ],
+   "h1": [
+    "Ahmad Saad"
+   ],
+   "reducedMotionCanvas": false
+  }
+ },
+ "desktop-1440-dark": {
+  "vitals": {
+   "lcp": 1692,
+   "lcpEl": "P .whitespace-pre-line text-sm text-foregro",
+   "cls": 0.07896639821244857,
+   "shifts": [
+    {
+     "v": 0.079,
+     "t": 1662,
+     "nodes": [
+      "DIV.",
+      "DIV.",
+      "DIV."
+     ]
+    }
+   ],
+   "fcp": 1664,
+   "ttfb": 1173.699999999255,
+   "domInteractive": 1435.6000000014901,
+   "load": 1906.699999999255,
+   "transfer": 953315,
+   "reqs": 39,
+   "byType": {
+    "link": {
+     "n": 15,
+     "bytes": 592509
+    },
+    "script": {
+     "n": 21,
+     "bytes": 316612
+    },
+    "xmlhttprequest": {
+     "n": 1,
+     "bytes": 300
+    },
+    "fetch": {
+     "n": 2,
+     "bytes": 21036
+    }
+   },
+   "docHeight": 900,
+   "overflowX": false
+  },
+  "a11y": {
+   "links": [
+    {
+     "tag": "A",
+     "href": "/",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/portfolio",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "/Ahmad_Saad_CV.pdf",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Mute sounds",
+     "w": 40,
+     "h": 40,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Scroll to top",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "/llms-full.txt",
+     "name": "llms-full.txt",
+     "w": 65,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "/llms.txt",
+     "name": "llms.txt",
+     "w": 42,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Toggle drawer",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Pronounce my name",
+     "w": 16,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Samsung Gulf Electronics06.2026 - 08.2026",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.samsung.com/ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Electro-Mechanical Company LLC12.2025 - 01.2026",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.elmec.ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Chief Nest09.2025 - \u221e",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://chiefnest.com",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "ONBRND09.2025 - 02.2026",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "American University of Sharjah11.2024 - \u221e",
+     "w": 680,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar",
+     "w": 78,
+     "h": 23,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar on GitHub",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "ahmadd.saad02@gmail.com",
+     "w": 203,
+     "h": 22,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 62,
+     "h": 22,
+     "visible": true
+    }
+   ],
+   "h1": [
+    "Ahmad Saad"
+   ],
+   "reducedMotionCanvas": false
+  }
+ },
+ "mobile-390-light": {
+  "vitals": {
+   "lcp": 3096,
+   "lcpEl": "P .leading-relaxed",
+   "cls": 0,
+   "shifts": [],
+   "fcp": 1712,
+   "ttfb": 1349.3999999985099,
+   "domInteractive": 1698.199999999255,
+   "load": 2221.199999999255,
+   "transfer": 953671,
+   "reqs": 39,
+   "byType": {
+    "link": {
+     "n": 15,
+     "bytes": 592662
+    },
+    "script": {
+     "n": 21,
+     "bytes": 316888
+    },
+    "xmlhttprequest": {
+     "n": 1,
+     "bytes": 300
+    },
+    "fetch": {
+     "n": 2,
+     "bytes": 21036
+    }
+   },
+   "docHeight": 844,
+   "overflowX": false
+  },
+  "a11y": {
+   "links": [
+    {
+     "tag": "A",
+     "href": "/",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/portfolio",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "/Ahmad_Saad_CV.pdf",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Mute sounds",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Scroll to top",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Toggle drawer",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Pronounce my name",
+     "w": 16,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Samsung Gulf Electronics06.2026 - 08.2026",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.samsung.com/ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Electro-Mechanical Company LLC12.2025 - 01.2026",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.elmec.ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Chief Nest09.2025 - \u221e",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://chiefnest.com",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "ONBRND09.2025 - 02.2026",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "American University of Sharjah11.2024 - \u221e",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar",
+     "w": 78,
+     "h": 23,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar on GitHub",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "ahmadd.saad02@gmail.com",
+     "w": 203,
+     "h": 22,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 62,
+     "h": 22,
+     "visible": true
+    }
+   ],
+   "h1": [
+    "Ahmad Saad"
+   ],
+   "reducedMotionCanvas": false
+  }
+ },
+ "mobile-390-dark": {
+  "vitals": {
+   "lcp": 3176,
+   "lcpEl": "P .leading-relaxed",
+   "cls": 0,
+   "shifts": [],
+   "fcp": 2024,
+   "ttfb": 1605.6000000014901,
+   "domInteractive": 2011.6000000014901,
+   "load": 2280.5,
+   "transfer": 953339,
+   "reqs": 39,
+   "byType": {
+    "link": {
+     "n": 15,
+     "bytes": 592543
+    },
+    "script": {
+     "n": 21,
+     "bytes": 316623
+    },
+    "xmlhttprequest": {
+     "n": 1,
+     "bytes": 300
+    },
+    "fetch": {
+     "n": 2,
+     "bytes": 21036
+    }
+   },
+   "docHeight": 844,
+   "overflowX": false
+  },
+  "a11y": {
+   "links": [
+    {
+     "tag": "A",
+     "href": "/",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/portfolio",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "/Ahmad_Saad_CV.pdf",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Mute sounds",
+     "w": 0,
+     "h": 0,
+     "visible": false
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Scroll to top",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Toggle drawer",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Pronounce my name",
+     "w": 16,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Samsung Gulf Electronics06.2026 - 08.2026",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.samsung.com/ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Electro-Mechanical Company LLC12.2025 - 01.2026",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.elmec.ae/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "Chief Nest09.2025 - \u221e",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://chiefnest.com",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "ONBRND09.2025 - 02.2026",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "BUTTON",
+     "href": null,
+     "name": "American University of Sharjah11.2024 - \u221e",
+     "w": 358,
+     "h": 55,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar",
+     "w": 78,
+     "h": 23,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://github.com/ahm-adsaad/trend-radar",
+     "name": "Trend Radar on GitHub",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.aus.edu/",
+     "name": "",
+     "w": 24,
+     "h": 24,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "mailto:ahmadd.saad02@gmail.com",
+     "name": "ahmadd.saad02@gmail.com",
+     "w": 203,
+     "h": 22,
+     "visible": true
+    },
+    {
+     "tag": "A",
+     "href": "https://www.linkedin.com/in/ahmaddsaad",
+     "name": "LinkedIn",
+     "w": 62,
+     "h": 22,
+     "visible": true
+    }
+   ],
+   "h1": [
+    "Ahmad Saad"
+   ],
+   "reducedMotionCanvas": false
+  }
+ }
+}

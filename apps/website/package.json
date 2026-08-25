@@ -19,9 +19,10 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "start": "next start",
     "ensure-next-symlink": "node ./scripts/ensure-next-symlink.mjs",
-    "preview": "pnpm ensure-next-symlink && opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "pnpm ensure-next-symlink && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "preview": "pnpm ensure-next-symlink && opennextjs-cloudflare build && pnpm assert-static-prerender && opennextjs-cloudflare preview",
+    "deploy": "pnpm ensure-next-symlink && opennextjs-cloudflare build && pnpm assert-static-prerender && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "assert-static-prerender": "node ./scripts/assert-static-prerender.mjs"
   },
   "dependencies": {
     "@arcjet/ip": "1.0.0-beta.11",

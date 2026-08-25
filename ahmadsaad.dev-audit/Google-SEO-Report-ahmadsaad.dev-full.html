@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 22mm 18mm 25mm 18mm;
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages);
+      font-size: 9pt;
+      color: #6b7280;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+    @bottom-left {
+      content: "Confidential";
+      font-size: 7pt;
+      color: #d6d3cc;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+    @bottom-right {
+      content: "ahmadsaad.dev Google SEO Report";
+      font-size: 8pt;
+      color: #cbd5e1;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+  }
+
+  @page :first {
+    margin: 0;
+    @bottom-left { content: none; }
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  @page toc {
+    @bottom-center {
+      content: counter(page);
+      font-size: 9pt;
+      color: #6b7280;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Times New Roman', 'DejaVu Serif', Georgia, serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: white;
+  }
+
+  /* ─── Title Page (Clean White) ─── */
+  .title-page {
+    page: first;
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1a1a2e;
+    position: relative;
+    padding: 50mm 30mm 40mm 30mm;
+    border-top: 6mm solid #1e3a5f;
+  }
+
+  .title-page .badge {
+    background: #f7f6f3;
+    border: 1px solid #d6d3cc;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 9pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15mm;
+    color: #1e3a5f;
+  }
+
+  .title-page h1 {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-bottom: 5mm;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #1a1a2e;
+  }
+
+  .title-page .subtitle {
+    font-size: 13pt;
+    color: #6b7280;
+    margin-bottom: 12mm;
+    font-weight: 300;
+  }
+
+  .title-page .url {
+    font-size: 12pt;
+    color: #1e3a5f;
+    margin-bottom: 15mm;
+    padding: 4mm 8mm;
+    border: 1px solid #d6d3cc;
+    border-radius: 6px;
+    background: #faf9f7;
+  }
+
+  .title-page .score-box {
+    background: #faf9f7;
+    border: 2px solid #d6d3cc;
+    border-radius: 12px;
+    padding: 6mm 12mm;
+    margin-bottom: 15mm;
+  }
+
+  .title-page .score-number {
+    font-size: 42pt;
+    font-weight: bold;
+    color: #1e3a5f;
+    line-height: 1;
+  }
+
+  .title-page .score-label {
+    font-size: 10pt;
+    color: #6b7280;
+    margin-top: 2mm;
+  }
+
+  .title-page .meta {
+    font-size: 9pt;
+    color: #6b7280;
+    margin-top: 8mm;
+    padding-top: 5mm;
+    border-top: 1px solid #d6d3cc;
+  }
+
+  .title-page .meta span {
+    margin: 0 8px;
+  }
+
+  /* ─── Table of Contents ─── */
+  .toc-page {
+    page: toc;
+    page-break-before: always;
+  }
+
+  .toc-page h2 {
+    font-size: 18pt;
+    color: #1e3a5f;
+    margin-bottom: 8mm;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid #1e3a5f;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .toc-list li {
+    padding: 2mm 0;
+    border-bottom: 1px solid #f1f5f9;
+    overflow: hidden;
+  }
+
+  .toc-list li.toc-section {
+    font-weight: bold;
+    font-size: 11pt;
+    padding-top: 4mm;
+    color: #0f172a;
+  }
+
+  .toc-list li.toc-sub {
+    padding-left: 8mm;
+    font-size: 9.5pt;
+    color: #475569;
+  }
+
+  .toc-score {
+    display: inline-block;
+    float: right;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 9pt;
+    font-weight: bold;
+    color: white;
+  }
+
+  .score-good { background: #2d6a4f; }
+  .score-warn { background: #d4740e; }
+  .score-bad { background: #c53030; }
+
+  /* ─── Section Styles ─── */
+  div.section {
+    page-break-before: always;
+  }
+
+  .section-header {
+    background: #faf9f7;
+    border-left: 4px solid #1e3a5f;
+    padding: 5mm 6mm;
+    margin-bottom: 6mm;
+    page-break-after: avoid;
+  }
+
+  .section-header h2 {
+    font-size: 16pt;
+    color: #0f172a;
+    margin-bottom: 1mm;
+  }
+
+  .section-header .section-score {
+    font-size: 12pt;
+    font-weight: bold;
+    float: right;
+    margin-top: -6mm;
+  }
+
+  h3 {
+    font-size: 12pt;
+    color: #1e3a5f;
+    margin-top: 6mm;
+    margin-bottom: 3mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 1px solid #d6d3cc;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 10.5pt;
+    color: #334155;
+    margin-top: 4mm;
+    margin-bottom: 2mm;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 3mm;
+    color: #334155;
+  }
+
+  .highlight {
+    background: #fef3c7;
+    border-left: 3px solid #d4740e;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .critical-box {
+    background: #fef2f2;
+    border-left: 3px solid #c53030;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .success-box {
+    background: #f0fdf4;
+    border-left: 3px solid #2d6a4f;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4mm 0 6mm 0;
+    font-size: 9pt;
+  }
+
+  thead th {
+    background: #f7f6f3;
+    color: #0f172a;
+    font-weight: bold;
+    padding: 3mm 4mm;
+    text-align: left;
+    border-bottom: 2px solid #d6d3cc;
+    font-size: 9pt;
+  }
+
+  tbody td {
+    padding: 2.5mm 3mm;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #fdfcfa;
+  }
+
+  .status-pass {
+    color: #2d6a4f;
+    font-weight: bold;
+  }
+
+  .status-fail {
+    color: #c53030;
+    font-weight: bold;
+  }
+
+  .status-warn {
+    color: #d4740e;
+    font-weight: bold;
+  }
+
+  .status-partial {
+    color: #4a5568;
+    font-weight: bold;
+  }
+
+  /* ─── Charts ─── */
+  .chart-container {
+    text-align: center;
+    margin: 4mm 0;
+  }
+
+  .chart-container img {
+    max-width: 100%;
+    max-height: 120mm;
+    height: auto;
+  }
+
+  .chart-caption {
+    font-size: 8.5pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 2mm;
+    text-align: center;
+  }
+
+  .chart-half {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: center;
+    margin: 2mm 0;
+  }
+
+  .chart-half img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ─── Two column layout ─── */
+  .two-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 3mm 0;
+  }
+
+  .two-col .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 2mm;
+  }
+
+  .four-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 3mm 0;
+  }
+
+  .four-col .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 1.5mm;
+  }
+
+  /* ─── Metric Cards ─── */
+  .metric-card {
+    background: #faf9f7;
+    border: 1px solid #d6d3cc;
+    border-radius: 6px;
+    padding: 2.5mm 3mm;
+    text-align: center;
+    margin: 2mm 0;
+  }
+
+  .metric-card .value {
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .metric-card .label {
+    font-size: 7.5pt;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1mm;
+  }
+
+  /* ─── Action Plan ─── */
+  .action-item {
+    background: #faf9f7;
+    border-radius: 4px;
+    padding: 3mm 4mm;
+    margin: 3mm 0;
+    border-left: 3px solid #cbd5e1;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .action-item.critical {
+    border-left-color: #c53030;
+    background: #fdf2f2;
+  }
+
+  .action-item.high {
+    border-left-color: #d4740e;
+    background: #fdf8ef;
+  }
+
+  .action-item.medium {
+    border-left-color: #1e3a5f;
+    background: #f0f4f8;
+  }
+
+  .action-item.low {
+    border-left-color: #94a3b8;
+  }
+
+  .action-item h4 {
+    margin-top: 0;
+    margin-bottom: 1.5mm;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .action-item .effort {
+    font-size: 8.5pt;
+    color: #64748b;
+    float: right;
+  }
+
+  .priority-tag {
+    display: inline-block;
+    padding: 0.5mm 3mm;
+    border-radius: 3px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: white;
+    margin-right: 2mm;
+    vertical-align: middle;
+  }
+
+  .priority-critical { background: #c53030; }
+  .priority-high { background: #d4740e; }
+  .priority-medium { background: #1e3a5f; }
+  .priority-low { background: #94a3b8; }
+
+  /* ─── Code blocks ─── */
+  .code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 3mm 4mm;
+    border-radius: 4px;
+    font-family: 'DejaVu Sans Mono', monospace;
+    font-size: 8pt;
+    line-height: 1.6;
+    margin: 3mm 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  /* ─── Divider ─── */
+  .divider {
+    border: none;
+    border-top: 1px solid #d6d3cc;
+    margin: 5mm 0;
+  }
+
+  /* ─── Roadmap ─── */
+  .roadmap-phase {
+    background: #faf9f7;
+    border-radius: 6px;
+    padding: 4mm 5mm;
+    margin: 4mm 0;
+    border: 1px solid #d6d3cc;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .roadmap-phase h4 {
+    margin-top: 0;
+    border-bottom: none;
+    color: #1e3a5f;
+  }
+
+  .roadmap-phase ul {
+    margin: 2mm 0 0 5mm;
+    padding: 0;
+  }
+
+  .roadmap-phase li {
+    margin-bottom: 1.5mm;
+    font-size: 9.5pt;
+    color: #334155;
+  }
+
+  /* ─── Lists ─── */
+  ul {
+    margin-left: 5mm;
+    margin-bottom: 3mm;
+  }
+
+  li {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Data freshness ─── */
+  .data-freshness {
+    font-size: 8pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid #d6d3cc;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ======================================================= TITLE PAGE === -->
+<div class="title-page">
+  <div class="badge">Full SEO Audit Report</div>
+  <h1>ahmadsaad.dev</h1>
+  <div class="subtitle">Prepared by Claude SEO</div>
+  <div class="score-box">
+    <div class="score-number">46<span style="font-size: 20pt; color: #94a3b8;">/100</span></div>
+    <div class="score-label">SEO Health Score</div>
+  </div>
+  <div class="meta">
+    <span>August 24, 2026</span>
+    <span>Full Audit</span>
+  </div>
+</div>
+
+
+<!-- ======================================================= TABLE OF CONTENTS === -->
+<div class="toc-page">
+  <h2>Table of Contents</h2>
+  <ul class="toc-list">
+    <li class="toc-section"><span>1. Executive Summary</span></li>
+    <li class="toc-sub"><span>Key Metrics, Critical Issues &amp; Quick Wins</span></li>
+    <li class="toc-section"><span>2. Audit Categories</span></li>
+    <li class="toc-sub"><span>What Works</span></li>
+    <li class="toc-sub"><span>Findings by Severity</span></li>
+    <li class="toc-section"><span>3. Action Plan</span></li>
+    <li class="toc-sub"><span>Phased Roadmap</span></li>
+    <li class="toc-section"><span>4. Data Sources &amp; Methodology</span></li>
+  </ul>
+</div>
+
+
+<!-- ======================================================= 1. EXECUTIVE SUMMARY === -->
+<div class="section">
+  <div class="section-header">
+    <h2>1. Executive Summary</h2>
+  </div>
+
+  <p>This report presents a comprehensive SEO audit of <strong>ahmadsaad.dev</strong> for a <strong>Personal portfolio / personal brand (AI engineer, UAE)</strong> site, generated on August 24, 2026. Findings combine technical, content, schema, performance, visual, and search-readiness evidence as available.</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="metric-card">
+        <div class="value" style="color: #c53030;">46/100</div>
+        <div class="label">SEO Health Score</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="critical-box">
+    <strong>Critical Issues Found:</strong>
+    <ol>
+      <li><strong>Info:</strong> No canonical URL: http/https x apex/www all return 200 with no redirect; a metadataBase bug (https://https//ahmadsaad.dev/) would corrupt a relative canonical</li>
+      <li><strong>Info:</strong> JSON-LD is an empty Organization stub instead of a populated Person/WebSite/ProfilePage graph with sameAs</li>
+      <li><strong>Info:</strong> ~80% of proof-of-work content (4 role descriptions, 4 project captions) is unmounted from the DOM and invisible to crawlers and AI agents</li>
+      <li><strong>Info:</strong> AI-facing endpoints broken: template llms.txt/llms-full.txt from scripts/build-registry.mts shadow the route handlers, /me/craft.md returns 500, /me/experience.md is title-only</li>
+      <li><strong>Info:</strong> Mobile performance gated by one 174 KB JS chunk (~7 s throttled long task), TTFB 1.1-1.9 s with x-nextjs-cache MISS, 400 KB of eagerly preloaded oversized images, 3 dead analytics requests</li>
+    </ol>
+  </div>
+
+  <div class="success-box">
+    <strong>Quick Wins:</strong>
+    <ol>
+      <li>Cloudflare Always-Use-HTTPS + www-&gt;apex 301 redirect rule; fix metadataBase; add canonical; hardcode base URL</li>
+      <li>Paste the Person/WebSite/ProfilePage graph from findings/schema.md into app/page.tsx</li>
+      <li>Remove &#x27;/_next/&#x27; from disallow in app/robots.ts</li>
+      <li>Shorten the meta description to &lt;=160 chars (rewrite in findings/content.md)</li>
+      <li>Delete buildLlmsFiles() from scripts/build-registry.mts, remove the Vercel analytics scripts, gate Umami on its env var, purge the Cloudflare cache for /llms*.txt</li>
+    </ol>
+  </div>
+
+</div>
+
+<!-- ======================================================= 2. AUDIT CATEGORIES === -->
+<div class="section">
+  <div class="section-header">
+    <h2>2. Audit Categories</h2>
+  </div>
+
+  <h3>2.1 Technical SEO</h3>
+  <p><strong>Score:</strong> <span class="status-fail">38/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Fully prerendered HTML (344 KB with content, no SPA dependency)</li>
+    <li>Proper 404 status for unknown paths</li>
+    <li>robots.txt references the sitemap; AI-training crawler policy already right-shaped</li>
+    <li>Valid single-URL sitemap</li>
+    <li>Viewport meta, lang=en, favicon/apple-icon/manifest present</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>No canonical + 4 duplicate URL variants (http/https x apex/www) <span class="status-warn">Critical</span></h4>
+    <p>All four variants return 200 with no redirect and no &lt;link rel=canonical&gt;; www&#x27;s sitemap/robots self-report www URLs (host-derived in lib/server-url.ts). lib/seo/metadata.tsx builds metadataBase as new URL(&#x27;https://https://ahmadsaad.dev/&#x27;).</p>
+    <p><strong>Recommendation:</strong> Cloudflare Always Use HTTPS + www-&gt;apex 301 rule (or middleware.ts); hardcode the base in lib/server-url.ts; metadataBase: new URL(productionUrl); alternates.canonical &#x27;/&#x27;.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>robots.txt disallows /_next/ for every crawler <span class="status-warn">High</span></h4>
+    <p>Cloudflare-managed and app-generated User-agent: * groups merge; hashed CSS/JS/font chunks under /_next/static/ are blocked for Googlebot.</p>
+    <p><strong>Recommendation:</strong> Remove &#x27;/_next/&#x27; (and &#x27;/public/&#x27;) from disallow in app/robots.ts.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No security headers <span class="status-warn">High</span></h4>
+    <p>HSTS, CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy and Permissions-Policy are all absent on every response.</p>
+    <p><strong>Recommendation:</strong> Add headers() in next.config.mjs or public/_headers; enable HSTS in Cloudflare.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Hashed static assets not cached immutably <span class="status-warn">Medium</span></h4>
+    <p>/_next/static/*.css served with Cache-Control: public, max-age=0, must-revalidate.</p>
+    <p><strong>Recommendation:</strong> Cache-Control: public, max-age=31536000, immutable for /_next/static/:path*.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Dead analytics requests on every page load <span class="status-warn">Medium</span></h4>
+    <p>/stats/script.js (Umami, 404, NEXT_PUBLIC_UMAMI_WEBSITE_ID unset) plus /_vercel/insights/script.js and /_vercel/speed-insights/script.js on a Cloudflare deployment.</p>
+    <p><strong>Recommendation:</strong> Remove the Vercel scripts; render the Umami &lt;Script&gt; only when the env var is set.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Sitemap lastmod changes on every request <span class="status-warn">Medium</span></h4>
+    <p>app/sitemap.ts uses dayjs() at request time; two fetches 3 s apart returned different lastmod values.</p>
+    <p><strong>Recommendation:</strong> Use a manually bumped content date (code in findings/sitemap.md).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>og:image declared 1200x630 but the asset is 1600x836 <span class="status-warn">Medium</span></h4>
+    <p>createMetadata hardcodes 1200x630; createOgImage generates w_1600,h_836.</p>
+    <p><strong>Recommendation:</strong> Pass the real dimensions from createOgImage.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>HTML served with x-nextjs-cache: MISS on every fetch <span class="status-warn">Info</span></h4>
+    <p>Observed on all fetches; lab TTFB 1.1-1.9 s.</p>
+    <p><strong>Recommendation:</strong> Check the OpenNext ISR/cache configuration so the prerendered page is served from cache.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.2 Content Quality</h3>
+  <p><strong>Score:</strong> <span class="status-warn">58/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>content_quality.py 95/100: zero filler, zero AI-pattern markers</li>
+    <li>Claims hedged honestly (estimated $60K, projected 20%)</li>
+    <li>Clear who/what/where/when-available statements in the intro</li>
+    <li>Portfolio-page word floor met (635 visible words)</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Client-side collapse unmounts ~80% of proof-of-work content <span class="status-warn">Critical</span></h4>
+    <p>Radix CollapsibleContent without forceMount and a carousel that renders only the active caption: 4 role descriptions and 4 project captions have 0 matches in the rendered HTML.</p>
+    <p><strong>Recommendation:</strong> forceMount + CSS hide; render every slide caption (visually hidden when inactive).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>/me/experience.md is title-only (71 words) <span class="status-warn">Critical</span></h4>
+    <p>Description/skills interpolation is commented out in app/(llms)/me/experience.md/route.ts.</p>
+    <p><strong>Recommendation:</strong> Restore the interpolation.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Meta description is 313 chars <span class="status-warn">High</span></h4>
+    <p>USER.description is reused verbatim as meta, og:description and about.md; the SERP truncates at ~155 chars.</p>
+    <p><strong>Recommendation:</strong> Separate ~150-char meta description (rewrite in findings/content.md).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No language for the #1 target audience (technical PM) <span class="status-warn">Medium</span></h4>
+    <p>Zero occurrences of product/roadmap/prioritisation terms in the visible text despite the portfolio-context.md priority order.</p>
+    <p><strong>Recommendation:</strong> Add one PM-framing sentence in the hero or skills block.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>9 of 14 links lack an accessible name <span class="status-warn">Medium</span></h4>
+    <p>Icon-only home/GitHub/CV/mailto and company-logo links have no text, aria-label or title.</p>
+    <p><strong>Recommendation:</strong> Add aria-labels.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Freshness: Samsung role marked current though it ended 08.2026 <span class="status-warn">Low</span></h4>
+    <p>isCurrentEmployer is true on the only expanded card.</p>
+    <p><strong>Recommendation:</strong> Update the flags; Chief Nest / AUS AI Hub are the open-ended roles.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.3 On-Page SEO</h3>
+  <p><strong>Score:</strong> <span class="status-warn">55/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Title &#x27;Building production AI systems | Ahmad Saad&#x27; (44 chars)</li>
+    <li>Single H1 = name; H2 per section; H3 per role</li>
+    <li>Complete OG/Twitter cards</li>
+    <li>Authoritative outbound links (employers, university, GitHub, LinkedIn)</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>No &lt;link rel=canonical&gt; <span class="status-warn">Critical</span></h4>
+    <p>See Technical SEO.</p>
+    <p><strong>Recommendation:</strong> alternates.canonical after fixing metadataBase.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Section body text mostly absent from the DOM <span class="status-warn">Critical</span></h4>
+    <p>See Content Quality.</p>
+    <p><strong>Recommendation:</strong> See Content Quality.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Flagship project links to a private repo; LocalAI not described <span class="status-warn">High</span></h4>
+    <p>github.com/ahm-adsaad/trend-radar is linked twice while the brief says it is private; LocalAI (the best live-demo candidate) only appears as a tech chip.</p>
+    <p><strong>Recommendation:</strong> Make the repo public or relabel the link; add a LocalAI description + live-demo CTA.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>CV link is icon-only <span class="status-warn">Medium</span></h4>
+    <p>&lt;a href=/Ahmad_Saad_CV.pdf&gt; wraps a bare SVG.</p>
+    <p><strong>Recommendation:</strong> Visible &#x27;Download CV (PDF)&#x27; text + aria-label.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.4 Schema / Structured Data</h3>
+  <p><strong>Score:</strong> <span class="status-fail">12/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>JSON-LD is used (correct format)</li>
+    <li>No deprecated FAQPage/HowTo</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Empty, wrong-type JSON-LD <span class="status-warn">Critical</span></h4>
+    <p>{&quot;@type&quot;:&quot;Organization&quot;,&quot;@context&quot;:&quot;https://schema.org&quot;} with no properties (app/page.tsx:39-46).</p>
+    <p><strong>Recommendation:</strong> Replace with the Person + WebSite + ProfilePage graph (findings/schema.md section 5); widen the JsonLd prop type to WithContext&lt;Thing&gt; | Graph.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No sameAs / alumniOf / worksFor entity links <span class="status-warn">High</span></h4>
+    <p>Data exists in config/user.ts, config/experience.ts and config/education.ts but is never emitted.</p>
+    <p><strong>Recommendation:</strong> Included in the replacement graph.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No SoftwareSourceCode for public repos <span class="status-warn">Medium</span></h4>
+    <p>Optional; the 5 project links are server-rendered.</p>
+    <p><strong>Recommendation:</strong> Add once repo visibility is settled.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.5 Performance (CWV)</h3>
+  <p><strong>Score:</strong> <span class="status-warn">51/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Desktop LCP 1.4-2.5 s (good/borderline)</li>
+    <li>Mobile CLS 0 (Playwright) / 0.069 (Lighthouse)</li>
+    <li>Cloudflare edge + HTTP/3</li>
+    <li>LCP element is server-rendered text, so no image dependency</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>One JS chunk blocks the main thread before the LCP text paints <span class="status-warn">Critical</span></h4>
+    <p>224-b51a9b702c283363.js (174 KB) runs a single long task (~7 s at 4x throttle, 2.1 s desktop); mobile LCP 6-13 s, TBT up to 6.6 s. Compounded by the RevealOnLoad opacity animation on the intro.</p>
+    <p><strong>Recommendation:</strong> Code-split heavy client components with next/dynamic({ssr:false}); render the hero visible by default; tighten browserslist to drop ~12 KB of polyfills.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>TTFB 1.1-1.9 s on every run with x-nextjs-cache: MISS <span class="status-warn">Critical</span></h4>
+    <p>The prerendered page appears to be rendered on the Worker per request; 0 ms edge RTT, so the delay is origin work.</p>
+    <p><strong>Recommendation:</strong> Fix the OpenNext/Cloudflare cache so the HTML is served from cache; target TTFB &lt; 0.8 s.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>5 carousel JPEGs (400 KB, ~41% of page weight) eagerly preloaded and 30x oversized <span class="status-warn">Critical</span></h4>
+    <p>5x &lt;link rel=preload as=image&gt;; ~347 KB wasted per Lighthouse; never the LCP element.</p>
+    <p><strong>Recommendation:</strong> next/image with sizes/srcset and width/height; priority only on the active slide; lazy-load slides 2-5; drop the preloads.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>CLS 0.07-0.11 across runs <span class="status-warn">High</span></h4>
+    <p>Desktop culprit is the unsized carousel (0.097 of 0.106); mobile culprit is an accordion hydration race plus font swap.</p>
+    <p><strong>Recommendation:</strong> Reserve space for the carousel and the collapsible panels; open the default-expanded panel server-side.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No preconnect hints, 23 KB render-blocking CSS, Cloudflare Insights beacon ~0.66 s avoidable LCP delay <span class="status-warn">High</span></h4>
+    <p>Lighthouse critical-path audit.</p>
+    <p><strong>Recommendation:</strong> Add preconnect for remaining third-party origins; defer the beacon; inline critical CSS.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>3 dead analytics requests per load <span class="status-warn">Medium</span></h4>
+    <p>/stats/script.js (404), /_vercel/insights/script.js and /_vercel/speed-insights/script.js (wrong platform).</p>
+    <p><strong>Recommendation:</strong> Remove the Vercel scripts; gate Umami on its env var.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Hashed assets not cached immutably; 4 font preloads incl. one .otf <span class="status-warn">Medium</span></h4>
+    <p>Cache-Control max-age=0 on /_next/static; ~20 async JS chunks (309 KB) incl. motion + shooting-stars canvas.</p>
+    <p><strong>Recommendation:</strong> Immutable cache rule for /_next/static/*; keep &lt;= 2 font preloads; lazy-load decoration.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.6 AI Search Readiness</h3>
+  <p><strong>Score:</strong> <span class="status-fail">43/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Training crawlers blocked while retrieval agents (Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, Claude-User, Claude-SearchBot, PerplexityBot) are allowed</li>
+    <li>Content-Signal search=yes, ai-train=no</li>
+    <li>Quotable who/what/where/when intro passages</li>
+    <li>llms.txt convention adopted</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Template llms.txt / llms-full.txt shadow the real route handlers <span class="status-warn">Critical</span></h4>
+    <p>scripts/build-registry.mts writes public/llms.txt + llms-full.txt at build; the live llms.txt links 7 dead /craft/* URLs, a 500 (/me/craft.md) and a 404 (/me/bookmarks.md); llms-full.txt is 71 KB of template component code.</p>
+    <p><strong>Recommendation:</strong> Remove buildLlmsFiles(); adopt the draft in findings/geo.md; purge the cache.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>/me/craft.md returns HTTP 500 <span class="status-warn">High</span></h4>
+    <p>getAllPosts() reads MDX via fs.readdirSync at runtime on Workers.</p>
+    <p><strong>Recommendation:</strong> Delete the route or make it truly static.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Evidence passages hidden from agents <span class="status-warn">High</span></h4>
+    <p>Architecture / cost-governance / results text is in unmounted DOM.</p>
+    <p><strong>Recommendation:</strong> See Content Quality (action 2.1).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Weak entity signals <span class="status-warn">Medium</span></h4>
+    <p>No Person sameAs; name collision with saadahmad.dev and several public figures.</p>
+    <p><strong>Recommendation:</strong> Schema fix + owned-profile links.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.7 Images</h3>
+  <p><strong>Score:</strong> <span class="status-warn">58/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>All 5 images have descriptive alt text</li>
+    <li>Reasonable source sizes (591-1080 px)</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>No width/height or srcset; not lazy-loaded; all preloaded <span class="status-warn">Medium</span></h4>
+    <p>Plain &lt;img&gt; tags; /_next/image returns the original JPEG (optimizer inactive on Cloudflare).</p>
+    <p><strong>Recommendation:</strong> next/image with sizes + a fixed aspect-ratio wrapper; preload only the first slide.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>JPEG only; WebP would save ~46% (386 -&gt; ~209 KB) <span class="status-warn">Medium</span></h4>
+    <p>Per-file savings of 20-61%.</p>
+    <p><strong>Recommendation:</strong> Pre-convert at build time or enable an image loader.</p>
+  </div>
+  <hr class="divider">
+</div>
+
+<!-- ======================================================= 3. ACTION PLAN === -->
+<div class="section">
+  <div class="section-header">
+    <h2>3. Action Plan</h2>
+  </div>
+
+  <div class="roadmap-phase">
+    <h4>Phase 1: Get indexed correctly <span class="effort">Week 1</span></h4>
+    <ul>
+      <li>1.1 One canonical URL: HTTPS + www-&gt;apex redirect, fix metadataBase, canonical tag, hardcode base URL</li>
+      <li>1.2 Remove /_next/ from robots disallow</li>
+      <li>1.3 Person + WebSite + ProfilePage JSON-LD with sameAs</li>
+      <li>1.4 Search Console domain property, submit sitemap, static lastmod</li>
+      <li>1.5 Meta description &lt;= 160 chars</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Phase 2: Make proof-of-work crawlable; fix what&#x27;s broken <span class="effort">Weeks 2-3</span></h4>
+    <ul>
+      <li>2.1 Render collapsed role descriptions and all carousel captions in the DOM</li>
+      <li>2.2 Repair the llms.txt pipeline, experience.md, remove/fix craft.md (500), purge cache</li>
+      <li>2.3 Security headers (HSTS, XCTO, Referrer-Policy, Permissions-Policy, frame-ancestors)</li>
+      <li>2.4 Performance: code-split the 174 KB blocking chunk, un-gate the LCP text from the reveal animation, fix HTML cache MISS/TTFB, next/image + lazy, drop preloads, remove dead analytics scripts, immutable caching</li>
+      <li>2.5 aria-labels, tap targets, carousel arrows, og:image dimensions</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Phase 3: Content &amp; Authority <span class="effort">Month 2</span></h4>
+    <ul>
+      <li>3.1 Technical-PM framing sentence; LocalAI description + live demo; resolve repo visibility; refresh isCurrentEmployer</li>
+      <li>3.2 Owned-profile links: GitHub website/homepage fields, LinkedIn website, chapter pages</li>
+      <li>3.3 Two architecture write-ups for earned mentions</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Phase 4: Monitoring &amp; Iteration <span class="effort">Ongoing</span></h4>
+    <ul>
+      <li>Drift baseline now, compare after each deploy</li>
+      <li>Weekly GSC: indexed = 1, no duplicates, branded impressions</li>
+      <li>Monthly AI-assistant citation check + lab CWV</li>
+      <li>Re-audit after Phases 1-2; target &gt;= 75</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======================================================= DATA SOURCES & METHODOLOGY === -->
+<div class="section" style="text-align: center; padding-top: 15mm;">
+  <hr class="divider">
+  <h3 style="text-align: left;">Data Sources &amp; Methodology</h3>
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Description</th><th>Update Frequency</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>PageSpeed Insights API</td>
+          <td>Lighthouse lab audit (mobile emulation, Moto G Power, slow 4G)</td>
+          <td>Real-time</td></tr>
+      <tr><td>Chrome UX Report (CrUX)</td>
+          <td>28-day rolling field data from real Chrome users</td>
+          <td>Daily ~04:00 UTC</td></tr>
+      <tr><td>CrUX History API</td>
+          <td>25-week p75 trend data per metric</td>
+          <td>Weekly</td></tr>
+      <tr><td>Google Search Console</td>
+          <td>Search Analytics (clicks, impressions, CTR, position)</td>
+          <td>2-3 day lag</td></tr>
+      <tr><td>URL Inspection API</td>
+          <td>Per-URL index status, coverage state, crawl info</td>
+          <td>Real-time (2,000/day)</td></tr>
+    </tbody>
+  </table>
+  <p style="color: #94a3b8; font-size: 9pt; margin-top: 5mm;">
+    Report generated by Claude SEO &mdash; Google SEO Intelligence Skill &mdash; August 24, 2026<br>
+    Methodology based on Google Web Vitals thresholds, Search Console documentation, and Lighthouse scoring algorithms.
+  </p>
+</div>
+
+</body>
+</html>

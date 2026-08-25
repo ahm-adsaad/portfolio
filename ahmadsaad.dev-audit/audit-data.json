@@ -1,0 +1,210 @@
+{
+  "site": "https://ahmadsaad.dev",
+  "domain": "ahmadsaad.dev",
+  "audit_date": "2026-08-24",
+  "summary": {
+    "health_score": 46,
+    "business_type": "Personal portfolio / personal brand (AI engineer, UAE)",
+    "pages_crawled": 1,
+    "context": "Repository first commit and site launch: 2026-08-24 (same day as the audit). Absence from the Google index is expected; the goal is a clean first indexation.",
+    "top_findings": [
+      "No canonical URL: http/https x apex/www all return 200 with no redirect; a metadataBase bug (https://https//ahmadsaad.dev/) would corrupt a relative canonical",
+      "JSON-LD is an empty Organization stub instead of a populated Person/WebSite/ProfilePage graph with sameAs",
+      "~80% of proof-of-work content (4 role descriptions, 4 project captions) is unmounted from the DOM and invisible to crawlers and AI agents",
+      "AI-facing endpoints broken: template llms.txt/llms-full.txt from scripts/build-registry.mts shadow the route handlers, /me/craft.md returns 500, /me/experience.md is title-only",
+      "Mobile performance gated by one 174 KB JS chunk (~7 s throttled long task), TTFB 1.1-1.9 s with x-nextjs-cache MISS, 400 KB of eagerly preloaded oversized images, 3 dead analytics requests",
+      "robots.txt disallows /_next/ for all crawlers (merged User-agent: * groups), blocking CSS/JS/fonts for Googlebot"
+    ],
+    "quick_wins": [
+      "Cloudflare Always-Use-HTTPS + www->apex 301 redirect rule; fix metadataBase; add canonical; hardcode base URL",
+      "Paste the Person/WebSite/ProfilePage graph from findings/schema.md into app/page.tsx",
+      "Remove '/_next/' from disallow in app/robots.ts",
+      "Shorten the meta description to <=160 chars (rewrite in findings/content.md)",
+      "Delete buildLlmsFiles() from scripts/build-registry.mts, remove the Vercel analytics scripts, gate Umami on its env var, purge the Cloudflare cache for /llms*.txt"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "weight": 0.22,
+      "score": 38,
+      "what_works": [
+        "Fully prerendered HTML (344 KB with content, no SPA dependency)",
+        "Proper 404 status for unknown paths",
+        "robots.txt references the sitemap; AI-training crawler policy already right-shaped",
+        "Valid single-URL sitemap",
+        "Viewport meta, lang=en, favicon/apple-icon/manifest present"
+      ],
+      "findings": [
+        {"title": "No canonical + 4 duplicate URL variants (http/https x apex/www)", "severity": "Critical", "description": "All four variants return 200 with no redirect and no <link rel=canonical>; www's sitemap/robots self-report www URLs (host-derived in lib/server-url.ts). lib/seo/metadata.tsx builds metadataBase as new URL('https://https://ahmadsaad.dev/').", "recommendation": "Cloudflare Always Use HTTPS + www->apex 301 rule (or middleware.ts); hardcode the base in lib/server-url.ts; metadataBase: new URL(productionUrl); alternates.canonical '/'."},
+        {"title": "robots.txt disallows /_next/ for every crawler", "severity": "High", "description": "Cloudflare-managed and app-generated User-agent: * groups merge; hashed CSS/JS/font chunks under /_next/static/ are blocked for Googlebot.", "recommendation": "Remove '/_next/' (and '/public/') from disallow in app/robots.ts."},
+        {"title": "No security headers", "severity": "High", "description": "HSTS, CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy and Permissions-Policy are all absent on every response.", "recommendation": "Add headers() in next.config.mjs or public/_headers; enable HSTS in Cloudflare."},
+        {"title": "Hashed static assets not cached immutably", "severity": "Medium", "description": "/_next/static/*.css served with Cache-Control: public, max-age=0, must-revalidate.", "recommendation": "Cache-Control: public, max-age=31536000, immutable for /_next/static/:path*."},
+        {"title": "Dead analytics requests on every page load", "severity": "Medium", "description": "/stats/script.js (Umami, 404, NEXT_PUBLIC_UMAMI_WEBSITE_ID unset) plus /_vercel/insights/script.js and /_vercel/speed-insights/script.js on a Cloudflare deployment.", "recommendation": "Remove the Vercel scripts; render the Umami <Script> only when the env var is set."},
+        {"title": "Sitemap lastmod changes on every request", "severity": "Medium", "description": "app/sitemap.ts uses dayjs() at request time; two fetches 3 s apart returned different lastmod values.", "recommendation": "Use a manually bumped content date (code in findings/sitemap.md)."},
+        {"title": "og:image declared 1200x630 but the asset is 1600x836", "severity": "Medium", "description": "createMetadata hardcodes 1200x630; createOgImage generates w_1600,h_836.", "recommendation": "Pass the real dimensions from createOgImage."},
+        {"title": "HTML served with x-nextjs-cache: MISS on every fetch", "severity": "Info", "description": "Observed on all fetches; lab TTFB 1.1-1.9 s.", "recommendation": "Check the OpenNext ISR/cache configuration so the prerendered page is served from cache."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "weight": 0.23,
+      "score": 58,
+      "what_works": [
+        "content_quality.py 95/100: zero filler, zero AI-pattern markers",
+        "Claims hedged honestly (estimated $60K, projected 20%)",
+        "Clear who/what/where/when-available statements in the intro",
+        "Portfolio-page word floor met (635 visible words)"
+      ],
+      "findings": [
+        {"title": "Client-side collapse unmounts ~80% of proof-of-work content", "severity": "Critical", "description": "Radix CollapsibleContent without forceMount and a carousel that renders only the active caption: 4 role descriptions and 4 project captions have 0 matches in the rendered HTML.", "recommendation": "forceMount + CSS hide; render every slide caption (visually hidden when inactive)."},
+        {"title": "/me/experience.md is title-only (71 words)", "severity": "Critical", "description": "Description/skills interpolation is commented out in app/(llms)/me/experience.md/route.ts.", "recommendation": "Restore the interpolation."},
+        {"title": "Meta description is 313 chars", "severity": "High", "description": "USER.description is reused verbatim as meta, og:description and about.md; the SERP truncates at ~155 chars.", "recommendation": "Separate ~150-char meta description (rewrite in findings/content.md)."},
+        {"title": "No language for the #1 target audience (technical PM)", "severity": "Medium", "description": "Zero occurrences of product/roadmap/prioritisation terms in the visible text despite the portfolio-context.md priority order.", "recommendation": "Add one PM-framing sentence in the hero or skills block."},
+        {"title": "9 of 14 links lack an accessible name", "severity": "Medium", "description": "Icon-only home/GitHub/CV/mailto and company-logo links have no text, aria-label or title.", "recommendation": "Add aria-labels."},
+        {"title": "Freshness: Samsung role marked current though it ended 08.2026", "severity": "Low", "description": "isCurrentEmployer is true on the only expanded card.", "recommendation": "Update the flags; Chief Nest / AUS AI Hub are the open-ended roles."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "weight": 0.2,
+      "score": 55,
+      "what_works": [
+        "Title 'Building production AI systems | Ahmad Saad' (44 chars)",
+        "Single H1 = name; H2 per section; H3 per role",
+        "Complete OG/Twitter cards",
+        "Authoritative outbound links (employers, university, GitHub, LinkedIn)"
+      ],
+      "findings": [
+        {"title": "No <link rel=canonical>", "severity": "Critical", "description": "See Technical SEO.", "recommendation": "alternates.canonical after fixing metadataBase."},
+        {"title": "Section body text mostly absent from the DOM", "severity": "Critical", "description": "See Content Quality.", "recommendation": "See Content Quality."},
+        {"title": "Flagship project links to a private repo; LocalAI not described", "severity": "High", "description": "github.com/ahm-adsaad/trend-radar is linked twice while the brief says it is private; LocalAI (the best live-demo candidate) only appears as a tech chip.", "recommendation": "Make the repo public or relabel the link; add a LocalAI description + live-demo CTA."},
+        {"title": "CV link is icon-only", "severity": "Medium", "description": "<a href=/Ahmad_Saad_CV.pdf> wraps a bare SVG.", "recommendation": "Visible 'Download CV (PDF)' text + aria-label."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "weight": 0.1,
+      "score": 12,
+      "what_works": ["JSON-LD is used (correct format)", "No deprecated FAQPage/HowTo"],
+      "findings": [
+        {"title": "Empty, wrong-type JSON-LD", "severity": "Critical", "description": "{\"@type\":\"Organization\",\"@context\":\"https://schema.org\"} with no properties (app/page.tsx:39-46).", "recommendation": "Replace with the Person + WebSite + ProfilePage graph (findings/schema.md section 5); widen the JsonLd prop type to WithContext<Thing> | Graph."},
+        {"title": "No sameAs / alumniOf / worksFor entity links", "severity": "High", "description": "Data exists in config/user.ts, config/experience.ts and config/education.ts but is never emitted.", "recommendation": "Included in the replacement graph."},
+        {"title": "No SoftwareSourceCode for public repos", "severity": "Medium", "description": "Optional; the 5 project links are server-rendered.", "recommendation": "Add once repo visibility is settled."}
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "weight": 0.1,
+      "score": 51,
+      "what_works": [
+        "Desktop LCP 1.4-2.5 s (good/borderline)",
+        "Mobile CLS 0 (Playwright) / 0.069 (Lighthouse)",
+        "Cloudflare edge + HTTP/3",
+        "LCP element is server-rendered text, so no image dependency"
+      ],
+      "metrics_lab": {
+        "sources": "Lighthouse 13.4.1 (2 mobile runs, 4x CPU throttle; 1 desktop) + Playwright Chromium (4 runs, unthrottled). No CrUX field data; PSI API rate-limited without a key.",
+        "mobile_lighthouse": {"ttfb_ms": "1188-1617", "lcp_ms": "5961-13389", "tbt_ms": "321-6631", "cls": 0.069, "transfer_kb": 973, "requests": 44},
+        "desktop_lighthouse": {"ttfb_ms": 1431, "lcp_ms": 1357, "tbt_ms": 1913, "cls": 0.106, "transfer_kb": 992, "requests": 43},
+        "playwright_desktop": {"ttfb_ms": "1174-1922", "fcp_ms": "1664-2476", "lcp_ms": "1692-2488", "cls": 0.077},
+        "playwright_mobile": {"ttfb_ms": "1349-1606", "fcp_ms": "1712-2024", "lcp_ms": "3096-3176", "cls": 0},
+        "lcp_element": "intro / role text <p> in 7 of 7 runs",
+        "inp": "not measurable in lab; TBT used as proxy"
+      },
+      "findings": [
+        {"title": "One JS chunk blocks the main thread before the LCP text paints", "severity": "Critical", "description": "224-b51a9b702c283363.js (174 KB) runs a single long task (~7 s at 4x throttle, 2.1 s desktop); mobile LCP 6-13 s, TBT up to 6.6 s. Compounded by the RevealOnLoad opacity animation on the intro.", "recommendation": "Code-split heavy client components with next/dynamic({ssr:false}); render the hero visible by default; tighten browserslist to drop ~12 KB of polyfills."},
+        {"title": "TTFB 1.1-1.9 s on every run with x-nextjs-cache: MISS", "severity": "Critical", "description": "The prerendered page appears to be rendered on the Worker per request; 0 ms edge RTT, so the delay is origin work.", "recommendation": "Fix the OpenNext/Cloudflare cache so the HTML is served from cache; target TTFB < 0.8 s."},
+        {"title": "5 carousel JPEGs (400 KB, ~41% of page weight) eagerly preloaded and 30x oversized", "severity": "Critical", "description": "5x <link rel=preload as=image>; ~347 KB wasted per Lighthouse; never the LCP element.", "recommendation": "next/image with sizes/srcset and width/height; priority only on the active slide; lazy-load slides 2-5; drop the preloads."},
+        {"title": "CLS 0.07-0.11 across runs", "severity": "High", "description": "Desktop culprit is the unsized carousel (0.097 of 0.106); mobile culprit is an accordion hydration race plus font swap.", "recommendation": "Reserve space for the carousel and the collapsible panels; open the default-expanded panel server-side."},
+        {"title": "No preconnect hints, 23 KB render-blocking CSS, Cloudflare Insights beacon ~0.66 s avoidable LCP delay", "severity": "High", "description": "Lighthouse critical-path audit.", "recommendation": "Add preconnect for remaining third-party origins; defer the beacon; inline critical CSS."},
+        {"title": "3 dead analytics requests per load", "severity": "Medium", "description": "/stats/script.js (404), /_vercel/insights/script.js and /_vercel/speed-insights/script.js (wrong platform).", "recommendation": "Remove the Vercel scripts; gate Umami on its env var."},
+        {"title": "Hashed assets not cached immutably; 4 font preloads incl. one .otf", "severity": "Medium", "description": "Cache-Control max-age=0 on /_next/static; ~20 async JS chunks (309 KB) incl. motion + shooting-stars canvas.", "recommendation": "Immutable cache rule for /_next/static/*; keep <= 2 font preloads; lazy-load decoration."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "weight": 0.1,
+      "score": 43,
+      "what_works": [
+        "Training crawlers blocked while retrieval agents (Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, Claude-User, Claude-SearchBot, PerplexityBot) are allowed",
+        "Content-Signal search=yes, ai-train=no",
+        "Quotable who/what/where/when intro passages",
+        "llms.txt convention adopted"
+      ],
+      "findings": [
+        {"title": "Template llms.txt / llms-full.txt shadow the real route handlers", "severity": "Critical", "description": "scripts/build-registry.mts writes public/llms.txt + llms-full.txt at build; the live llms.txt links 7 dead /craft/* URLs, a 500 (/me/craft.md) and a 404 (/me/bookmarks.md); llms-full.txt is 71 KB of template component code.", "recommendation": "Remove buildLlmsFiles(); adopt the draft in findings/geo.md; purge the cache."},
+        {"title": "/me/craft.md returns HTTP 500", "severity": "High", "description": "getAllPosts() reads MDX via fs.readdirSync at runtime on Workers.", "recommendation": "Delete the route or make it truly static."},
+        {"title": "Evidence passages hidden from agents", "severity": "High", "description": "Architecture / cost-governance / results text is in unmounted DOM.", "recommendation": "See Content Quality (action 2.1)."},
+        {"title": "Weak entity signals", "severity": "Medium", "description": "No Person sameAs; name collision with saadahmad.dev and several public figures.", "recommendation": "Schema fix + owned-profile links."}
+      ]
+    },
+    {
+      "name": "Images",
+      "weight": 0.05,
+      "score": 58,
+      "what_works": ["All 5 images have descriptive alt text", "Reasonable source sizes (591-1080 px)"],
+      "findings": [
+        {"title": "No width/height or srcset; not lazy-loaded; all preloaded", "severity": "Medium", "description": "Plain <img> tags; /_next/image returns the original JPEG (optimizer inactive on Cloudflare).", "recommendation": "next/image with sizes + a fixed aspect-ratio wrapper; preload only the first slide."},
+        {"title": "JPEG only; WebP would save ~46% (386 -> ~209 KB)", "severity": "Medium", "description": "Per-file savings of 20-61%.", "recommendation": "Pre-convert at build time or enable an image loader."}
+      ]
+    }
+  ],
+  "supplementary": {
+    "sitemap": {"score": 82, "note": "Valid single-URL sitemap; lastmod drifts per request"},
+    "sxo": {
+      "gap_score": 29,
+      "personas": {"post_interview_name_verifier": 13, "technical_pm_hiring_manager": 50, "ai_ml_lead": 52, "forward_deployed_lead": 59, "recruiter_20s_skim": 67},
+      "serp": "site:ahmadsaad.dev and \"ahmadsaad.dev\" return only unrelated people and saadahmad.dev (2026-08-24)"
+    },
+    "backlinks": {
+      "status": "insufficient data",
+      "common_crawl_snapshot": "cc-main-2026-jan-feb-mar",
+      "in_crawl": false,
+      "owned_links_missing": ["GitHub profile website field", "trend-radar homepage", "manos-basic-computer-simulator homepage", "LinkedIn website (unverified)"]
+    },
+    "visual": {"score": 74, "screenshots": 8}
+  },
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1: Get indexed correctly", "timeframe": "Week 1", "items": [
+        "1.1 One canonical URL: HTTPS + www->apex redirect, fix metadataBase, canonical tag, hardcode base URL",
+        "1.2 Remove /_next/ from robots disallow",
+        "1.3 Person + WebSite + ProfilePage JSON-LD with sameAs",
+        "1.4 Search Console domain property, submit sitemap, static lastmod",
+        "1.5 Meta description <= 160 chars"
+      ]},
+      {"name": "Phase 2: Make proof-of-work crawlable; fix what's broken", "timeframe": "Weeks 2-3", "items": [
+        "2.1 Render collapsed role descriptions and all carousel captions in the DOM",
+        "2.2 Repair the llms.txt pipeline, experience.md, remove/fix craft.md (500), purge cache",
+        "2.3 Security headers (HSTS, XCTO, Referrer-Policy, Permissions-Policy, frame-ancestors)",
+        "2.4 Performance: code-split the 174 KB blocking chunk, un-gate the LCP text from the reveal animation, fix HTML cache MISS/TTFB, next/image + lazy, drop preloads, remove dead analytics scripts, immutable caching",
+        "2.5 aria-labels, tap targets, carousel arrows, og:image dimensions"
+      ]},
+      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": [
+        "3.1 Technical-PM framing sentence; LocalAI description + live demo; resolve repo visibility; refresh isCurrentEmployer",
+        "3.2 Owned-profile links: GitHub website/homepage fields, LinkedIn website, chapter pages",
+        "3.3 Two architecture write-ups for earned mentions"
+      ]},
+      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": [
+        "Drift baseline now, compare after each deploy",
+        "Weekly GSC: indexed = 1, no duplicates, branded impressions",
+        "Monthly AI-assistant citation check + lab CWV",
+        "Re-audit after Phases 1-2; target >= 75"
+      ]}
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/",
+    "lab_vitals": "lab-vitals.json",
+    "report": "FULL-AUDIT-REPORT.md",
+    "action_plan": "ACTION-PLAN.md"
+  },
+  "limitations": [
+    "No Google API credentials: no CrUX/GSC/GA4 field data; PSI rate-limited without a key",
+    "Backlinks Tier 0 (Common Crawl only)",
+    "Lab CWV single-location",
+    "SERP checks via US-routed web search"
+  ]
+}

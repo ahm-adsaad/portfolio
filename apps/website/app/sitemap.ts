@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
  * (experience, projects, education, copy). NOT on every deploy: a lastmod that
  * churns with each build is a signal Google learns to ignore.
  */
-export const CONTENT_LAST_MODIFIED = '2026-08-24';
+export const CONTENT_LAST_MODIFIED = '2026-09-01';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = ['/'];

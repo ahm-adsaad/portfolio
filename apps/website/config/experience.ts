@@ -137,18 +137,31 @@ export const experiences: Experience[] = [
     companyName: 'American University of Sharjah',
     companyUrl: 'https://www.aus.edu/',
     city: 'Sharjah, UAE',
+    companyLogo: '/company_logos/citl-aus.jpg',
     isCurrentEmployer: true,
     positions: [
+      {
+        id: 'aus-web-consultant',
+        title: 'Web Design and Development Consultant, College of Engineering',
+        employmentPeriod: {
+          start: '08.2026',
+        },
+        icon: 'design',
+        description:
+          'Shipping production-grade, executive-facing WordPress and Elementor websites to live domains in under 48 hours, translating client requirements into design systems, implementation, testing, audits, and deployment orchestrated end to end across AI agents.\n\nBuilding sites that non-technical teams maintain themselves: structured content, self-updating Elementor listings, and editor documentation, so no one edits code or layout to publish.\n\nDelivering mobile- and web-optimized, accessible (WCAG AA), performance-tuned front ends with purposeful animation following UX/UI best practices, plus automation that pulls in images and metadata, scoped against documented client requirements.',
+        skills: ['WordPress', 'Elementor', 'Accessibility (WCAG AA)', 'UX/UI'],
+      },
       {
         id: 'aus-ai-hub-assistant',
         title: 'AI Hub Assistant, Center of Innovation in Teaching and Learning',
         employmentPeriod: {
           start: '11.2024',
         },
+        employmentType: 'Part-time',
         icon: 'design',
         description:
-          'Led the HTML and CSS redesign of the university\'s AI website against stakeholder requirements, prototyping in Figma. Researched emerging AI tooling and produced written evaluations that shaped faculty adoption.',
-        skills: ['HTML', 'CSS', 'Figma'],
+          'Developing and maintaining the CITL AI Hub, a dynamic WordPress site used by AUS faculty: led its HTML and CSS redesign against stakeholder requirements, prototyped in Figma, and handle ongoing updates for content accuracy, functionality, and engagement. Researching emerging AI technologies and producing written evaluations that shape faculty adoption.',
+        skills: ['WordPress', 'HTML', 'CSS', 'Figma'],
       },
       {
         id: 'aus-research-assistant',
@@ -160,7 +173,7 @@ export const experiences: Experience[] = [
         },
         icon: 'code',
         description:
-          'Speech emotion recognition: classified emotion from audio snippets using log-mel spectrogram representations, fine-tuning ResNet and EfficientNet backbones in TensorFlow and Scikit-Learn. Reached roughly 75% accuracy after augmentation and hyperparameter tuning.',
+          'Speech emotion recognition: classified emotion from audio snippets using log-mel spectrogram representations, fine-tuning ResNet and MobileNet backbones in TensorFlow and Scikit-Learn. Reached roughly 75% accuracy after augmentation and hyperparameter tuning.',
         skills: ['TensorFlow', 'Scikit-Learn', 'Python'],
       },
     ],

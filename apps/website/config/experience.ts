@@ -137,7 +137,6 @@ export const experiences: Experience[] = [
     companyName: 'American University of Sharjah',
     companyUrl: 'https://www.aus.edu/',
     city: 'Sharjah, UAE',
-    companyLogo: '/company_logos/citl-aus.jpg',
     isCurrentEmployer: true,
     positions: [
       {

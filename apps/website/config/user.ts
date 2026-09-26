@@ -23,7 +23,10 @@ export type User = {
     bluesky: string;
   };
   image: {
+    /** Absolute URL of the headshot JPEG (Person.image, sitemap). */
     profile: string;
+    width: number;
+    height: number;
   };
   flipSentences: string[];
   experiences?: Experience[];
@@ -57,8 +60,12 @@ const USER: User = {
     'Measurement decides, LLMs describe.',
     'From scoped idea to shipped system.',
   ],
+  // Built from assets/headshot by `pnpm images:headshot`. Same photo as the
+  // LinkedIn and GitHub avatars, so image search ties the profiles together.
   image: {
-    profile: 'https://github.com/ahm-adsaad.png',
+    profile: 'https://ahmadsaad.dev/ahmad-saad.jpg',
+    width: 748,
+    height: 748,
   },
   experiences: experiences,
 };

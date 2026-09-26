@@ -12,6 +12,7 @@
     "shadcn:build": "npx shadcn build registry.json --output ./public/r",
     "capture": "npx tsx ./scripts/capture.mts",
     "images:projects": "npx tsx ./scripts/build-project-images.mts",
+    "images:headshot": "npx tsx ./scripts/build-headshot-images.mts",
     "generate-libphonenumber-metadata": "libphonenumber-metadata-generator ./assets/libphonenumber.metadata.json --countries VN --extended",
     "upgrade:next": "npx @next/codemod@latest upgrade latest",
     "upgrade:tailwind": "npx @tailwindcss/upgrade@latest",

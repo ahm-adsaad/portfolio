@@ -9,6 +9,7 @@ import {
   DrawerTrigger,
 } from '@repo/design-system/components/ui/drawer';
 import { VisuallyHidden } from '@repo/design-system/components/ui/visually-hidden';
+import { Headshot } from '@/components/headshot';
 import { USER } from '@/config/user';
 import { DockConfig } from '@/lib/config';
 import { useMounted } from '@/lib/hooks/use-mounted';
@@ -54,14 +55,7 @@ export function MobileDrawer() {
                 className="link-card inline-flex items-center gap-2 p-2"
                 onClick={() => setOpen(false)}
               >
-                <img
-                  src={USER.image.profile}
-                  alt={USER.name}
-                  width={40}
-                  height={40}
-                  loading="lazy"
-                  className="rounded-full border shadow-xs"
-                />
+                <Headshot size={40} />
                 <div className="flex flex-col">
                   <span className="font-semibold tracking-tight">
                     {USER.name}

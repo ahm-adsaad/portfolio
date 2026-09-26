@@ -1,3 +1,4 @@
+import { Headshot } from '@/components/headshot';
 import { InfoOverlay } from '@/components/info-overlay';
 import { FloatingHeader } from '@/components/navigation/floating-header';
 import { PronounceMyName } from '@/components/pronounce-my-name';
@@ -20,7 +21,7 @@ import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import { SITE_URL } from '@/lib/server-url';
 import type { Metadata } from 'next/types';
-import type { Graph, Thing } from 'schema-dts';
+import type { Graph, ImageObject, Thing } from 'schema-dts';
 
 // Force static generation at build time
 export const dynamic = 'force-static';
@@ -47,6 +48,17 @@ const WEBSITE_ID = `${SITE_URL}/#website`;
 const PROFILE_PAGE_ID = `${SITE_URL}/#profilepage`;
 const orgId = (id: string) => `${SITE_URL}/#org-${id}`;
 const AUS_ID = orgId('aus');
+const HEADSHOT_ID = `${SITE_URL}/#headshot`;
+
+const HEADSHOT: ImageObject = {
+  '@type': 'ImageObject',
+  '@id': HEADSHOT_ID,
+  url: USER.image.profile,
+  contentUrl: USER.image.profile,
+  width: String(USER.image.width),
+  height: String(USER.image.height),
+  caption: USER.name,
+};
 
 /** Primary language per public repo; not derivable from the skills list. */
 const PROJECT_LANGUAGE: Record<string, string> = {
@@ -125,7 +137,7 @@ function buildJsonLd(): Graph {
         givenName: USER.firstName,
         familyName: USER.lastName,
         url: `${SITE_URL}/`,
-        image: USER.image.profile,
+        image: HEADSHOT,
         email: USER.email,
         jobTitle: USER.jobTitle,
         description: USER.description,
@@ -187,10 +199,7 @@ function buildJsonLd(): Graph {
         isPartOf: { '@id': WEBSITE_ID },
         about: { '@id': PERSON_ID },
         mainEntity: { '@id': PERSON_ID },
-        primaryImageOfPage: {
-          '@type': 'ImageObject',
-          url: USER.image.profile,
-        },
+        primaryImageOfPage: { '@id': HEADSHOT_ID },
       },
       ...projects,
     ],
@@ -217,14 +226,17 @@ export default async function Page() {
             CSS entrance only settles it, it never hides it. */}
         <Section>
           {/* Name and Title */}
-          <div className="animate-hero-in space-y-1">
-            <div className="flex items-center gap-2">
-              <h1 className="font-semibold text-2xl">{USER.name}</h1>
-              <PronounceMyName name={USER.name} />
+          <div className="animate-hero-in flex items-center gap-4">
+            <Headshot size={64} />
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <h1 className="font-semibold text-2xl">{USER.name}</h1>
+                <PronounceMyName name={USER.name} />
+              </div>
+              <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
+                {USER.jobTitle}
+              </p>
             </div>
-            <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
-              {USER.jobTitle}
-            </p>
           </div>
 
           {/* Description */}

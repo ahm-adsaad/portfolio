@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
 
+import { PROJECT_PAGES } from '@/config/projects';
 import { SOURCE_CODE_GITHUB_URL } from '@/config/site';
 import { USER } from '@/config/user';
 import { MARKDOWN_HEADERS } from '@/lib/llms';
+import { projectPath } from '@/lib/seo/project-schema';
 
 // Force static generation at build time
 export const dynamic = 'force-static';
@@ -18,6 +20,15 @@ function generateLlmsContent() {
     `- [About](${USER.website}/me/about.md): Who I am, where I am based, and how to reach me.`,
     `- [Experience](${USER.website}/me/experience.md): Every role with its full description and skills.`,
     `- [Projects](${USER.website}/me/projects.md): Selected projects with technical detail and measured impact.`,
+    '',
+    '## Pages',
+    '',
+    `- [About ${USER.name}](${USER.website}/about): Bio, education, experience, and availability.`,
+    `- [Projects](${USER.website}/projects): Index of project case studies.`,
+    ...PROJECT_PAGES.map(
+      (project) =>
+        `- [${project.title}](${USER.website}${projectPath(project)}): ${project.shortDescription ?? 'Case study.'}`
+    ),
     '',
     '## Social',
     '',

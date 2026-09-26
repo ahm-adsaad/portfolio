@@ -20,6 +20,7 @@ import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import { SITE_URL } from '@/lib/server-url';
+import Link from 'next/link';
 import type { Metadata } from 'next/types';
 import type { Graph, ImageObject, Thing } from 'schema-dts';
 
@@ -262,7 +263,14 @@ export default async function Page() {
             <p className="leading-relaxed">
               I hold a UAE Golden Visa, so no employer sponsorship is required.
               I graduate in December 2026 and I am available to start January
-              2027.
+              2027.{' '}
+              <Link
+                href="/about"
+                className="font-medium text-foreground underline underline-offset-4 hover:text-foreground/80"
+              >
+                More about me
+              </Link>
+              .
             </p>
           </div>
         </Section>
@@ -344,6 +352,14 @@ export default async function Page() {
                 LinkedIn
               </a>
               .
+            </p>
+            <p className="text-foreground/70 leading-relaxed">
+              <Link
+                href="/about"
+                className="inline-block py-1 font-medium text-foreground underline underline-offset-4 hover:text-foreground/80"
+              >
+                About {USER.name}
+              </Link>
             </p>
           </div>
         </Section>

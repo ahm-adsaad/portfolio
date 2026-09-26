@@ -18,6 +18,7 @@ import { ProjectCoverflow } from '@/features/home/components/project-coverflow';
 import { TechStack } from '@/features/home/components/tech-stack';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
+import { projectSchema } from '@/lib/seo/project-schema';
 import { createMetadata } from '@/lib/seo/metadata';
 import { SITE_URL } from '@/lib/server-url';
 import Link from 'next/link';
@@ -61,14 +62,6 @@ const HEADSHOT: ImageObject = {
   caption: USER.name,
 };
 
-/** Primary language per public repo; not derivable from the skills list. */
-const PROJECT_LANGUAGE: Record<string, string> = {
-  'trend-radar': 'TypeScript',
-  localai: 'TypeScript',
-  'mano-computer-simulator': 'Python',
-  portfolio: 'TypeScript',
-};
-
 function buildJsonLd(): Graph {
   // One Organization node per employer with a public URL. AUS is emitted once,
   // as the university (it is both alma mater and employer).
@@ -89,37 +82,7 @@ function buildJsonLd(): Graph {
     ?.positions[0];
 
   // Only projects with a live public URL: schema must never point at a dead link.
-  const projects: Thing[] = PROJECTS.flatMap((p): Thing[] => {
-    const id = `${SITE_URL}/#project-${p.id}`;
-    if (p.github) {
-      return [
-        {
-          '@type': 'SoftwareSourceCode',
-          '@id': id,
-          name: p.title,
-          description: p.shortDescription,
-          codeRepository: p.github,
-          programmingLanguage: PROJECT_LANGUAGE[p.id],
-          author: { '@id': PERSON_ID },
-        },
-      ];
-    }
-    if (p.link) {
-      return [
-        {
-          '@type': 'WebApplication',
-          '@id': id,
-          name: p.title,
-          description: p.shortDescription,
-          url: p.link,
-          applicationCategory: 'UtilitiesApplication',
-          operatingSystem: 'Any browser with WebGPU',
-          author: { '@id': PERSON_ID },
-        },
-      ];
-    }
-    return [];
-  });
+  const projects: Thing[] = PROJECTS.flatMap((p) => projectSchema(p) ?? []);
 
   return {
     '@context': 'https://schema.org',
@@ -295,6 +258,14 @@ export default async function Page() {
               carousel.
             </p>
             <ProjectCoverflow />
+            <p className="text-center text-sm text-foreground/60">
+              <Link
+                href="/projects"
+                className="inline-block py-1 font-medium text-foreground underline underline-offset-4 hover:text-foreground/80"
+              >
+                Read the case studies
+              </Link>
+            </p>
           </div>
         </Section>
 

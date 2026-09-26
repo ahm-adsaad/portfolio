@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 
@@ -15,11 +16,13 @@ export interface CoverflowSlide {
   alt: string;
   title?: string;
   subtitle?: string;
+  /** Title link. A path starting with "/" is an internal page and opens in place. */
   href?: string;
   /** GitHub repo URL, shown as an arrow next to the title. */
   github?: string;
-  /** Renders a call-to-action button pointing at `href`. */
+  /** Renders a call-to-action button pointing at `ctaHref` (or `href`). */
   ctaLabel?: string;
+  ctaHref?: string;
   meta?: { label: string; value: string }[];
 }
 
@@ -372,7 +375,14 @@ export function CoverflowCarousel({
                 className="flex flex-col items-center px-6 duration-300 animate-in fade-in"
               >
                 <div className="flex items-center gap-1">
-                  {slide.href ? (
+                  {slide.href?.startsWith('/') ? (
+                    <Link
+                      href={slide.href}
+                      className="py-0.5 text-[15px] font-semibold tracking-tight text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
+                    >
+                      {slide.title}
+                    </Link>
+                  ) : slide.href ? (
                     <a
                       href={slide.href}
                       target="_blank"
@@ -404,9 +414,9 @@ export function CoverflowCarousel({
                     {slide.subtitle}
                   </p>
                 )}
-                {slide.ctaLabel && slide.href && (
+                {slide.ctaLabel && (slide.ctaHref ?? slide.href) && (
                   <a
-                    href={slide.href}
+                    href={slide.ctaHref ?? slide.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex min-h-8 items-center gap-1 rounded-full border border-border bg-background px-3.5 text-[13px] font-medium text-foreground transition-colors hover:bg-muted"

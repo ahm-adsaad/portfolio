@@ -5,6 +5,12 @@ import { USER } from '@/config/user';
 export const DockConfig = {
   navbar: [
     { href: '/', icon: Icons.home, label: 'Home', ariaLabel: 'Home' },
+    {
+      href: '/about',
+      icon: Icons.about,
+      label: 'About',
+      ariaLabel: `About ${USER.name}`,
+    },
     // Re-enable once real posts exist:
     // { href: '/craft', icon: Icons.craft, label: 'Craft' },
     // { href: '/blog', icon: Icons.bookmark, label: 'Blog' },

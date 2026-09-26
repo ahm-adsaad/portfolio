@@ -9,6 +9,7 @@ import {
   MailIcon,
   PencilIcon,
   TerminalSquareIcon,
+  UserIcon,
 } from 'lucide-react';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
@@ -89,6 +90,7 @@ export const Icons = {
   ),
   spinner: Loader2,
   home: (props: IconProps) => <HomeIcon {...props} />,
+  about: (props: IconProps) => <UserIcon {...props} />,
   craft: (props: IconProps) => <PencilIcon {...props} />,
   guestbook: (props: IconProps) => <BookOpenIcon {...props} />,
   bookmark: (props: IconProps) => <BookmarkIcon {...props} />,

@@ -5,6 +5,13 @@ type MetadataGenerator = Omit<Metadata, 'description' | 'title'> & {
   title: string;
   description: string;
   image?: string;
+  /**
+   * Route path for the canonical URL and og:url (e.g. '/about'). Every page
+   * other than the homepage must pass its own path, or it canonicalises to '/'.
+   */
+  path?: string;
+  /** Use `title` verbatim instead of appending "| Ahmad Saad". */
+  absoluteTitle?: boolean;
 };
 
 const applicationName = 'Ahmad Saad';
@@ -24,16 +31,20 @@ export const createMetadata = ({
   title,
   description,
   image,
+  path = '/',
+  absoluteTitle = false,
   ...properties
 }: MetadataGenerator): Metadata => {
-  const parsedTitle = `${title} | ${applicationName}`;
+  const parsedTitle = absoluteTitle ? title : `${title} | ${applicationName}`;
   const defaultMetadata: Metadata = {
-    title: parsedTitle,
+    // `absolute` keeps the root layout's title template from appending the
+    // name a second time on nested routes.
+    title: { absolute: parsedTitle },
     description,
     applicationName,
     metadataBase: new URL(productionUrl),
     // Relative on purpose: resolves against metadataBase to the apex URL.
-    alternates: { canonical: '/' },
+    alternates: { canonical: path },
     authors: [author],
     creator: author.name,
     formatDetection: {
@@ -50,7 +61,7 @@ export const createMetadata = ({
       type: 'website',
       siteName: applicationName,
       locale: 'en_US',
-      url: '/',
+      url: path,
     },
     publisher,
     twitter: {

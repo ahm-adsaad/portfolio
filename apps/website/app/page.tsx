@@ -25,15 +25,18 @@ import type { Graph, Thing } from 'schema-dts';
 // Force static generation at build time
 export const dynamic = 'force-static';
 
+/** Name first: the page has to rank for the bare query "Ahmad Saad". */
+const HOME_TITLE = `${USER.name} · AI Engineer in the UAE`;
+
 export async function generateMetadata(): Promise<Metadata> {
-  const title = USER.tagline;
   const description = USER.metaDescription;
   const image = createOgImage({
-    title: title,
-    meta: description,
+    title: USER.name,
+    meta: 'AI Engineer · Computer Engineering @ AUS · UAE',
   });
   return createMetadata({
-    title: title,
+    title: HOME_TITLE,
+    absoluteTitle: true,
     description: description,
     image: image,
   });
@@ -126,7 +129,10 @@ function buildJsonLd(): Graph {
         email: USER.email,
         jobTitle: USER.jobTitle,
         description: USER.description,
-        sameAs: [USER.social.github, USER.social.linkedin],
+        disambiguatingDescription:
+          'Computer engineer and AI engineer based in the UAE, American University of Sharjah.',
+        // Every public profile lives in USER.social; empty entries are skipped.
+        sameAs: Object.values(USER.social).filter(Boolean),
         alumniOf: { '@id': AUS_ID },
         affiliation: { '@id': AUS_ID },
         worksFor: currentEmployers,
@@ -175,7 +181,7 @@ function buildJsonLd(): Graph {
         '@type': 'ProfilePage',
         '@id': PROFILE_PAGE_ID,
         url: `${SITE_URL}/`,
-        name: `${USER.tagline} | ${USER.name}`,
+        name: HOME_TITLE,
         description: USER.metaDescription,
         inLanguage: 'en-US',
         isPartOf: { '@id': WEBSITE_ID },

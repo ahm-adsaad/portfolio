@@ -9,6 +9,7 @@ import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
+import { personStub } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import Link from 'next/link';
 import type { Metadata } from 'next/types';
@@ -75,6 +76,7 @@ const jsonLd: Graph = {
         },
       ],
     },
+    personStub(),
   ],
 };
 
@@ -146,7 +148,11 @@ export default function AboutPage() {
         <Section>
           <div className="space-y-2 text-center">
             <p className="text-foreground/70 leading-relaxed">
-              Back to the{' '}
+              See the{' '}
+              <Link href="/projects" className={linkClass}>
+                projects
+              </Link>{' '}
+              or go back to the{' '}
               <Link href="/" className={linkClass}>
                 homepage
               </Link>

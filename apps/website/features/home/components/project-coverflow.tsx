@@ -28,9 +28,11 @@ function toSlide(project: Project): CoverflowSlide {
     alt: `${project.title} cover`,
     title: project.title,
     subtitle: project.shortDescription,
-    href: project.link,
+    // The project page is the primary link; GitHub stays a secondary icon.
+    href: project.caseStudy ? `/projects/${project.id}` : project.link,
     github: project.github,
     ctaLabel: project.ctaLabel,
+    ctaHref: project.link,
     meta: [
       { label: 'Tech', value: project.skills.slice(0, 3).join(' · ') },
       { label: 'Year', value: periodLabel(project.period) },

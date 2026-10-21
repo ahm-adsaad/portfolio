@@ -12,7 +12,7 @@ export const dynamic = 'force-static';
  * on every deploy: a lastmod that churns with each build is a signal Google
  * learns to ignore.
  */
-export const CONTENT_LAST_MODIFIED = '2026-09-26';
+export const CONTENT_LAST_MODIFIED = '2026-10-21';
 
 type Route = { path: string; images?: string[] };
 

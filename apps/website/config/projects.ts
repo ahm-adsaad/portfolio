@@ -100,24 +100,26 @@ I architected and built the system on my own, and scoped it directly with the ma
   {
     id: 'localai',
     title: 'LocalAI',
-    titleSummary: 'On-Device RAG Document Q&A',
-    caseStudy: `## Problem
+    titleSummary: 'Private AI for Company Documents',
+    caseStudy: `## The problem I found
 
-Most document Q&A tools upload your files to a server, embed them there, and send the text to a hosted model. For contracts, medical records, or internal reports that is often a dealbreaker. LocalAI answers questions about a PDF without the document, its embeddings, or the question ever leaving the device.
+Talking with people at different companies, I kept hearing the same thing. They were not allowed to put work material into ChatGPT or Claude, or would not do it themselves, because the data would go to a company they do not trust. So they either did not use AI at work or used it only for things that did not matter. The tools they could use at work did less than the ones they used at home.
 
-## Approach
+## What I did about it
 
-Everything runs in the browser. There is no backend and a hard no-remote-inference guarantee: ingestion, embedding, retrieval, and generation all happen locally on WebGPU.
+I treated this as a discovery problem and gathered requirements from those conversations, the way a forward deployed engineer would on a customer site: nothing may leave the machine, and the person using it must be able to check that; self-hosting a model was not an option, so it could not become an IT project; it had to work for people who are not technical; it had to do real work over contracts, reports and handbooks and show where each answer came from; and it had to run on the laptops people already have.
 
-## Architecture
+## What I built
 
-Ingestion uses layout-aware PDF extraction and overlapping chunking. Chunks are embedded with MiniLM sentence embeddings quantized to q8. Retrieval is hybrid: dense cosine similarity and BM25 keyword scoring run side by side and are merged with Reciprocal Rank Fusion, so exact terms and paraphrases both get found.
+LocalAI runs the language model, the embeddings and a cross-encoder reranker on the user's own GPU and CPU, inside the browser. There is no server, no account and no API key; the model weights download once and stay cached. You drop in a PDF, Word, text or Markdown file and ask in plain language. Every answer cites the file and page it came from, a \`/extract\` command pulls named fields under a JSON grammar so the output always parses, and follow-up questions are rewritten before retrieval. Privacy is enforced rather than promised: a strict Content Security Policy lets the page talk only to itself and the model-weight hosts, and a Playwright audit boots the app on a real GPU, indexes a document, asks a question, and asserts that no request left for any other host, none carried a body, and none contained document text.
 
-Generation streams from Qwen 2.5, Phi-4, or Llama 3.2, quantized to Q4f16 and run through WebLLM. WebLLM and Transformers.js live in a Web Worker, so model load, embedding, and token decode never block the UI. Documents, embeddings, and model weights persist in IndexedDB, which makes repeat visits work offline, and a VRAM-aware catalog only offers models the current GPU can hold.
+## How I measured it
 
-## Retrieval tuning
+I built a golden set of 49 questions over four generated PDFs and a Node eval that runs in CI, then compared eight embedders and five rerankers before choosing. The eval found and fixed three real bugs along the way (a rerank that was undoing retrieval, excerpt clipping that dropped the answering sentence for half the questions, and a prompt that fed the model its own earlier mistakes). On an integrated Intel laptop GPU, the slowest realistic case, retrieval puts the right excerpt in the prompt for 100% of questions and the default 1.5B model answers 100% of single-turn questions correctly. Every turn in the app reports its own latency and throughput.
 
-Two failure cases shaped the tuning. Broad questions like "what is this document about?" retrieved weak, scattered chunks, so the pipeline adds query expansion and pins the introduction chunk for overview queries. Dashboard-style PDFs full of labels and numbers crowded out real explanations, so a prose-density reranker favors chunks that read as sentences. Context window, max tokens, and excerpt length are tuned against browser prefill and decode latency rather than set to the largest values that fit.
+## Stack
+
+TypeScript, React, Vite, WebLLM (WebGPU), Transformers.js (WASM), pdf.js, mammoth, IndexedDB, Vitest, Playwright, GitHub Actions, Cloudflare Workers.
 
 ## My role
 
@@ -133,19 +135,25 @@ I designed and built LocalAI end to end. The repository is public and the live d
     // First three surface as "Tech" in the carousel.
     skills: [
       'WebGPU',
-      'Qwen 2.5',
-      'Llama 3.2',
-      'TypeScript',
-      'React',
       'WebLLM',
       'Transformers.js',
+      'TypeScript',
+      'React',
+      'Vite',
+      'pdf.js',
+      'mammoth',
       'IndexedDB',
+      'Vitest',
+      'Playwright',
+      'GitHub Actions',
+      'Cloudflare Workers',
     ],
     shortDescription:
-      'On-device RAG document Q&A that runs entirely in the browser: PDF ingestion, embeddings, hybrid retrieval, and generation on WebGPU.',
+      'Private AI for company documents that runs entirely in the browser, with page-level citations and a Playwright audit that proves nothing leaves the device.',
     description:
-      'Privacy-preserving RAG that runs PDF ingestion, embedding, retrieval, and generation entirely in the browser. No backend, no document data leaving the device.\n\nFull pipeline: layout-aware PDF extraction, overlapping chunking, MiniLM sentence embeddings (q8), and hybrid retrieval combining dense cosine similarity, BM25, and Reciprocal Rank Fusion. Streaming on-device generation with Qwen 2.5, Phi-4, and Llama 3.2 (Q4f16) on WebGPU; WebLLM and Transformers.js run in a Web Worker so model load, embedding, and token decode never block the UI.\n\nRetrieval tuning: query expansion, prose-density reranking, and intro-chunk pinning to fix weak overview queries and noisy dashboard PDFs. IndexedDB persistence with offline weight caching and a VRAM-aware multi-model catalog.',
-    impact: 'No backend and no document data leaving the device.',
+      'Private AI for company documents that runs entirely in the browser. Built after conversations with people who were barred from, or afraid of, putting work data into hosted AI: no server, no account, nothing leaves the device, and a Playwright audit proves it. Hybrid retrieval with a cross-encoder reranker, page-level citations, structured extraction, and a CI eval that scores 100% retrieval and 100% single-turn answers on an integrated laptop GPU.',
+    impact:
+      '100% retrieval and 100% single-turn answers on an integrated laptop GPU, with nothing leaving the device.',
   },
   {
     id: 'mano-computer-simulator',

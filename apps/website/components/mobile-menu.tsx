@@ -1,7 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+
+import { isCurrentPath } from '@/lib/is-current-path';
+import { stagger } from '@/lib/stagger';
 
 export type MenuLink = {
   label: string;
@@ -16,9 +20,28 @@ export type MenuLink = {
 export function MobileMenu({ links }: { links: MenuLink[] }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  // The dialog lives inside the `md:hidden` wrapper: left open across the
+  // 768px breakpoint it would turn display:none while still modal, leaving
+  // the page inert. Close it when the viewport grows, and on navigation.
+  useEffect(() => {
+    const wide = window.matchMedia('(min-width: 768px)');
+    const onChange = (e: MediaQueryListEvent) => {
+      if (e.matches) dialogRef.current?.close();
+    };
+    wide.addEventListener('change', onChange);
+    return () => wide.removeEventListener('change', onChange);
+  }, []);
+  useEffect(() => {
+    dialogRef.current?.close();
+  }, [pathname]);
 
   const show = () => {
-    dialogRef.current?.showModal();
+    const dialog = dialogRef.current;
+    // The header may be hidden by the scroll hook; bring it back first.
+    dialog?.closest('.site-nav')?.classList.remove('is-hidden');
+    dialog?.showModal();
     setOpen(true);
   };
   const close = () => dialogRef.current?.close();
@@ -44,7 +67,7 @@ export function MobileMenu({ links }: { links: MenuLink[] }) {
       >
         <div className="site-menu-inner" data-tone="ink">
           <div className="site-menu-bar">
-            <span className="mono-label text-bone/48">Menu</span>
+            <span className="mono-label text-bone/56">Menu</span>
             <button type="button" className="nav-link" onClick={close}>
               Close
             </button>
@@ -53,7 +76,7 @@ export function MobileMenu({ links }: { links: MenuLink[] }) {
           <nav aria-label="Primary, mobile">
             <ul className="site-menu-links">
               {links.map((link, i) => (
-                <li key={link.href} style={{ '--i': i } as React.CSSProperties}>
+                <li key={link.href} style={stagger(i)}>
                   {link.external ? (
                     <a
                       href={link.href}
@@ -76,6 +99,9 @@ export function MobileMenu({ links }: { links: MenuLink[] }) {
                     <Link
                       href={link.href}
                       className="site-menu-link display-light"
+                      aria-current={
+                        isCurrentPath(pathname, link.href) ? 'page' : undefined
+                      }
                       onClick={close}
                     >
                       {link.label}

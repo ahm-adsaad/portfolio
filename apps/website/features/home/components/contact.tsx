@@ -1,5 +1,6 @@
 import { PillLink } from '@/components/pill-link';
 import { USER } from '@/config/user';
+import { stagger } from '@/lib/stagger';
 
 export function Contact() {
   return (
@@ -21,16 +22,12 @@ export function Contact() {
       <p
         className="display-light counter-size mt-8 max-w-[30ch] text-bone/88 md:mt-10"
         data-reveal
-        style={{ '--i': 1 } as React.CSSProperties}
+        style={stagger(1)}
       >
         Graduating December 2026, available from January 2027.
       </p>
 
-      <p
-        className="mt-10 md:mt-14"
-        data-reveal
-        style={{ '--i': 2 } as React.CSSProperties}
-      >
+      <p className="mt-10 md:mt-14" data-reveal style={stagger(2)}>
         <a href={`mailto:${USER.email}`} className="email-link">
           {USER.email}
         </a>
@@ -39,7 +36,7 @@ export function Contact() {
       <div
         className="mt-10 flex flex-wrap gap-3"
         data-reveal
-        style={{ '--i': 3 } as React.CSSProperties}
+        style={stagger(3)}
       >
         <PillLink href={USER.social.linkedin} external>
           LinkedIn

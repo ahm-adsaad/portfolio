@@ -72,7 +72,7 @@
   --foreground: var(--color-bone);
   --muted: var(--color-ink-2);
   --border: var(--color-ink-3);
-  --muted-foreground: color-mix(in srgb, var(--color-bone) 48%, transparent);
+  --muted-foreground: color-mix(in srgb, var(--color-bone) 56%, transparent);
   --accent-strong: var(--color-apricot);
   --label: var(--color-sea);
   color-scheme: dark;
@@ -83,7 +83,7 @@
   --foreground: var(--color-ink);
   --muted: var(--color-bone-2);
   --border: color-mix(in srgb, var(--color-ink) 24%, transparent);
-  --muted-foreground: color-mix(in srgb, var(--color-ink) 48%, transparent);
+  --muted-foreground: color-mix(in srgb, var(--color-ink) 56%, transparent);
   --accent-strong: var(--color-apricot-ink);
   --label: var(--color-sea-ink);
   color-scheme: light;
@@ -177,6 +177,11 @@
     padding-block: calc(var(--section) * 0.6);
   }
 
+  /* Two ink sections in a row: halve the top gap so the rhythm stays even. */
+  .section[data-tone="ink"] + .section[data-tone="ink"] {
+    padding-top: calc(var(--section) * 0.5);
+  }
+
   .grid-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -221,7 +226,7 @@
   }
 
   .hero-size {
-    font-size: clamp(5.5rem, 17vw, 20rem);
+    font-size: min(clamp(5.5rem, 17vw, 20rem), 24vh);
   }
 
   /* Mobile: the name fills the width in two lines (DESIGN.md section 4). */
@@ -366,14 +371,15 @@
     bottom: -3px;
     height: 1px;
     background: currentColor;
-    transform: scaleX(0.35);
+    transform: scaleX(1);
     transform-origin: left;
-    transition: transform 0.3s var(--ease-out-expo);
+    opacity: 0.35;
+    transition: opacity 0.3s var(--ease-out-expo);
   }
 
   .text-link:hover::after,
   .text-link:focus-visible::after {
-    transform: scaleX(1);
+    opacity: 1;
   }
 
   /* Nav */
@@ -389,6 +395,11 @@
     color: var(--color-bone);
     mix-blend-mode: difference;
     pointer-events: none;
+    transition: translate 0.4s var(--ease-out-expo);
+  }
+
+  .site-nav.is-hidden {
+    translate: 0 -100%;
   }
 
   .site-nav > * {
@@ -513,7 +524,7 @@
     font-size: 10px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--color-bone) 48%, transparent);
+    color: color-mix(in srgb, var(--color-bone) 56%, transparent);
   }
 
   .hero-cue::after {
@@ -541,7 +552,7 @@
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--foreground) 48%, transparent);
+    color: color-mix(in srgb, var(--foreground) 56%, transparent);
   }
 
   .crumb li + li::before {
@@ -591,8 +602,8 @@
 
   @media (max-width: 767px) {
     .radar {
-      --size: 100vw;
-      top: 42%;
+      --size: 84vw;
+      top: 34%;
       opacity: 0.75;
     }
   }
@@ -691,8 +702,13 @@
     translate: 0 -50%;
   }
 
-  /* On narrow screens the labels point inward so none is clipped. */
+  /* On narrow screens only the dots show; the labels stay in the DOM for
+     screen readers and point inward so none is clipped. */
   @media (max-width: 767px) {
+    .radar-blips li {
+      font-size: 0;
+    }
+
     .radar-blips li[data-side="right"] {
       flex-direction: row-reverse;
       translate: -100% -50%;
@@ -787,7 +803,7 @@
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--foreground) 48%, transparent);
+    color: color-mix(in srgb, var(--foreground) 56%, transparent);
   }
 
   .glyph {
@@ -835,14 +851,16 @@
   }
 
   @media (min-width: 1024px) {
-    .ledger-body {
+    .position {
       display: grid;
       grid-template-columns: 5fr 7fr;
       gap: var(--gap);
     }
 
-    .ledger-body > * {
-      grid-column: 2;
+    .position-head {
+      position: sticky;
+      top: calc(var(--nav) + 1rem);
+      align-self: start;
     }
   }
 
@@ -873,8 +891,7 @@
     border-radius: 24px;
     background: var(--color-ink);
     color: var(--color-bone);
-    box-shadow: 0 -12px 40px
-      color-mix(in srgb, var(--color-ink) 18%, transparent);
+    border: 1px solid var(--color-ink-3);
   }
 
   @media (min-width: 1024px) {
@@ -904,6 +921,15 @@
       aspect-ratio: auto;
       height: 100%;
       min-height: 100%;
+    }
+
+    /* Inset in the card so the previous cover never peeks above it. */
+    .stack-card-inner .stack-cover {
+      height: auto;
+      min-height: 0;
+      margin: 16px 16px 16px 0;
+      border-radius: 12px;
+      overflow: hidden;
     }
   }
 
@@ -978,9 +1004,26 @@
 
   /* Tech marquee */
   .marquee {
-    overflow: hidden;
     padding-block: clamp(0.75rem, 1.5vw, 1.25rem);
     border-bottom: 1px solid var(--border);
+  }
+
+  .marquee-viewport {
+    overflow: hidden;
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
   }
 
   .marquee:first-of-type {
@@ -1050,6 +1093,7 @@
     text-decoration-color: var(--color-apricot);
     text-decoration-thickness: 2px;
     text-underline-offset: 8px;
+    text-decoration-skip-ink: none;
     overflow-wrap: anywhere;
     transition: color 0.2s;
   }
@@ -1217,7 +1261,7 @@
   fill: #ff9e5e;
 }
 .gh-graph svg text {
-  fill: color-mix(in srgb, var(--color-bone) 48%, transparent);
+  fill: color-mix(in srgb, var(--color-bone) 56%, transparent);
 }
 
 /* ------------------------------------------------------------------ */
@@ -1439,8 +1483,10 @@
     opacity: 0.6;
   }
 
-  .marquee {
+  .marquee-viewport {
     overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   .marquee-track {

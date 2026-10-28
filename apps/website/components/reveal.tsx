@@ -6,6 +6,9 @@ import { useEffect } from 'react';
 /**
  * One IntersectionObserver for every `[data-reveal]` element. Adds `js` to
  * <html> so the hiding rule only applies when this can actually un-hide.
+ * Nodes are collected once per route, so `data-reveal` must never sit inside
+ * a lazy chunk or a Suspense boundary (the GitHub graph's wrapper is outside
+ * the dynamic import for that reason).
  */
 export function Reveal() {
   const pathname = usePathname();
@@ -33,7 +36,7 @@ export function Reveal() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -5% 0px' }
+      { threshold: 0, rootMargin: '0px 0px -12% 0px' }
     );
     for (const node of nodes) observer.observe(node);
 

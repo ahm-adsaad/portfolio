@@ -52,7 +52,7 @@ Dark ground with warm text, one warm accent, one cool accent for labels.
 | `--sea-ink`    | `#1C6E5C` | Sea for use ON BONE.                                     |
 
 Text opacity steps on ink: `--bone` at 100% for display and headings, 72%
-for body, 48% for muted, 24% for dim rules. On bone, `--ink` at the same
+for body, 56% for muted (11px mono needs it to clear 4.5:1), 24% for dim rules. On bone, `--ink` at the same
 steps. Never put `--apricot` or `--sea` text on bone: use the `-ink`
 variants. Selection: apricot background, ink text.
 

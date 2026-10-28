@@ -19,10 +19,10 @@ import {
 } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import { cn } from '@/lib/utils';
+import { stagger } from '@/lib/stagger';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next/types';
-import type { CSSProperties } from 'react';
 import type { Graph } from 'schema-dts';
 
 export const dynamic = 'force-static';
@@ -88,8 +88,6 @@ function buildJsonLd(project: Project): Graph {
   };
 }
 
-const stagger = (i: number) => ({ '--i': i }) as CSSProperties;
-
 function PagerCell({
   project,
   dir,
@@ -102,7 +100,7 @@ function PagerCell({
   }
   return (
     <Link href={projectPath(project)} className="pager-cell" data-dir={dir}>
-      <span className="mono-label text-fg/48">
+      <span className="mono-label text-fg/56">
         {dir === 'prev' ? 'Previous' : 'Next'}
       </span>
       <span className="display pager-title">{project.title}</span>
@@ -156,7 +154,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
               {project.title}
             </h1>
 
-            <p className="mono-label rise mt-6 text-bone/48" style={stagger(3)}>
+            <p className="mono-label rise mt-6 text-bone/56" style={stagger(3)}>
               Built by{' '}
               <Link
                 href="/about"

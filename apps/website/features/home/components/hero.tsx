@@ -1,10 +1,7 @@
-import type { CSSProperties } from 'react';
-
 import { PillLink } from '@/components/pill-link';
 import { USER } from '@/config/user';
+import { stagger } from '@/lib/stagger';
 import { Radar } from './radar';
-
-const stagger = (i: number) => ({ '--i': i }) as CSSProperties;
 
 export function Hero() {
   return (
@@ -17,7 +14,9 @@ export function Hero() {
 
       <div className="hero-copy">
         <p className="eyebrow rise" style={stagger(0)}>
-          AI Engineer · FDE · Computer Engineering @ AUS · UAE
+          AI Engineer · FDE ·{' '}
+          <span className="whitespace-nowrap">Computer Engineering @ AUS</span>{' '}
+          · UAE
         </p>
 
         <h1 id="hero-name" className="display hero-size mt-5 md:mt-6">

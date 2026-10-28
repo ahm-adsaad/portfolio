@@ -55,6 +55,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(fontDisplay.variable, fontSans.variable, fontMono.variable)}
+      suppressHydrationWarning
     >
       <head>
         {/* Cloudflare Web Analytics injects its beacon at the edge; warm the

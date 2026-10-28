@@ -1,9 +1,14 @@
-import { Icons } from '@/components/icons';
+import { Breadcrumb } from '@/components/breadcrumb';
+import { Chip } from '@/components/chip';
 import { Markdown } from '@/components/markdown';
+import { PillLink } from '@/components/pill-link';
+import { ProjectCover } from '@/components/project-cover';
+import { SectionHeader } from '@/components/section-header';
 import { PROJECT_PAGES, type Project } from '@/config/projects';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
 import { formatPeriod } from '@/lib/format-period';
+import { formatIndex, projectIndex } from '@/lib/project-index';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import {
@@ -13,12 +18,11 @@ import {
   projectTitle,
 } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
-import { Tag } from '@repo/design-system/components/ui/tag';
-import { Prose } from '@repo/design-system/components/ui/typography';
-import { ArrowLeftIcon, ArrowRightIcon, ArrowUpRightIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next/types';
+import type { CSSProperties } from 'react';
 import type { Graph } from 'schema-dts';
 
 export const dynamic = 'force-static';
@@ -84,229 +88,206 @@ function buildJsonLd(project: Project): Graph {
   };
 }
 
-/** WebP twins of each cover come from `pnpm images:projects`. */
-function Cover({ project }: { project: Project }) {
-  if (!project.image) return null;
-  const stem = project.image.replace(/\.jpe?g$/i, '');
+const stagger = (i: number) => ({ '--i': i }) as CSSProperties;
 
+function PagerCell({
+  project,
+  dir,
+}: {
+  project?: Project;
+  dir: 'prev' | 'next';
+}) {
+  if (!project) {
+    return <div className="pager-cell" data-dir={dir} aria-hidden="true" />;
+  }
   return (
-    <picture>
-      <source
-        srcSet={`${stem}-320.webp 320w, ${stem}.webp 640w`}
-        sizes="(min-width: 640px) 320px, 100vw"
-        type="image/webp"
-      />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={project.image}
-        alt={`${project.title}, a project by ${USER.name}`}
-        width={640}
-        height={640}
-        decoding="async"
-        className="aspect-square w-full max-w-xs rounded-2xl bg-muted object-cover shadow-xl"
-      />
-    </picture>
+    <Link href={projectPath(project)} className="pager-cell" data-dir={dir}>
+      <span className="mono-label text-fg/48">
+        {dir === 'prev' ? 'Previous' : 'Next'}
+      </span>
+      <span className="display pager-title">{project.title}</span>
+    </Link>
   );
 }
-
-const linkClass =
-  'font-medium text-foreground underline underline-offset-4 hover:text-foreground/80';
-
-const buttonClass =
-  'inline-flex min-h-8 items-center gap-1.5 rounded-full border border-border bg-background px-3.5 text-[13px] font-medium text-foreground transition-colors hover:bg-muted';
 
 export default async function ProjectPage({ params }: { params: Params }) {
   const { id } = await params;
   const project = findProject(id);
   if (!project) notFound();
 
-  const index = PROJECT_PAGES.indexOf(project);
-  const prev = PROJECT_PAGES[index - 1];
-  const next = PROJECT_PAGES[index + 1];
-  const demo = project.link && project.link !== project.github;
+  const pageIndex = PROJECT_PAGES.indexOf(project);
+  const prev = PROJECT_PAGES[pageIndex - 1];
+  const next = PROJECT_PAGES[pageIndex + 1];
+  // A live demo is a `link` that is not just the repository again.
+  const demo =
+    project.link && project.link !== project.github ? project.link : undefined;
+  const paragraphs = project.description?.split('\n\n') ?? [];
 
   return (
     <>
       <JsonLd code={buildJsonLd(project)} />
 
       <section
-        className="section"
+        className="section page-hero"
         data-tone="ink"
-        style={{ paddingTop: 'calc(var(--nav) + var(--section) * 0.5)' }}
+        aria-labelledby="project-title"
       >
-        <div className="mx-auto w-full max-w-3xl">
-          <div className="py-8">
-            <nav
-              aria-label="Breadcrumb"
-              className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Projects', href: '/projects' },
+            { label: project.title },
+          ]}
+          className="rise"
+          style={stagger(0)}
+        />
+
+        <div className="grid-12 mt-10 md:mt-14">
+          <div className="col-span-12 flex flex-col lg:col-span-7">
+            <p className="mono-label rise text-apricot" style={stagger(1)}>
+              {formatIndex(projectIndex(project))}
+            </p>
+
+            <h1
+              id="project-title"
+              className="display page-size rise-name mt-4 text-bone"
+              style={stagger(2)}
             >
-              <Link href="/" className="hover:text-foreground">
-                Home
-              </Link>
-              <span className="mx-2" aria-hidden="true">
-                /
-              </span>
-              <Link href="/projects" className="hover:text-foreground">
-                Projects
-              </Link>
-              <span className="mx-2" aria-hidden="true">
-                /
-              </span>
-              <span aria-current="page">{project.title}</span>
-            </nav>
+              {project.title}
+            </h1>
 
-            <div className="space-y-1">
-              <h1 className="font-semibold text-2xl">{project.title}</h1>
-              <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
-                Built by{' '}
-                <Link
-                  href="/about"
-                  className="hover:text-foreground underline underline-offset-4"
-                >
-                  {USER.name}
-                </Link>{' '}
-                · {formatPeriod(project.period)}
-              </p>
-            </div>
+            <p className="mono-label rise mt-6 text-bone/48" style={stagger(3)}>
+              Built by{' '}
+              <Link
+                href="/about"
+                className="text-bone/72 underline underline-offset-4 transition-colors hover:text-bone"
+              >
+                {USER.name}
+              </Link>{' '}
+              · {formatPeriod(project.period)}
+            </p>
 
-            {project.shortDescription && (
-              <p className="mt-6 text-foreground/70 leading-relaxed">
+            {project.shortDescription ? (
+              <p
+                className="display-light intro-size rise mt-8 max-w-[40ch] text-bone/88"
+                style={stagger(4)}
+              >
                 {project.shortDescription}
               </p>
-            )}
+            ) : null}
 
-            <div className="mt-6 flex justify-center sm:justify-start">
-              <Cover project={project} />
-            </div>
-
-            {(project.github || demo) && (
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={buttonClass}
-                  >
-                    <Icons.github className="size-3.5" aria-hidden="true" />
-                    Source on GitHub
-                  </a>
-                )}
-                {demo && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={buttonClass}
-                  >
+            {project.github || demo ? (
+              <div
+                className="rise mt-8 flex flex-wrap gap-3 lg:mt-auto lg:pt-10"
+                style={stagger(5)}
+              >
+                {demo ? (
+                  <PillLink href={demo} variant="fill" external>
                     {project.ctaLabel ?? 'Visit the project'}
-                    <ArrowUpRightIcon className="size-3.5" aria-hidden="true" />
-                  </a>
-                )}
+                  </PillLink>
+                ) : null}
+                {project.github ? (
+                  <PillLink
+                    href={project.github}
+                    variant={demo ? 'outline' : 'fill'}
+                    external
+                  >
+                    Source on GitHub
+                  </PillLink>
+                ) : null}
               </div>
-            )}
+            ) : null}
           </div>
 
-          <div className="py-8">
-            <div className="space-y-4">
-              <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
-                Overview
-              </h2>
-              {project.description && (
-                <div className="space-y-3 text-foreground/70">
-                  {project.description.split('\n\n').map((paragraph) => (
-                    <p key={paragraph.slice(0, 32)} className="leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              )}
-              {project.impact && (
-                <p className="text-foreground/70 leading-relaxed">
-                  <span className="font-medium text-foreground">Impact: </span>
-                  {project.impact}
-                </p>
-              )}
-              <ul className="flex flex-wrap gap-1.5 pt-1">
-                {project.skills.map((skill) => (
-                  <li key={skill} className="flex">
-                    <Tag>{skill}</Tag>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="py-8">
-            <Prose className="text-foreground/80 prose-h2:font-mono prose-h2:text-sm prose-h2:font-normal prose-h2:tracking-widest prose-h2:text-muted-foreground prose-h2:uppercase">
-              <Markdown>{project.caseStudy}</Markdown>
-            </Prose>
-          </div>
-
-          <div className="py-8">
-            <nav
-              aria-label="More projects"
-              className="flex items-start justify-between gap-4 text-sm"
-            >
-              {prev ? (
-                <Link
-                  href={projectPath(prev)}
-                  className="group flex items-center gap-1.5 text-foreground/70 hover:text-foreground"
-                >
-                  <ArrowLeftIcon
-                    className="size-4 shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <span className="block font-mono text-xs tracking-wider text-muted-foreground uppercase">
-                      Previous
-                    </span>
-                    <span className="font-medium group-hover:underline">
-                      {prev.title}
-                    </span>
-                  </span>
-                </Link>
-              ) : (
-                <span />
-              )}
-              {next ? (
-                <Link
-                  href={projectPath(next)}
-                  className="group flex items-center gap-1.5 text-right text-foreground/70 hover:text-foreground"
-                >
-                  <span>
-                    <span className="block font-mono text-xs tracking-wider text-muted-foreground uppercase">
-                      Next
-                    </span>
-                    <span className="font-medium group-hover:underline">
-                      {next.title}
-                    </span>
-                  </span>
-                  <ArrowRightIcon
-                    className="size-4 shrink-0"
-                    aria-hidden="true"
-                  />
-                </Link>
-              ) : (
-                <span />
-              )}
-            </nav>
-          </div>
-
-          <div className="py-8">
-            <p className="text-center text-foreground/70 leading-relaxed">
-              See{' '}
-              <Link href="/projects" className={linkClass}>
-                all projects
-              </Link>{' '}
-              or read{' '}
-              <Link href="/about" className={linkClass}>
-                about {USER.name}
-              </Link>
-              .
-            </p>
+          <div className="col-span-12 mt-10 lg:col-span-5 lg:mt-0">
+            <ProjectCover
+              project={project}
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              priority
+              className="cover-hero"
+            />
           </div>
         </div>
+      </section>
+
+      <section
+        className="section"
+        data-tone="bone"
+        aria-labelledby="overview-title"
+      >
+        <SectionHeader
+          id="overview-title"
+          eyebrow="Overview"
+          value={`${project.skills.length} tools`}
+        />
+
+        <div className="grid-12">
+          <aside className="col-span-12 lg:sticky lg:col-span-5 lg:top-[calc(var(--nav)+2rem)] lg:self-start">
+            {project.impact ? (
+              <div data-reveal>
+                <p className="eyebrow">Impact</p>
+                <p className="display-light counter-size mt-3 max-w-[24ch] text-fg">
+                  {project.impact}
+                </p>
+              </div>
+            ) : null}
+
+            <ul
+              className={cn('flex flex-wrap gap-2', project.impact && 'mt-8')}
+              data-reveal
+              style={stagger(1)}
+            >
+              {project.skills.map((skill) => (
+                <li key={skill} className="flex">
+                  <Chip>{skill}</Chip>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          <div className="col-span-12 mt-10 lg:col-span-7 lg:mt-0">
+            {paragraphs.length ? (
+              <div
+                className="prose-body body-lg space-y-5 text-fg/72"
+                data-reveal
+              >
+                {paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                ))}
+              </div>
+            ) : null}
+
+            {/* The typography plugin's `prose` base plus the site's `prose-ink`
+                skin. The design-system Prose wrapper is not used here: its
+                `radix-ui` import drags the whole Radix barrel (~73 kB gz) into
+                this otherwise static page. */}
+            <div
+              className={cn(
+                'prose prose-ink',
+                paragraphs.length && 'mt-12 border-line border-t pt-10'
+              )}
+            >
+              <Markdown>{project.caseStudy}</Markdown>
+            </div>
+          </div>
+        </div>
+
+        <nav
+          aria-label="More projects"
+          className="pager mt-[clamp(4rem,10vh,7rem)]"
+        >
+          <PagerCell project={prev} dir="prev" />
+          <PagerCell project={next} dir="next" />
+        </nav>
+
+        <p className="mono-label mt-8 flex flex-wrap gap-x-6 gap-y-2 text-fg/72">
+          <Link href="/projects" className="text-link">
+            All projects
+          </Link>
+          <Link href="/about" className="text-link">
+            About {USER.name}
+          </Link>
+        </p>
       </section>
     </>
   );

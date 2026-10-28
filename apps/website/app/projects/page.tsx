@@ -1,13 +1,14 @@
-import { PROJECT_PAGES } from '@/config/projects';
+import { Breadcrumb } from '@/components/breadcrumb';
+import { PROJECT_PAGES, PROJECTS } from '@/config/projects';
 import { USER } from '@/config/user';
+import { ProjectStack } from '@/features/home/components/project-stack';
 import { createOgImage } from '@/lib/createOgImage';
-import { formatPeriod } from '@/lib/format-period';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
-import { projectPath, projectSchemaId } from '@/lib/seo/project-schema';
+import { projectSchemaId } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
-import Link from 'next/link';
 import type { Metadata } from 'next/types';
+import type { CSSProperties } from 'react';
 import type { Graph } from 'schema-dts';
 
 export const dynamic = 'force-static';
@@ -68,88 +69,59 @@ const jsonLd: Graph = {
   ],
 };
 
+const stagger = (i: number) => ({ '--i': i }) as CSSProperties;
+
 export default function ProjectsPage() {
   return (
     <>
       <JsonLd code={jsonLd} />
 
       <section
-        className="section"
+        className="section page-hero"
         data-tone="ink"
-        style={{ paddingTop: 'calc(var(--nav) + var(--section) * 0.5)' }}
+        aria-labelledby="projects-name"
       >
-        <div className="mx-auto w-full max-w-3xl">
-          <div className="py-8">
-            <nav
-              aria-label="Breadcrumb"
-              className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
-            >
-              <Link href="/" className="hover:text-foreground">
-                Home
-              </Link>
-              <span className="mx-2" aria-hidden="true">
-                /
-              </span>
-              <span aria-current="page">Projects</span>
-            </nav>
+        <Breadcrumb
+          items={[{ label: 'Home', href: '/' }, { label: 'Projects' }]}
+          className="rise"
+          style={stagger(0)}
+        />
 
-            <h1 className="font-semibold text-2xl">{TITLE}</h1>
-            <p className="mt-6 text-foreground/70 leading-relaxed">
+        <div className="grid-12 mt-10 md:mt-14">
+          <div className="col-span-12 lg:col-span-5">
+            <p className="eyebrow rise" style={stagger(1)}>
+              AI systems, embedded hardware, and computer architecture
+            </p>
+            <h1 id="projects-name" className="mt-4 text-bone">
+              <span
+                className="display h2-size block rise-name"
+                style={stagger(2)}
+              >
+                Projects
+              </span>{' '}
+              <span
+                className="display-light counter-size rise mt-3 block text-bone/88"
+                style={stagger(3)}
+              >
+                by {USER.name}
+              </span>
+            </h1>
+          </div>
+
+          <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0 lg:self-end">
+            <p
+              className="display-light intro-size rise max-w-[40ch] text-bone/88"
+              style={stagger(4)}
+            >
               Write-ups of the systems I have built, from production LLM
               pipelines to a custom PCB. Each one covers the problem, the
               approach, the architecture, and my role.
             </p>
           </div>
-
-          <div className="py-8">
-            <ul className="space-y-6">
-              {PROJECT_PAGES.map((project) => {
-                const stem = project.image?.replace(/\.jpe?g$/i, '');
-                return (
-                  <li key={project.id}>
-                    <Link
-                      href={projectPath(project)}
-                      className="group flex items-start gap-4"
-                    >
-                      {stem && (
-                        <picture className="shrink-0">
-                          <source
-                            srcSet={`${stem}-320.webp`}
-                            type="image/webp"
-                          />
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={project.image}
-                            alt={`${project.title}, a project by ${USER.name}`}
-                            width={64}
-                            height={64}
-                            loading="lazy"
-                            decoding="async"
-                            className="size-16 rounded-lg bg-muted object-cover"
-                          />
-                        </picture>
-                      )}
-                      <div className="flex-1 space-y-1">
-                        <h2 className="font-medium text-foreground group-hover:underline">
-                          {project.title}
-                        </h2>
-                        <p className="text-sm text-muted-foreground">
-                          {formatPeriod(project.period)}
-                        </p>
-                        {project.shortDescription && (
-                          <p className="text-sm text-foreground/60 leading-relaxed">
-                            {project.shortDescription}
-                          </p>
-                        )}
-                      </div>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
         </div>
       </section>
+
+      <ProjectStack projects={PROJECTS} />
     </>
   );
 }

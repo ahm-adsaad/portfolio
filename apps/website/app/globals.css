@@ -14,7 +14,7 @@
   --color-bone: #f1ece4;
   --color-bone-2: #e6dfd3;
   --color-apricot: #ff9e5e;
-  --color-apricot-ink: #c2491a;
+  --color-apricot-ink: #ae3e19;
   --color-sea: #7fd6c2;
   --color-sea-ink: #1c6e5c;
 
@@ -83,7 +83,7 @@
   --foreground: var(--color-ink);
   --muted: var(--color-bone-2);
   --border: color-mix(in srgb, var(--color-ink) 24%, transparent);
-  --muted-foreground: color-mix(in srgb, var(--color-ink) 56%, transparent);
+  --muted-foreground: color-mix(in srgb, var(--color-ink) 64%, transparent);
   --accent-strong: var(--color-apricot-ink);
   --label: var(--color-sea-ink);
   color-scheme: light;
@@ -195,7 +195,6 @@
     text-transform: uppercase;
     line-height: 0.86;
     letter-spacing: -0.01em;
-    font-variation-settings: "wght" 800, "wdth" 75, "opsz" 96;
     overflow-wrap: anywhere;
   }
 
@@ -205,7 +204,6 @@
     line-height: 1;
     letter-spacing: 0;
     text-transform: none;
-    font-variation-settings: "wght" 300, "wdth" 100, "opsz" 96;
   }
 
   .eyebrow {
@@ -576,7 +574,9 @@
     color: color-mix(in srgb, var(--foreground) 72%, transparent);
   }
 
-  /* Page-load rise (DESIGN.md section 7). The name animates transform only. */
+  /* Page-load rise (DESIGN.md section 7). The name animates transform only;
+     the rest starts at .6, never near-invisible, so an LCP candidate still
+     counts as painted on its first frame. */
   .rise {
     animation: rise 0.7s var(--ease-out-expo) both;
     animation-delay: calc(var(--i, 0) * 70ms);
@@ -737,11 +737,16 @@
     margin-right: 0.25em;
   }
 
+  /* The range starts the moment a word enters so the dim state is never
+     applied outside it (fill-mode none): words below the fold compute to
+     opacity 1 at load, which is what axe measures, and the fade from dim
+     still runs from about entry 70% to cover 45% via the held keyframe. */
   @supports (animation-timeline: view()) {
     .word {
-      animation: word-in linear both;
+      animation: word-in linear;
+      animation-fill-mode: none;
       animation-timeline: view();
-      animation-range: entry 70% cover 45%;
+      animation-range: entry 0% cover 45%;
     }
   }
 
@@ -812,7 +817,6 @@
     align-self: start;
     font-family: var(--font-display);
     font-weight: 300;
-    font-variation-settings: "wght" 300, "wdth" 100;
     font-size: clamp(1.75rem, 3vw, 2.75rem);
     line-height: 1;
     color: var(--accent-strong);
@@ -1163,7 +1167,7 @@
 /* ------------------------------------------------------------------ */
 @keyframes rise {
   from {
-    opacity: 0.001;
+    opacity: 0.6;
     translate: 0 24px;
   }
   to {
@@ -1200,10 +1204,11 @@
 }
 
 @keyframes word-in {
-  from {
+  0%,
+  8% {
     opacity: 0.12;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -1303,7 +1308,6 @@
   font-family: var(--font-display);
   font-weight: 800;
   letter-spacing: -0.01em;
-  font-variation-settings: "wght" 800, "wdth" 75, "opsz" 96;
   color: var(--foreground);
   text-wrap: balance;
 }
@@ -1416,7 +1420,6 @@
   font-family: var(--font-display);
   font-weight: 300;
   font-style: normal;
-  font-variation-settings: "wght" 300, "wdth" 100, "opsz" 96;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   line-height: 1.3;
   color: var(--foreground);

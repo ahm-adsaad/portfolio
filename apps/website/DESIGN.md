@@ -47,13 +47,13 @@ Dark ground with warm text, one warm accent, one cool accent for labels.
 | `--bone`       | `#F1ECE4` | Text on ink. Also the ground of inverted sections.       |
 | `--bone-2`     | `#E6DFD3` | Raised surfaces on bone.                                 |
 | `--apricot`    | `#FF9E5E` | Primary accent on ink: numbers, CTAs, radar, selection.  |
-| `--apricot-ink`| `#C2491A` | Apricot for use ON BONE (text and lines). 5:1 on bone.   |
+| `--apricot-ink`| `#AE3E19` | Apricot for use ON BONE (text and lines). 5.1:1 on bone, 4.5:1 on bone-2. |
 | `--sea`        | `#7FD6C2` | Cool accent, mono eyebrows and labels on ink only.       |
 | `--sea-ink`    | `#1C6E5C` | Sea for use ON BONE.                                     |
 
 Text opacity steps on ink: `--bone` at 100% for display and headings, 72%
 for body, 56% for muted (11px mono needs it to clear 4.5:1), 24% for dim rules. On bone, `--ink` at the same
-steps. Never put `--apricot` or `--sea` text on bone: use the `-ink`
+steps except muted, which is 64% (`--ink` at 56% on bone is only 4.2:1; 64% is 5.5:1). Never put `--apricot` or `--sea` text on bone: use the `-ink`
 variants. Selection: apricot background, ink text.
 
 Rationale: apricot is the Gulf sun at dusk, sea is the water, ink is the sky
@@ -68,14 +68,18 @@ packages and are copied into `assets/fonts/`.
 
 | Role    | Face                                   | Settings                                                        |
 | ------- | -------------------------------------- | --------------------------------------------------------------- |
-| Display | Bricolage Grotesque (variable)         | `wght 800`, `wdth 75`, `opsz 96`, uppercase, `line-height .86`, `letter-spacing -0.01em` |
-| Display light | Bricolage Grotesque (variable)   | `wght 300`, `wdth 100`, `opsz 96`, sentence case, `line-height 1`, the "counterpoint" where the reference used italic serif |
+| Display | Bricolage Grotesque (static instance)  | `wght 800`, `wdth 75`, `opsz 96`, uppercase, `line-height .86`, `letter-spacing -0.01em` |
+| Display light | Bricolage Grotesque (static instance) | `wght 300`, `wdth 100`, `opsz 96`, sentence case, `line-height 1`, the "counterpoint" where the reference used italic serif |
 | Body    | Instrument Sans (variable)             | `wght 400/500`, `line-height 1.6`, 16 to 18px                   |
 | Mono    | Geist Mono (variable)                  | `wght 400/500`, 11 to 13px, `letter-spacing .18em`, uppercase for eyebrows |
 
-One variable family carries both display voices: condensed black for the
-shout and extended light for the whisper. That contrast replaces the
-reference's Bebas + Playfair pairing, and it is the typographic signature.
+One family carries both display voices: condensed black for the shout and
+extended light for the whisper. That contrast replaces the reference's
+Bebas + Playfair pairing, and it is the typographic signature. The two
+voices ship as two static instances (`assets/fonts/bricolage-display*.woff2`,
+about 18 KiB each, Latin subset) baked out of the variable file by
+`pnpm fonts:display` (`scripts/build-display-fonts.mts`); the 129 KiB
+variable file delayed the hero LCP by over a second on 4G.
 
 Scale (desktop / mobile):
 
@@ -203,8 +207,10 @@ continuously except the tech marquee.
 - Page load: eyebrow, the two name lines, the counterpoint, and the buttons
   rise 24px and fade in with a 70ms stagger over 700ms, `cubic-bezier(.16,1,.3,1)`.
   The h1 is the LCP element and must be painted on the first frame, so the
-  animation starts from `opacity: .001` only on the decorative pieces; the
-  name itself animates `transform` only, from `translateY(24px)`, never opacity 0.
+  animation starts from `opacity: .6` (never near zero: on About and the
+  project pages the intro paragraph is the LCP candidate and has to count as
+  painted on its first frame) on the decorative pieces; the name itself
+  animates `transform` only, from `translateY(24px)`.
 - Scroll reveals: elements with `data-reveal` get `is-visible` from one
   `IntersectionObserver` in a 30-line client component (`components/reveal.tsx`);
   CSS transitions opacity and a 20px translate. Threshold 0.15, unobserve
@@ -235,9 +241,9 @@ The site is prerendered to static HTML on Cloudflare Workers via OpenNext.
   `react-fast-marquee`, `canvas-confetti`, `html2canvas`, `jspdf` on the home
   page bundle. Remove the imports; leave unused packages in `package.json`
   for a later cleanup commit if removing them breaks the registry build.
-- Fonts: three woff2 files, preloaded via `next/font/local`, `display: swap`
-  for body and mono, `display: block` for the display face (the hero must
-  not flash a fallback).
+- Fonts: four woff2 files (two static display instances, body, mono),
+  preloaded via `next/font/local`, `display: swap` for body and mono,
+  `display: block` for the display face (the hero must not flash a fallback).
 - Images: the project covers and headshot already exist as jpg + webp twins
   under `public/`; use `<picture>` with explicit width/height. Lazy-load
   everything below the fold, eager the hero only.

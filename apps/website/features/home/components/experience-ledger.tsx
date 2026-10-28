@@ -1,9 +1,8 @@
-import type { CSSProperties } from 'react';
-
 import { Chip } from '@/components/chip';
 import { SectionHeader } from '@/components/section-header';
 import { type Experience, experiences } from '@/config/experience';
 import { formatPeriod } from '@/lib/format-period';
+import { stagger } from '@/lib/stagger';
 
 /** "MM.YYYY" or "YYYY" -> sortable YYYYMM. */
 const dateKey = (value: string) => {
@@ -57,49 +56,67 @@ export function ExperienceLedger() {
             className="ledger-row"
             open={experience.isExpanded}
             data-reveal
-            style={{ '--i': Math.min(i, 3) } as CSSProperties}
+            style={stagger(Math.min(i, 3))}
           >
             <summary className="ledger-summary">
               <h3 className="ledger-title display h3-size">
                 {experience.companyName}
               </h3>
-              <p className="ledger-meta">
+              <span className="block ledger-meta">
                 {companyPeriod(experience)} · {experience.city}
-              </p>
+              </span>
               <span className="glyph" aria-hidden="true" />
             </summary>
 
             <div className="ledger-body">
               <div>
-                {experience.positions.map((position) => (
-                  <article key={position.id} className="position">
-                    <h4 className="font-medium text-fg">{position.title}</h4>
-                    <p className="mono-label mt-2 text-fg/48">
-                      {formatPeriod(position.employmentPeriod)}
-                      {position.employmentType
-                        ? ` · ${position.employmentType}`
-                        : null}
-                    </p>
+                {experience.positions.map((position) => {
+                  // The summary row already prints the company span, so a
+                  // single position repeats nothing but its type.
+                  const meta = [
+                    experience.positions.length > 1
+                      ? formatPeriod(position.employmentPeriod)
+                      : null,
+                    position.employmentType ?? null,
+                  ].filter(Boolean);
 
-                    {position.description ? (
-                      <div className="prose-body mt-5 space-y-4 text-fg/72">
-                        {position.description.split('\n\n').map((paragraph) => (
-                          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-                        ))}
+                  return (
+                    <article key={position.id} className="position">
+                      <div className="position-head">
+                        <h4 className="font-medium text-fg">
+                          {position.title}
+                        </h4>
+                        {meta.length ? (
+                          <p className="mono-label mt-2 text-fg/56">
+                            {meta.join(' · ')}
+                          </p>
+                        ) : null}
                       </div>
-                    ) : null}
 
-                    {position.skills?.length ? (
-                      <ul className="mt-6 flex flex-wrap gap-2">
-                        {position.skills.map((skill) => (
-                          <li key={skill} className="flex">
-                            <Chip>{skill}</Chip>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </article>
-                ))}
+                      <div className="position-body mt-5 lg:mt-0">
+                        {position.description ? (
+                          <div className="prose-body space-y-4 text-fg/72">
+                            {position.description
+                              .split('\n\n')
+                              .map((paragraph) => (
+                                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                              ))}
+                          </div>
+                        ) : null}
+
+                        {position.skills?.length ? (
+                          <ul className="mt-6 flex flex-wrap gap-2">
+                            {position.skills.map((skill) => (
+                              <li key={skill} className="flex">
+                                <Chip>{skill}</Chip>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </details>

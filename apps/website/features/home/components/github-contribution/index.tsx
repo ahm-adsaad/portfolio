@@ -22,7 +22,7 @@ export async function GitHubContribution() {
         {data.length > 0 ? (
           <LazyGitHubContributionGraph contributions={data} />
         ) : (
-          <p className="mono-label text-bone/48">
+          <p className="mono-label text-bone/56">
             Contribution data was unavailable when this page was built.
           </p>
         )}

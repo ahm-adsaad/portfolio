@@ -10,7 +10,7 @@ export function SiteFooter() {
   return (
     <footer className="section section-tight pb-0" data-tone="bone">
       <div className="mono-label flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3 border-t border-line pt-5 text-fg/72">
-        <p className="text-fg/48">
+        <p className="text-fg/56">
           © {year} {USER.name}
         </p>
         <ul className="flex flex-wrap gap-x-6 gap-y-3">

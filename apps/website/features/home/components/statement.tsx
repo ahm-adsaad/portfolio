@@ -15,7 +15,7 @@ export function Statement() {
 
   return (
     <section
-      className="section flex min-h-[80vh] items-center"
+      className="section flex min-h-[60svh] items-center md:min-h-[80vh]"
       data-tone="ink"
       aria-label="Statement"
     >

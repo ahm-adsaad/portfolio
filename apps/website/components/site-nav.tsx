@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { USER } from '@/config/user';
 import { MobileMenu, type MenuLink } from './mobile-menu';
+import { NavHide } from './nav-hide';
+import { NavLinks } from './nav-links';
 
 const LINKS: MenuLink[] = [
   { label: 'About', href: '/about' },
@@ -12,7 +14,8 @@ const LINKS: MenuLink[] = [
 
 /**
  * Fixed header in bone with `mix-blend-mode: difference`, so it inverts by
- * itself over the bone sections. No background, no JS except the mobile menu.
+ * itself over the bone sections. No background; the only JS is the mobile
+ * menu, the current-page marker on the links and the hide-on-scroll hook.
  */
 export function SiteNav() {
   return (
@@ -22,33 +25,11 @@ export function SiteNav() {
       </Link>
 
       <nav aria-label="Primary" className="hidden md:block">
-        <ul className="flex items-center gap-7">
-          {LINKS.map((link) => (
-            <li key={link.href}>
-              {link.external ? (
-                <a
-                  href={link.href}
-                  className="nav-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.label}
-                </a>
-              ) : link.href.startsWith('mailto:') ? (
-                <a href={link.href} className="nav-link">
-                  {link.label}
-                </a>
-              ) : (
-                <Link href={link.href} className="nav-link">
-                  {link.label}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
+        <NavLinks links={LINKS} />
       </nav>
 
       <MobileMenu links={LINKS} />
+      <NavHide />
     </header>
   );
 }

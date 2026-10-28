@@ -30,16 +30,18 @@ export function TechMarquee() {
             }
           >
             <p className="marquee-title mono-label text-sea">{group.title}</p>
-            <ul className="marquee-track display-light marquee-size">
-              {group.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-              {group.items.map((item) => (
-                <li key={`${item}-copy`} aria-hidden="true">
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="marquee-viewport">
+              <ul className="marquee-track display-light marquee-size">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+                {group.items.map((item) => (
+                  <li key={`${item}-copy`} aria-hidden="true">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>

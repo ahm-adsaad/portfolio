@@ -40,7 +40,7 @@ export function Education() {
               </a>
             </h3>
             <p className="body-lg mt-5 text-bone/88">{EDUCATION.degree}</p>
-            <p className="mono-label mt-2 text-bone/48">
+            <p className="mono-label mt-2 text-bone/56">
               {EDUCATION.period} · {EDUCATION.city}
             </p>
           </div>
@@ -52,7 +52,7 @@ export function Education() {
             {EDUCATION.highlights.map((highlight) => (
               <li key={highlight} className="flex gap-4">
                 <span
-                  className="mt-[0.7em] h-px w-5 shrink-0 bg-apricot"
+                  className="mt-[0.65em] h-[2px] w-5 shrink-0 bg-apricot"
                   aria-hidden="true"
                 />
                 <span>{highlight}</span>

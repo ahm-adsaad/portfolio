@@ -37,7 +37,7 @@ export function GitHubContributionGraph({
       </ContributionGraphCalendar>
 
       <ContributionGraphFooter className="mono-label pt-2">
-        <ContributionGraphTotalCount className="text-bone/48" />
+        <ContributionGraphTotalCount className="text-bone/56" />
         <ContributionGraphLegend />
       </ContributionGraphFooter>
     </ContributionGraph>

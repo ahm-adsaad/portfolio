@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import type { CSSProperties } from 'react';
 
 import { Chip } from '@/components/chip';
 import { ProjectCover } from '@/components/project-cover';
 import { SectionHeader } from '@/components/section-header';
 import type { Project } from '@/config/projects';
 import { formatIndex, projectIndex } from '@/lib/project-index';
+import { stagger } from '@/lib/stagger';
 
 type Props = {
   projects: Project[];
@@ -36,7 +36,7 @@ export function ProjectStack({ projects, showAllLink = false }: Props) {
             <li
               key={project.id}
               className="stack-card"
-              style={{ '--i': i } as CSSProperties}
+              style={stagger(i)}
               data-tone="ink"
             >
               <article className="stack-card-inner">

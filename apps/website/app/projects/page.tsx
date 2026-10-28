@@ -7,8 +7,8 @@ import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import { projectSchemaId } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
+import { stagger } from '@/lib/stagger';
 import type { Metadata } from 'next/types';
-import type { CSSProperties } from 'react';
 import type { Graph } from 'schema-dts';
 
 export const dynamic = 'force-static';
@@ -68,8 +68,6 @@ const jsonLd: Graph = {
     },
   ],
 };
-
-const stagger = (i: number) => ({ '--i': i }) as CSSProperties;
 
 export default function ProjectsPage() {
   return (

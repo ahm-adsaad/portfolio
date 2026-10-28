@@ -1,13 +1,18 @@
+import { Breadcrumb } from '@/components/breadcrumb';
 import { Headshot } from '@/components/headshot';
+import { PillLink } from '@/components/pill-link';
+import { SectionHeader } from '@/components/section-header';
 import { ABOUT_INTRO, ABOUT_SECTIONS } from '@/config/about';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
+import { formatIndex } from '@/lib/project-index';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import { personStub } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import Link from 'next/link';
 import type { Metadata } from 'next/types';
+import type { CSSProperties } from 'react';
 import type { Graph } from 'schema-dts';
 
 export const dynamic = 'force-static';
@@ -76,103 +81,125 @@ const jsonLd: Graph = {
 };
 
 const linkClass =
-  'font-medium text-foreground underline underline-offset-4 hover:text-foreground/80';
+  'font-medium text-fg underline decoration-accent-strong underline-offset-4 transition-colors hover:text-accent-strong';
+
+const stagger = (i: number) => ({ '--i': i }) as CSSProperties;
+
+const slug = (heading: string) =>
+  heading.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 export default function AboutPage() {
+  const last = ABOUT_SECTIONS.length - 1;
+
   return (
     <>
       <JsonLd code={jsonLd} />
 
       <section
-        className="section"
+        className="section page-hero"
         data-tone="ink"
-        style={{ paddingTop: 'calc(var(--nav) + var(--section) * 0.5)' }}
+        aria-labelledby="about-name"
       >
-        <div className="mx-auto w-full max-w-3xl">
-          <div className="py-8">
-            <nav
-              aria-label="Breadcrumb"
-              className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
-            >
-              <Link href="/" className="hover:text-foreground">
-                Home
-              </Link>
-              <span className="mx-2" aria-hidden="true">
-                /
+        <Breadcrumb
+          items={[{ label: 'Home', href: '/' }, { label: 'About' }]}
+          className="rise"
+          style={stagger(0)}
+        />
+
+        <div className="grid-12 mt-10 md:mt-14">
+          <div className="col-span-12 lg:col-span-5">
+            <Headshot
+              size={160}
+              className="rise ring-2 ring-apricot ring-offset-4 ring-offset-ink"
+            />
+            <p className="eyebrow rise mt-10" style={stagger(1)}>
+              About
+            </p>
+            <h1 id="about-name" className="display h2-size mt-4 text-bone">
+              <span className="block rise-name" style={stagger(2)}>
+                {USER.firstName}
               </span>
-              <span aria-current="page">About</span>
-            </nav>
+              <span className="block rise-name" style={stagger(3)}>
+                {USER.lastName}
+              </span>
+            </h1>
+          </div>
 
-            <div className="flex items-center gap-4">
-              <Headshot size={96} />
-              <div className="space-y-1">
-                <h1 className="font-semibold text-2xl">About {USER.name}</h1>
-                <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
-                  Computer &amp; AI Engineer · UAE
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-6 text-foreground/70 leading-relaxed">
+          <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0 lg:self-end">
+            <p
+              className="display-light intro-size rise max-w-[44ch] text-bone/88"
+              style={stagger(4)}
+            >
               {ABOUT_INTRO}
             </p>
           </div>
-
-          {ABOUT_SECTIONS.map((section) => (
-            <div key={section.heading}>
-              <div className="py-8">
-                <div className="space-y-4">
-                  <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
-                    {section.heading}
-                  </h2>
-                  <div className="space-y-3 text-foreground/70">
-                    {section.paragraphs.map((paragraph) => (
-                      <p
-                        key={paragraph.slice(0, 32)}
-                        className="leading-relaxed"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          <div className="py-8">
-            <div className="space-y-2 text-center">
-              <p className="text-foreground/70 leading-relaxed">
-                See the{' '}
-                <Link href="/projects" className={linkClass}>
-                  projects
-                </Link>{' '}
-                or go back to the{' '}
-                <Link href="/" className={linkClass}>
-                  homepage
-                </Link>
-                .
-              </p>
-              <p className="text-foreground/70 leading-relaxed">
-                Reach me at{' '}
-                <a href={`mailto:${USER.email}`} className={linkClass}>
-                  {USER.email}
-                </a>{' '}
-                or on{' '}
-                <a
-                  href={USER.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  LinkedIn
-                </a>
-                .
-              </p>
-            </div>
-          </div>
         </div>
       </section>
+
+      {ABOUT_SECTIONS.map((section, i) => {
+        const id = `about-${slug(section.heading)}`;
+        return (
+          <section
+            key={section.heading}
+            className="section"
+            data-tone={i % 2 ? 'ink' : 'bone'}
+            aria-labelledby={id}
+          >
+            <SectionHeader
+              as="p"
+              eyebrow="About"
+              value={`${formatIndex(i + 1)} / ${formatIndex(ABOUT_SECTIONS.length)}`}
+            />
+
+            <div className="grid-12">
+              <div className="col-span-12 lg:col-span-5">
+                <h2 id={id} className="display h3-size text-fg" data-reveal>
+                  {section.heading}
+                </h2>
+              </div>
+
+              <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0">
+                <div
+                  className="prose-body body-lg space-y-5 text-fg/72"
+                  data-reveal
+                >
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                  ))}
+                </div>
+
+                {i === last ? (
+                  <div
+                    className="mt-12 border-line border-t pt-10"
+                    data-reveal
+                    style={stagger(1)}
+                  >
+                    <p className="prose-body body-lg text-fg/72">
+                      See the{' '}
+                      <Link href="/projects" className={linkClass}>
+                        projects
+                      </Link>{' '}
+                      or go back to the{' '}
+                      <Link href="/" className={linkClass}>
+                        homepage
+                      </Link>
+                      .
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <PillLink href={`mailto:${USER.email}`} variant="fill">
+                        Email
+                      </PillLink>
+                      <PillLink href={USER.social.linkedin} external>
+                        LinkedIn
+                      </PillLink>
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          </section>
+        );
+      })}
     </>
   );
 }

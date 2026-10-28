@@ -22,6 +22,7 @@ import { cn } from '@/lib/utils';
 import { stagger } from '@/lib/stagger';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { preload } from 'react-dom';
 import type { Metadata } from 'next/types';
 import type { Graph } from 'schema-dts';
 
@@ -33,6 +34,8 @@ type Params = Promise<{ id: string }>;
 export function generateStaticParams() {
   return PROJECT_PAGES.map((project) => ({ id: project.id }));
 }
+
+const COVER_SIZES = '(min-width: 1024px) 40vw, 100vw';
 
 const findProject = (id: string) =>
   PROJECT_PAGES.find((project) => project.id === id);
@@ -100,7 +103,7 @@ function PagerCell({
   }
   return (
     <Link href={projectPath(project)} className="pager-cell" data-dir={dir}>
-      <span className="mono-label text-fg/56">
+      <span className="mono-label text-fg/64">
         {dir === 'prev' ? 'Previous' : 'Next'}
       </span>
       <span className="display pager-title">{project.title}</span>
@@ -120,6 +123,20 @@ export default async function ProjectPage({ params }: { params: Params }) {
   const demo =
     project.link && project.link !== project.github ? project.link : undefined;
   const paragraphs = project.description?.split('\n\n') ?? [];
+
+  // The cover is this page's LCP element. Emit a <link rel=preload> in the
+  // head for the webp twins (same srcset/sizes ProjectCover renders, so the
+  // preload is the request the <picture> reuses) instead of letting the
+  // browser discover the <img> after it has parsed the whole hero.
+  if (project.image) {
+    const stem = project.image.replace(/\.jpe?g$/i, '');
+    preload(`${stem}.webp`, {
+      as: 'image',
+      fetchPriority: 'high',
+      imageSrcSet: `${stem}-320.webp 320w, ${stem}.webp 640w`,
+      imageSizes: COVER_SIZES,
+    });
+  }
 
   return (
     <>
@@ -200,7 +217,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
           <div className="col-span-12 mt-10 lg:col-span-5 lg:mt-0">
             <ProjectCover
               project={project}
-              sizes="(min-width: 1024px) 40vw, 100vw"
+              sizes={COVER_SIZES}
               priority
               className="cover-hero"
             />

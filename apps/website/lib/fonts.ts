@@ -1,19 +1,29 @@
 import localFont from 'next/font/local';
 
 /**
- * Three self-hosted variable faces (DESIGN.md section 4). The display face
- * blocks instead of swapping so the hero never flashes a fallback; body and
- * mono swap. `font-variation-settings` lives on `.display` / `.display-light`
- * in app/globals.css, not here, because it is inherited and would override
- * `font-weight` on every descendant.
+ * Three self-hosted faces (DESIGN.md section 4). The display face is two
+ * static instances baked out of the variable Bricolage Grotesque by
+ * `pnpm fonts:display` (wght 800 / wdth 75 / opsz 96 and wght 300 / wdth 100 /
+ * opsz 96, Latin subset), so the hero text waits on ~18 KiB instead of the
+ * 129 KiB variable file. It blocks instead of swapping so the hero never
+ * flashes a fallback; body and mono swap. `.display` / `.display-light` in
+ * app/globals.css pick the instance through `font-weight` alone.
  */
 export const fontDisplay = localFont({
-  src: '../assets/fonts/bricolage-grotesque-latin-standard.woff2',
-  weight: '200 800',
-  style: 'normal',
+  src: [
+    {
+      path: '../assets/fonts/bricolage-display.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/bricolage-display-light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+  ],
   display: 'block',
   variable: '--font-bricolage',
-  declarations: [{ prop: 'font-stretch', value: '75% 100%' }],
 });
 
 export const fontSans = localFont({

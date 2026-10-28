@@ -1,9 +1,4 @@
-import { LoaderIcon } from 'lucide-react';
-
+/** Same height as the rendered graph so nothing shifts when it hydrates. */
 export function GitHubContributionFallback() {
-  return (
-    <div className="flex h-[162px] items-center justify-center">
-      <LoaderIcon className="animate-spin text-foreground" />
-    </div>
-  );
+  return <div className="h-[162px]" aria-hidden="true" />;
 }

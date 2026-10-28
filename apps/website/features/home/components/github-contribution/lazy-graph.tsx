@@ -15,7 +15,7 @@ const GitHubContributionGraph = dynamic(
 export function LazyGitHubContributionGraph({
   contributions,
 }: {
-  contributions: Promise<Activity[]>;
+  contributions: Activity[];
 }) {
   return <GitHubContributionGraph contributions={contributions} />;
 }

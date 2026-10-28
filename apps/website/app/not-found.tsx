@@ -1,24 +1,26 @@
-import { SnakeGame } from '@/features/game/snake-game';
-import { InfoOverlay } from '@/components/info-overlay';
-import { GameOfLife } from '@/registry/srisomanaath/game-of-life';
-import { Button } from '@repo/design-system/components/ui/button';
-import Link from 'next/link';
+import { PillLink } from '@/components/pill-link';
 
 export default function NotFound() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-8">
-      <GameOfLife
-        size={20}
-        interval={200}
-        backgroundColor="#000000"
-        cellColor="#1e1e1e"
-      />
-      <p className="font-bold text-4xl">Oops!</p>
-      <SnakeGame />
-      <InfoOverlay show={['time', 'screen', 'llms']} />
-      <Link href="/">
-        <Button variant="outline">Go Home</Button>
-      </Link>
-    </div>
+    <section
+      className="section flex min-h-svh flex-col justify-end"
+      data-tone="ink"
+      style={{ paddingTop: 'calc(var(--nav) + 2rem)' }}
+    >
+      <p className="eyebrow">404</p>
+      <h1 className="display hero-size mt-5 text-bone">
+        Not
+        <br />
+        Found
+      </h1>
+      <p className="display-light counter-size mt-8 max-w-[30ch] text-bone/72">
+        Nothing is measured at this address.
+      </p>
+      <div className="mt-10">
+        <PillLink href="/" variant="fill">
+          Back home
+        </PillLink>
+      </div>
+    </section>
   );
 }

@@ -1,8 +1,3 @@
-import { FloatingHeader } from '@/components/navigation/floating-header';
-import { ScrollArea } from '@/components/scroll-area';
-import { Section } from '@/components/section';
-import Separator from '@/components/separator';
-import { ShootingStarsLayer } from '@/components/ui/shooting-stars-layer';
 import { PROJECT_PAGES } from '@/config/projects';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
@@ -77,85 +72,84 @@ export default function ProjectsPage() {
   return (
     <>
       <JsonLd code={jsonLd} />
-      <ShootingStarsLayer />
 
-      <ScrollArea useScrollAreaId className="relative z-10">
-        <FloatingHeader scrollTitle={TITLE} />
+      <section
+        className="section"
+        data-tone="ink"
+        style={{ paddingTop: 'calc(var(--nav) + var(--section) * 0.5)' }}
+      >
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="py-8">
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
+            >
+              <Link href="/" className="hover:text-foreground">
+                Home
+              </Link>
+              <span className="mx-2" aria-hidden="true">
+                /
+              </span>
+              <span aria-current="page">Projects</span>
+            </nav>
 
-        <Separator />
+            <h1 className="font-semibold text-2xl">{TITLE}</h1>
+            <p className="mt-6 text-foreground/70 leading-relaxed">
+              Write-ups of the systems I have built, from production LLM
+              pipelines to a custom PCB. Each one covers the problem, the
+              approach, the architecture, and my role.
+            </p>
+          </div>
 
-        <Section>
-          <nav
-            aria-label="Breadcrumb"
-            className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
-          >
-            <Link href="/" className="hover:text-foreground">
-              Home
-            </Link>
-            <span className="mx-2" aria-hidden="true">
-              /
-            </span>
-            <span aria-current="page">Projects</span>
-          </nav>
-
-          <h1 className="font-semibold text-2xl">{TITLE}</h1>
-          <p className="mt-6 text-foreground/70 leading-relaxed">
-            Write-ups of the systems I have built, from production LLM
-            pipelines to a custom PCB. Each one covers the problem, the
-            approach, the architecture, and my role.
-          </p>
-        </Section>
-
-        <Separator />
-
-        <Section>
-          <ul className="space-y-6">
-            {PROJECT_PAGES.map((project) => {
-              const stem = project.image?.replace(/\.jpe?g$/i, '');
-              return (
-                <li key={project.id}>
-                  <Link
-                    href={projectPath(project)}
-                    className="group flex items-start gap-4"
-                  >
-                    {stem && (
-                      <picture className="shrink-0">
-                        <source srcSet={`${stem}-320.webp`} type="image/webp" />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={project.image}
-                          alt={`${project.title}, a project by ${USER.name}`}
-                          width={64}
-                          height={64}
-                          loading="lazy"
-                          decoding="async"
-                          className="size-16 rounded-lg bg-muted object-cover"
-                        />
-                      </picture>
-                    )}
-                    <div className="flex-1 space-y-1">
-                      <h2 className="font-medium text-foreground group-hover:underline">
-                        {project.title}
-                      </h2>
-                      <p className="text-sm text-muted-foreground">
-                        {formatPeriod(project.period)}
-                      </p>
-                      {project.shortDescription && (
-                        <p className="text-sm text-foreground/60 leading-relaxed">
-                          {project.shortDescription}
-                        </p>
+          <div className="py-8">
+            <ul className="space-y-6">
+              {PROJECT_PAGES.map((project) => {
+                const stem = project.image?.replace(/\.jpe?g$/i, '');
+                return (
+                  <li key={project.id}>
+                    <Link
+                      href={projectPath(project)}
+                      className="group flex items-start gap-4"
+                    >
+                      {stem && (
+                        <picture className="shrink-0">
+                          <source
+                            srcSet={`${stem}-320.webp`}
+                            type="image/webp"
+                          />
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={project.image}
+                            alt={`${project.title}, a project by ${USER.name}`}
+                            width={64}
+                            height={64}
+                            loading="lazy"
+                            decoding="async"
+                            className="size-16 rounded-lg bg-muted object-cover"
+                          />
+                        </picture>
                       )}
-                    </div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </Section>
-
-        <Separator />
-        <div className="h-[clamp(80px,10vh,200px)] shrink-0" />
-      </ScrollArea>
+                      <div className="flex-1 space-y-1">
+                        <h2 className="font-medium text-foreground group-hover:underline">
+                          {project.title}
+                        </h2>
+                        <p className="text-sm text-muted-foreground">
+                          {formatPeriod(project.period)}
+                        </p>
+                        {project.shortDescription && (
+                          <p className="text-sm text-foreground/60 leading-relaxed">
+                            {project.shortDescription}
+                          </p>
+                        )}
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

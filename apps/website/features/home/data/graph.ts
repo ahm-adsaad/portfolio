@@ -10,7 +10,18 @@ type GitHubContributionsResponse = {
 // on the build date gives one fresh fetch per day of deploys.
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
-export async function getContributions() {
+export async function getContributions(): Promise<Activity[]> {
+  try {
+    return await fetchContributions();
+  } catch (error) {
+    // Degrade honestly: an unreachable API at build time must not fail the
+    // build or 500 the page. The section says the data was unavailable.
+    console.warn('[github-contribution] fetch failed:', error);
+    return [];
+  }
+}
+
+async function fetchContributions() {
   const res = await fetch(
     `https://github-contributions-api.jogruber.de/v4/${USER.username}?y=last&build=${BUILD_DATE}`,
     // Fetched once at build time and baked into the prerendered page; the
@@ -20,6 +31,7 @@ export async function getContributions() {
     // the interval elapses. See scripts/assert-static-prerender.mjs.
     { cache: 'force-cache' }
   );
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = (await res.json()) as GitHubContributionsResponse;
-  return data.contributions;
+  return data.contributions ?? [];
 }

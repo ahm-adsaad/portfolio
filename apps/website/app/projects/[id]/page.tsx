@@ -1,10 +1,5 @@
 import { Icons } from '@/components/icons';
 import { Markdown } from '@/components/markdown';
-import { FloatingHeader } from '@/components/navigation/floating-header';
-import { ScrollArea } from '@/components/scroll-area';
-import { Section } from '@/components/section';
-import Separator from '@/components/separator';
-import { ShootingStarsLayer } from '@/components/ui/shooting-stars-layer';
 import { PROJECT_PAGES, type Project } from '@/config/projects';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
@@ -133,187 +128,186 @@ export default async function ProjectPage({ params }: { params: Params }) {
   return (
     <>
       <JsonLd code={buildJsonLd(project)} />
-      <ShootingStarsLayer />
 
-      <ScrollArea useScrollAreaId className="relative z-10">
-        <FloatingHeader scrollTitle={project.title} />
+      <section
+        className="section"
+        data-tone="ink"
+        style={{ paddingTop: 'calc(var(--nav) + var(--section) * 0.5)' }}
+      >
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="py-8">
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
+            >
+              <Link href="/" className="hover:text-foreground">
+                Home
+              </Link>
+              <span className="mx-2" aria-hidden="true">
+                /
+              </span>
+              <Link href="/projects" className="hover:text-foreground">
+                Projects
+              </Link>
+              <span className="mx-2" aria-hidden="true">
+                /
+              </span>
+              <span aria-current="page">{project.title}</span>
+            </nav>
 
-        <Separator />
-
-        <Section>
-          <nav
-            aria-label="Breadcrumb"
-            className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
-          >
-            <Link href="/" className="hover:text-foreground">
-              Home
-            </Link>
-            <span className="mx-2" aria-hidden="true">
-              /
-            </span>
-            <Link href="/projects" className="hover:text-foreground">
-              Projects
-            </Link>
-            <span className="mx-2" aria-hidden="true">
-              /
-            </span>
-            <span aria-current="page">{project.title}</span>
-          </nav>
-
-          <div className="space-y-1">
-            <h1 className="font-semibold text-2xl">{project.title}</h1>
-            <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
-              Built by{' '}
-              <Link href="/about" className="hover:text-foreground underline underline-offset-4">
-                {USER.name}
-              </Link>{' '}
-              · {formatPeriod(project.period)}
-            </p>
-          </div>
-
-          {project.shortDescription && (
-            <p className="mt-6 text-foreground/70 leading-relaxed">
-              {project.shortDescription}
-            </p>
-          )}
-
-          <div className="mt-6 flex justify-center sm:justify-start">
-            <Cover project={project} />
-          </div>
-
-          {(project.github || demo) && (
-            <div className="mt-6 flex flex-wrap gap-2">
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener"
-                  className={buttonClass}
+            <div className="space-y-1">
+              <h1 className="font-semibold text-2xl">{project.title}</h1>
+              <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
+                Built by{' '}
+                <Link
+                  href="/about"
+                  className="hover:text-foreground underline underline-offset-4"
                 >
-                  <Icons.github className="size-3.5" aria-hidden="true" />
-                  Source on GitHub
-                </a>
-              )}
-              {demo && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener"
-                  className={buttonClass}
-                >
-                  {project.ctaLabel ?? 'Visit the project'}
-                  <ArrowUpRightIcon className="size-3.5" aria-hidden="true" />
-                </a>
-              )}
+                  {USER.name}
+                </Link>{' '}
+                · {formatPeriod(project.period)}
+              </p>
             </div>
-          )}
-        </Section>
 
-        <Separator />
-
-        <Section>
-          <div className="space-y-4">
-            <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
-              Overview
-            </h2>
-            {project.description && (
-              <div className="space-y-3 text-foreground/70">
-                {project.description.split('\n\n').map((paragraph) => (
-                  <p key={paragraph.slice(0, 32)} className="leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            )}
-            {project.impact && (
-              <p className="text-foreground/70 leading-relaxed">
-                <span className="font-medium text-foreground">Impact: </span>
-                {project.impact}
+            {project.shortDescription && (
+              <p className="mt-6 text-foreground/70 leading-relaxed">
+                {project.shortDescription}
               </p>
             )}
-            <ul className="flex flex-wrap gap-1.5 pt-1">
-              {project.skills.map((skill) => (
-                <li key={skill} className="flex">
-                  <Tag>{skill}</Tag>
-                </li>
-              ))}
-            </ul>
+
+            <div className="mt-6 flex justify-center sm:justify-start">
+              <Cover project={project} />
+            </div>
+
+            {(project.github || demo) && (
+              <div className="mt-6 flex flex-wrap gap-2">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buttonClass}
+                  >
+                    <Icons.github className="size-3.5" aria-hidden="true" />
+                    Source on GitHub
+                  </a>
+                )}
+                {demo && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buttonClass}
+                  >
+                    {project.ctaLabel ?? 'Visit the project'}
+                    <ArrowUpRightIcon className="size-3.5" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            )}
           </div>
-        </Section>
 
-        <Separator />
+          <div className="py-8">
+            <div className="space-y-4">
+              <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
+                Overview
+              </h2>
+              {project.description && (
+                <div className="space-y-3 text-foreground/70">
+                  {project.description.split('\n\n').map((paragraph) => (
+                    <p key={paragraph.slice(0, 32)} className="leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              )}
+              {project.impact && (
+                <p className="text-foreground/70 leading-relaxed">
+                  <span className="font-medium text-foreground">Impact: </span>
+                  {project.impact}
+                </p>
+              )}
+              <ul className="flex flex-wrap gap-1.5 pt-1">
+                {project.skills.map((skill) => (
+                  <li key={skill} className="flex">
+                    <Tag>{skill}</Tag>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-        <Section>
-          <Prose className="text-foreground/80 prose-h2:font-mono prose-h2:text-sm prose-h2:font-normal prose-h2:tracking-widest prose-h2:text-muted-foreground prose-h2:uppercase">
-            <Markdown>{project.caseStudy}</Markdown>
-          </Prose>
-        </Section>
+          <div className="py-8">
+            <Prose className="text-foreground/80 prose-h2:font-mono prose-h2:text-sm prose-h2:font-normal prose-h2:tracking-widest prose-h2:text-muted-foreground prose-h2:uppercase">
+              <Markdown>{project.caseStudy}</Markdown>
+            </Prose>
+          </div>
 
-        <Separator />
-
-        <Section>
-          <nav
-            aria-label="More projects"
-            className="flex items-start justify-between gap-4 text-sm"
-          >
-            {prev ? (
-              <Link
-                href={projectPath(prev)}
-                className="group flex items-center gap-1.5 text-foreground/70 hover:text-foreground"
-              >
-                <ArrowLeftIcon className="size-4 shrink-0" aria-hidden="true" />
-                <span>
-                  <span className="block font-mono text-xs tracking-wider text-muted-foreground uppercase">
-                    Previous
+          <div className="py-8">
+            <nav
+              aria-label="More projects"
+              className="flex items-start justify-between gap-4 text-sm"
+            >
+              {prev ? (
+                <Link
+                  href={projectPath(prev)}
+                  className="group flex items-center gap-1.5 text-foreground/70 hover:text-foreground"
+                >
+                  <ArrowLeftIcon
+                    className="size-4 shrink-0"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    <span className="block font-mono text-xs tracking-wider text-muted-foreground uppercase">
+                      Previous
+                    </span>
+                    <span className="font-medium group-hover:underline">
+                      {prev.title}
+                    </span>
                   </span>
-                  <span className="font-medium group-hover:underline">
-                    {prev.title}
+                </Link>
+              ) : (
+                <span />
+              )}
+              {next ? (
+                <Link
+                  href={projectPath(next)}
+                  className="group flex items-center gap-1.5 text-right text-foreground/70 hover:text-foreground"
+                >
+                  <span>
+                    <span className="block font-mono text-xs tracking-wider text-muted-foreground uppercase">
+                      Next
+                    </span>
+                    <span className="font-medium group-hover:underline">
+                      {next.title}
+                    </span>
                   </span>
-                </span>
+                  <ArrowRightIcon
+                    className="size-4 shrink-0"
+                    aria-hidden="true"
+                  />
+                </Link>
+              ) : (
+                <span />
+              )}
+            </nav>
+          </div>
+
+          <div className="py-8">
+            <p className="text-center text-foreground/70 leading-relaxed">
+              See{' '}
+              <Link href="/projects" className={linkClass}>
+                all projects
+              </Link>{' '}
+              or read{' '}
+              <Link href="/about" className={linkClass}>
+                about {USER.name}
               </Link>
-            ) : (
-              <span />
-            )}
-            {next ? (
-              <Link
-                href={projectPath(next)}
-                className="group flex items-center gap-1.5 text-right text-foreground/70 hover:text-foreground"
-              >
-                <span>
-                  <span className="block font-mono text-xs tracking-wider text-muted-foreground uppercase">
-                    Next
-                  </span>
-                  <span className="font-medium group-hover:underline">
-                    {next.title}
-                  </span>
-                </span>
-                <ArrowRightIcon className="size-4 shrink-0" aria-hidden="true" />
-              </Link>
-            ) : (
-              <span />
-            )}
-          </nav>
-        </Section>
-
-        <Separator />
-
-        <Section>
-          <p className="text-center text-foreground/70 leading-relaxed">
-            See{' '}
-            <Link href="/projects" className={linkClass}>
-              all projects
-            </Link>{' '}
-            or read{' '}
-            <Link href="/about" className={linkClass}>
-              about {USER.name}
-            </Link>
-            .
-          </p>
-        </Section>
-
-        <Separator />
-        <div className="h-[clamp(80px,10vh,200px)] shrink-0" />
-      </ScrollArea>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -1,52 +1,77 @@
-import Link from 'next/link';
-import { ArrowUpRightIcon, GraduationCapIcon } from 'lucide-react';
-
+import { Chip } from '@/components/chip';
+import { SectionHeader } from '@/components/section-header';
 import { EDUCATION } from '@/config/education';
-import { Tag } from '@repo/design-system/components/ui/tag';
 
 export function Education() {
-  return (
-    <div className="space-y-6">
-      <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
-        Education
-      </h2>
+  const [gpa, scale] = EDUCATION.gpa.split('/').map((s) => s.trim());
 
-      <div className="flex items-start gap-4">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
-          <GraduationCapIcon className="size-5" />
+  return (
+    <section
+      className="section"
+      data-tone="ink"
+      aria-labelledby="education-title"
+    >
+      <SectionHeader
+        id="education-title"
+        eyebrow="Education"
+        value={`GPA ${gpa}`}
+      />
+
+      <div className="grid-12">
+        <div className="col-span-12 lg:col-span-5" data-reveal>
+          <p className="flex flex-wrap items-baseline gap-x-4">
+            <span className="display hero-size text-apricot">{gpa}</span>
+            <span className="display-light counter-size text-bone/72">
+              / {scale}
+            </span>
+          </p>
         </div>
 
-        <div className="flex-1 space-y-2 pt-1">
-          <div className="flex items-center gap-1">
-            <h3 className="font-medium text-foreground">{EDUCATION.school}</h3>
-            <Link
-              href={EDUCATION.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${EDUCATION.school} website`}
-              className="flex size-6 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            >
-              <ArrowUpRightIcon className="size-4" />
-            </Link>
+        <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0">
+          <div data-reveal>
+            <h3 className="display h3-size text-bone">
+              <a
+                href={EDUCATION.url}
+                className="transition-colors hover:text-apricot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {EDUCATION.school}
+              </a>
+            </h3>
+            <p className="body-lg mt-5 text-bone/88">{EDUCATION.degree}</p>
+            <p className="mono-label mt-2 text-bone/48">
+              {EDUCATION.period} · {EDUCATION.city}
+            </p>
           </div>
 
-          <p className="text-sm text-foreground/60 leading-relaxed">
-            {EDUCATION.degree} · {EDUCATION.period} · GPA {EDUCATION.gpa}
-          </p>
-
-          <ul className="space-y-1 text-sm text-foreground/60 leading-relaxed">
+          <ul
+            className="prose-body mt-8 space-y-3 border-t border-line pt-6 text-bone/72"
+            data-reveal
+          >
             {EDUCATION.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
+              <li key={highlight} className="flex gap-4">
+                <span
+                  className="mt-[0.7em] h-px w-5 shrink-0 bg-apricot"
+                  aria-hidden="true"
+                />
+                <span>{highlight}</span>
+              </li>
             ))}
           </ul>
 
-          <div className="flex flex-wrap gap-1.5 pt-1">
-            {EDUCATION.coursework.map((course) => (
-              <Tag key={course}>{course}</Tag>
-            ))}
+          <div className="mt-8" data-reveal>
+            <p className="eyebrow">Coursework</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {EDUCATION.coursework.map((course) => (
+                <li key={course} className="flex">
+                  <Chip>{course}</Chip>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

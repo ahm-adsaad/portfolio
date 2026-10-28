@@ -1,7 +1,5 @@
 'use client';
 
-import { use } from 'react';
-
 import type { Activity } from '@repo/design-system/components/ui/contribution-graph';
 import {
   ContributionGraph,
@@ -15,14 +13,12 @@ import {
 export function GitHubContributionGraph({
   contributions,
 }: {
-  contributions: Promise<Activity[]>;
+  contributions: Activity[];
 }) {
-  const data = use(contributions);
-
   return (
     <ContributionGraph
-      className="mx-auto font-mono"
-      data={data}
+      className="font-mono"
+      data={contributions}
       fontSize={11}
       blockSize={9}
       blockMargin={3}
@@ -40,8 +36,8 @@ export function GitHubContributionGraph({
         )}
       </ContributionGraphCalendar>
 
-      <ContributionGraphFooter className="">
-        <ContributionGraphTotalCount className="text-foreground" />
+      <ContributionGraphFooter className="mono-label pt-2">
+        <ContributionGraphTotalCount className="text-bone/48" />
         <ContributionGraphLegend />
       </ContributionGraphFooter>
     </ContributionGraph>

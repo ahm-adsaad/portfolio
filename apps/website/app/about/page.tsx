@@ -1,9 +1,4 @@
 import { Headshot } from '@/components/headshot';
-import { FloatingHeader } from '@/components/navigation/floating-header';
-import { ScrollArea } from '@/components/scroll-area';
-import { Section } from '@/components/section';
-import Separator from '@/components/separator';
-import { ShootingStarsLayer } from '@/components/ui/shooting-stars-layer';
 import { ABOUT_INTRO, ABOUT_SECTIONS } from '@/config/about';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
@@ -87,99 +82,97 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd code={jsonLd} />
-      <ShootingStarsLayer />
 
-      <ScrollArea useScrollAreaId className="relative z-10">
-        <FloatingHeader scrollTitle={`About ${USER.name}`} />
+      <section
+        className="section"
+        data-tone="ink"
+        style={{ paddingTop: 'calc(var(--nav) + var(--section) * 0.5)' }}
+      >
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="py-8">
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
+            >
+              <Link href="/" className="hover:text-foreground">
+                Home
+              </Link>
+              <span className="mx-2" aria-hidden="true">
+                /
+              </span>
+              <span aria-current="page">About</span>
+            </nav>
 
-        <Separator />
+            <div className="flex items-center gap-4">
+              <Headshot size={96} />
+              <div className="space-y-1">
+                <h1 className="font-semibold text-2xl">About {USER.name}</h1>
+                <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
+                  Computer &amp; AI Engineer · UAE
+                </p>
+              </div>
+            </div>
 
-        <Section>
-          <nav
-            aria-label="Breadcrumb"
-            className="mb-6 font-mono text-xs tracking-wider text-muted-foreground uppercase"
-          >
-            <Link href="/" className="hover:text-foreground">
-              Home
-            </Link>
-            <span className="mx-2" aria-hidden="true">
-              /
-            </span>
-            <span aria-current="page">About</span>
-          </nav>
+            <p className="mt-6 text-foreground/70 leading-relaxed">
+              {ABOUT_INTRO}
+            </p>
+          </div>
 
-          <div className="flex items-center gap-4">
-            <Headshot size={96} />
-            <div className="space-y-1">
-              <h1 className="font-semibold text-2xl">About {USER.name}</h1>
-              <p className="font-mono text-sm tracking-wider text-muted-foreground uppercase">
-                Computer &amp; AI Engineer · UAE
+          {ABOUT_SECTIONS.map((section) => (
+            <div key={section.heading}>
+              <div className="py-8">
+                <div className="space-y-4">
+                  <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
+                    {section.heading}
+                  </h2>
+                  <div className="space-y-3 text-foreground/70">
+                    {section.paragraphs.map((paragraph) => (
+                      <p
+                        key={paragraph.slice(0, 32)}
+                        className="leading-relaxed"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <div className="py-8">
+            <div className="space-y-2 text-center">
+              <p className="text-foreground/70 leading-relaxed">
+                See the{' '}
+                <Link href="/projects" className={linkClass}>
+                  projects
+                </Link>{' '}
+                or go back to the{' '}
+                <Link href="/" className={linkClass}>
+                  homepage
+                </Link>
+                .
+              </p>
+              <p className="text-foreground/70 leading-relaxed">
+                Reach me at{' '}
+                <a href={`mailto:${USER.email}`} className={linkClass}>
+                  {USER.email}
+                </a>{' '}
+                or on{' '}
+                <a
+                  href={USER.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClass}
+                >
+                  LinkedIn
+                </a>
+                .
               </p>
             </div>
           </div>
-
-          <p className="mt-6 text-foreground/70 leading-relaxed">
-            {ABOUT_INTRO}
-          </p>
-        </Section>
-
-        {ABOUT_SECTIONS.map((section) => (
-          <div key={section.heading}>
-            <Separator />
-            <Section>
-              <div className="space-y-4">
-                <h2 className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
-                  {section.heading}
-                </h2>
-                <div className="space-y-3 text-foreground/70">
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph.slice(0, 32)} className="leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </Section>
-          </div>
-        ))}
-
-        <Separator />
-
-        <Section>
-          <div className="space-y-2 text-center">
-            <p className="text-foreground/70 leading-relaxed">
-              See the{' '}
-              <Link href="/projects" className={linkClass}>
-                projects
-              </Link>{' '}
-              or go back to the{' '}
-              <Link href="/" className={linkClass}>
-                homepage
-              </Link>
-              .
-            </p>
-            <p className="text-foreground/70 leading-relaxed">
-              Reach me at{' '}
-              <a href={`mailto:${USER.email}`} className={linkClass}>
-                {USER.email}
-              </a>{' '}
-              or on{' '}
-              <a
-                href={USER.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={linkClass}
-              >
-                LinkedIn
-              </a>
-              .
-            </p>
-          </div>
-        </Section>
-
-        <Separator />
-        <div className="h-[clamp(80px,10vh,200px)] shrink-0" />
-      </ScrollArea>
+        </div>
+      </section>
     </>
   );
 }

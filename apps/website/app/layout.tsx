@@ -1,20 +1,22 @@
 import { createOgImage } from '@/lib/createOgImage';
-import { fontMono, fontX } from '@/lib/fonts';
+import { fontDisplay, fontMono, fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import type { Metadata, Viewport } from 'next';
 import type React from 'react';
 
-import '@repo/design-system/styles/globals.css';
+import './globals.css';
 
-import DevTools from '@/components/dev-tools';
-import Navigation from '@/components/navigation';
-import { META_THEME_COLORS } from '@/config/site';
+import { Grain } from '@/components/grain';
+import { Reveal } from '@/components/reveal';
+import { ScrollProgress } from '@/components/scroll-progress';
+import { SiteFooter } from '@/components/site-footer';
+import { SiteNav } from '@/components/site-nav';
 import { USER } from '@/config/user';
-import { Providers } from '@/lib/providers';
 import Script from 'next/script';
 
 export const viewport: Viewport = {
-  themeColor: META_THEME_COLORS.light,
+  themeColor: '#0E0C14',
+  colorScheme: 'dark',
   width: 'device-width',
   initialScale: 1,
 };
@@ -44,22 +46,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-// Thanks @shadcn-ui, @tailwindcss
-const darkModeScript = String.raw`
-  try {
-    if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
-    }
-  } catch (_) {}
-
-  try {
-    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-      document.documentElement.classList.add('os-macos')
-    }
-  } catch (_) {}
-`;
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -67,36 +54,29 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(fontX.variable, fontMono.variable, 'scroll-smooth')}
-      suppressHydrationWarning
+      className={cn(fontDisplay.variable, fontSans.variable, fontMono.variable)}
     >
       <head>
         {/* Cloudflare Web Analytics injects its beacon at the edge; warm the
             connection so it stays off the LCP critical path. */}
         <link rel="preconnect" href="https://static.cloudflareinsights.com" />
         <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+        {/* Marks the document as scripted before first paint so `[data-reveal]`
+            elements already in view do not flash visible, then hidden, then
+            fade in once components/reveal.tsx hydrates. */}
         <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{ __html: darkModeScript }}
+          dangerouslySetInnerHTML={{
+            __html: 'document.documentElement.classList.add("js")',
+          }}
         />
-        {/*
-          Thanks @tailwindcss. We inject the script via the `<Script/>` tag again,
-          since we found the regular `<script>` tag to not execute when rendering a not-found page.
-         */}
-        <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
       </head>
-      <body suppressHydrationWarning>
-        <Providers>
-          <Navigation />
-          <main
-            id="main-content"
-            vaul-drawer-wrapper=""
-            className="relative min-h-screen w-full bg-background"
-          >
-            {children}
-          </main>
-          <DevTools />
-        </Providers>
+      <body>
+        <ScrollProgress />
+        <SiteNav />
+        <main id="main-content">{children}</main>
+        <SiteFooter />
+        <Grain />
+        <Reveal />
         {/* Umami is only wired up when its website id is configured; otherwise
             the tag would 404 on every page load. */}
         {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ? (

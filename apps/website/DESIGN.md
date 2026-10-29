@@ -112,13 +112,13 @@ Section sequence on the home page (order matters, it is a narrative):
 1. **Hero** (ink). Name as h1 in display, two lines: `AHMAD` / `SAAD`.
    Under it, the counterpoint in display light: "Forward deployed. Builds the
    system, scopes it with the people who use it, ships it." Eyebrow above the
-   name: `AI ENGINEER · FDE · COMPUTER ENGINEERING @ AUS · UAE`. Two
-   pill links: `Email` (apricot fill) and `LinkedIn` (outline). A small
+   name: `AI ENGINEER · FDE`, nothing more. Three apricot-filled pill links:
+   `Email`, `LinkedIn`, and `CV`. A small
    `scroll` cue bottom-left. The radar (section 6) sits behind the name.
 2. **Statement** (ink, min-height 80vh, centered). The reference's word-by-word
    opacity scroll. Text in display light at `clamp(2rem, 5vw, 5.5rem)`:
-   "Technical enough to build the system. Comfortable enough to scope it.
-   Measurement decides. Models describe." Words start at 12% opacity and
+   "Every number has a source. Every run has a budget. Measurement decides,
+   LLMs describe." Words start at 12% opacity and
    reach 100% as they cross the viewport middle. Pure CSS scroll-driven
    animation (`animation-timeline: view()`); where unsupported the words are
    simply fully visible.
@@ -213,8 +213,10 @@ continuously except the tech marquee.
   animates `transform` only, from `translateY(24px)`.
 - Scroll reveals: elements with `data-reveal` get `is-visible` from one
   `IntersectionObserver` in a 30-line client component (`components/reveal.tsx`);
-  CSS transitions opacity and a 20px translate. Threshold 0.15, unobserve
-  after reveal. Stagger children with `--i` custom property.
+  CSS animates opacity and a 20px translate over 700ms (a `backwards`-filled
+  keyframe, not a transition, so nothing stays attached or layer-promoted
+  after the reveal). Threshold 0.15, unobserve after reveal. Stagger
+  children with `--i` custom property.
 - Scroll progress: a 2px apricot bar at the top driven by
   `animation-timeline: scroll()`, no JS, hidden where unsupported.
 - Nav: fixed, `mix-blend-mode: difference` in bone so it auto-inverts over
@@ -227,9 +229,12 @@ continuously except the tech marquee.
 
 A 128x128 PNG noise tile (generated once by `scripts/build-grain.mts`, or
 an inline SVG data URI of the same size) as `background-image` on a fixed
-`pointer-events: none` layer at `opacity: .05` with `mix-blend-mode:
-overlay`. Tiled images cost nothing; a viewport-sized filter costs a repaint
-every frame.
+`pointer-events: none` layer, high-contrast and opaque, at `opacity: .01`
+and no blend mode: that reads as the same +-1-level texture as a mid-grey
+tile at 5% overlay, and the compositor draws it as one plain quad. A
+`mix-blend-mode` on a full-viewport layer is a render pass that re-blends
+the whole screen every frame; a viewport-sized filter costs a repaint every
+frame. Tiled images cost nothing.
 
 ## 9. Performance budget
 

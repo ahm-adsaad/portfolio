@@ -14,9 +14,7 @@ export function Hero() {
 
       <div className="hero-copy">
         <p className="eyebrow rise" style={stagger(0)}>
-          AI Engineer · FDE ·{' '}
-          <span className="whitespace-nowrap">Computer Engineering @ AUS</span>{' '}
-          · UAE
+          AI Engineer · FDE
         </p>
 
         <h1 id="hero-name" className="display hero-size mt-5 md:mt-6">
@@ -43,8 +41,11 @@ export function Hero() {
           <PillLink href={`mailto:${USER.email}`} variant="fill">
             Email
           </PillLink>
-          <PillLink href={USER.social.linkedin} variant="outline" external>
+          <PillLink href={USER.social.linkedin} variant="fill" external>
             LinkedIn
+          </PillLink>
+          <PillLink href="/Ahmad_Saad_CV.pdf" variant="fill" external>
+            CV
           </PillLink>
         </div>
       </div>

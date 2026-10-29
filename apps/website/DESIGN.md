@@ -117,8 +117,8 @@ Section sequence on the home page (order matters, it is a narrative):
    `scroll` cue bottom-left. The radar (section 6) sits behind the name.
 2. **Statement** (ink, min-height 80vh, centered). The reference's word-by-word
    opacity scroll. Text in display light at `clamp(2rem, 5vw, 5.5rem)`:
-   "Every number has a source. Every run has a budget. Measurement decides,
-   LLMs describe." Words start at 12% opacity and
+   "I build systems that have to prove they work. An AI pipeline, a CPU, a
+   circuit board." Words start at 12% opacity and
    reach 100% as they cross the viewport middle. Pure CSS scroll-driven
    animation (`animation-timeline: view()`); where unsupported the words are
    simply fully visible.

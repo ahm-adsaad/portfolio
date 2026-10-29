@@ -576,14 +576,17 @@
 
   /* Page-load rise (DESIGN.md section 7). The name animates transform only;
      the rest starts at .6, never near-invisible, so an LCP candidate still
-     counts as painted on its first frame. */
+     counts as painted on its first frame. Fill mode is `backwards`, not
+     `both`: the end keyframe equals the static style, and a forwards fill
+     would keep every risen element (both h1 lines included) on its own
+     compositor layer for the life of the page. */
   .rise {
-    animation: rise 0.7s var(--ease-out-expo) both;
+    animation: rise 0.7s var(--ease-out-expo) backwards;
     animation-delay: calc(var(--i, 0) * 70ms);
   }
 
   .rise-name {
-    animation: rise-name 0.7s var(--ease-out-expo) both;
+    animation: rise-name 0.7s var(--ease-out-expo) backwards;
     animation-delay: calc(var(--i, 0) * 70ms);
   }
 
@@ -663,6 +666,7 @@
       transparent 70deg
     );
     animation: radar-sweep 14s linear infinite;
+    will-change: transform;
   }
 
   .radar-blips {
@@ -1012,22 +1016,33 @@
     border-bottom: 1px solid var(--border);
   }
 
+  /* The edge fade is two gradients to the section ground, not a mask-image:
+     a mask over a compositor-animated child costs a render surface per row
+     on every frame, and on the solid ink ground the two look the same. */
   .marquee-viewport {
+    position: relative;
     overflow: hidden;
-    mask-image: linear-gradient(
-      90deg,
-      transparent,
-      #000 6%,
-      #000 94%,
-      transparent
-    );
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      transparent,
-      #000 6%,
-      #000 94%,
-      transparent
-    );
+  }
+
+  .marquee-viewport::before,
+  .marquee-viewport::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .marquee-viewport::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--background), transparent);
+  }
+
+  .marquee-viewport::after {
+    right: 0;
+    background: linear-gradient(-90deg, var(--background), transparent);
   }
 
   .marquee:first-of-type {
@@ -1046,6 +1061,7 @@
     padding: 0;
     list-style: none;
     animation: marquee-x var(--dur, 40s) linear infinite;
+    will-change: transform;
   }
 
   .marquee[data-dir="ltr"] .marquee-track {
@@ -1115,15 +1131,20 @@
     color: var(--foreground);
   }
 
-  /* Grain (DESIGN.md section 8): a 128px tile, not a viewport filter */
+  /* Grain (DESIGN.md section 8): a 128px tile, not a viewport filter, and
+     no blend mode. `mix-blend-mode: overlay` on a fixed full-viewport layer
+     made the compositor read back and re-blend the whole screen every frame
+     (one extra render pass; about +45% draw time in a software trace). The
+     same +-0.7-level texture comes from a higher-contrast opaque tile at 1%,
+     which the compositor draws as one plain quad. */
   .grain {
     position: fixed;
     inset: 0;
     z-index: 40;
     pointer-events: none;
-    opacity: 0.05;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='128' height='128' filter='url(%23n)'/></svg>");
+    contain: strict;
+    opacity: 0.01;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/><feComponentTransfer><feFuncR type='linear' slope='4' intercept='-1.5'/><feFuncG type='linear' slope='4' intercept='-1.5'/><feFuncB type='linear' slope='4' intercept='-1.5'/><feFuncA type='linear' slope='0' intercept='1'/></feComponentTransfer></filter><rect width='128' height='128' filter='url(%23n)'/></svg>");
     background-size: 128px 128px;
   }
 
@@ -1239,10 +1260,20 @@
     translate: 0 20px;
   }
 
-  [data-reveal] {
-    transition: opacity 0.7s var(--ease-out-expo), translate 0.7s
-      var(--ease-out-expo);
-    transition-delay: calc(var(--i, 0) * 70ms);
+  /* A keyframe animation, not a transition: it exists only for its 700ms
+     (plus the --i delay, held at the start keyframe by the backwards fill),
+     so no transition stays attached to later style changes and no element
+     keeps a compositor layer once it has risen. */
+  [data-reveal].is-visible {
+    animation: reveal-in 0.7s var(--ease-out-expo) backwards;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    translate: 0 20px;
   }
 }
 
@@ -1488,8 +1519,16 @@
 
   .marquee-viewport {
     overflow: visible;
-    mask-image: none;
-    -webkit-mask-image: none;
+  }
+
+  .marquee-viewport::before,
+  .marquee-viewport::after {
+    display: none;
+  }
+
+  .radar-sweep,
+  .marquee-track {
+    will-change: auto;
   }
 
   .marquee-track {

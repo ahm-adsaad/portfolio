@@ -1,5 +1,5 @@
 const STATEMENT =
-  'Technical enough to build the system. Comfortable enough to scope it. Measurement decides. Models describe.';
+  'Every number has a source. Every run has a budget. Measurement decides, LLMs describe.';
 
 /**
  * Word-by-word opacity driven by `animation-timeline: view()`. Where that is
@@ -19,7 +19,7 @@ export function Statement() {
       data-tone="ink"
       aria-label="Statement"
     >
-      <p className="display-light statement-size mx-auto max-w-[22ch] text-center text-bone">
+      <p className="display-light statement-size mx-auto max-w-[20ch] text-center text-bone">
         {words.map(({ key, word }) => (
           <span key={key} className="word">
             {word}

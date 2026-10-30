@@ -114,7 +114,8 @@ Section sequence on the home page (order matters, it is a narrative):
    system, scopes it with the people who use it, ships it." Eyebrow above the
    name: `AI ENGINEER · FDE`, nothing more. Three apricot-filled pill links:
    `Email`, `LinkedIn`, and `CV`. A small
-   `scroll` cue bottom-left. The radar (section 6) sits behind the name.
+   `scroll` cue bottom-left. The drive loop (section 6) plays behind the
+   name in near-natural colour.
 2. **Statement** (ink, min-height 80vh, centered). The reference's word-by-word
    opacity scroll. Text in display light at `clamp(2rem, 5vw, 5.5rem)`:
    "I build systems that have to prove they work. An AI pipeline, a CPU, a
@@ -174,15 +175,9 @@ Section sequence on the home page (order matters, it is a narrative):
 
 Secondary pages use the same nav, footer, and section header row:
 
-The About hero carries the one piece of video on the site: a 7 second
-Mixkit loop of a sports car on a curving road at dawn (Mixkit free license),
-encoded by `scripts/build-about-video.mts` into a 1080 and a 720 H.264 file
-plus a poster frame under `public/about/`. It is desaturated and darkened
-under an ink wash so the type keeps its contrast, the poster is what paints
-first, the video mounts only on the client and only without reduced motion
-or data saver, and it pauses off screen. Nowhere else gets video.
+The About hero reuses the drive loop from section 6 in its muted tone.
 
-- `/about`: ink hero with eyebrow `ABOUT`, display `AHMAD` / `SAAD`, the
+- `/about`: ink hero over the muted drive loop, eyebrow `ABOUT`, display `AHMAD` / `SAAD`, the
   headshot at 160px with an apricot ring, `ABOUT_INTRO` in display light.
   Then one bone section per `ABOUT_SECTIONS` entry, alternating ink/bone,
   heading in display at card-title size, paragraphs in body.
@@ -193,21 +188,22 @@ or data saver, and it pauses off screen. Nowhere else gets video.
   case study prose (`Markdown` + `Prose`), max 68ch. Prev/next in a two-cell
   row at the end. Breadcrumb in mono.
 
-## 6. Signature: the radar
+## 6. Signature: the drive loop
 
-Behind the hero name sits a radar: three concentric rings and a cross-hair in
-`--bone` at 8% opacity, and a sweep (a `conic-gradient` from transparent to
-apricot at 22% back to transparent over 70 degrees) rotating once every 14
-seconds with a linear timing function. Five blips sit on the rings, one per
-project, each a 6px apricot dot with a mono label (`Trend Radar`, `LocalAI`,
-`Mano CPU`, `LoRaWAN node`, `ahmadsaad.dev`) that brightens from 25% to
-100% opacity for a moment as the sweep passes (an opacity keyframe with the
-same 14s period and a per-blip `animation-delay` matching its angle). The
-whole thing is a few divs and two keyframes; it never touches the main
-thread. Under `prefers-reduced-motion` the sweep stops at a fixed angle and
-the blips stay at 60%.
+Behind the hero name plays a 7 second loop of a sports car on a curving
+road at dawn (Mixkit clip 52427, Mixkit free license), encoded by
+`scripts/build-about-video.mts` into a 1080 and a 720 H.264 file plus a
+poster frame under `public/about/`. On the home page it keeps its colour
+(`tone="vivid"`): only a light contrast lift, and an ink wash that sits on
+the left and top where the eyebrow, name and pills are, so the sky and road
+stay open on the right. On the About hero the same loop runs desaturated and
+darkened (`tone="muted"`) as texture under the type.
 
-It is the one memorable element. Nothing else on the page animates
+Rules that make it cheap: the poster is server-rendered and preloaded, so it
+is the LCP and paints on the first frame; the video mounts only on the
+client, only without reduced motion or data saver, picks the 720 file on
+phones, pauses off screen and in background tabs, and fades in over the
+poster. Nothing else on the site gets video, and nothing else animates
 continuously except the tech marquee.
 
 ## 7. Motion

@@ -1,16 +1,26 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { preload } from 'react-dom';
 
 type Props = {
   /** Full-size MP4 (H.264), used from 768px up. */
   src: string;
   /** Smaller MP4 for phones. Falls back to `src` when omitted. */
   srcMobile?: string;
-  /** Poster frame; also the only thing painted before hydration. */
+  /** Poster frame (JPEG); also the only thing painted before hydration. */
   poster: string;
+  /** WebP twin of the poster, preferred when the browser supports it. */
+  posterWebp?: string;
   width: number;
   height: number;
+  /**
+   * `muted`: desaturated and darkened under a heavy ink wash (About).
+   * `vivid`: near-natural colour, lighter wash kept to the text side (home).
+   */
+  tone?: 'muted' | 'vivid';
+  /** Preload the poster: set on the hero that is the page's LCP. */
+  priority?: boolean;
 };
 
 /**
@@ -21,9 +31,22 @@ type Props = {
  * off screen or in a background tab so it never burns battery for nothing.
  * Decorative: both layers are hidden from assistive tech.
  */
-export function HeroVideo({ src, srcMobile, poster, width, height }: Props) {
+export function HeroVideo({
+  src,
+  srcMobile,
+  poster,
+  posterWebp,
+  width,
+  height,
+  tone = 'muted',
+  priority = false,
+}: Props) {
   const [enabled, setEnabled] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  if (priority) {
+    preload(posterWebp ?? poster, { as: 'image', fetchPriority: 'high' });
+  }
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -62,16 +85,19 @@ export function HeroVideo({ src, srcMobile, poster, width, height }: Props) {
   }, [enabled]);
 
   return (
-    <div className="hero-media" aria-hidden="true">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={poster}
-        alt=""
-        width={width}
-        height={height}
-        decoding="async"
-        fetchPriority="high"
-      />
+    <div className={`hero-media hero-media--${tone}`} aria-hidden="true">
+      <picture>
+        {posterWebp && <source srcSet={posterWebp} type="image/webp" />}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={poster}
+          alt=""
+          width={width}
+          height={height}
+          decoding="async"
+          fetchPriority={priority ? 'high' : undefined}
+        />
+      </picture>
       {enabled && (
         <video
           ref={videoRef}

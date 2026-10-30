@@ -14,6 +14,28 @@ export function CredentialBadge({
   credential: Certification;
   className?: string;
 }) {
+  if (credential.image) {
+    const img = (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={credential.image}
+        alt={`${credential.name}, issued by ${credential.issuer}`}
+        width={120}
+        height={120}
+        loading="lazy"
+        decoding="async"
+        className={cn('credential-image', className)}
+      />
+    );
+    return credential.url ? (
+      <a href={credential.url} target="_blank" rel="noopener noreferrer">
+        {img}
+      </a>
+    ) : (
+      img
+    );
+  }
+
   const body = (
     <>
       <span className="credential-mark" aria-hidden="true">

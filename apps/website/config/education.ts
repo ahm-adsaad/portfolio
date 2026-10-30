@@ -26,11 +26,19 @@ export type Certification = {
   year?: string;
   /** Public verification link (Credly or the issuer's page); omit if none. */
   url?: string;
+  /**
+   * Path under /public to the issuer's official badge artwork, e.g.
+   * '/credentials/claude-certified-architect.png'. When set, the badge is
+   * shown instead of the typographic stamp.
+   */
+  image?: string;
 };
 
 export const CERTIFICATIONS: Certification[] = [
   {
-    name: 'Claude Certified Architect',
+    name: 'Claude Certified Architect: Foundations',
     issuer: 'Anthropic',
+    url: 'https://www.credly.com/badges/976e4176-241f-4870-83ea-c66f896f64ff',
+    image: '/credentials/claude-certified-architect.png',
   },
 ];

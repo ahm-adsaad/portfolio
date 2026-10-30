@@ -1,16 +1,25 @@
+import { HeroVideo } from '@/components/hero-video';
 import { PillLink } from '@/components/pill-link';
 import { USER } from '@/config/user';
 import { stagger } from '@/lib/stagger';
-import { Radar } from './radar';
 
 export function Hero() {
   return (
     <section
-      className="section hero"
+      className="section hero has-media"
       data-tone="ink"
       aria-labelledby="hero-name"
     >
-      <Radar />
+      <HeroVideo
+        src="/about/drive-1080.mp4"
+        srcMobile="/about/drive-720.mp4"
+        poster="/about/drive-poster.jpg"
+        posterWebp="/about/drive-poster.webp"
+        width={1920}
+        height={1080}
+        tone="vivid"
+        priority
+      />
 
       <div className="hero-copy">
         <p className="eyebrow rise" style={stagger(0)}>

@@ -105,8 +105,11 @@ export default function AboutPage() {
           src="/about/drive-1080.mp4"
           srcMobile="/about/drive-720.mp4"
           poster="/about/drive-poster.jpg"
+          posterWebp="/about/drive-poster.webp"
           width={1920}
           height={1080}
+          tone="muted"
+          priority
         />
 
         <Breadcrumb

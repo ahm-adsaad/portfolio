@@ -513,7 +513,7 @@
 
   .hero-cue {
     position: absolute;
-    left: var(--pad);
+    right: var(--pad);
     bottom: clamp(1rem, 2.5vh, 1.75rem);
     display: inline-flex;
     align-items: center;
@@ -543,15 +543,20 @@
      the frame is darkened under an ink gradient so the type keeps 4.5:1.
      The layer is compositor-only: filter on a single video element, an
      opacity fade, nothing animating on the main thread. */
-  .page-hero.has-media {
+  .has-media {
     position: relative;
     isolation: isolate;
     overflow: clip;
   }
 
-  .page-hero.has-media > *:not(.hero-media) {
+  .has-media > *:not(.hero-media) {
     position: relative;
     z-index: 1;
+  }
+
+  /* The scroll cue is pinned to the corner, not part of the flow. */
+  .has-media > .hero-cue {
+    position: absolute;
   }
 
   .hero-media {
@@ -569,7 +574,18 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .hero-media--muted img,
+  .hero-media--muted video {
     filter: saturate(0.25) brightness(0.5) contrast(1.05);
+  }
+
+  /* Home: the dawn colour stays; only a light contrast lift. Legibility
+     comes from the wash below, which is heavy on the text side only. */
+  .hero-media--vivid img,
+  .hero-media--vivid video {
+    filter: saturate(1.1) brightness(0.92) contrast(1.03);
   }
 
   .hero-media-video {
@@ -583,6 +599,10 @@
     content: "";
     position: absolute;
     inset: 0;
+  }
+
+  /* About: heavy wash, the frame is texture. */
+  .hero-media--muted::after {
     background:
       linear-gradient(
         to right,
@@ -598,6 +618,39 @@
         transparent 70%,
         var(--color-ink) 100%
       );
+  }
+
+  /* Home: ink only where the name, eyebrow and pills sit (left and top),
+     open sky and road on the right, dissolve to ink at the bottom edge. */
+  .hero-media--vivid::after {
+    background:
+      linear-gradient(
+        to right,
+        color-mix(in srgb, var(--color-ink) 86%, transparent) 0%,
+        color-mix(in srgb, var(--color-ink) 64%, transparent) 34%,
+        color-mix(in srgb, var(--color-ink) 16%, transparent) 60%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--color-ink) 82%, transparent) 0%,
+        color-mix(in srgb, var(--color-ink) 34%, transparent) 12%,
+        color-mix(in srgb, var(--color-ink) 6%, transparent) 26%,
+        transparent 55%,
+        color-mix(in srgb, var(--color-ink) 90%, transparent) 100%
+      );
+  }
+
+  @media (max-width: 767px) {
+    .hero-media--vivid::after {
+      background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--color-ink) 70%, transparent) 0%,
+        color-mix(in srgb, var(--color-ink) 40%, transparent) 30%,
+        color-mix(in srgb, var(--color-ink) 72%, transparent) 62%,
+        var(--color-ink) 100%
+      );
+    }
   }
 
   @keyframes hero-media-in {
@@ -656,151 +709,6 @@
   .rise-name {
     animation: rise-name 0.7s var(--ease-out-expo) backwards;
     animation-delay: calc(var(--i, 0) * 70ms);
-  }
-
-  /* Radar (DESIGN.md section 6) */
-  .radar {
-    --size: min(80vmin, 760px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: var(--size);
-    aspect-ratio: 1;
-    translate: -50% -50%;
-    pointer-events: none;
-    opacity: 0.85;
-  }
-
-  @media (max-width: 767px) {
-    .radar {
-      --size: 84vw;
-      top: 34%;
-      opacity: 0.75;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .radar {
-      left: 58%;
-      opacity: 1;
-    }
-  }
-
-  .radar-ring,
-  .radar-cross,
-  .radar-sweep {
-    position: absolute;
-  }
-
-  .radar-ring {
-    border: 1px solid color-mix(in srgb, var(--color-bone) 8%, transparent);
-    border-radius: 50%;
-    inset: 0;
-  }
-
-  .radar-ring[data-ring="2"] {
-    inset: 16.5%;
-  }
-
-  .radar-ring[data-ring="1"] {
-    inset: 33%;
-  }
-
-  .radar-cross {
-    background: color-mix(in srgb, var(--color-bone) 8%, transparent);
-  }
-
-  .radar-cross[data-axis="x"] {
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 1px;
-  }
-
-  .radar-cross[data-axis="y"] {
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-  }
-
-  .radar-sweep {
-    inset: 0;
-    border-radius: 50%;
-    background: conic-gradient(
-      from 0deg,
-      transparent 0deg,
-      color-mix(in srgb, var(--color-apricot) 22%, transparent) 70deg,
-      transparent 70deg
-    );
-    animation: radar-sweep 14s linear infinite;
-    will-change: transform;
-  }
-
-  .radar-blips {
-    position: absolute;
-    inset: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .radar-blips li {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transform: rotate(var(--angle))
-      translateX(calc(var(--size) / 2 * var(--ring)))
-      rotate(calc(-1 * var(--angle)));
-    animation: radar-blip 14s linear infinite;
-    animation-delay: var(--delay);
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-apricot);
-    white-space: nowrap;
-  }
-
-  .radar-blips li[data-side="left"] {
-    flex-direction: row-reverse;
-    translate: -100% -50%;
-  }
-
-  .radar-blips li[data-side="right"] {
-    translate: 0 -50%;
-  }
-
-  /* On narrow screens only the dots show; the labels stay in the DOM for
-     screen readers and point inward so none is clipped. */
-  @media (max-width: 767px) {
-    .radar-blips li {
-      font-size: 0;
-    }
-
-    .radar-blips li[data-side="right"] {
-      flex-direction: row-reverse;
-      translate: -100% -50%;
-    }
-
-    .radar-blips li[data-side="left"] {
-      flex-direction: row;
-      translate: 0 -50%;
-    }
-  }
-
-  .radar-blips li::before {
-    content: "";
-    flex: none;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-apricot);
-    box-shadow: 0 0 12px
-      color-mix(in srgb, var(--color-apricot) 60%, transparent);
   }
 
   /* Statement: word-by-word scroll-driven opacity */
@@ -1225,6 +1133,11 @@
     color: var(--muted-foreground);
   }
 
+  .credential-image {
+    width: clamp(88px, 9vw, 120px);
+    height: auto;
+  }
+
   /* Contact */
   .contact {
     display: flex;
@@ -1333,24 +1246,6 @@
   }
   to {
     translate: 0 0;
-  }
-}
-
-@keyframes radar-sweep {
-  to {
-    rotate: 360deg;
-  }
-}
-
-@keyframes radar-blip {
-  0% {
-    opacity: 1;
-  }
-  8% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0.25;
   }
 }
 
@@ -1636,20 +1531,10 @@
 
   .rise,
   .rise-name,
-  .radar-sweep,
-  .radar-blips li,
   .marquee-track,
   .word,
   .scroll-progress {
     animation: none !important;
-  }
-
-  .radar-sweep {
-    rotate: 40deg;
-  }
-
-  .radar-blips li {
-    opacity: 0.6;
   }
 
   .marquee-viewport {
@@ -1661,7 +1546,6 @@
     display: none;
   }
 
-  .radar-sweep,
   .marquee-track {
     will-change: auto;
   }

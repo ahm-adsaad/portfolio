@@ -2,7 +2,7 @@
 
 Personal portfolio of **Ahmad Saad**, live at [ahmadsaad.dev](https://ahmadsaad.dev).
 
-Started from the MIT-licensed [ruixenui/portfolio](https://github.com/ruixenui/portfolio) template, since rebuilt on its own design system (see `apps/website/DESIGN.md`) and deployed to Cloudflare Workers.
+Built on its own design system (see `apps/website/DESIGN.md`) and deployed to Cloudflare Workers.
 
 ## Tech Stack
 

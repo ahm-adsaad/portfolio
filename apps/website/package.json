@@ -13,6 +13,7 @@
     "capture": "npx tsx ./scripts/capture.mts",
     "images:projects": "npx tsx ./scripts/build-project-images.mts",
     "images:headshot": "npx tsx ./scripts/build-headshot-images.mts",
+    "video:about": "npx tsx ./scripts/build-about-video.mts",
     "fonts:display": "npx tsx ./scripts/build-display-fonts.mts",
     "generate-libphonenumber-metadata": "libphonenumber-metadata-generator ./assets/libphonenumber.metadata.json --countries VN --extended",
     "upgrade:next": "npx @next/codemod@latest upgrade latest",

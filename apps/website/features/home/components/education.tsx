@@ -1,6 +1,7 @@
 import { Chip } from '@/components/chip';
+import { CredentialBadge } from '@/components/credential-badge';
 import { SectionHeader } from '@/components/section-header';
-import { EDUCATION } from '@/config/education';
+import { CERTIFICATIONS, EDUCATION } from '@/config/education';
 
 export function Education() {
   const [gpa, scale] = EDUCATION.gpa.split('/').map((s) => s.trim());
@@ -59,6 +60,19 @@ export function Education() {
               </li>
             ))}
           </ul>
+
+          {CERTIFICATIONS.length > 0 && (
+            <div className="mt-8" data-reveal>
+              <p className="eyebrow">Certification</p>
+              <ul className="mt-3 flex flex-wrap gap-3">
+                {CERTIFICATIONS.map((credential) => (
+                  <li key={credential.name} className="flex">
+                    <CredentialBadge credential={credential} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="mt-8" data-reveal>
             <p className="eyebrow">Coursework</p>

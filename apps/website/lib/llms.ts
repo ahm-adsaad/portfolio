@@ -2,12 +2,13 @@
  * Markdown renderers shared by the agent-facing endpoints
  * (/llms.txt, /llms-full.txt, /me/*.md). One source of truth: config/*.
  */
-import { EDUCATION } from '@/config/education';
+import { CERTIFICATIONS, EDUCATION } from '@/config/education';
 import { experiences } from '@/config/experience';
 import { PROJECTS } from '@/config/projects';
 import { USER } from '@/config/user';
 
-const period = (start: string, end?: string) => `${start} - ${end ?? 'Present'}`;
+const period = (start: string, end?: string) =>
+  `${start} - ${end ?? 'Present'}`;
 
 const heading = (level: number) => '#'.repeat(level);
 
@@ -25,7 +26,9 @@ export function formatAboutMarkdown(level = 2): string {
     `- Website: ${USER.website}`,
     ...Object.entries(USER.social)
       .filter(([, url]) => url)
-      .map(([name, url]) => `- ${name[0].toUpperCase()}${name.slice(1)}: ${url}`),
+      .map(
+        ([name, url]) => `- ${name[0].toUpperCase()}${name.slice(1)}: ${url}`
+      ),
   ].join('\n');
 }
 
@@ -99,6 +102,14 @@ export function formatEducationMarkdown(level = 2): string {
     ...EDUCATION.highlights.map((item) => `- ${item}`),
     '',
     `Coursework: ${EDUCATION.coursework.join(', ')}`,
+    ...(CERTIFICATIONS.length > 0
+      ? [
+          '',
+          `Certifications: ${CERTIFICATIONS.map(
+            (c) => `${c.name} (${c.issuer}${c.year ? `, ${c.year}` : ''})`
+          ).join(', ')}`,
+        ]
+      : []),
   ].join('\n');
 }
 

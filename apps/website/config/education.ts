@@ -18,3 +18,19 @@ export const EDUCATION = {
     'Wireless Communications',
   ],
 };
+
+export type Certification = {
+  name: string;
+  issuer: string;
+  /** Year awarded; shown after the issuer when set. */
+  year?: string;
+  /** Public verification link (Credly or the issuer's page); omit if none. */
+  url?: string;
+};
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    name: 'Claude Certified Architect',
+    issuer: 'Anthropic',
+  },
+];

@@ -1,5 +1,5 @@
 import { PROJECTS } from '@/config/projects';
-import { EDUCATION } from '@/config/education';
+import { CERTIFICATIONS, EDUCATION } from '@/config/education';
 import { experiences } from '@/config/experience';
 import { USER } from '@/config/user';
 import { AboutTeaser } from '@/features/home/components/about-teaser';
@@ -106,6 +106,13 @@ function buildJsonLd(): Graph {
         alumniOf: { '@id': AUS_ID },
         affiliation: { '@id': AUS_ID },
         worksFor: currentEmployers,
+        hasCredential: CERTIFICATIONS.map((c) => ({
+          '@type': 'EducationalOccupationalCredential',
+          name: c.name,
+          credentialCategory: 'certification',
+          recognizedBy: { '@type': 'Organization', name: c.issuer },
+          ...(c.url ? { url: c.url } : {}),
+        })),
         homeLocation: {
           '@type': 'Place',
           address: {

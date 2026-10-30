@@ -174,6 +174,14 @@ Section sequence on the home page (order matters, it is a narrative):
 
 Secondary pages use the same nav, footer, and section header row:
 
+The About hero carries the one piece of video on the site: a 7 second
+Mixkit loop of a sports car on a curving road at dawn (Mixkit free license),
+encoded by `scripts/build-about-video.mts` into a 1080 and a 720 H.264 file
+plus a poster frame under `public/about/`. It is desaturated and darkened
+under an ink wash so the type keeps its contrast, the poster is what paints
+first, the video mounts only on the client and only without reduced motion
+or data saver, and it pauses off screen. Nowhere else gets video.
+
 - `/about`: ink hero with eyebrow `ABOUT`, display `AHMAD` / `SAAD`, the
   headshot at 160px with an apricot ring, `ABOUT_INTRO` in display light.
   Then one bone section per `ABOUT_SECTIONS` entry, alternating ink/bone,

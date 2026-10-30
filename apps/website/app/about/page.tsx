@@ -1,8 +1,14 @@
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
 import { Breadcrumb } from '@/components/breadcrumb';
+import { CredentialBadge } from '@/components/credential-badge';
 import { Headshot } from '@/components/headshot';
+import { HeroVideo } from '@/components/hero-video';
 import { PillLink } from '@/components/pill-link';
 import { SectionHeader } from '@/components/section-header';
 import { ABOUT_INTRO, ABOUT_SECTIONS } from '@/config/about';
+import { CERTIFICATIONS } from '@/config/education';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
 import { formatIndex } from '@/lib/project-index';
@@ -86,6 +92,12 @@ const linkClass =
 const slug = (heading: string) =>
   heading.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
+/* The drive loop is optional at build time: the hero renders without the
+   media layer until `pnpm video:about` has produced the poster. */
+const HAS_DRIVE_LOOP = existsSync(
+  path.join(process.cwd(), 'public', 'about', 'drive-poster.jpg')
+);
+
 export default function AboutPage() {
   const last = ABOUT_SECTIONS.length - 1;
 
@@ -94,10 +106,22 @@ export default function AboutPage() {
       <JsonLd code={jsonLd} />
 
       <section
-        className="section page-hero"
+        className={
+          HAS_DRIVE_LOOP ? 'section page-hero has-media' : 'section page-hero'
+        }
         data-tone="ink"
         aria-labelledby="about-name"
       >
+        {HAS_DRIVE_LOOP && (
+          <HeroVideo
+            src="/about/drive-1080.mp4"
+            srcMobile="/about/drive-720.mp4"
+            poster="/about/drive-poster.jpg"
+            width={1920}
+            height={1080}
+          />
+        )}
+
         <Breadcrumb
           items={[{ label: 'Home', href: '/' }, { label: 'About' }]}
           className="rise"
@@ -121,6 +145,15 @@ export default function AboutPage() {
                 {USER.lastName}
               </span>
             </h1>
+            {CERTIFICATIONS.length > 0 && (
+              <ul className="rise mt-8 flex flex-wrap gap-3" style={stagger(4)}>
+                {CERTIFICATIONS.map((credential) => (
+                  <li key={credential.name} className="flex">
+                    <CredentialBadge credential={credential} />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0 lg:self-end">

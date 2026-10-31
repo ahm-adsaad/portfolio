@@ -132,4 +132,7 @@ export function formatEducationMarkdown(level = 2): string {
 
 export const MARKDOWN_HEADERS = {
   'Content-Type': 'text/markdown;charset=utf-8',
+  // Fetchable by any agent, but kept out of search results: the HTML pages
+  // are the citation targets. Not a robots.txt Disallow, which would block it.
+  'X-Robots-Tag': 'noindex',
 };

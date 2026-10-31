@@ -74,7 +74,9 @@ export function ProjectStack({ projects, showAllLink = false }: Props) {
                         href={`/projects/${project.id}`}
                         className="text-link mono-label text-apricot"
                       >
-                        Read the case study
+                        Read the{' '}
+                        <span className="sr-only">{project.title} </span>case
+                        study
                       </Link>
                     ) : source ? (
                       <a

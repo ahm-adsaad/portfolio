@@ -35,6 +35,7 @@ export const projectSchemaId = (project: Project) =>
 
 /** "Title: Summary | Ahmad Saad", with the summary capped near 45 characters. */
 export function projectTitle(project: Project): string {
+  if (project.seoTitle) return project.seoTitle;
   const summary =
     project.titleSummary ?? trimToWord(project.shortDescription ?? '', 45);
   return summary ? `${project.title}: ${summary}` : project.title;

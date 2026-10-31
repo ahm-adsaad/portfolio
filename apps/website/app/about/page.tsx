@@ -21,9 +21,9 @@ import type { Graph } from 'schema-dts';
 export const dynamic = 'force-static';
 
 const PATH = '/about';
-const TITLE = `About ${USER.name} | Computer & AI Engineer`;
+const TITLE = `About ${USER.name} | AI Engineer, AUS Computer Engineering`;
 const DESCRIPTION =
-  'Ahmad Saad is a Computer Engineering senior at AUS and an AI engineer in the UAE. Golden Visa holder, available to start January 2027.';
+  'Ahmad Saad, an AI engineer and Computer Engineering senior at the American University of Sharjah, formerly at Samsung Gulf Electronics. Available January 2027.';
 
 export function generateMetadata(): Metadata {
   return createMetadata({

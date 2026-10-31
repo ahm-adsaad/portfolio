@@ -50,7 +50,8 @@ export async function generateMetadata({
 
   return createMetadata({
     title: projectTitle(project),
-    description: project.shortDescription ?? project.title,
+    description:
+      project.seoDescription ?? project.shortDescription ?? project.title,
     path: projectPath(project),
     image: createOgImage({
       title: project.title,
@@ -233,7 +234,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
         <SectionHeader
           id="overview-title"
           eyebrow="Overview"
-          value={`${project.skills.length} tools`}
+          value={`${project.skills.length} ${project.skills.length === 1 ? 'tool' : 'tools'}`}
         />
 
         <div className="grid-12">

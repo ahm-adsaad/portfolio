@@ -1,0 +1,50 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "CreativeWork",
+    "@id": "https://ahmadsaad.dev/projects/lorawan-sensor-node#project",
+    "name": "Energy Harvesting LoRaWAN Sensor Node",
+    "description": "Custom 2-layer PCB with an ATMEGA4809 MCU, LoRa transceiver, and an energy harvesting power path.",
+    "author": {
+     "@id": "https://ahmadsaad.dev/#person"
+    },
+    "url": "https://ahmadsaad.dev/projects/lorawan-sensor-node",
+    "mainEntityOfPage": "https://ahmadsaad.dev/projects/lorawan-sensor-node",
+    "image": "https://ahmadsaad.dev/projects/lorawan-sensor-node.jpg",
+    "keywords": "EasyEDA, PCB design, Embedded systems"
+   },
+   {
+    "@type": "Person",
+    "@id": "https://ahmadsaad.dev/#person",
+    "name": "Ahmad Saad",
+    "url": "https://ahmadsaad.dev/"
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "https://ahmadsaad.dev/projects/lorawan-sensor-node#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ahmadsaad.dev/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://ahmadsaad.dev/projects"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Energy Harvesting LoRaWAN Sensor Node",
+      "item": "https://ahmadsaad.dev/projects/lorawan-sensor-node"
+     }
+    ]
+   }
+  ]
+ }
+]

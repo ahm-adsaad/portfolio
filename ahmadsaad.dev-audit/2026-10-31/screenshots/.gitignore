@@ -1,0 +1,4 @@
+# Evidence only: the two new pages at phone width. The other captures stay local (14 MB of near-duplicate PNGs).
+*.png
+!aus-390.png
+!cv-390.png

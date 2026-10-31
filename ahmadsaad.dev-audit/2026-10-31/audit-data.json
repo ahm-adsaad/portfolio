@@ -1,0 +1,96 @@
+{
+  "site": "https://ahmadsaad.dev",
+  "date": "2026-10-31",
+  "phase": "before round 2",
+  "baseline_commit": "cd4ee5a",
+  "goal": "Rank for the full name Ahmad Atef Saad and for ahmad aus and its qualified variants",
+  "weights": {
+    "technical": 22,
+    "content": 23,
+    "on_page": 20,
+    "schema": 10,
+    "performance": 10,
+    "ai_search": 10,
+    "images": 5
+  },
+  "dimension_mapping": {
+    "content": "content architecture (query coverage), findings/content-architecture.md",
+    "on_page": "name and AUS entity coverage, findings/name-entity.md",
+    "ai_search": "GEO readiness, findings/geo.md",
+    "images": "carried from 2026-10-30, not re-audited"
+  },
+  "scores": {
+    "technical": 90,
+    "content": 54,
+    "on_page": 46,
+    "schema": 78,
+    "performance": 76,
+    "ai_search": 69,
+    "images": 62
+  },
+  "composite": {
+    "formula": "0.22*90 + 0.23*54 + 0.20*46 + 0.10*78 + 0.10*76 + 0.10*69 + 0.05*62",
+    "exact": 66.82,
+    "rounded": 67,
+    "previous": 72,
+    "previous_date": "2026-10-30",
+    "note": "No regression: Content and On-Page are now scored against the full-name and AUS goal."
+  },
+  "outside_composite": {
+    "search_visibility": 24,
+    "offsite": 38
+  },
+  "indexation": {
+    "google": {
+      "status": "indexed",
+      "urls": 8,
+      "list": [
+        "https://ahmadsaad.dev/",
+        "https://ahmadsaad.dev/about",
+        "https://ahmadsaad.dev/projects",
+        "https://ahmadsaad.dev/projects/localai",
+        "https://ahmadsaad.dev/projects/trend-radar",
+        "https://ahmadsaad.dev/projects/mano-computer-simulator",
+        "https://ahmadsaad.dev/projects/lorawan-sensor-node",
+        "https://localai.ahmadsaad.dev/"
+      ],
+      "snippets": "stale, predate the 2026-10-31 deploy",
+      "search_console": false,
+      "positions_measured": false
+    },
+    "bing": {
+      "status": "homepage only (DuckDuckGo proxy)",
+      "webmaster_tools_verified": true
+    },
+    "indexnow": false
+  },
+  "name_queries_checked": 15,
+  "name_queries_with_site_ranking": 0,
+  "full_name_visible_occurrences": 0,
+  "top_findings": [
+    "Full name Ahmad Atef Saad is in no title, meta, visible text or alt on any of the 7 pages",
+    "No page is built around AUS; AUS is absent from the homepage title and all four case studies",
+    "Google has the site indexed; the gap is relevance and authority (no aus.edu links, no Search Console, no IndexNow)",
+    "Full Person node only on the homepage; stubs elsewhere lack alternateName and sameAs; alumniOf premature; memberOf vague",
+    "llms.txt opening lacks both spellings and AUS; no FAQ or third-person definition on /about; CITL misnamed Center of"
+  ],
+  "expected_after": {
+    "scores": {
+      "technical": 92,
+      "content": 80,
+      "on_page": 88,
+      "schema": 90,
+      "performance": 77,
+      "ai_search": 78,
+      "images": 64
+    },
+    "composite": {
+      "formula": "0.22*92 + 0.23*80 + 0.20*88 + 0.10*90 + 0.10*77 + 0.10*78 + 0.05*64",
+      "exact": 83.94,
+      "rounded": 84
+    },
+    "performance_if_owner_disables_js_detections": 88,
+    "search_visibility": "24 until reindexed; 40 to 55 within 2 to 4 weeks only with Search Console and an aihub.aus.edu link",
+    "offsite": "38 until the owner runs the GitHub script and outreach; about 55 after"
+  }
+}

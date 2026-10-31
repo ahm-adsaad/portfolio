@@ -1,0 +1,67 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "AboutPage",
+    "@id": "https://ahmadsaad.dev/about#page",
+    "url": "https://ahmadsaad.dev/about",
+    "name": "About Ahmad Saad | AI Engineer, AUS Computer Engineering",
+    "description": "Ahmad Saad, an AI engineer and Computer Engineering senior at the American University of Sharjah, formerly at Samsung Gulf Electronics. Available January 2027.",
+    "inLanguage": "en-US",
+    "isPartOf": {
+     "@id": "https://ahmadsaad.dev/#website"
+    },
+    "mainEntity": {
+     "@id": "https://ahmadsaad.dev/#person"
+    },
+    "about": {
+     "@id": "https://ahmadsaad.dev/#person"
+    },
+    "primaryImageOfPage": {
+     "@type": "ImageObject",
+     "@id": "https://ahmadsaad.dev/#headshot",
+     "url": "https://ahmadsaad.dev/ahmad-saad.jpg",
+     "width": 748,
+     "height": 748,
+     "caption": "Ahmad Saad"
+    },
+    "breadcrumb": {
+     "@id": "https://ahmadsaad.dev/about#breadcrumb"
+    },
+    "dateCreated": "2026-09-26",
+    "dateModified": "2026-10-31"
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "https://ahmadsaad.dev/about#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ahmadsaad.dev/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://ahmadsaad.dev/about"
+     }
+    ]
+   },
+   {
+    "@type": "Person",
+    "@id": "https://ahmadsaad.dev/#person",
+    "name": "Ahmad Saad",
+    "url": "https://ahmadsaad.dev/"
+   },
+   {
+    "@type": "WebSite",
+    "@id": "https://ahmadsaad.dev/#website",
+    "name": "Ahmad Saad",
+    "url": "https://ahmadsaad.dev/"
+   }
+  ]
+ }
+]

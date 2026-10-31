@@ -1,0 +1,52 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "SoftwareSourceCode",
+    "@id": "https://ahmadsaad.dev/projects/trend-radar#project",
+    "name": "Trend Radar",
+    "description": "Production TikTok trend-detection platform where measurement decides and LLMs describe.",
+    "author": {
+     "@id": "https://ahmadsaad.dev/#person"
+    },
+    "url": "https://ahmadsaad.dev/projects/trend-radar",
+    "mainEntityOfPage": "https://ahmadsaad.dev/projects/trend-radar",
+    "image": "https://ahmadsaad.dev/projects/trend-radar.jpg",
+    "keywords": "TypeScript, Node.js, Claude API, PostgreSQL, Docker, Next.js, REST API",
+    "codeRepository": "https://github.com/ahm-adsaad/trend-radar",
+    "programmingLanguage": "TypeScript"
+   },
+   {
+    "@type": "Person",
+    "@id": "https://ahmadsaad.dev/#person",
+    "name": "Ahmad Saad",
+    "url": "https://ahmadsaad.dev/"
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "https://ahmadsaad.dev/projects/trend-radar#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ahmadsaad.dev/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://ahmadsaad.dev/projects"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Trend Radar",
+      "item": "https://ahmadsaad.dev/projects/trend-radar"
+     }
+    ]
+   }
+  ]
+ }
+]

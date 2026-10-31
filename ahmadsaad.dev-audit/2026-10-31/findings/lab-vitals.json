@@ -1,0 +1,4344 @@
+{
+ "mobile /": [
+  {
+   "lcp": {
+    "t": 2248,
+    "url": "",
+    "tag": "SPAN",
+    "cls": "block rise-name",
+    "txt": "Ahmad",
+    "size": 58812,
+    "rst": 2248,
+    "lt": 0
+   },
+   "cls": 0,
+   "fcp": 2248,
+   "ttfb": 443.8999999910593,
+   "tbt": 1538,
+   "lt": [
+    [
+     1535.7999999970198,
+     619
+    ],
+    [
+     2276.8999999910593,
+     70
+    ],
+    [
+     2575.699999988079,
+     601
+    ],
+    [
+     3257.699999988079,
+     888
+    ],
+    [
+     4612.29999999702,
+     65
+    ],
+    [
+     4746.899999991059,
+     125
+    ],
+    [
+     5077.399999991059,
+     52
+    ],
+    [
+     5170,
+     87
+    ]
+   ],
+   "nav": {
+    "ttfb": 443.8999999910593,
+    "dcl": 2342,
+    "load": 3217.699999988079
+   },
+   "res": [
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     63032,
+     62732,
+     573.5,
+     1612.2999999970198,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     22225,
+     21925,
+     576.7999999970198,
+     1377.0999999940395,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     772,
+     472,
+     577.8999999910593,
+     740.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     2202,
+     1902,
+     578.8999999910593,
+     1705.3999999910593,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56094,
+     55794,
+     580.1999999880791,
+     2340.2999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     46571,
+     46271,
+     581,
+     2300.0999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     515,
+     215,
+     581.6999999880791,
+     1669.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     3842,
+     3542,
+     582.5,
+     1711.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     2412,
+     2112,
+     583.0999999940395,
+     1654.699999988079,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3850,
+     3550,
+     583.8999999910593,
+     1718.5999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7541,
+     7241,
+     585,
+     1806.8999999910593,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     976,
+     676,
+     585.8999999910593,
+     1597.699999988079,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     18796,
+     18496,
+     587.3999999910593,
+     1192.699999988079,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     19948,
+     19648,
+     588.5999999940395,
+     1346.199999988079,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     30392,
+     30092,
+     589.8999999910593,
+     1468.7999999970198,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     7982,
+     7682,
+     591.8999999910593,
+     904.7999999970198,
+     "img"
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     0,
+     0,
+     617.5999999940395,
+     1084.3999999910593,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     23428,
+     23128,
+     1714.5999999940395,
+     2206.699999988079,
+     "css"
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     300,
+     0,
+     4212.199999988079,
+     4416.0999999940395,
+     "xmlhttprequest"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+     15258,
+     14958,
+     4812,
+     5069.399999991059,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+     2796,
+     2496,
+     4818.699999988079,
+     5016.29999999702,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-720.mp4",
+     570053,
+     569753,
+     4951.899999991059,
+     7852.899999991059,
+     "video"
+    ]
+   ],
+   "hdr": [
+    [
+     "https://ahmadsaad.dev/",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "62732",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "7682",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     200,
+     {
+      "cache-control": "public, max-age=86400",
+      "content-type": "text/javascript;charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "18496",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "19648",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "30092",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "23128",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a530827ccf842a3f",
+     302,
+     {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": null,
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/scripts/jsd/c787ce48cf6b/main.js?ray=a530827ccf842a3f",
+     200,
+     {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": "application/javascript; charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     204,
+     {
+      "cache-control": null,
+      "content-type": "text/plain",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/jsd/oneshot/c787ce48cf6b/0.22462455036310713:1793423966:axssbjBmJzr3owwk7E7Hjkm0N5czfznc9JTCwSS_bSY/a530827ccf842a3f",
+     200,
+     {
+      "cache-control": null,
+      "content-type": "text/plain; charset=UTF-8",
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-720.mp4",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "video/mp4",
+      "content-length": "569753",
+      "cf-cache-status": "HIT"
+     }
+    ]
+   ],
+   "msgs": [],
+   "prof": [
+    [
+     "(native/(idle))",
+     2869322
+    ],
+    [
+     "(native/(program))",
+     2134597
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a530827ccf842a3f",
+     808049
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     701951
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     280783
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     274518
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     192520
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     99449
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+     89495
+    ],
+    [
+     "(native/appendChild)",
+     79916
+    ],
+    [
+     "(native/(garbage collector))",
+     75224
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+     29201
+    ],
+    [
+     "https://ahmadsaad.dev/",
+     21347
+    ],
+    [
+     "(native/createElementNS)",
+     15482
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     13557
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     11469
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     9313
+    ],
+    [
+     "(native/addEventListener)",
+     8575
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7569
+    ],
+    [
+     "(native/removeChild)",
+     7100
+    ],
+    [
+     "(native/get Temporal)",
+     4219
+    ],
+    [
+     "(native/atob)",
+     4174
+    ],
+    [
+     "(native/)",
+     4126
+    ],
+    [
+     "(native/querySelector)",
+     3284
+    ],
+    [
+     "(native/createElement)",
+     3174
+    ]
+   ],
+   "html": "",
+   "imgs": [
+    {
+     "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+     "w": "1920",
+     "h": "1080",
+     "nw": 1920,
+     "loading": "auto",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     "w": "56",
+     "h": "56",
+     "nw": 56,
+     "loading": "eager",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "120",
+     "h": "120",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    }
+   ]
+  },
+  {
+   "lcp": {
+    "t": 2660,
+    "url": "",
+    "tag": "SPAN",
+    "cls": "block rise-name",
+    "txt": "Ahmad",
+    "size": 58812,
+    "rst": 2660,
+    "lt": 0
+   },
+   "cls": 0,
+   "fcp": 2660,
+   "ttfb": 422.70000000298023,
+   "tbt": 1553,
+   "lt": [
+    [
+     1480,
+     833
+    ],
+    [
+     2701.9000000059605,
+     779
+    ],
+    [
+     3762.2999999970198,
+     741
+    ],
+    [
+     4735.79999999702,
+     53
+    ],
+    [
+     4850.100000008941,
+     109
+    ],
+    [
+     5261.20000000298,
+     121
+    ]
+   ],
+   "nav": {
+    "ttfb": 422.70000000298023,
+    "dcl": 2688.2999999970198,
+    "load": 3522.2999999970198
+   }
+  },
+  {
+   "lcp": {
+    "t": 2192,
+    "url": "",
+    "tag": "SPAN",
+    "cls": "block rise-name",
+    "txt": "Ahmad",
+    "size": 58812,
+    "rst": 2192,
+    "lt": 0
+   },
+   "cls": 0,
+   "fcp": 2192,
+   "ttfb": 404.09999999403954,
+   "tbt": 1500,
+   "lt": [
+    [
+     2173.5999999940395,
+     111
+    ],
+    [
+     2381.5,
+     57
+    ],
+    [
+     2471.7999999970198,
+     712
+    ],
+    [
+     3489.3999999910593,
+     723
+    ],
+    [
+     4431.0999999940395,
+     54
+    ],
+    [
+     4556.5999999940395,
+     133
+    ],
+    [
+     4999.5999999940395,
+     121
+    ]
+   ],
+   "nav": {
+    "ttfb": 404.09999999403954,
+    "dcl": 2434.3999999910593,
+    "load": 3254.2999999970198
+   }
+  }
+ ],
+ "mobile /about": [
+  {
+   "lcp": {
+    "t": 1964,
+    "url": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "tag": "IMG",
+    "cls": "select-none rounded-full bg-muted object-cover rise ring-2 ring-apricot ring-off",
+    "txt": "",
+    "size": 25567,
+    "rst": 1964,
+    "lt": 1516.5999999940395
+   },
+   "cls": 0,
+   "fcp": 1964,
+   "ttfb": 411.79999999701977,
+   "tbt": 1266,
+   "lt": [
+    [
+     1361.4000000059605,
+     411
+    ],
+    [
+     2547.2999999970198,
+     581
+    ],
+    [
+     3216.5999999940395,
+     757
+    ],
+    [
+     4281.0999999940395,
+     59
+    ],
+    [
+     4434.29999999702,
+     69
+    ]
+   ],
+   "nav": {
+    "ttfb": 411.79999999701977,
+    "dcl": 1981.2999999970198,
+    "load": 3192.7999999970198
+   },
+   "res": [
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     63032,
+     62732,
+     520.7000000029802,
+     2077.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     22225,
+     21925,
+     524.9000000059605,
+     1260,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     772,
+     472,
+     526.2999999970198,
+     706.9000000059605,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     2202,
+     1902,
+     527.7000000029802,
+     1593.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56093,
+     55793,
+     528.2000000029802,
+     2538.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     46576,
+     46276,
+     529.2000000029802,
+     2400.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     515,
+     215,
+     529.4000000059605,
+     1506.9000000059605,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     3842,
+     3542,
+     529.5999999940395,
+     1607.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     1229,
+     929,
+     530.0999999940395,
+     1563.5999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3850,
+     3550,
+     530.5,
+     1599.2999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7507,
+     7207,
+     532.2000000029802,
+     1709,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     976,
+     676,
+     533.2000000029802,
+     1493.5999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     18796,
+     18496,
+     534.2999999970198,
+     1321.9000000059605,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     19948,
+     19648,
+     536.2000000029802,
+     1260.4000000059605,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     30392,
+     30092,
+     537.2999999970198,
+     1463.0999999940395,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad.webp",
+     19594,
+     19294,
+     539.5999999940395,
+     1352.4000000059605,
+     "img"
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     0,
+     0,
+     541.4000000059605,
+     998.2999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     23428,
+     23128,
+     1514.7000000029802,
+     2140,
+     "css"
+    ],
+    [
+     "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+     65447,
+     65147,
+     1929.5999999940395,
+     2752.9000000059605,
+     "img"
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     300,
+     0,
+     4030.5999999940395,
+     4229.5,
+     "xmlhttprequest"
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+     14825,
+     14525,
+     4407,
+     4647.79999999702,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-720.mp4",
+     570053,
+     569753,
+     4514.29999999702,
+     7432.5999999940395,
+     "video"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     2412,
+     2112,
+     4646.5,
+     4828,
+     "script"
+    ]
+   ],
+   "hdr": [
+    [
+     "https://ahmadsaad.dev/about",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "62732",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "19294",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     200,
+     {
+      "cache-control": "public, max-age=86400",
+      "content-type": "text/javascript;charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "19648",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "18496",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "30092",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/png",
+      "content-length": "65147",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "23128",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53083309b92d0b7",
+     302,
+     {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": null,
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/scripts/jsd/c787ce48cf6b/main.js?ray=a53083309b92d0b7",
+     200,
+     {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": "application/javascript; charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     204,
+     {
+      "cache-control": null,
+      "content-type": "text/plain",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/jsd/oneshot/c787ce48cf6b/0.22462455036310713:1793423966:axssbjBmJzr3owwk7E7Hjkm0N5czfznc9JTCwSS_bSY/a53083309b92d0b7",
+     200,
+     {
+      "cache-control": null,
+      "content-type": "text/plain; charset=UTF-8",
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-720.mp4",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "video/mp4",
+      "content-length": "569753",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ]
+   ],
+   "msgs": [],
+   "prof": [
+    [
+     "(native/(idle))",
+     4152871
+    ],
+    [
+     "(native/(program))",
+     1546135
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53083309b92d0b7",
+     678038
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     397204
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     238202
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     236898
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     204799
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     85185
+    ],
+    [
+     "(native/appendChild)",
+     62163
+    ],
+    [
+     "(native/(garbage collector))",
+     55820
+    ],
+    [
+     "https://ahmadsaad.dev/about",
+     18347
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     11386
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     9326
+    ],
+    [
+     "(native/removeChild)",
+     9050
+    ],
+    [
+     "(native/PerformanceObserver.observe.type)",
+     7171
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     6239
+    ],
+    [
+     "(native/)",
+     5464
+    ],
+    [
+     "(native/fetch)",
+     5204
+    ],
+    [
+     "(native/get Temporal)",
+     5082
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     4196
+    ],
+    [
+     "(native/addEventListener)",
+     4164
+    ],
+    [
+     "(native/atob)",
+     4038
+    ],
+    [
+     "(native/querySelector)",
+     3036
+    ],
+    [
+     "(native/queueMicrotask)",
+     2059
+    ],
+    [
+     "(native/requestIdleCallback)",
+     1939
+    ]
+   ],
+   "html": "",
+   "imgs": [
+    {
+     "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+     "w": "1920",
+     "h": "1080",
+     "nw": 1920,
+     "loading": "auto",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "https://ahmadsaad.dev/ahmad-saad.webp",
+     "w": "160",
+     "h": "160",
+     "nw": 160,
+     "loading": "auto",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+     "w": "120",
+     "h": "120",
+     "nw": 340,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    }
+   ]
+  },
+  {
+   "lcp": {
+    "t": 2064,
+    "url": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "tag": "IMG",
+    "cls": "select-none rounded-full bg-muted object-cover rise ring-2 ring-apricot ring-off",
+    "txt": "",
+    "size": 25567,
+    "rst": 2064,
+    "lt": 1691.8999999910593
+   },
+   "cls": 0,
+   "fcp": 2064,
+   "ttfb": 511.8999999910593,
+   "tbt": 1610,
+   "lt": [
+    [
+     1533.8999999910593,
+     420
+    ],
+    [
+     2080.8999999910593,
+     55
+    ],
+    [
+     2539.7000000029802,
+     893
+    ],
+    [
+     3540.2999999970198,
+     801
+    ],
+    [
+     4610.0999999940395,
+     55
+    ],
+    [
+     4715.5999999940395,
+     56
+    ]
+   ],
+   "nav": {
+    "ttfb": 511.8999999910593,
+    "dcl": 2127.7000000029802,
+    "load": 3503.7999999970198
+   }
+  },
+  {
+   "lcp": {
+    "t": 2392,
+    "url": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "tag": "IMG",
+    "cls": "select-none rounded-full bg-muted object-cover rise ring-2 ring-apricot ring-off",
+    "txt": "",
+    "size": 25567,
+    "rst": 2392,
+    "lt": 2132.8999999910593
+   },
+   "cls": 0,
+   "fcp": 2392,
+   "ttfb": 579,
+   "tbt": 1554,
+   "lt": [
+    [
+     1427.3999999910593,
+     60
+    ],
+    [
+     1493.8999999910593,
+     617
+    ],
+    [
+     2374,
+     77
+    ],
+    [
+     2736.2999999970198,
+     841
+    ],
+    [
+     3647.7000000029802,
+     808
+    ],
+    [
+     4836,
+     55
+    ]
+   ],
+   "nav": {
+    "ttfb": 579,
+    "dcl": 2441.7999999970198,
+    "load": 3623.0999999940395
+   }
+  }
+ ],
+ "mobile /projects/trend-radar": [
+  {
+   "lcp": {
+    "t": 2184,
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "tag": "IMG",
+    "cls": "h-full w-full object-cover",
+    "txt": "",
+    "size": 69138,
+    "rst": 2184,
+    "lt": 1626.5999999940395
+   },
+   "cls": 0,
+   "fcp": 2184,
+   "ttfb": 539.5999999940395,
+   "tbt": 1228,
+   "lt": [
+    [
+     1335.8999999910593,
+     50
+    ],
+    [
+     1393.8999999910593,
+     577
+    ],
+    [
+     2182.2999999970198,
+     78
+    ],
+    [
+     2413.5999999940395,
+     487
+    ],
+    [
+     3222.0999999940395,
+     828
+    ],
+    [
+     4244,
+     63
+    ]
+   ],
+   "nav": {
+    "ttfb": 539.5999999940395,
+    "dcl": 2251.8999999910593,
+    "load": 2967.7999999970198
+   },
+   "res": [
+    [
+     "https://ahmadsaad.dev/projects/trend-radar.webp",
+     17110,
+     16810,
+     639.2999999970198,
+     1365.0999999940395,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     22225,
+     21925,
+     643,
+     1289,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     772,
+     472,
+     643.2999999970198,
+     844.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     2202,
+     1902,
+     644,
+     1611,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56094,
+     55794,
+     644.2000000029802,
+     2227.5999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     46571,
+     46271,
+     644.7000000029802,
+     2197.0999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     515,
+     215,
+     644.8999999910593,
+     1509.8999999910593,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+     460,
+     160,
+     645,
+     1553.2999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     3842,
+     3542,
+     645,
+     1637.5999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3850,
+     3550,
+     645.0999999940395,
+     1611.5,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     976,
+     676,
+     645.3999999910593,
+     1546.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7507,
+     7207,
+     645.3999999910593,
+     1703.8999999910593,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     18796,
+     18496,
+     645.5999999940395,
+     1211.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     19948,
+     19648,
+     645.8999999910593,
+     1395.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     30392,
+     30092,
+     646.0999999940395,
+     1409.5999999940395,
+     "link"
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     0,
+     0,
+     646.5999999940395,
+     1103.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     23428,
+     23128,
+     1624.2999999970198,
+     2166.2999999970198,
+     "css"
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     300,
+     0,
+     3041.2000000029802,
+     3231.5999999940395,
+     "xmlhttprequest"
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+     14874,
+     14574,
+     4380.29999999702,
+     4885.5,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+     6296,
+     5996,
+     4383,
+     4608.29999999702,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+     7100,
+     6800,
+     4386.20000000298,
+     4624.399999991059,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     1229,
+     929,
+     4608.0999999940395,
+     4994.20000000298,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     2412,
+     2112,
+     4846.399999991059,
+     5317,
+     "script"
+    ]
+   ],
+   "hdr": [
+    [
+     "https://ahmadsaad.dev/projects/trend-radar",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/projects/trend-radar.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "16810",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     200,
+     {
+      "cache-control": "public, max-age=86400",
+      "content-type": "text/javascript;charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "18496",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "19648",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "30092",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "23128",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53083e6fed10e84",
+     302,
+     {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": null,
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/scripts/jsd/c787ce48cf6b/main.js?ray=a53083e6fed10e84",
+     200,
+     {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": "application/javascript; charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     204,
+     {
+      "cache-control": null,
+      "content-type": "text/plain",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/jsd/oneshot/c787ce48cf6b/0.22462455036310713:1793423966:axssbjBmJzr3owwk7E7Hjkm0N5czfznc9JTCwSS_bSY/a53083e6fed10e84",
+     200,
+     {
+      "cache-control": null,
+      "content-type": "text/plain; charset=UTF-8",
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "MISS"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "MISS"
+     }
+    ]
+   ],
+   "msgs": [],
+   "prof": [
+    [
+     "(native/(idle))",
+     4015326
+    ],
+    [
+     "(native/(program))",
+     1332974
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53083e6fed10e84",
+     754207
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     357046
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     266176
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     241682
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     133417
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     112264
+    ],
+    [
+     "(native/appendChild)",
+     62716
+    ],
+    [
+     "(native/(garbage collector))",
+     30234
+    ],
+    [
+     "https://ahmadsaad.dev/projects/trend-radar",
+     24014
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     14420
+    ],
+    [
+     "(native/fetch)",
+     10108
+    ],
+    [
+     "(native/PerformanceObserver.observe.type)",
+     7310
+    ],
+    [
+     "(native/removeChild)",
+     7201
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     5140
+    ],
+    [
+     "(native/addEventListener)",
+     4220
+    ],
+    [
+     "(native/atob)",
+     4210
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     4084
+    ],
+    [
+     "(native/get Temporal)",
+     3965
+    ],
+    [
+     "(native/)",
+     3616
+    ],
+    [
+     "(native/querySelector)",
+     3233
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     3052
+    ],
+    [
+     "(native/get InteractionContentfulPaint)",
+     1118
+    ],
+    [
+     "(native/querySelectorAll)",
+     1113
+    ]
+   ],
+   "html": "",
+   "imgs": [
+    {
+     "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+     "w": "640",
+     "h": "640",
+     "nw": 393,
+     "loading": "eager",
+     "srcset": false,
+     "sizes": ""
+    }
+   ]
+  },
+  {
+   "lcp": {
+    "t": 1896,
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "tag": "IMG",
+    "cls": "h-full w-full object-cover",
+    "txt": "",
+    "size": 69138,
+    "rst": 1896,
+    "lt": 1455
+   },
+   "cls": 0,
+   "fcp": 1896,
+   "ttfb": 432.20000000298023,
+   "tbt": 1209,
+   "lt": [
+    [
+     1259.1000000089407,
+     443
+    ],
+    [
+     1873.800000011921,
+     76
+    ],
+    [
+     2102.800000011921,
+     553
+    ],
+    [
+     2964.1000000089407,
+     748
+    ],
+    [
+     3751.9000000059605,
+     58
+    ]
+   ],
+   "nav": {
+    "ttfb": 432.20000000298023,
+    "dcl": 1949.7000000029802,
+    "load": 2683
+   }
+  },
+  {
+   "lcp": {
+    "t": 1860,
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "tag": "IMG",
+    "cls": "h-full w-full object-cover",
+    "txt": "",
+    "size": 69138,
+    "rst": 1860,
+    "lt": 1575.4000000059605
+   },
+   "cls": 0,
+   "fcp": 1860,
+   "ttfb": 587.3000000119209,
+   "tbt": 1174,
+   "lt": [
+    [
+     2378.1000000089407,
+     504
+    ],
+    [
+     2940.5,
+     770
+    ],
+    [
+     3935.5,
+     50
+    ]
+   ],
+   "nav": {
+    "ttfb": 587.3000000119209,
+    "dcl": 1912.5,
+    "load": 2915
+   }
+  }
+ ],
+ "desktop /": [
+  {
+   "lcp": {
+    "t": 1340,
+    "url": "",
+    "tag": "SPAN",
+    "cls": "block rise-name",
+    "txt": "Ahmad",
+    "size": 142004,
+    "rst": 1340,
+    "lt": 0
+   },
+   "cls": 0.0009282296865423343,
+   "fcp": 1340,
+   "ttfb": 762.5,
+   "tbt": 58,
+   "lt": [
+    [
+     1096.800000011921,
+     137
+    ],
+    [
+     1436,
+     73
+    ],
+    [
+     1556.300000011921,
+     85
+    ]
+   ],
+   "nav": {
+    "ttfb": 762.5,
+    "dcl": 1280.2000000029802,
+    "load": 1516.1000000089407
+   },
+   "res": [
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     63032,
+     62732,
+     778.3000000119209,
+     1076,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     22229,
+     21929,
+     778.7000000029802,
+     1078,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     772,
+     472,
+     778.8000000119209,
+     1050.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     2202,
+     1902,
+     778.9000000059605,
+     1233.9000000059605,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     46571,
+     46271,
+     779,
+     1414.800000011921,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56094,
+     55794,
+     779,
+     1423.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     515,
+     215,
+     779.1000000089407,
+     1228.800000011921,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     3895,
+     3595,
+     779.1000000089407,
+     1228.4000000059605,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     2412,
+     2112,
+     779.3000000119209,
+     1255.300000011921,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3850,
+     3550,
+     779.4000000059605,
+     1259.9000000059605,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     976,
+     676,
+     779.5,
+     1232.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7507,
+     7207,
+     779.5,
+     1243,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     18796,
+     18496,
+     779.7000000029802,
+     1050.800000011921,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     19948,
+     19648,
+     779.8000000119209,
+     1095.6000000089407,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     7982,
+     7682,
+     779.9000000059605,
+     1095.9000000059605,
+     "img"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     30392,
+     30092,
+     779.9000000059605,
+     1095.7000000029802,
+     "link"
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     0,
+     0,
+     780.1000000089407,
+     836.9000000059605,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     23428,
+     23128,
+     1142.5,
+     1409.6000000089407,
+     "css"
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     300,
+     0,
+     1525.1000000089407,
+     1645.9000000059605,
+     "xmlhttprequest"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+     15258,
+     14958,
+     1653.4000000059605,
+     1787,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+     2796,
+     2496,
+     1654,
+     1788.4000000059605,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/about?_rsc=1p-R_iEY6bj0jY31",
+     7048,
+     6748,
+     1670.4000000059605,
+     1808.7000000029802,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=1p-R_iEY6bj0jY31",
+     6360,
+     6060,
+     1670.5,
+     1908.2000000029802,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-1080.mp4",
+     1525672,
+     1525372,
+     1672.9000000059605,
+     3365.800000011921,
+     "video"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     1229,
+     929,
+     1814.7000000029802,
+     1967,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+     460,
+     160,
+     1905,
+     2124.6000000089407,
+     "script"
+    ]
+   ],
+   "hdr": [
+    [
+     "https://ahmadsaad.dev/",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     200,
+     {
+      "cache-control": "public, max-age=86400",
+      "content-type": "text/javascript;charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "62732",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "18496",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "7682",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "19648",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "30092",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5308490db2404f5",
+     302,
+     {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": null,
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "23128",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/scripts/jsd/c787ce48cf6b/main.js?ray=a5308490db2404f5",
+     200,
+     {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": "application/javascript; charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     204,
+     {
+      "cache-control": null,
+      "content-type": "text/plain",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/jsd/oneshot/c787ce48cf6b/0.22462455036310713:1793423966:axssbjBmJzr3owwk7E7Hjkm0N5czfznc9JTCwSS_bSY/a5308490db2404f5",
+     200,
+     {
+      "cache-control": null,
+      "content-type": "text/plain; charset=UTF-8",
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about?_rsc=1p-R_iEY6bj0jY31",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-1080.mp4",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "video/mp4",
+      "content-length": "1525372",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=1p-R_iEY6bj0jY31",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ]
+   ],
+   "msgs": [],
+   "prof": [
+    [
+     "(native/(idle))",
+     5077112
+    ],
+    [
+     "(native/(program))",
+     392485
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5308490db2404f5",
+     77424
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56779
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     39999
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     27973
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     23107
+    ],
+    [
+     "(native/(garbage collector))",
+     17294
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     15282
+    ],
+    [
+     "(native/appendChild)",
+     10368
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+     8950
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+     3508
+    ],
+    [
+     "https://ahmadsaad.dev/",
+     3069
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     1535
+    ],
+    [
+     "(native/createElement)",
+     1474
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     1088
+    ],
+    [
+     "(native/addEventListener)",
+     1035
+    ],
+    [
+     "(native/get fragmentDirective)",
+     1021
+    ],
+    [
+     "(native/fetch)",
+     1008
+    ],
+    [
+     "(native/get speechSynthesis)",
+     993
+    ]
+   ],
+   "html": "",
+   "imgs": [
+    {
+     "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+     "w": "1920",
+     "h": "1080",
+     "nw": 1920,
+     "loading": "auto",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     "w": "56",
+     "h": "56",
+     "nw": 56,
+     "loading": "eager",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "640",
+     "h": "640",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "",
+     "w": "120",
+     "h": "120",
+     "nw": 0,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    }
+   ]
+  },
+  {
+   "lcp": {
+    "t": 944,
+    "url": "",
+    "tag": "SPAN",
+    "cls": "block rise-name",
+    "txt": "Ahmad",
+    "size": 142004,
+    "rst": 944,
+    "lt": 0
+   },
+   "cls": 0.0009282296865423343,
+   "fcp": 944,
+   "ttfb": 420.1000000089407,
+   "tbt": 45,
+   "lt": [
+    [
+     740.8000000119209,
+     111
+    ],
+    [
+     1076,
+     75
+    ],
+    [
+     1158.6000000089407,
+     70
+    ]
+   ],
+   "nav": {
+    "ttfb": 420.1000000089407,
+    "dcl": 860,
+    "load": 1156.300000011921
+   }
+  },
+  {
+   "lcp": {
+    "t": 1108,
+    "url": "",
+    "tag": "SPAN",
+    "cls": "block rise-name",
+    "txt": "Ahmad",
+    "size": 142004,
+    "rst": 1108,
+    "lt": 0
+   },
+   "cls": 0.0009282296865423343,
+   "fcp": 1108,
+   "ttfb": 590,
+   "tbt": 78,
+   "lt": [
+    [
+     1238,
+     79
+    ],
+    [
+     1326.2999999970198,
+     99
+    ]
+   ],
+   "nav": {
+    "ttfb": 590,
+    "dcl": 1011.1999999880791,
+    "load": 1325
+   }
+  }
+ ],
+ "desktop /about": [
+  {
+   "lcp": {
+    "t": 1012,
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "tag": "IMG",
+    "cls": "",
+    "txt": "",
+    "size": 1134696,
+    "rst": 1012,
+    "lt": 908.2000000029802
+   },
+   "cls": 0.0005551960204885736,
+   "fcp": 1012,
+   "ttfb": 527.5,
+   "tbt": 73,
+   "lt": [
+    [
+     833.4000000059605,
+     73
+    ],
+    [
+     1183.9000000059605,
+     78
+    ],
+    [
+     1270.7000000029802,
+     95
+    ]
+   ],
+   "nav": {
+    "ttfb": 527.5,
+    "dcl": 916.7000000029802,
+    "load": 1269.9000000059605
+   },
+   "res": [
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     63032,
+     62732,
+     542.9000000059605,
+     864.2000000029802,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     22225,
+     21925,
+     543.2999999970198,
+     818.5999999940395,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     772,
+     472,
+     543.5,
+     696.0999999940395,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     2202,
+     1902,
+     543.7000000029802,
+     969.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56093,
+     55793,
+     543.7999999970198,
+     1177.4000000059605,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     515,
+     215,
+     544,
+     967.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     46571,
+     46271,
+     544,
+     1152,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     3842,
+     3542,
+     544.0999999940395,
+     992.5,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     1229,
+     929,
+     544.2000000029802,
+     970.2999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3850,
+     3550,
+     544.2000000029802,
+     992.0999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7541,
+     7241,
+     544.2999999970198,
+     962.2999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     18796,
+     18496,
+     544.4000000059605,
+     818.9000000059605,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     976,
+     676,
+     544.4000000059605,
+     971.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     19948,
+     19648,
+     544.5,
+     864.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     30392,
+     30092,
+     544.5999999940395,
+     864.5999999940395,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     7982,
+     7682,
+     544.7000000029802,
+     695.2999999970198,
+     "img"
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     0,
+     0,
+     544.9000000059605,
+     597.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     23428,
+     23128,
+     864.7000000029802,
+     1147.2999999970198,
+     "css"
+    ],
+    [
+     "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+     65447,
+     65147,
+     945.7000000029802,
+     1197.7000000029802,
+     "img"
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     300,
+     0,
+     1376.5999999940395,
+     1501.9000000059605,
+     "xmlhttprequest"
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-1080.mp4",
+     1525672,
+     1525372,
+     1411.2999999970198,
+     1923.0999999940395,
+     "video"
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+     14828,
+     14528,
+     1417.9000000059605,
+     1769.2999999970198,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=_paE49VugaXyxB1G",
+     6301,
+     6001,
+     1418.2999999970198,
+     1767.5,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     2412,
+     2112,
+     1768.5999999940395,
+     1925.7000000029802,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+     460,
+     160,
+     1770.7999999970198,
+     1926.0999999940395,
+     "script"
+    ]
+   ],
+   "hdr": [
+    [
+     "https://ahmadsaad.dev/about",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     200,
+     {
+      "cache-control": "public, max-age=86400",
+      "content-type": "text/javascript;charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "7682",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-poster.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "62732",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "18496",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "19648",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "30092",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a530851d0c08f548",
+     302,
+     {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": null,
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/png",
+      "content-length": "65147",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "23128",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/scripts/jsd/c787ce48cf6b/main.js?ray=a530851d0c08f548",
+     200,
+     {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": "application/javascript; charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/jsd/oneshot/c787ce48cf6b/0.22462455036310713:1793423966:axssbjBmJzr3owwk7E7Hjkm0N5czfznc9JTCwSS_bSY/a530851d0c08f548",
+     200,
+     {
+      "cache-control": null,
+      "content-type": "text/plain; charset=UTF-8",
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     204,
+     {
+      "cache-control": null,
+      "content-type": "text/plain",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about/drive-1080.mp4",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "video/mp4",
+      "content-length": "1525372",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=_paE49VugaXyxB1G",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ]
+   ],
+   "msgs": [],
+   "prof": [
+    [
+     "(native/(idle))",
+     5243207
+    ],
+    [
+     "(native/(program))",
+     241426
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a530851d0c08f548",
+     84286
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     39808
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     39279
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     25736
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     23345
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     11261
+    ],
+    [
+     "(native/(garbage collector))",
+     10172
+    ],
+    [
+     "(native/appendChild)",
+     8346
+    ],
+    [
+     "https://ahmadsaad.dev/about",
+     3164
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3079
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     2068
+    ],
+    [
+     "(native/addEventListener)",
+     2041
+    ],
+    [
+     "(native/get Temporal)",
+     1060
+    ],
+    [
+     "(native/fetch)",
+     1019
+    ],
+    [
+     "(native/removeChild)",
+     1014
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     1011
+    ],
+    [
+     "(native/get BackgroundFetchRegistration)",
+     1003
+    ],
+    [
+     "(native/queueMicrotask)",
+     1000
+    ]
+   ],
+   "html": "",
+   "imgs": [
+    {
+     "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+     "w": "1920",
+     "h": "1080",
+     "nw": 1920,
+     "loading": "auto",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+     "w": "160",
+     "h": "160",
+     "nw": 160,
+     "loading": "auto",
+     "srcset": false,
+     "sizes": ""
+    },
+    {
+     "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+     "w": "120",
+     "h": "120",
+     "nw": 340,
+     "loading": "lazy",
+     "srcset": false,
+     "sizes": ""
+    }
+   ]
+  },
+  {
+   "lcp": {
+    "t": 1264,
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "tag": "IMG",
+    "cls": "",
+    "txt": "",
+    "size": 1134696,
+    "rst": 1264,
+    "lt": 1111
+   },
+   "cls": 0.0005588247526486297,
+   "fcp": 1264,
+   "ttfb": 648.7000000029802,
+   "tbt": 132,
+   "lt": [
+    [
+     1075.7999999970198,
+     87
+    ],
+    [
+     1602.5,
+     117
+    ],
+    [
+     1729.7999999970198,
+     115
+    ]
+   ],
+   "nav": {
+    "ttfb": 648.7000000029802,
+    "dcl": 1172.7999999970198,
+    "load": 1728.7999999970198
+   }
+  },
+  {
+   "lcp": {
+    "t": 948,
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "tag": "IMG",
+    "cls": "",
+    "txt": "",
+    "size": 1134696,
+    "rst": 948,
+    "lt": 840.7999999970198
+   },
+   "cls": 0.0005588247526486297,
+   "fcp": 948,
+   "ttfb": 458.5,
+   "tbt": 138,
+   "lt": [
+    [
+     768.2000000029802,
+     72
+    ],
+    [
+     1154.1000000089407,
+     119
+    ],
+    [
+     1284,
+     119
+    ]
+   ],
+   "nav": {
+    "ttfb": 458.5,
+    "dcl": 847.7000000029802,
+    "load": 1282.7000000029802
+   }
+  }
+ ],
+ "desktop /projects/trend-radar": [
+  {
+   "lcp": {
+    "t": 1124,
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "tag": "IMG",
+    "cls": "h-full w-full object-cover",
+    "txt": "",
+    "size": 240345,
+    "rst": 1124,
+    "lt": 1031.0999999940395
+   },
+   "cls": 0.0010614996497679712,
+   "fcp": 1124,
+   "ttfb": 685.5999999940395,
+   "tbt": 57,
+   "lt": [
+    [
+     989.5,
+     87
+    ],
+    [
+     1314.3999999910593,
+     74
+    ],
+    [
+     1402,
+     83
+    ]
+   ],
+   "nav": {
+    "ttfb": 685.5999999940395,
+    "dcl": 1084.2999999970198,
+    "load": 1394.8999999910593
+   },
+   "res": [
+    [
+     "https://ahmadsaad.dev/projects/trend-radar.webp",
+     17110,
+     16810,
+     698.1999999880791,
+     988,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     22225,
+     21925,
+     698.3999999910593,
+     973.6999999880791,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     772,
+     472,
+     698.5,
+     859.7999999970198,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     2202,
+     1902,
+     698.6999999880791,
+     1137.5,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     56094,
+     55794,
+     698.7999999970198,
+     1310.3999999910593,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     46571,
+     46271,
+     698.8999999910593,
+     1280.699999988079,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     515,
+     215,
+     699,
+     1126.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     3895,
+     3595,
+     699,
+     1147.199999988079,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+     460,
+     160,
+     699.0999999940395,
+     1138.699999988079,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     3921,
+     3621,
+     699.0999999940395,
+     1146.0999999940395,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     976,
+     676,
+     699.1999999880791,
+     1149.7999999970198,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     7541,
+     7241,
+     699.1999999880791,
+     1163.8999999910593,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     18796,
+     18496,
+     699.3999999910593,
+     859,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     30392,
+     30092,
+     699.5,
+     988.2999999970198,
+     "link"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     19948,
+     19648,
+     699.5,
+     989.5999999940395,
+     "link"
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     0,
+     0,
+     699.6999999880791,
+     755.6999999880791,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     23428,
+     23128,
+     1030.5999999940395,
+     1291.199999988079,
+     "css"
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     300,
+     0,
+     1490.2999999970198,
+     1613,
+     "xmlhttprequest"
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+     14828,
+     14528,
+     1520.7999999970198,
+     1667.5999999940395,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+     7100,
+     6800,
+     1520.8999999910593,
+     1655.5999999940395,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+     6301,
+     6001,
+     1521.0999999940395,
+     1788.2999999970198,
+     "fetch"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     1229,
+     929,
+     1658.3999999910593,
+     1784.699999988079,
+     "script"
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     2412,
+     2112,
+     1661,
+     1799.3999999910593,
+     "script"
+    ]
+   ],
+   "hdr": [
+    [
+     "https://ahmadsaad.dev/projects/trend-radar",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     200,
+     {
+      "cache-control": "public, max-age=86400",
+      "content-type": "text/javascript;charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "18496",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/css/c54461d5f46232cf.css",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/css",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/projects/trend-radar.webp",
+     200,
+     {
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-type": "image/webp",
+      "content-length": "16810",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "30092",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "19648",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53085a998681ef7",
+     302,
+     {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": null,
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "font/woff2",
+      "content-length": "23128",
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/scripts/jsd/c787ce48cf6b/main.js?ray=a53085a998681ef7",
+     200,
+     {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-type": "application/javascript; charset=UTF-8",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/h/g/jsd/oneshot/c787ce48cf6b/0.22462455036310713:1793423966:axssbjBmJzr3owwk7E7Hjkm0N5czfznc9JTCwSS_bSY/a53085a998681ef7",
+     200,
+     {
+      "cache-control": null,
+      "content-type": "text/plain; charset=UTF-8",
+      "content-length": "0",
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/rum?",
+     204,
+     {
+      "cache-control": null,
+      "content-type": "text/plain",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/about/page-58d2ca93d516ac47.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+     200,
+     {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate=2592000",
+      "content-type": "text/x-component",
+      "content-length": null,
+      "cf-cache-status": null
+     }
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/page-89a755c0d25d9f42.js",
+     200,
+     {
+      "cache-control": "public, max-age=31536000, immutable",
+      "content-type": "text/javascript",
+      "content-length": null,
+      "cf-cache-status": "HIT"
+     }
+    ]
+   ],
+   "msgs": [],
+   "prof": [
+    [
+     "(native/(idle))",
+     5286720
+    ],
+    [
+     "(native/(program))",
+     198848
+    ],
+    [
+     "https://ahmadsaad.dev/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53085a998681ef7",
+     73091
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+     38742
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+     30934
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+     24545
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+     18783
+    ],
+    [
+     "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+     10624
+    ],
+    [
+     "(native/(garbage collector))",
+     7300
+    ],
+    [
+     "(native/appendChild)",
+     7203
+    ],
+    [
+     "https://ahmadsaad.dev/projects/trend-radar",
+     3105
+    ],
+    [
+     "(native/queueMicrotask)",
+     2168
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+     1835
+    ],
+    [
+     "(native/get SpeechSynthesisVoice)",
+     1088
+    ],
+    [
+     "(native/addEventListener)",
+     1054
+    ],
+    [
+     "(native/get Temporal)",
+     1051
+    ],
+    [
+     "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+     1014
+    ],
+    [
+     "(native/fetch)",
+     1011
+    ],
+    [
+     "(native/)",
+     986
+    ]
+   ],
+   "html": "",
+   "imgs": [
+    {
+     "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+     "w": "640",
+     "h": "640",
+     "nw": 540,
+     "loading": "eager",
+     "srcset": false,
+     "sizes": ""
+    }
+   ]
+  },
+  {
+   "lcp": {
+    "t": 840,
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "tag": "IMG",
+    "cls": "h-full w-full object-cover",
+    "txt": "",
+    "size": 240345,
+    "rst": 840,
+    "lt": 746
+   },
+   "cls": 0.0010506516504684353,
+   "fcp": 840,
+   "ttfb": 403.29999999701977,
+   "tbt": 53,
+   "lt": [
+    [
+     712.0999999940395,
+     70
+    ],
+    [
+     1057.8999999910593,
+     76
+    ],
+    [
+     1140.5999999940395,
+     77
+    ]
+   ],
+   "nav": {
+    "ttfb": 403.29999999701977,
+    "dcl": 790.2999999970198,
+    "load": 1139.7999999970198
+   }
+  },
+  {
+   "lcp": {
+    "t": 844,
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "tag": "IMG",
+    "cls": "h-full w-full object-cover",
+    "txt": "",
+    "size": 240345,
+    "rst": 844,
+    "lt": 770.0999999940395
+   },
+   "cls": 0.0010614996497679712,
+   "fcp": 844,
+   "ttfb": 434.69999998807907,
+   "tbt": 62,
+   "lt": [
+    [
+     1077.2999999970198,
+     73
+    ],
+    [
+     1157.8999999910593,
+     89
+    ]
+   ],
+   "nav": {
+    "ttfb": 434.69999998807907,
+    "dcl": 821.0999999940395,
+    "load": 1156.8999999910593
+   }
+  }
+ ]
+}

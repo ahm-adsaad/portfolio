@@ -35,7 +35,7 @@ export function generateMetadata(): Metadata {
     path: PATH,
     image: createOgImage({
       title: `About ${USER.name}`,
-      meta: 'Computer & AI Engineer · UAE',
+      meta: 'AI Engineer · Sharjah, UAE',
     }),
   });
 }

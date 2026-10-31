@@ -32,7 +32,7 @@ export function generateMetadata(): Metadata {
     path: PATH,
     image: createOgImage({
       title: TITLE,
-      meta: 'AI systems, embedded hardware, and computer architecture',
+      meta: 'AI systems, hardware, and architecture',
     }),
   });
 }

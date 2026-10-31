@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const description = USER.metaDescription;
   const image = createOgImage({
     title: USER.name,
-    meta: 'AI Engineer · Computer Engineering @ AUS · UAE',
+    meta: 'AI Engineer · American University of Sharjah',
   });
   return createMetadata({
     title: HOME_TITLE,

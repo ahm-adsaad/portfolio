@@ -1,3 +1,4 @@
+import { Headshot } from '@/components/headshot';
 import { HeroVideo } from '@/components/hero-video';
 import { PillLink } from '@/components/pill-link';
 import { USER } from '@/config/user';
@@ -22,9 +23,14 @@ export function Hero() {
       />
 
       <div className="hero-copy">
-        <p className="eyebrow rise" style={stagger(0)}>
-          AI Engineer · FDE
-        </p>
+        <div className="rise flex items-center gap-4" style={stagger(0)}>
+          <Headshot
+            size={56}
+            priority
+            className="ring-2 ring-apricot ring-offset-2 ring-offset-ink"
+          />
+          <p className="eyebrow">AI Engineer · Sharjah, UAE</p>
+        </div>
 
         <h1 id="hero-name" className="display hero-size mt-5 md:mt-6">
           <span className="block rise-name" style={stagger(1)}>

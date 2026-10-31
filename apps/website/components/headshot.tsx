@@ -9,10 +9,13 @@ import { cn } from '@/lib/utils';
 export function Headshot({
   size,
   className,
+  priority,
 }: {
   /** Rendered CSS pixel size of the square. */
   size: number;
   className?: string;
+  /** Fetch early (eager, high priority) when the headshot is above the fold. */
+  priority?: boolean;
 }) {
   return (
     <picture className="shrink-0">
@@ -28,6 +31,8 @@ export function Headshot({
         width={size}
         height={size}
         decoding="async"
+        fetchPriority={priority ? 'high' : undefined}
+        loading={priority ? 'eager' : undefined}
         className={cn(
           'select-none rounded-full bg-muted object-cover ring-1 ring-border ring-offset-2 ring-offset-background',
           className

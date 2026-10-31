@@ -47,3 +47,22 @@ export const ABOUT_SECTIONS: AboutSection[] = [
     ],
   },
 ];
+
+export type PressMention = {
+  outlet: string;
+  headline: string;
+  url: string;
+  /** YYYY-MM-DD */
+  datePublished: string;
+};
+
+/** Third-party coverage. AUS publishes his name as Ahmad Atef Saad. */
+export const PRESS_MENTIONS: PressMention[] = [
+  {
+    outlet: 'AUS News',
+    headline:
+      'AUS engineering student receives competitive Tau Beta Pi Scholarship',
+    url: 'https://www.aus.edu/media/news/aus-engineering-student-receives-competitive-tau-beta-pi-scholarship',
+    datePublished: '2026-06-22',
+  },
+];

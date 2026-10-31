@@ -22,6 +22,20 @@ export const personStub = () => ({
   url: `${SITE_URL}/`,
 });
 
+/** Names the site's `@id` so `isPartOf` resolves on pages without the full WebSite node. */
+export const websiteStub = () => ({
+  '@type': 'WebSite' as const,
+  '@id': `${SITE_URL}/#website`,
+  name: USER.name,
+  url: `${SITE_URL}/`,
+});
+
+/**
+ * ImageObject width or height as a plain integer (pixels). schema-dts types
+ * these as Text, but the graph must carry numbers, not quoted strings.
+ */
+export const pixels = (value: number) => value as unknown as string;
+
 export const projectPath = (project: Project) => `/projects/${project.id}`;
 
 /**

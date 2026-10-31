@@ -1,11 +1,17 @@
 import { Breadcrumb } from '@/components/breadcrumb';
 import { PROJECT_PAGES, PROJECTS } from '@/config/projects';
+import { CONTENT_LAST_MODIFIED } from '@/config/site';
 import { USER } from '@/config/user';
 import { ProjectStack } from '@/features/home/components/project-stack';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
-import { projectSchemaId } from '@/lib/seo/project-schema';
+import {
+  personStub,
+  projectSchema,
+  projectSchemaId,
+  websiteStub,
+} from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import { stagger } from '@/lib/stagger';
 import type { Metadata } from 'next/types';
@@ -47,6 +53,7 @@ const jsonLd: Graph = {
         '@id': projectSchemaId(project),
       })),
       breadcrumb: { '@id': `${SITE_URL}${PATH}#breadcrumb` },
+      dateModified: CONTENT_LAST_MODIFIED,
     },
     {
       '@type': 'BreadcrumbList',
@@ -66,6 +73,9 @@ const jsonLd: Graph = {
         },
       ],
     },
+    ...PROJECT_PAGES.flatMap((project) => projectSchema(project) ?? []),
+    personStub(),
+    websiteStub(),
   ],
 };
 

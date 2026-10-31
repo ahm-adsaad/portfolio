@@ -1,6 +1,8 @@
 import { PROJECTS } from '@/config/projects';
+import { PRESS_MENTIONS } from '@/config/about';
 import { CERTIFICATIONS, EDUCATION } from '@/config/education';
 import { experiences } from '@/config/experience';
+import { CONTENT_LAST_MODIFIED, SITE_PUBLISHED } from '@/config/site';
 import { USER } from '@/config/user';
 import { AboutTeaser } from '@/features/home/components/about-teaser';
 import { Contact } from '@/features/home/components/contact';
@@ -13,7 +15,7 @@ import { Statement } from '@/features/home/components/statement';
 import { TechMarquee } from '@/features/home/components/tech-marquee';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
-import { projectSchema } from '@/lib/seo/project-schema';
+import { pixels, projectSchema } from '@/lib/seo/project-schema';
 import { createMetadata } from '@/lib/seo/metadata';
 import { SITE_URL } from '@/lib/server-url';
 import type { Metadata } from 'next/types';
@@ -51,8 +53,8 @@ const HEADSHOT: ImageObject = {
   '@id': HEADSHOT_ID,
   url: USER.image.profile,
   contentUrl: USER.image.profile,
-  width: String(USER.image.width),
-  height: String(USER.image.height),
+  width: pixels(USER.image.width),
+  height: pixels(USER.image.height),
   caption: USER.name,
 };
 
@@ -92,6 +94,7 @@ function buildJsonLd(): Graph {
         '@type': 'Person',
         '@id': PERSON_ID,
         name: USER.name,
+        alternateName: 'Ahmad Atef Saad',
         givenName: USER.firstName,
         familyName: USER.lastName,
         url: `${SITE_URL}/`,
@@ -100,7 +103,7 @@ function buildJsonLd(): Graph {
         jobTitle: USER.jobTitle,
         description: USER.description,
         disambiguatingDescription:
-          'Computer engineer and AI engineer based in the UAE, American University of Sharjah.',
+          'AI engineer and Computer Engineering senior at the American University of Sharjah, UAE, and President of its Tau Beta Pi chapter.',
         // Every public profile lives in USER.social; empty entries are skipped.
         sameAs: Object.values(USER.social).filter(Boolean),
         alumniOf: { '@id': AUS_ID },
@@ -113,8 +116,31 @@ function buildJsonLd(): Graph {
           recognizedBy: { '@type': 'Organization', name: c.issuer },
           ...(c.url ? { url: c.url } : {}),
         })),
+        knowsLanguage: [
+          { '@type': 'Language', name: 'English', alternateName: 'en' },
+          { '@type': 'Language', name: 'Arabic', alternateName: 'ar' },
+        ],
+        memberOf: {
+          '@type': 'Organization',
+          name: 'Tau Beta Pi, American University of Sharjah chapter',
+        },
+        award: [
+          'Tau Beta Pi Scholarship (2026)',
+          'Academic Merit Scholarship, American University of Sharjah',
+          "Dean's List (6 times), American University of Sharjah",
+          "Chancellor's List (3 times), American University of Sharjah",
+        ],
+        // Every current mention is published by AUS, which is already in the graph.
+        subjectOf: PRESS_MENTIONS.map((mention) => ({
+          '@type': 'NewsArticle' as const,
+          headline: mention.headline,
+          url: mention.url,
+          datePublished: mention.datePublished,
+          publisher: { '@id': AUS_ID },
+        })),
         homeLocation: {
           '@type': 'Place',
+          name: 'Abu Dhabi and Sharjah, United Arab Emirates',
           address: {
             '@type': 'PostalAddress',
             addressCountry: 'AE',
@@ -165,6 +191,8 @@ function buildJsonLd(): Graph {
         about: { '@id': PERSON_ID },
         mainEntity: { '@id': PERSON_ID },
         primaryImageOfPage: { '@id': HEADSHOT_ID },
+        dateCreated: SITE_PUBLISHED,
+        dateModified: CONTENT_LAST_MODIFIED,
       },
       ...projects,
     ],

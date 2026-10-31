@@ -17,10 +17,9 @@ export type User = {
   username: string;
   tagline: string;
   social: {
-    twitter: string;
     github: string;
     linkedin: string;
-    bluesky: string;
+    credly: string;
   };
   image: {
     /** Absolute URL of the headshot JPEG (Person.image, sitemap). */
@@ -49,10 +48,10 @@ const USER: User = {
     'Ahmad Saad is an AI engineer and forward deployed engineer in the UAE. Computer Engineering senior at AUS, Golden Visa holder, available January 2027.',
   namePronunciationUrl: '',
   social: {
-    twitter: '',
     github: 'https://github.com/ahm-adsaad',
     linkedin: 'https://www.linkedin.com/in/ahmaddsaad',
-    bluesky: '',
+    credly:
+      'https://www.credly.com/badges/976e4176-241f-4870-83ea-c66f896f64ff',
   },
   flipSentences: [
     'Building production AI systems.',

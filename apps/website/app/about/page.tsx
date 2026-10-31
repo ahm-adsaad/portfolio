@@ -6,12 +6,13 @@ import { PillLink } from '@/components/pill-link';
 import { SectionHeader } from '@/components/section-header';
 import { ABOUT_INTRO, ABOUT_SECTIONS } from '@/config/about';
 import { CERTIFICATIONS } from '@/config/education';
+import { ABOUT_PUBLISHED, CONTENT_LAST_MODIFIED } from '@/config/site';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
 import { formatIndex } from '@/lib/project-index';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
-import { personStub } from '@/lib/seo/project-schema';
+import { personStub, pixels, websiteStub } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import { stagger } from '@/lib/stagger';
 import Link from 'next/link';
@@ -55,11 +56,13 @@ const jsonLd: Graph = {
         '@type': 'ImageObject',
         '@id': `${SITE_URL}/#headshot`,
         url: USER.image.profile,
-        width: String(USER.image.width),
-        height: String(USER.image.height),
+        width: pixels(USER.image.width),
+        height: pixels(USER.image.height),
         caption: USER.name,
       },
       breadcrumb: { '@id': `${SITE_URL}${PATH}#breadcrumb` },
+      dateCreated: ABOUT_PUBLISHED,
+      dateModified: CONTENT_LAST_MODIFIED,
     },
     {
       '@type': 'BreadcrumbList',
@@ -80,6 +83,7 @@ const jsonLd: Graph = {
       ],
     },
     personStub(),
+    websiteStub(),
   ],
 };
 

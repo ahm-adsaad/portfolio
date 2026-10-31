@@ -29,3 +29,7 @@ export const MOBILE_SCROLL_THRESHOLD = 20;
  * a lastmod that churns with each build is a signal Google learns to ignore.
  */
 export const CONTENT_LAST_MODIFIED = '2026-10-31';
+
+/** First publication dates, from git history. */
+export const SITE_PUBLISHED = '2026-08-24';
+export const ABOUT_PUBLISHED = '2026-09-26';

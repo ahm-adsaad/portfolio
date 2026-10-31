@@ -107,7 +107,7 @@ export function HeroVideo({
           loop
           playsInline
           preload="auto"
-          poster={poster}
+          poster={posterWebp ?? poster}
           width={width}
           height={height}
           disablePictureInPicture

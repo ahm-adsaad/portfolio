@@ -1,0 +1,5 @@
+# Security contact for ahmadsaad.dev and its subdomains (RFC 9116).
+Contact: mailto:ahmadd.saad02@gmail.com
+Expires: 2027-10-31T00:00:00.000Z
+Preferred-Languages: en, ar
+Canonical: https://ahmadsaad.dev/.well-known/security.txt

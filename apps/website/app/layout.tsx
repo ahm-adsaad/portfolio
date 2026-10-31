@@ -58,6 +58,32 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* next/font emits no preloads on this build (its font manifest is empty),
+            so the hero waited on fonts found only after the CSS. These are content
+            hashes of assets/fonts/*.woff2 (bricolage-display 800, bricolage-display
+            light 300, instrument-sans); they change only if a font file changes,
+            and Task 12 of the 2026-10-30 plan checks they resolve. */}
+        <link
+          rel="preload"
+          href="/_next/static/media/3b9a2d35ca5574c2-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/media/81982458c8f63afe-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/media/ae05c57c271ebcb0-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         {/* Cloudflare Web Analytics injects its beacon at the edge; warm the
             connection so it stays off the LCP critical path. */}
         <link rel="preconnect" href="https://static.cloudflareinsights.com" />

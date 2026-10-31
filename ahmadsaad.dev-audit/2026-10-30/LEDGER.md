@@ -85,6 +85,14 @@ Minor findings, deferred (none block deploy):
 
 Started 2026-10-31 ~09:50 local. Steps: commit audit folder on the branch, `git merge --ff-only` onto main, run the OpenNext chain with `--dangerouslyUseUnsupportedNextVersion` and deploy, push main to origin, run scratchpad/live-check.sh against production.
 
+- Ruling: track only the before and after evidence screenshots (12 files) via screenshots/.gitignore; the other 20 captures stay local. Why: 44 MB of near-duplicate PNGs does not belong in a public repo. Cost if wrong: a capture is missing from history; it can be re-taken.
+- Audit commit e99b33a "Record the October SEO and GEO audit, plan and verification" (38 files). main fast-forwarded to e99b33a.
+- Deploy 2026-10-31 ~10:05 local: assert-static-prerender 19 routes none with ISR; Total Upload 5479.58 KiB, gzip 1117.66 KiB; Version ID d2766459-df98-4a00-b17a-80e21671e418; custom domains ahmadsaad.dev and www.ahmadsaad.dev.
+- Live check (scratchpad/live-check.sh) FAIL count 0: 15 routes 200, /nonexistent 404, http and www 301 to apex, "Ahmad Saad is" present on /, no collapsed "AhmadSaad", eyebrow "Sharjah, UAE", headshot img on /, X-Robots-Tag noindex on the 5 text endpoints and absent on /about, media Cache-Control max-age=604800 on webp and mp4, static chunk single immutable value, 3 font preloads 200, sitemap 7 x lastmod 2026-10-31, og:image 200 image/jpeg 148752 B, JSON-LD dangling none and image_dims ok on 4 page types, copy scan clean. Crawler status unchanged (owner action): GPTBot 403, ClaudeBot 403, OAI-SearchBot 200, PerplexityBot 200, Claude-SearchBot 200, Googlebot 200.
+- main pushed to origin.
+
+Phase 5 complete. Engagement closed 2026-10-31.
+
 ## Rulings
 
 - Ruling: write today's audit into `ahmadsaad.dev-audit/2026-10-30/` instead of overwriting the August files. Why: the August report and the September plan are the owner's history. Cost if wrong: none, a folder.

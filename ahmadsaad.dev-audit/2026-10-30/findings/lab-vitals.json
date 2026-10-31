@@ -1,0 +1,7492 @@
+[
+ {
+  "url": "https://ahmadsaad.dev/",
+  "mobile": true,
+  "reduced": false,
+  "lcp": {
+   "t": 3068,
+   "url": "",
+   "size": 64965,
+   "tag": "SPAN",
+   "cls": "block rise-name",
+   "rl": 3068,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 447.59999999403954,
+   "note": "text LCP",
+   "renderDelay": 2620.4000000059605
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 1034,
+  "longtasks": [
+   {
+    "s": 3085.3999999910593,
+    "d": 940,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4700.5,
+    "d": 121,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 5178.5999999940395,
+    "d": 117,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4603,
+    "d": 54,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 5089.0999999940395,
+    "d": 52,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1728,
+  "ttfb": 447.59999999403954,
+  "load": 4228.5999999940395,
+  "bytes": 1009730,
+  "requests": 24,
+  "dom": 1043,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-720.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": false,
+   "w": 412,
+   "h": 823,
+   "vw": 1280,
+   "vh": 720
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 412,
+    "ch": 823,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/localai.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/mano-computer-simulator.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/lorawan-sensor-node.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/portfolio.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 0,
+    "nh": 0,
+    "cw": 88,
+    "ch": 88,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 570,
+    "e": 1198,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 572,
+    "e": 1075,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 573,
+    "e": 762,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 574,
+    "e": 1246,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 576,
+    "e": 2346,
+    "ts": 56155,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 577,
+    "e": 2299,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 578,
+    "e": 1269,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 578,
+    "e": 1372,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 579,
+    "e": 1311,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 579,
+    "e": 1378,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 580,
+    "e": 1475,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 580,
+    "e": 1290,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 604,
+    "e": 904,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1184,
+    "e": 1922,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1281,
+    "e": 2189,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1312,
+    "e": 2097,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1314,
+    "e": 2016,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 4299,
+    "e": 4494,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "i": "script",
+    "s": 4769,
+    "e": 5072,
+    "ts": 15258,
+    "ds": 49002
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "i": "script",
+    "s": 4774,
+    "e": 4969,
+    "ts": 2796,
+    "ds": 5816
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 4821,
+    "e": 5473,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "i": "video",
+    "s": 4901,
+    "e": 8202,
+    "ts": 570053,
+    "ds": 569753
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "569753",
+    "cc": null,
+    "ce": null
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/",
+  "mobile": true,
+  "reduced": false,
+  "lcp": {
+   "t": 2576,
+   "url": "",
+   "size": 64965,
+   "tag": "SPAN",
+   "cls": "block rise-name",
+   "rl": 2576,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 412.1000000089407,
+   "note": "text LCP",
+   "renderDelay": 2163.8999999910593
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 950,
+  "longtasks": [
+   {
+    "s": 2859.1000000089407,
+    "d": 847,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4384.70000000298,
+    "d": 120,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4896.9000000059605,
+    "d": 120,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3809.2999999970198,
+    "d": 57,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4272.29999999702,
+    "d": 56,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4806.9000000059605,
+    "d": 50,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1872,
+  "ttfb": 412.1000000089407,
+  "load": 3862.4000000059605,
+  "bytes": 1009750,
+  "requests": 24,
+  "dom": 1043,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-720.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": false,
+   "w": 412,
+   "h": 823,
+   "vw": 1280,
+   "vh": 720
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 412,
+    "ch": 823,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/localai.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/mano-computer-simulator.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/lorawan-sensor-node.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/portfolio.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 0,
+    "nh": 0,
+    "cw": 88,
+    "ch": 88,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 539,
+    "e": 1181,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 543,
+    "e": 1041,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 545,
+    "e": 713,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 547,
+    "e": 1222,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 550,
+    "e": 2309,
+    "ts": 56093,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 553,
+    "e": 2262,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 555,
+    "e": 1241,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 557,
+    "e": 1386,
+    "ts": 3895,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 558,
+    "e": 1354,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 558,
+    "e": 1339,
+    "ts": 3921,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 559,
+    "e": 1448,
+    "ts": 7507,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 561,
+    "e": 1278,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 592,
+    "e": 900,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1164,
+    "e": 1869,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1298,
+    "e": 2185,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1352,
+    "e": 2107,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1353,
+    "e": 2027,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3938,
+    "e": 4122,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "i": "script",
+    "s": 4457,
+    "e": 4780,
+    "ts": 15271,
+    "ds": 49002
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "i": "script",
+    "s": 4464,
+    "e": 4659,
+    "ts": 2796,
+    "ds": 5816
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 4504,
+    "e": 5455,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "i": "video",
+    "s": 4578,
+    "e": 7872,
+    "ts": 570053,
+    "ds": 569753
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "569753",
+    "cc": null,
+    "ce": null
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/about",
+  "mobile": true,
+  "reduced": false,
+  "lcp": {
+   "t": 2032,
+   "url": "",
+   "size": 55998,
+   "tag": "P",
+   "cls": "display-light intro-size rise max-w-[44ch] text-bone/88",
+   "rl": 2032,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 428.5,
+   "note": "text LCP",
+   "renderDelay": 1603.5
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 1034,
+  "longtasks": [
+   {
+    "s": 2517.7999999970198,
+    "d": 1061,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4765.399999991059,
+    "d": 61,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4046.3999999910593,
+    "d": 59,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3922.8999999910593,
+    "d": 53,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1800,
+  "ttfb": 428.5,
+  "load": 3633.0999999940395,
+  "bytes": 1081510,
+  "requests": 26,
+  "dom": 200,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-720.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": false,
+   "w": 412,
+   "h": 915,
+   "vw": 1280,
+   "vh": 720
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 412,
+    "ch": 915,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "attr": "/ahmad-saad.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": null,
+    "nw": 160,
+    "nh": 160,
+    "cw": 160,
+    "ch": 160,
+    "w": "160",
+    "h": "160"
+   },
+   {
+    "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 340,
+    "nh": 340,
+    "cw": 88,
+    "ch": 88,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 499,
+    "e": 1256,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 502,
+    "e": 1048,
+    "ts": 22268,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 504,
+    "e": 685,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 506,
+    "e": 1340,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 507,
+    "e": 2497,
+    "ts": 56155,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 508,
+    "e": 2387,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 509,
+    "e": 1316,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 511,
+    "e": 1407,
+    "ts": 3895,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 512,
+    "e": 1365,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 512,
+    "e": 1399,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 513,
+    "e": 1487,
+    "ts": 7507,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 514,
+    "e": 1272,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "i": "img",
+    "s": 515,
+    "e": 1000,
+    "ts": 19594,
+    "ds": 19294
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 516,
+    "e": 908,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1166,
+    "e": 1943,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1240,
+    "e": 2229,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1303,
+    "e": 2134,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1306,
+    "e": 2023,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "i": "img",
+    "s": 1751,
+    "e": 2669,
+    "ts": 65447,
+    "ds": 65147
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3702,
+    "e": 3888,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 4036,
+    "e": 4827,
+    "ts": 14107,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 4105,
+    "e": 5845,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "i": "video",
+    "s": 4168,
+    "e": 7542,
+    "ts": 570053,
+    "ds": 569753
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 4812,
+    "e": 5003,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/about",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "19294",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "status": 200,
+    "type": "image",
+    "ct": "image/png",
+    "cl": "65147",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "569753",
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/about",
+  "mobile": true,
+  "reduced": false,
+  "lcp": {
+   "t": 2064,
+   "url": "",
+   "size": 55998,
+   "tag": "P",
+   "cls": "display-light intro-size rise max-w-[44ch] text-bone/88",
+   "rl": 2064,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 434.69999998807907,
+   "note": "text LCP",
+   "renderDelay": 1629.300000011921
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 719,
+  "longtasks": [
+   {
+    "s": 2519.699999988079,
+    "d": 743,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 2275,
+    "d": 63,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3576.5999999940395,
+    "d": 57,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3696.2999999970198,
+    "d": 56,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1868,
+  "ttfb": 434.69999998807907,
+  "load": 3307.0999999940395,
+  "bytes": 1081543,
+  "requests": 26,
+  "dom": 200,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-720.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": false,
+   "w": 412,
+   "h": 915,
+   "vw": 1280,
+   "vh": 720
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 412,
+    "ch": 915,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "attr": "/ahmad-saad.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": null,
+    "nw": 160,
+    "nh": 160,
+    "cw": 160,
+    "ch": 160,
+    "w": "160",
+    "h": "160"
+   },
+   {
+    "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 340,
+    "nh": 340,
+    "cw": 88,
+    "ch": 88,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 513,
+    "e": 1265,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 516,
+    "e": 1066,
+    "ts": 22268,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 517,
+    "e": 692,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 518,
+    "e": 1308,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 518,
+    "e": 2511,
+    "ts": 56094,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 518,
+    "e": 2402,
+    "ts": 46632,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 519,
+    "e": 1336,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 519,
+    "e": 1429,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 520,
+    "e": 1371,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 522,
+    "e": 1393,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 523,
+    "e": 1522,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 524,
+    "e": 1323,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "i": "img",
+    "s": 526,
+    "e": 1103,
+    "ts": 19594,
+    "ds": 19294
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 528,
+    "e": 862,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1205,
+    "e": 1963,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1272,
+    "e": 2262,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1334,
+    "e": 2153,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1337,
+    "e": 2074,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "i": "img",
+    "s": 1820,
+    "e": 2668,
+    "ts": 65447,
+    "ds": 65147
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3376,
+    "e": 3563,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 3686,
+    "e": 3910,
+    "ts": 14104,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 3752,
+    "e": 4705,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "i": "video",
+    "s": 3761,
+    "e": 7060,
+    "ts": 570053,
+    "ds": 569753
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 3908,
+    "e": 4096,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/about",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "19294",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "status": 200,
+    "type": "image",
+    "ct": "image/png",
+    "cl": "65147",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-720.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "569753",
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/projects/trend-radar",
+  "mobile": true,
+  "reduced": false,
+  "lcp": {
+   "t": 1648,
+   "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+   "size": 112364,
+   "tag": "IMG",
+   "cls": "h-full w-full object-cover",
+   "rl": 1648,
+   "ll": 1213.5,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 435.5,
+   "loadDelay": 73.20000000298023,
+   "loadTime": 396.20000000298023,
+   "renderDelay": 743.0999999940395
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 773,
+  "longtasks": [
+   {
+    "s": 2276,
+    "d": 814,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3420.300000011921,
+    "d": 59,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 1706.7000000029802,
+    "d": 50,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1648,
+  "ttfb": 435.5,
+  "load": 3121.7000000029802,
+  "bytes": 311947,
+  "requests": 25,
+  "dom": 193,
+  "video": null,
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "eager",
+    "fp": "high",
+    "nw": 412,
+    "nh": 412,
+    "cw": 371,
+    "ch": 371,
+    "w": "640",
+    "h": "640"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "i": "link",
+    "s": 509,
+    "e": 905,
+    "ts": 17110,
+    "ds": 16810
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 512,
+    "e": 936,
+    "ts": 22268,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 514,
+    "e": 688,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 515,
+    "e": 1126,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 516,
+    "e": 2199,
+    "ts": 56094,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 517,
+    "e": 2198,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 518,
+    "e": 1170,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 520,
+    "e": 1164,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 520,
+    "e": 1250,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 522,
+    "e": 1259,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 523,
+    "e": 1328,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 524,
+    "e": 1186,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 527,
+    "e": 858,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1043,
+    "e": 1765,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1156,
+    "e": 2059,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1210,
+    "e": 1998,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1212,
+    "e": 1889,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3196,
+    "e": 3396,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 3542,
+    "e": 3853,
+    "ts": 14136,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 3546,
+    "e": 3771,
+    "ts": 5644,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 3549,
+    "e": 4167,
+    "ts": 6632,
+    "ds": 21418
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 3851,
+    "e": 4023,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 4173,
+    "e": 4354,
+    "ts": 1226,
+    "ds": 1613
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "16810",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/projects/trend-radar",
+  "mobile": true,
+  "reduced": false,
+  "lcp": {
+   "t": 1656,
+   "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+   "size": 112364,
+   "tag": "IMG",
+   "cls": "h-full w-full object-cover",
+   "rl": 1656,
+   "ll": 1226.7000000029802,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 444.90000000596046,
+   "loadDelay": 77.19999998807907,
+   "loadTime": 407.6000000089407,
+   "renderDelay": 726.2999999970198
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 833,
+  "longtasks": [
+   {
+    "s": 2264.2000000029802,
+    "d": 881,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3483.2999999970198,
+    "d": 52,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1656,
+  "ttfb": 444.90000000596046,
+  "load": 3176.2999999970198,
+  "bytes": 311869,
+  "requests": 25,
+  "dom": 193,
+  "video": null,
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "eager",
+    "fp": "high",
+    "nw": 412,
+    "nh": 412,
+    "cw": 371,
+    "ch": 371,
+    "w": "640",
+    "h": "640"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "i": "link",
+    "s": 522,
+    "e": 930,
+    "ts": 17110,
+    "ds": 16810
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 525,
+    "e": 945,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 526,
+    "e": 727,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 527,
+    "e": 1135,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 528,
+    "e": 2187,
+    "ts": 56094,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 529,
+    "e": 2171,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 530,
+    "e": 1183,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 530,
+    "e": 1266,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 531,
+    "e": 1151,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 532,
+    "e": 1257,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 533,
+    "e": 1338,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 533,
+    "e": 1158,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 535,
+    "e": 882,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1068,
+    "e": 1826,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1168,
+    "e": 2078,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1223,
+    "e": 2014,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1226,
+    "e": 1920,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3266,
+    "e": 3456,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 3598,
+    "e": 3908,
+    "ts": 14163,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 3601,
+    "e": 3874,
+    "ts": 5644,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 3604,
+    "e": 3854,
+    "ts": 6634,
+    "ds": 21418
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 3848,
+    "e": 4032,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 3869,
+    "e": 4048,
+    "ts": 1226,
+    "ds": 1613
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "16810",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/",
+  "mobile": false,
+  "reduced": false,
+  "lcp": {
+   "t": 1136,
+   "url": "",
+   "size": 142004,
+   "tag": "SPAN",
+   "cls": "block rise-name",
+   "rl": 1136,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 429.3999999910593,
+   "note": "text LCP",
+   "renderDelay": 706.6000000089407
+  },
+  "cls": 0.0009282296865423343,
+  "shifts": [
+   {
+    "v": 0.0009282296865423343,
+    "t": 1082.199999988079,
+    "n": [
+     "NAV.hidden md:block",
+     "A.pill pill-fill",
+     "A.pill pill-fill",
+     "A.nav-link",
+     "P.hero-cue rise hidden md:inline-flex"
+    ]
+   }
+  ],
+  "tbt": 30,
+  "longtasks": [
+   {
+    "s": 1092,
+    "d": 80,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 908,
+  "ttfb": 429.3999999910593,
+  "load": 1178,
+  "bytes": 1998314,
+  "requests": 29,
+  "dom": 1043,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-1080.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": false,
+   "w": 1350,
+   "h": 940,
+   "vw": 1920,
+   "vh": 1080
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 1350,
+    "ch": 940,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 540,
+    "nh": 540,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/localai.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/mano-computer-simulator.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/lorawan-sensor-node.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/portfolio.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 0,
+    "nh": 0,
+    "cw": 120,
+    "ch": 120,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 448,
+    "e": 756,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 448,
+    "e": 638,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 448,
+    "e": 614,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 448,
+    "e": 852,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 448,
+    "e": 1086,
+    "ts": 56093,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 448,
+    "e": 844,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 448,
+    "e": 1087,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 449,
+    "e": 818,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 449,
+    "e": 837,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 449,
+    "e": 932,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 449,
+    "e": 963,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 449,
+    "e": 825,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 452,
+    "e": 556,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 660,
+    "e": 992,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 677,
+    "e": 970,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 698,
+    "e": 1048,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 698,
+    "e": 1034,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 1186,
+    "e": 1339,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "i": "script",
+    "s": 1223,
+    "e": 1393,
+    "ts": 15271,
+    "ds": 49002
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "i": "script",
+    "s": 1224,
+    "e": 1388,
+    "ts": 2796,
+    "ds": 5816
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 1229,
+    "e": 1471,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about?_rsc=1p-R_iEY6bj0jY31",
+    "i": "fetch",
+    "s": 1233,
+    "e": 1435,
+    "ts": 6586,
+    "ds": 21418
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=1p-R_iEY6bj0jY31",
+    "i": "fetch",
+    "s": 1234,
+    "e": 1434,
+    "ts": 5644,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "i": "video",
+    "s": 1235,
+    "e": 2658,
+    "ts": 1525672,
+    "ds": 1525372
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 1440,
+    "e": 1643,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 1442,
+    "e": 1600,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "i": "img",
+    "s": 5291,
+    "e": 5466,
+    "ts": 17110,
+    "ds": 16810
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=1p-R_iEY6bj0jY31",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about?_rsc=1p-R_iEY6bj0jY31",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "1525372",
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "16810",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/",
+  "mobile": false,
+  "reduced": false,
+  "lcp": {
+   "t": 1256,
+   "url": "",
+   "size": 142004,
+   "tag": "SPAN",
+   "cls": "block rise-name",
+   "rl": 1256,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 426.90000000596046,
+   "note": "text LCP",
+   "renderDelay": 829.0999999940395
+  },
+  "cls": 0.0009282296865423343,
+  "shifts": [
+   {
+    "v": 0.0009282296865423343,
+    "t": 1317.9000000059605,
+    "n": [
+     "NAV.hidden md:block",
+     "A.pill pill-fill",
+     "A.pill pill-fill",
+     "A.nav-link",
+     "P.hero-cue rise hidden md:inline-flex"
+    ]
+   }
+  ],
+  "tbt": 51,
+  "longtasks": [
+   {
+    "s": 1184,
+    "d": 101,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 984,
+  "ttfb": 426.90000000596046,
+  "load": 1287.2000000029802,
+  "bytes": 1998202,
+  "requests": 29,
+  "dom": 1043,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-1080.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": false,
+   "w": 1350,
+   "h": 940,
+   "vw": 1920,
+   "vh": 1080
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 1350,
+    "ch": 940,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 540,
+    "nh": 540,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/localai.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/mano-computer-simulator.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/lorawan-sensor-node.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/portfolio.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 489,
+    "ch": 643,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 0,
+    "nh": 0,
+    "cw": 120,
+    "ch": 120,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 449,
+    "e": 763,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 449,
+    "e": 655,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 449,
+    "e": 760,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 449,
+    "e": 944,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 449,
+    "e": 1146,
+    "ts": 56155,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 449,
+    "e": 920,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 449,
+    "e": 1180,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 450,
+    "e": 907,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 450,
+    "e": 941,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 450,
+    "e": 946,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 450,
+    "e": 947,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 450,
+    "e": 1068,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 453,
+    "e": 542,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 779,
+    "e": 1108,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 798,
+    "e": 1165,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 815,
+    "e": 1155,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 816,
+    "e": 1148,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 1330,
+    "e": 1461,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "i": "script",
+    "s": 1371,
+    "e": 1561,
+    "ts": 15258,
+    "ds": 49002
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "i": "script",
+    "s": 1371,
+    "e": 1519,
+    "ts": 2796,
+    "ds": 5816
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 1375,
+    "e": 1657,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about?_rsc=1p-R_iEY6bj0jY31",
+    "i": "fetch",
+    "s": 1378,
+    "e": 1553,
+    "ts": 6586,
+    "ds": 21418
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=1p-R_iEY6bj0jY31",
+    "i": "fetch",
+    "s": 1378,
+    "e": 1559,
+    "ts": 5705,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "i": "video",
+    "s": 1379,
+    "e": 2794,
+    "ts": 1525672,
+    "ds": 1525372
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 1550,
+    "e": 1700,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 1554,
+    "e": 1697,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "i": "img",
+    "s": 5383,
+    "e": 5544,
+    "ts": 17110,
+    "ds": 16810
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about?_rsc=1p-R_iEY6bj0jY31",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "1525372",
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=1p-R_iEY6bj0jY31",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "16810",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/about",
+  "mobile": false,
+  "reduced": false,
+  "lcp": {
+   "t": 844,
+   "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+   "size": 1134696,
+   "tag": "IMG",
+   "cls": "",
+   "rl": 844,
+   "ll": 697.0999999940395,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 391.09999999403954,
+   "loadDelay": 11.0,
+   "loadTime": 294.29999999701977,
+   "renderDelay": 147.6000000089407
+  },
+  "cls": 0.0005588247526486297,
+  "shifts": [
+   {
+    "v": 0.0005588247526486297,
+    "t": 1075.3999999910593,
+    "n": [
+     "NAV.hidden md:block",
+     "A.nav-link",
+     "LI."
+    ]
+   }
+  ],
+  "tbt": 61,
+  "longtasks": [
+   {
+    "s": 1083.0999999940395,
+    "d": 111,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 788,
+  "ttfb": 391.09999999403954,
+  "load": 1201.5,
+  "bytes": 2032484,
+  "requests": 28,
+  "dom": 200,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-1080.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": true,
+   "w": 1350,
+   "h": 841,
+   "vw": 1920,
+   "vh": 1080
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 1350,
+    "ch": 841,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+    "attr": "/ahmad-saad.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": null,
+    "nw": 160,
+    "nh": 160,
+    "cw": 160,
+    "ch": 160,
+    "w": "160",
+    "h": "160"
+   },
+   {
+    "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 340,
+    "nh": 340,
+    "cw": 120,
+    "ch": 120,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 402,
+    "e": 696,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 402,
+    "e": 596,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 402,
+    "e": 558,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 402,
+    "e": 777,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 402,
+    "e": 1075,
+    "ts": 56094,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 403,
+    "e": 1029,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 403,
+    "e": 789,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 403,
+    "e": 811,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 403,
+    "e": 780,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 403,
+    "e": 805,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 403,
+    "e": 809,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 403,
+    "e": 949,
+    "ts": 7506,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+    "i": "img",
+    "s": 403,
+    "e": 565,
+    "ts": 7982,
+    "ds": 7682
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 403,
+    "e": 504,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 614,
+    "e": 1035,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 624,
+    "e": 1013,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 632,
+    "e": 1045,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 633,
+    "e": 1028,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "i": "img",
+    "s": 691,
+    "e": 1097,
+    "ts": 65447,
+    "ds": 65147
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 1210,
+    "e": 1365,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 1231,
+    "e": 1635,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "i": "video",
+    "s": 1232,
+    "e": 2694,
+    "ts": 1525672,
+    "ds": 1525372
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 1245,
+    "e": 1834,
+    "ts": 14136,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 1245,
+    "e": 1552,
+    "ts": 5644,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 1557,
+    "e": 1707,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 1833,
+    "e": 1992,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/about",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "7682",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "status": 200,
+    "type": "image",
+    "ct": "image/png",
+    "cl": "65147",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "1525372",
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/about",
+  "mobile": false,
+  "reduced": false,
+  "lcp": {
+   "t": 1140,
+   "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+   "size": 1134696,
+   "tag": "IMG",
+   "cls": "",
+   "rl": 1140,
+   "ll": 1018.7999999970198,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 645.1000000089407,
+   "loadDelay": 12.799999997019768,
+   "loadTime": 317.20000000298023,
+   "renderDelay": 164.8999999910593
+  },
+  "cls": 0.0005588247526486297,
+  "shifts": [
+   {
+    "v": 0.0005588247526486297,
+    "t": 1283.7000000029802,
+    "n": [
+     "NAV.hidden md:block",
+     "A.nav-link",
+     "LI."
+    ]
+   }
+  ],
+  "tbt": 45,
+  "longtasks": [
+   {
+    "s": 1302.1000000089407,
+    "d": 95,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1052,
+  "ttfb": 645.1000000089407,
+  "load": 1404.5,
+  "bytes": 2032686,
+  "requests": 28,
+  "dom": 200,
+  "video": {
+   "src": "https://ahmadsaad.dev/about/drive-1080.mp4",
+   "attrs": "<video class=\"hero-media-video\" autoplay=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" poster=\"/about/drive-poster.jpg\" width=\"1920\" height=\"1080\" disablepictureinpicture=\"\"><source src=\"/about/drive-720.mp4\" type=\"video/mp4\" media=\"(max-width: 767px)\"><source src=\"/about/drive-1080.mp4\" type=\"video/mp4\"></video>",
+   "poster": "https://ahmadsaad.dev/about/drive-poster.jpg",
+   "preload": "auto",
+   "autoplay": true,
+   "muted": true,
+   "paused": true,
+   "w": 1350,
+   "h": 841,
+   "vw": 1920,
+   "vh": 1080
+  },
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 1350,
+    "ch": 841,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+    "attr": "/ahmad-saad.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": null,
+    "nw": 160,
+    "nh": 160,
+    "cw": 160,
+    "ch": 160,
+    "w": "160",
+    "h": "160"
+   },
+   {
+    "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 340,
+    "nh": 340,
+    "cw": 120,
+    "ch": 120,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 658,
+    "e": 975,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 658,
+    "e": 826,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 658,
+    "e": 850,
+    "ts": 22268,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 658,
+    "e": 1132,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 658,
+    "e": 1292,
+    "ts": 46576,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 658,
+    "e": 1295,
+    "ts": 56155,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 658,
+    "e": 1020,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 659,
+    "e": 1025,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 659,
+    "e": 1017,
+    "ts": 3921,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 659,
+    "e": 1020,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 659,
+    "e": 1022,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 659,
+    "e": 1185,
+    "ts": 7507,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+    "i": "img",
+    "s": 659,
+    "e": 964,
+    "ts": 7982,
+    "ds": 7682
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 659,
+    "e": 758,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 872,
+    "e": 1163,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 883,
+    "e": 1208,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 889,
+    "e": 1250,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 890,
+    "e": 1243,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "i": "img",
+    "s": 952,
+    "e": 1322,
+    "ts": 65447,
+    "ds": 65147
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 1413,
+    "e": 1550,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "i": "video",
+    "s": 1435,
+    "e": 1678,
+    "ts": 81251,
+    "ds": 80951
+   },
+   {
+    "n": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "i": "video",
+    "s": 1437,
+    "e": 2845,
+    "ts": 1525672,
+    "ds": 1525372
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 1453,
+    "e": 1820,
+    "ts": 14107,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 1454,
+    "e": 1692,
+    "ts": 5644,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 1695,
+    "e": 1825,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 1812,
+    "e": 1980,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/about",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/ahmad-saad-320.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "7682",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "status": 200,
+    "type": "image",
+    "ct": "image/png",
+    "cl": "65147",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.jpg",
+    "status": 200,
+    "type": "image",
+    "ct": "image/jpeg",
+    "cl": "80951",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-1080.mp4",
+    "status": 200,
+    "type": "media",
+    "ct": "video/mp4",
+    "cl": "1525372",
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/projects/trend-radar",
+  "mobile": false,
+  "reduced": false,
+  "lcp": {
+   "t": 828,
+   "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+   "size": 240345,
+   "tag": "IMG",
+   "cls": "h-full w-full object-cover",
+   "rl": 828,
+   "ll": 774.6999999880791,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 451.59999999403954,
+   "loadDelay": 12.0,
+   "loadTime": 219.90000000596046,
+   "renderDelay": 144.5
+  },
+  "cls": 0.0010614996497679712,
+  "shifts": [
+   {
+    "v": 0.0010614996497679712,
+    "t": 1134.199999988079,
+    "n": [
+     "NAV.hidden md:block",
+     "#text.",
+     "A.nav-link",
+     "LI.",
+     "LI."
+    ]
+   }
+  ],
+  "tbt": 33,
+  "longtasks": [
+   {
+    "s": 1149,
+    "d": 83,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 816,
+  "ttfb": 451.59999999403954,
+  "load": 1237.3999999910593,
+  "bytes": 311919,
+  "requests": 25,
+  "dom": 193,
+  "video": null,
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "eager",
+    "fp": "high",
+    "nw": 540,
+    "nh": 540,
+    "cw": 491,
+    "ch": 491,
+    "w": "640",
+    "h": "640"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "i": "link",
+    "s": 464,
+    "e": 684,
+    "ts": 17110,
+    "ds": 16810
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 464,
+    "e": 663,
+    "ts": 22216,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 464,
+    "e": 640,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 464,
+    "e": 1007,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 464,
+    "e": 1093,
+    "ts": 46576,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 464,
+    "e": 1143,
+    "ts": 56094,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 464,
+    "e": 866,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 465,
+    "e": 1007,
+    "ts": 3842,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 465,
+    "e": 986,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 465,
+    "e": 1017,
+    "ts": 3921,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 465,
+    "e": 858,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 465,
+    "e": 1047,
+    "ts": 7507,
+    "ds": 20598
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 465,
+    "e": 563,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 683,
+    "e": 1028,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 698,
+    "e": 1124,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 708,
+    "e": 1112,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 709,
+    "e": 1103,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 1246,
+    "e": 1386,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 1265,
+    "e": 1831,
+    "ts": 14136,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 1265,
+    "e": 1439,
+    "ts": 5644,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 1265,
+    "e": 1454,
+    "ts": 6586,
+    "ds": 21418
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 1457,
+    "e": 1644,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 1832,
+    "e": 1987,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "16810",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/projects/trend-radar",
+  "mobile": false,
+  "reduced": false,
+  "lcp": {
+   "t": 684,
+   "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+   "size": 240345,
+   "tag": "IMG",
+   "cls": "h-full w-full object-cover",
+   "rl": 684,
+   "ll": 581.5,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 358.3999999910593,
+   "loadDelay": 13.799999997019768,
+   "loadTime": 147.30000001192093,
+   "renderDelay": 164.5
+  },
+  "cls": 0.0010614996497679712,
+  "shifts": [
+   {
+    "v": 0.0010614996497679712,
+    "t": 971.0999999940395,
+    "n": [
+     "NAV.hidden md:block",
+     "#text.",
+     "A.nav-link",
+     "LI.",
+     "LI."
+    ]
+   }
+  ],
+  "tbt": 30,
+  "longtasks": [
+   {
+    "s": 973.8999999910593,
+    "d": 80,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 684,
+  "ttfb": 358.3999999910593,
+  "load": 1060.199999988079,
+  "bytes": 312228,
+  "requests": 25,
+  "dom": 193,
+  "video": null,
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "eager",
+    "fp": "high",
+    "nw": 540,
+    "nh": 540,
+    "cw": 491,
+    "ch": 491,
+    "w": "640",
+    "h": "640"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "i": "link",
+    "s": 372,
+    "e": 520,
+    "ts": 17110,
+    "ds": 16810
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 372,
+    "e": 523,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 372,
+    "e": 538,
+    "ts": 22268,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 373,
+    "e": 743,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 373,
+    "e": 931,
+    "ts": 56155,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 373,
+    "e": 957,
+    "ts": 46632,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 373,
+    "e": 716,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 373,
+    "e": 820,
+    "ts": 3895,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "i": "script",
+    "s": 373,
+    "e": 720,
+    "ts": 460,
+    "ds": 187
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 373,
+    "e": 845,
+    "ts": 3921,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 373,
+    "e": 814,
+    "ts": 7507,
+    "ds": 20598
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 373,
+    "e": 476,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 373,
+    "e": 721,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 555,
+    "e": 923,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 571,
+    "e": 926,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 581,
+    "e": 931,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 581,
+    "e": 920,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 1069,
+    "e": 1210,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 1098,
+    "e": 1444,
+    "ts": 14136,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 1098,
+    "e": 1272,
+    "ts": 6634,
+    "ds": 21418
+   },
+   {
+    "n": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "i": "fetch",
+    "s": 1098,
+    "e": 1303,
+    "ts": 5705,
+    "ds": 23775
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 1274,
+    "e": 1443,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 1443,
+    "e": 1585,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects/trend-radar.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "16810",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/projects/%5Bid%5D/page-f7c8edf5ad4e01ab.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/about?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/projects?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=aJ3IAgbqTpenUL5u",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/",
+  "mobile": true,
+  "reduced": true,
+  "lcp": {
+   "t": 2284,
+   "url": "",
+   "size": 64965,
+   "tag": "SPAN",
+   "cls": "block rise-name",
+   "rl": 2284,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 434.59999999403954,
+   "note": "text LCP",
+   "renderDelay": 1849.4000000059605
+  },
+  "cls": 0.001061748969435011,
+  "shifts": [
+   {
+    "v": 0.001061748969435011,
+    "t": 2489.2999999970198,
+    "n": [
+     "A.pill pill-fill",
+     "A.pill pill-fill",
+     "BUTTON.nav-link"
+    ]
+   }
+  ],
+  "tbt": 774,
+  "longtasks": [
+   {
+    "s": 2566.2999999970198,
+    "d": 705,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4297.0999999940395,
+    "d": 120,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3900.5,
+    "d": 96,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 3703.4000000059605,
+    "d": 52,
+    "a": [
+     "unknown"
+    ]
+   },
+   {
+    "s": 4233.79999999702,
+    "d": 51,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1696,
+  "ttfb": 434.59999999403954,
+  "load": 3324.4000000059605,
+  "bytes": 357676,
+  "requests": 22,
+  "dom": 1040,
+  "video": null,
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 412,
+    "ch": 823,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "",
+    "attr": "/projects/trend-radar.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/localai.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/mano-computer-simulator.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/lorawan-sensor-node.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/projects/portfolio.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": "auto",
+    "nw": 0,
+    "nh": 0,
+    "cw": 369,
+    "ch": 184,
+    "w": "640",
+    "h": "640"
+   },
+   {
+    "src": "",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 0,
+    "nh": 0,
+    "cw": 88,
+    "ch": 88,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 545,
+    "e": 1290,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 548,
+    "e": 974,
+    "ts": 22210,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 550,
+    "e": 707,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 551,
+    "e": 1164,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 552,
+    "e": 2267,
+    "ts": 56094,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 553,
+    "e": 2219,
+    "ts": 46571,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 554,
+    "e": 1186,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 555,
+    "e": 1321,
+    "ts": 3895,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 556,
+    "e": 1275,
+    "ts": 2411,
+    "ds": 5069
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 557,
+    "e": 1301,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 558,
+    "e": 1432,
+    "ts": 7541,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 559,
+    "e": 1171,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 586,
+    "e": 911,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1078,
+    "e": 1840,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1168,
+    "e": 2107,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1234,
+    "e": 2027,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1237,
+    "e": 1949,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3373,
+    "e": 3569,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "i": "script",
+    "s": 3948,
+    "e": 4226,
+    "ts": 15258,
+    "ds": 49002
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "i": "script",
+    "s": 3954,
+    "e": 4147,
+    "ts": 2796,
+    "ds": 5816
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/310.53726654d1ccb897.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/901.8a25dbf02a40cde8.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ },
+ {
+  "url": "https://ahmadsaad.dev/about",
+  "mobile": true,
+  "reduced": true,
+  "lcp": {
+   "t": 2316,
+   "url": "",
+   "size": 64782,
+   "tag": "P",
+   "cls": "display-light intro-size rise max-w-[44ch] text-bone/88",
+   "rl": 2316,
+   "ll": 0,
+   "id": ""
+  },
+  "lcp_sub": {
+   "ttfb": 401.79999999701977,
+   "note": "text LCP",
+   "renderDelay": 1914.2000000029802
+  },
+  "cls": 0,
+  "shifts": [],
+  "tbt": 880,
+  "longtasks": [
+   {
+    "s": 2770.2999999970198,
+    "d": 930,
+    "a": [
+     "unknown"
+    ]
+   }
+  ],
+  "fcp": 1880,
+  "ttfb": 401.79999999701977,
+  "load": 3725.7000000029802,
+  "bytes": 429541,
+  "requests": 24,
+  "dom": 197,
+  "video": null,
+  "imgs": [
+   {
+    "src": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "attr": "/about/drive-poster.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": "high",
+    "nw": 1920,
+    "nh": 1080,
+    "cw": 412,
+    "ch": 915,
+    "w": "1920",
+    "h": "1080"
+   },
+   {
+    "src": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "attr": "/ahmad-saad.jpg",
+    "srcset": "",
+    "sizes": "",
+    "loading": "auto",
+    "fp": null,
+    "nw": 160,
+    "nh": 160,
+    "cw": 160,
+    "ch": 160,
+    "w": "160",
+    "h": "160"
+   },
+   {
+    "src": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "attr": "/credentials/claude-certified-architect.png",
+    "srcset": "",
+    "sizes": "",
+    "loading": "lazy",
+    "fp": null,
+    "nw": 340,
+    "nh": 340,
+    "cw": 88,
+    "ch": 88,
+    "w": "120",
+    "h": "120"
+   }
+  ],
+  "resources": [
+   {
+    "n": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "i": "link",
+    "s": 471,
+    "e": 1203,
+    "ts": 63032,
+    "ds": 62732
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "i": "link",
+    "s": 474,
+    "e": 1061,
+    "ts": 22268,
+    "ds": 116937
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "i": "link",
+    "s": 475,
+    "e": 749,
+    "ts": 772,
+    "ds": 1523
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "i": "link",
+    "s": 477,
+    "e": 1315,
+    "ts": 2202,
+    "ds": 3535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "i": "script",
+    "s": 478,
+    "e": 2524,
+    "ts": 56155,
+    "ds": 173019
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "i": "script",
+    "s": 480,
+    "e": 2425,
+    "ts": 46576,
+    "ds": 173628
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "i": "script",
+    "s": 481,
+    "e": 1310,
+    "ts": 515,
+    "ds": 514
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "i": "script",
+    "s": 482,
+    "e": 1450,
+    "ts": 3895,
+    "ds": 8535
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "i": "script",
+    "s": 483,
+    "e": 1336,
+    "ts": 1226,
+    "ds": 1613
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "i": "script",
+    "s": 484,
+    "e": 1414,
+    "ts": 3850,
+    "ds": 9912
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "i": "script",
+    "s": 485,
+    "e": 1494,
+    "ts": 7510,
+    "ds": 20598
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "i": "script",
+    "s": 487,
+    "e": 1295,
+    "ts": 976,
+    "ds": 1142
+   },
+   {
+    "n": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "i": "img",
+    "s": 488,
+    "e": 1030,
+    "ts": 19594,
+    "ds": 19294
+   },
+   {
+    "n": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "i": "script",
+    "s": 489,
+    "e": 779,
+    "ts": 0,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "i": "css",
+    "s": 1219,
+    "e": 1972,
+    "ts": 19948,
+    "ds": 19648
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "i": "css",
+    "s": 1313,
+    "e": 2294,
+    "ts": 30392,
+    "ds": 30092
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "i": "css",
+    "s": 1353,
+    "e": 2165,
+    "ts": 23428,
+    "ds": 23128
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "i": "css",
+    "s": 1356,
+    "e": 2094,
+    "ts": 18796,
+    "ds": 18496
+   },
+   {
+    "n": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "i": "img",
+    "s": 1835,
+    "e": 2694,
+    "ts": 65447,
+    "ds": 65147
+   },
+   {
+    "n": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "i": "xmlhttprequest",
+    "s": 3778,
+    "e": 3967,
+    "ts": 300,
+    "ds": 0
+   },
+   {
+    "n": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "i": "fetch",
+    "s": 4084,
+    "e": 4328,
+    "ts": 14107,
+    "ds": 75473
+   },
+   {
+    "n": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "i": "script",
+    "s": 4318,
+    "e": 4546,
+    "ts": 2411,
+    "ds": 5069
+   }
+  ],
+  "responses": [
+   {
+    "url": "https://ahmadsaad.dev/about",
+    "status": 200,
+    "type": "document",
+    "ct": "text/html; charset=utf-8",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/about/drive-poster.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "62732",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/0e3dc28b6d0875cb.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/ahmad-saad.webp",
+    "status": 200,
+    "type": "image",
+    "ct": "image/webp",
+    "cl": "19294",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/css/20d5d92d3364b90c.css",
+    "status": 200,
+    "type": "stylesheet",
+    "ct": "text/css",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript;charset=UTF-8",
+    "cl": null,
+    "cc": "public, max-age=86400",
+    "ce": "gzip"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/global-error-2800998d6ce07ab2.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/main-app-c6393312209d3cc9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/webpack-962bc6b938aa81c4.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/about/page-a0f4d815af4fcae9.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/layout-621d240667687942.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/401-50b40e0007d6a5fe.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/327-d06f9dc85f21aa8f.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/81982458c8f63afe-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "19648",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/credentials/claude-certified-architect.png",
+    "status": 200,
+    "type": "image",
+    "ct": "image/png",
+    "cl": "65147",
+    "cc": "public, max-age=0, must-revalidate",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/3b9a2d35ca5574c2-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "18496",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/125b055e8623e92e-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "23128",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/media/ae05c57c271ebcb0-s.p.woff2",
+    "status": 200,
+    "type": "font",
+    "ct": "font/woff2",
+    "cl": "30092",
+    "cc": "public, max-age=31536000, immutable",
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/493-814d4b9f3428b5ce.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/135c3189-7749ebca5435a60b.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/cdn-cgi/rum?",
+    "status": 204,
+    "type": "xhr",
+    "ct": "text/plain",
+    "cl": null,
+    "cc": null,
+    "ce": null
+   },
+   {
+    "url": "https://ahmadsaad.dev/?_rsc=_paE49VugaXyxB1G",
+    "status": 200,
+    "type": "fetch",
+    "ct": "text/x-component",
+    "cl": null,
+    "cc": "s-maxage=31536000, stale-while-revalidate=2592000",
+    "ce": "zstd"
+   },
+   {
+    "url": "https://ahmadsaad.dev/_next/static/chunks/app/page-007cd82c7f8df09d.js",
+    "status": 200,
+    "type": "script",
+    "ct": "text/javascript",
+    "cl": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ce": "zstd"
+   }
+  ]
+ }
+]

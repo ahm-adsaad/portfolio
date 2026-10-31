@@ -1,0 +1,2661 @@
+{
+ "home-desktop": {
+  "sw": 1440,
+  "cw": 1440,
+  "small": [
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "Email",
+    11
+   ],
+   [
+    "A",
+    "LinkedIn",
+    11
+   ],
+   [
+    "BUTTON",
+    "Menu",
+    11
+   ],
+   [
+    "SPAN",
+    "Menu",
+    11
+   ],
+   [
+    "BUTTON",
+    "Close",
+    11
+   ],
+   [
+    "P",
+    "AI Engineer \u00b7 FDE",
+    11
+   ],
+   [
+    "P",
+    "Scroll",
+    10
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "Available January 2027",
+    11
+   ],
+   [
+    "DT",
+    "UAE Golden Visa",
+    11
+   ],
+   [
+    "DT",
+    "Available",
+    11
+   ],
+   [
+    "DT",
+    "Languages",
+    11
+   ],
+   [
+    "A",
+    "More about me",
+    11
+   ],
+   [
+    "H2",
+    "Experience",
+    11
+   ],
+   [
+    "P",
+    "2024 to 2026",
+    11
+   ],
+   [
+    "SPAN",
+    "06.2026 - 08.2026 \u00b7 Dubai, UAE",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "Node.js",
+    11
+   ],
+   [
+    "SPAN",
+    "PostgreSQL",
+    11
+   ],
+   [
+    "SPAN",
+    "Docker",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "Cloudflare Workers",
+    11
+   ],
+   [
+    "SPAN",
+    "Anthropic Claude API",
+    11
+   ],
+   [
+    "SPAN",
+    "12.2025 - 01.2026 \u00b7 Abu Dhabi,",
+    11
+   ],
+   [
+    "P",
+    "Internship",
+    11
+   ],
+   [
+    "SPAN",
+    "SCADA",
+    11
+   ],
+   [
+    "SPAN",
+    "Siemens switchgear",
+    11
+   ],
+   [
+    "SPAN",
+    "EPC workflows",
+    11
+   ],
+   [
+    "SPAN",
+    "09.2025 - Present \u00b7 Remote (Ri",
+    11
+   ],
+   [
+    "SPAN",
+    "GTM strategy",
+    11
+   ],
+   [
+    "SPAN",
+    "Operations",
+    11
+   ],
+   [
+    "SPAN",
+    "09.2025 - 02.2026 \u00b7 Remote (Ca",
+    11
+   ],
+   [
+    "SPAN",
+    "ClickUp",
+    11
+   ],
+   [
+    "SPAN",
+    "Operations",
+    11
+   ],
+   [
+    "SPAN",
+    "10.2024 - Present \u00b7 Sharjah, U",
+    11
+   ],
+   [
+    "P",
+    "08.2026 - Present",
+    11
+   ],
+   [
+    "SPAN",
+    "WordPress",
+    11
+   ],
+   [
+    "SPAN",
+    "Elementor",
+    11
+   ],
+   [
+    "SPAN",
+    "Accessibility (WCAG AA)",
+    11
+   ],
+   [
+    "SPAN",
+    "UX/UI",
+    11
+   ],
+   [
+    "P",
+    "11.2024 - Present \u00b7 Part-time",
+    11
+   ],
+   [
+    "SPAN",
+    "WordPress",
+    11
+   ],
+   [
+    "SPAN",
+    "HTML",
+    11
+   ],
+   [
+    "SPAN",
+    "CSS",
+    11
+   ],
+   [
+    "SPAN",
+    "Figma",
+    11
+   ],
+   [
+    "P",
+    "10.2024 - 07.2025",
+    11
+   ],
+   [
+    "SPAN",
+    "TensorFlow",
+    11
+   ],
+   [
+    "SPAN",
+    "Scikit-Learn",
+    11
+   ],
+   [
+    "SPAN",
+    "Python",
+    11
+   ],
+   [
+    "H2",
+    "Projects",
+    11
+   ],
+   [
+    "P",
+    "5 builds",
+    11
+   ],
+   [
+    "P",
+    "01",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "Node.js",
+    11
+   ],
+   [
+    "SPAN",
+    "Claude API",
+    11
+   ],
+   [
+    "SPAN",
+    "PostgreSQL",
+    11
+   ],
+   [
+    "SPAN",
+    "Docker",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "REST API",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "02",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "WebGPU",
+    11
+   ],
+   [
+    "SPAN",
+    "WebLLM",
+    11
+   ],
+   [
+    "SPAN",
+    "Transformers.js",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "React",
+    11
+   ],
+   [
+    "SPAN",
+    "Vite",
+    11
+   ],
+   [
+    "SPAN",
+    "pdf.js",
+    11
+   ],
+   [
+    "SPAN",
+    "mammoth",
+    11
+   ],
+   [
+    "SPAN",
+    "IndexedDB",
+    11
+   ],
+   [
+    "SPAN",
+    "Vitest",
+    11
+   ],
+   [
+    "SPAN",
+    "Playwright",
+    11
+   ],
+   [
+    "SPAN",
+    "GitHub Actions",
+    11
+   ],
+   [
+    "SPAN",
+    "Cloudflare Workers",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "03",
+    11
+   ],
+   [
+    "SPAN",
+    "Python",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "04",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "EasyEDA",
+    11
+   ],
+   [
+    "SPAN",
+    "PCB design",
+    11
+   ],
+   [
+    "SPAN",
+    "Embedded systems",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "05",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "React",
+    11
+   ],
+   [
+    "SPAN",
+    "Tailwind CSS",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ],
+   [
+    "A",
+    "All projects",
+    11
+   ],
+   [
+    "H2",
+    "Education",
+    11
+   ],
+   [
+    "P",
+    "GPA 3.96",
+    11
+   ],
+   [
+    "P",
+    "08.2023 - 12.2026 (expected) \u00b7",
+    11
+   ],
+   [
+    "P",
+    "Certification",
+    11
+   ],
+   [
+    "P",
+    "Coursework",
+    11
+   ],
+   [
+    "SPAN",
+    "Machine Learning",
+    11
+   ],
+   [
+    "SPAN",
+    "Data Structures and Algorithms",
+    11
+   ],
+   [
+    "SPAN",
+    "Computer Architecture",
+    11
+   ],
+   [
+    "SPAN",
+    "Computer Networks",
+    11
+   ],
+   [
+    "SPAN",
+    "Wireless Communications",
+    11
+   ],
+   [
+    "H2",
+    "Stack",
+    11
+   ],
+   [
+    "P",
+    "37 tools",
+    11
+   ],
+   [
+    "P",
+    "Languages",
+    11
+   ],
+   [
+    "P",
+    "AI / ML",
+    11
+   ],
+   [
+    "P",
+    "Tools & Infrastructure",
+    11
+   ],
+   [
+    "H2",
+    "GitHub",
+    11
+   ],
+   [
+    "P",
+    "1,511 contributions",
+    11
+   ],
+   [
+    "title",
+    "Contribution Graph",
+    11
+   ],
+   [
+    "text",
+    "Nov",
+    11
+   ],
+   [
+    "text",
+    "Dec",
+    11
+   ],
+   [
+    "text",
+    "Jan",
+    11
+   ],
+   [
+    "text",
+    "Feb",
+    11
+   ],
+   [
+    "text",
+    "Mar",
+    11
+   ],
+   [
+    "text",
+    "Apr",
+    11
+   ],
+   [
+    "text",
+    "May",
+    11
+   ],
+   [
+    "text",
+    "Jun",
+    11
+   ],
+   [
+    "text",
+    "Jul",
+    11
+   ],
+   [
+    "text",
+    "Aug",
+    11
+   ],
+   [
+    "text",
+    "Sep",
+    11
+   ],
+   [
+    "text",
+    "Oct",
+    11
+   ],
+   [
+    "DIV",
+    "1511 contributions in the last",
+    11
+   ],
+   [
+    "SPAN",
+    "Less",
+    11
+   ],
+   [
+    "title",
+    "0 contributions",
+    11
+   ],
+   [
+    "title",
+    "1 contributions",
+    11
+   ],
+   [
+    "title",
+    "2 contributions",
+    11
+   ],
+   [
+    "title",
+    "3 contributions",
+    11
+   ],
+   [
+    "title",
+    "4 contributions",
+    11
+   ],
+   [
+    "SPAN",
+    "More",
+    11
+   ],
+   [
+    "P",
+    "\u00a9 2026 Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "llms.txt",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ]
+  ],
+  "taps": [
+   [
+    "A",
+    "More about me",
+    112,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ],
+   [
+    "A",
+    "All projects",
+    103,
+    18
+   ],
+   [
+    "A",
+    "About",
+    43,
+    18
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    18
+   ],
+   [
+    "A",
+    "llms.txt",
+    69,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ]
+  ],
+  "h1": {
+   "t": "AHMAD\nSAAD",
+   "top": 203.265625,
+   "op": "1",
+   "fs": "216px"
+  },
+  "bodyfs": "17px",
+  "heroText": "AHMAD SAAD\nABOUT\nPROJECTS\nEMAIL\nLINKEDIN\n\nAI ENGINEER \u00b7 FDE\n\nAHMAD\nSAAD\n\nForward deployed. Builds the system, scopes it with the people who use it, ships it.\n\nEMAIL\nLINKEDIN\nCV\n\nSCROLL\n\nIbuildsystemsthathavetoprovetheywork.AnAIpipeline,aCPU,acircuitboard.\n\nABOUT\n\nAVAILABLE JANUARY 2027\n\nFORWARD\nDEPLOYED\n\nI'm Ahmad, a Computer Engineering senior at the American University of Sharjah who ships production systems. My work centers on applied AI: LLM systems with real cost governance, real evaluation, and real stakeholders. Most recently at Samsung Gulf Electronics, I architected and solely built a",
+  "opac0": [
+   [
+    "DIV",
+    "section-head",
+    "AboutAvailable January 2027"
+   ],
+   [
+    "H2",
+    "display h2-size text-fg",
+    "ForwardDeployed"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "I'm Ahmad, a Computer Engineer"
+   ],
+   [
+    "DL",
+    "facts mt-10",
+    "UAE Golden Visano sponsorship "
+   ],
+   [
+    "P",
+    "mt-10",
+    "More about me"
+   ],
+   [
+    "DIV",
+    "section-head",
+    "Experience2024 to 2026"
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "Samsung Gulf Electronics06.202"
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "Electro-Mechanical Company LLC"
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "Chief Nest09.2025 - Present \u00b7 "
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "ONBRND09.2025 - 02.2026 \u00b7 Remo"
+   ]
+  ]
+ },
+ "home-mobile": {
+  "sw": 390,
+  "cw": 390,
+  "small": [
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "Email",
+    11
+   ],
+   [
+    "A",
+    "LinkedIn",
+    11
+   ],
+   [
+    "BUTTON",
+    "Menu",
+    11
+   ],
+   [
+    "SPAN",
+    "Menu",
+    11
+   ],
+   [
+    "BUTTON",
+    "Close",
+    11
+   ],
+   [
+    "P",
+    "AI Engineer \u00b7 FDE",
+    11
+   ],
+   [
+    "P",
+    "Scroll",
+    10
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "Available January 2027",
+    11
+   ],
+   [
+    "DT",
+    "UAE Golden Visa",
+    11
+   ],
+   [
+    "DT",
+    "Available",
+    11
+   ],
+   [
+    "DT",
+    "Languages",
+    11
+   ],
+   [
+    "A",
+    "More about me",
+    11
+   ],
+   [
+    "H2",
+    "Experience",
+    11
+   ],
+   [
+    "P",
+    "2024 to 2026",
+    11
+   ],
+   [
+    "SPAN",
+    "06.2026 - 08.2026 \u00b7 Dubai, UAE",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "Node.js",
+    11
+   ],
+   [
+    "SPAN",
+    "PostgreSQL",
+    11
+   ],
+   [
+    "SPAN",
+    "Docker",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "Cloudflare Workers",
+    11
+   ],
+   [
+    "SPAN",
+    "Anthropic Claude API",
+    11
+   ],
+   [
+    "SPAN",
+    "12.2025 - 01.2026 \u00b7 Abu Dhabi,",
+    11
+   ],
+   [
+    "P",
+    "Internship",
+    11
+   ],
+   [
+    "SPAN",
+    "SCADA",
+    11
+   ],
+   [
+    "SPAN",
+    "Siemens switchgear",
+    11
+   ],
+   [
+    "SPAN",
+    "EPC workflows",
+    11
+   ],
+   [
+    "SPAN",
+    "09.2025 - Present \u00b7 Remote (Ri",
+    11
+   ],
+   [
+    "SPAN",
+    "GTM strategy",
+    11
+   ],
+   [
+    "SPAN",
+    "Operations",
+    11
+   ],
+   [
+    "SPAN",
+    "09.2025 - 02.2026 \u00b7 Remote (Ca",
+    11
+   ],
+   [
+    "SPAN",
+    "ClickUp",
+    11
+   ],
+   [
+    "SPAN",
+    "Operations",
+    11
+   ],
+   [
+    "SPAN",
+    "10.2024 - Present \u00b7 Sharjah, U",
+    11
+   ],
+   [
+    "P",
+    "08.2026 - Present",
+    11
+   ],
+   [
+    "SPAN",
+    "WordPress",
+    11
+   ],
+   [
+    "SPAN",
+    "Elementor",
+    11
+   ],
+   [
+    "SPAN",
+    "Accessibility (WCAG AA)",
+    11
+   ],
+   [
+    "SPAN",
+    "UX/UI",
+    11
+   ],
+   [
+    "P",
+    "11.2024 - Present \u00b7 Part-time",
+    11
+   ],
+   [
+    "SPAN",
+    "WordPress",
+    11
+   ],
+   [
+    "SPAN",
+    "HTML",
+    11
+   ],
+   [
+    "SPAN",
+    "CSS",
+    11
+   ],
+   [
+    "SPAN",
+    "Figma",
+    11
+   ],
+   [
+    "P",
+    "10.2024 - 07.2025",
+    11
+   ],
+   [
+    "SPAN",
+    "TensorFlow",
+    11
+   ],
+   [
+    "SPAN",
+    "Scikit-Learn",
+    11
+   ],
+   [
+    "SPAN",
+    "Python",
+    11
+   ],
+   [
+    "H2",
+    "Projects",
+    11
+   ],
+   [
+    "P",
+    "5 builds",
+    11
+   ],
+   [
+    "P",
+    "01",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "Node.js",
+    11
+   ],
+   [
+    "SPAN",
+    "Claude API",
+    11
+   ],
+   [
+    "SPAN",
+    "PostgreSQL",
+    11
+   ],
+   [
+    "SPAN",
+    "Docker",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "REST API",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "02",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "WebGPU",
+    11
+   ],
+   [
+    "SPAN",
+    "WebLLM",
+    11
+   ],
+   [
+    "SPAN",
+    "Transformers.js",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "React",
+    11
+   ],
+   [
+    "SPAN",
+    "Vite",
+    11
+   ],
+   [
+    "SPAN",
+    "pdf.js",
+    11
+   ],
+   [
+    "SPAN",
+    "mammoth",
+    11
+   ],
+   [
+    "SPAN",
+    "IndexedDB",
+    11
+   ],
+   [
+    "SPAN",
+    "Vitest",
+    11
+   ],
+   [
+    "SPAN",
+    "Playwright",
+    11
+   ],
+   [
+    "SPAN",
+    "GitHub Actions",
+    11
+   ],
+   [
+    "SPAN",
+    "Cloudflare Workers",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "03",
+    11
+   ],
+   [
+    "SPAN",
+    "Python",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "04",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "EasyEDA",
+    11
+   ],
+   [
+    "SPAN",
+    "PCB design",
+    11
+   ],
+   [
+    "SPAN",
+    "Embedded systems",
+    11
+   ],
+   [
+    "A",
+    "Read the case study",
+    11
+   ],
+   [
+    "P",
+    "05",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "React",
+    11
+   ],
+   [
+    "SPAN",
+    "Tailwind CSS",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ],
+   [
+    "A",
+    "All projects",
+    11
+   ],
+   [
+    "H2",
+    "Education",
+    11
+   ],
+   [
+    "P",
+    "GPA 3.96",
+    11
+   ],
+   [
+    "P",
+    "08.2023 - 12.2026 (expected) \u00b7",
+    11
+   ],
+   [
+    "P",
+    "Certification",
+    11
+   ],
+   [
+    "P",
+    "Coursework",
+    11
+   ],
+   [
+    "SPAN",
+    "Machine Learning",
+    11
+   ],
+   [
+    "SPAN",
+    "Data Structures and Algorithms",
+    11
+   ],
+   [
+    "SPAN",
+    "Computer Architecture",
+    11
+   ],
+   [
+    "SPAN",
+    "Computer Networks",
+    11
+   ],
+   [
+    "SPAN",
+    "Wireless Communications",
+    11
+   ],
+   [
+    "H2",
+    "Stack",
+    11
+   ],
+   [
+    "P",
+    "37 tools",
+    11
+   ],
+   [
+    "P",
+    "Languages",
+    11
+   ],
+   [
+    "P",
+    "AI / ML",
+    11
+   ],
+   [
+    "P",
+    "Tools & Infrastructure",
+    11
+   ],
+   [
+    "H2",
+    "GitHub",
+    11
+   ],
+   [
+    "P",
+    "1,511 contributions",
+    11
+   ],
+   [
+    "title",
+    "Contribution Graph",
+    11
+   ],
+   [
+    "text",
+    "Nov",
+    11
+   ],
+   [
+    "text",
+    "Dec",
+    11
+   ],
+   [
+    "text",
+    "Jan",
+    11
+   ],
+   [
+    "text",
+    "Feb",
+    11
+   ],
+   [
+    "text",
+    "Mar",
+    11
+   ],
+   [
+    "text",
+    "Apr",
+    11
+   ],
+   [
+    "text",
+    "May",
+    11
+   ],
+   [
+    "text",
+    "Jun",
+    11
+   ],
+   [
+    "text",
+    "Jul",
+    11
+   ],
+   [
+    "text",
+    "Aug",
+    11
+   ],
+   [
+    "text",
+    "Sep",
+    11
+   ],
+   [
+    "text",
+    "Oct",
+    11
+   ],
+   [
+    "DIV",
+    "1511 contributions in the last",
+    11
+   ],
+   [
+    "SPAN",
+    "Less",
+    11
+   ],
+   [
+    "title",
+    "0 contributions",
+    11
+   ],
+   [
+    "title",
+    "1 contributions",
+    11
+   ],
+   [
+    "title",
+    "2 contributions",
+    11
+   ],
+   [
+    "title",
+    "3 contributions",
+    11
+   ],
+   [
+    "title",
+    "4 contributions",
+    11
+   ],
+   [
+    "SPAN",
+    "More",
+    11
+   ],
+   [
+    "P",
+    "\u00a9 2026 Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "llms.txt",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ]
+  ],
+  "taps": [
+   [
+    "A",
+    "More about me",
+    112,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Read the case study",
+    163,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ],
+   [
+    "A",
+    "All projects",
+    103,
+    18
+   ],
+   [
+    "A",
+    "About",
+    43,
+    18
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    18
+   ],
+   [
+    "A",
+    "llms.txt",
+    69,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ]
+  ],
+  "h1": {
+   "t": "AHMAD\nSAAD",
+   "top": 356.734375,
+   "op": "1",
+   "fs": "144.3px"
+  },
+  "bodyfs": "16px",
+  "heroText": "AHMAD SAAD\nMENU\n\nAI ENGINEER \u00b7 FDE\n\nAHMAD\nSAAD\n\nForward deployed. Builds the system, scopes it with the people who use it, ships it.\n\nEMAIL\nLINKEDIN\nCV\n\nIbuildsystemsthathavetoprovetheywork.AnAIpipeline,aCPU,acircuitboard.\n\nABOUT\n\nAVAILABLE JANUARY 2027\n\nFORWARD\nDEPLOYED\n\nI'm Ahmad, a Computer Engineering senior at the American University of Sharjah who ships production systems. My work centers on applied AI: LLM systems with real cost governance, real evaluation, and real stakeholders. Most recently at Samsung Gulf Electronics, I architected and solely built a trend intelligence platform for ",
+  "opac0": [
+   [
+    "DIV",
+    "section-head",
+    "AboutAvailable January 2027"
+   ],
+   [
+    "H2",
+    "display h2-size text-fg",
+    "ForwardDeployed"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "I'm Ahmad, a Computer Engineer"
+   ],
+   [
+    "DL",
+    "facts mt-10",
+    "UAE Golden Visano sponsorship "
+   ],
+   [
+    "P",
+    "mt-10",
+    "More about me"
+   ],
+   [
+    "DIV",
+    "section-head",
+    "Experience2024 to 2026"
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "Samsung Gulf Electronics06.202"
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "Electro-Mechanical Company LLC"
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "Chief Nest09.2025 - Present \u00b7 "
+   ],
+   [
+    "DETAILS",
+    "ledger-row",
+    "ONBRND09.2025 - 02.2026 \u00b7 Remo"
+   ]
+  ]
+ },
+ "about-desktop": {
+  "sw": 1440,
+  "cw": 1440,
+  "small": [
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "Email",
+    11
+   ],
+   [
+    "A",
+    "LinkedIn",
+    11
+   ],
+   [
+    "BUTTON",
+    "Menu",
+    11
+   ],
+   [
+    "SPAN",
+    "Menu",
+    11
+   ],
+   [
+    "BUTTON",
+    "Close",
+    11
+   ],
+   [
+    "A",
+    "Home",
+    11
+   ],
+   [
+    "SPAN",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "01 / 04",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "02 / 04",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "03 / 04",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "04 / 04",
+    11
+   ],
+   [
+    "P",
+    "\u00a9 2026 Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "llms.txt",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ]
+  ],
+  "taps": [
+   [
+    "A",
+    "Home",
+    34,
+    14
+   ],
+   [
+    "A",
+    "projects",
+    71,
+    23
+   ],
+   [
+    "A",
+    "homepage",
+    94,
+    23
+   ],
+   [
+    "A",
+    "About",
+    43,
+    18
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    18
+   ],
+   [
+    "A",
+    "llms.txt",
+    69,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ]
+  ],
+  "h1": {
+   "t": "AHMAD\nSAAD",
+   "top": 425.1875,
+   "op": "1",
+   "fs": "115.2px"
+  },
+  "bodyfs": "17px",
+  "heroText": "AHMAD SAAD\nABOUT\nPROJECTS\nEMAIL\nLINKEDIN\nHOME\nABOUT\n\nABOUT\n\nAHMAD\nSAAD\n\nI'm Ahmad Saad, a Computer Engineering senior at the American University of Sharjah in the United Arab Emirates, and I build production AI systems. My work centers on applied AI: LLM systems that run under real cost governance and answer to stakeholders who depend on the output.\n\nABOUT\n\n01 / 04\n\nEDUCATION\n\nI study Computer Engineering at AUS, where I hold a 3.96 GPA and graduate in December 2026. I am President of the university's Tau Beta Pi chapter, after serving as its Vice President, and I was Treasurer of the IEEE Sol",
+  "opac0": [
+   [
+    "DIV",
+    "section-head",
+    "About01 / 04"
+   ],
+   [
+    "H2",
+    "display h3-size text-fg",
+    "Education"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "I study Computer Engineering a"
+   ],
+   [
+    "DIV",
+    "section-head",
+    "About02 / 04"
+   ],
+   [
+    "H2",
+    "display h3-size text-fg",
+    "Experience"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "From June to August 2026 I was"
+   ],
+   [
+    "DIV",
+    "section-head",
+    "About03 / 04"
+   ],
+   [
+    "H2",
+    "display h3-size text-fg",
+    "What I build"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "I like systems where the hard "
+   ],
+   [
+    "DIV",
+    "section-head",
+    "About04 / 04"
+   ]
+  ]
+ },
+ "about-mobile": {
+  "sw": 390,
+  "cw": 390,
+  "small": [
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "Email",
+    11
+   ],
+   [
+    "A",
+    "LinkedIn",
+    11
+   ],
+   [
+    "BUTTON",
+    "Menu",
+    11
+   ],
+   [
+    "SPAN",
+    "Menu",
+    11
+   ],
+   [
+    "BUTTON",
+    "Close",
+    11
+   ],
+   [
+    "A",
+    "Home",
+    11
+   ],
+   [
+    "SPAN",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "01 / 04",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "02 / 04",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "03 / 04",
+    11
+   ],
+   [
+    "P",
+    "About",
+    11
+   ],
+   [
+    "P",
+    "04 / 04",
+    11
+   ],
+   [
+    "P",
+    "\u00a9 2026 Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "llms.txt",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ]
+  ],
+  "taps": [
+   [
+    "A",
+    "Home",
+    34,
+    14
+   ],
+   [
+    "A",
+    "projects",
+    65,
+    20
+   ],
+   [
+    "A",
+    "homepage",
+    86,
+    20
+   ],
+   [
+    "A",
+    "About",
+    43,
+    18
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    18
+   ],
+   [
+    "A",
+    "llms.txt",
+    69,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ]
+  ],
+  "h1": {
+   "t": "AHMAD\nSAAD",
+   "top": 397.8125,
+   "op": "1",
+   "fs": "48px"
+  },
+  "bodyfs": "16px",
+  "heroText": "AHMAD SAAD\nMENU\nHOME\nABOUT\n\nABOUT\n\nAHMAD\nSAAD\n\nI'm Ahmad Saad, a Computer Engineering senior at the American University of Sharjah in the United Arab Emirates, and I build production AI systems. My work centers on applied AI: LLM systems that run under real cost governance and answer to stakeholders who depend on the output.\n\nABOUT\n\n01 / 04\n\nEDUCATION\n\nI study Computer Engineering at AUS, where I hold a 3.96 GPA and graduate in December 2026. I am President of the university's Tau Beta Pi chapter, after serving as its Vice President, and I was Treasurer of the IEEE Solid-State Circuits Society",
+  "opac0": [
+   [
+    "DIV",
+    "section-head",
+    "About01 / 04"
+   ],
+   [
+    "H2",
+    "display h3-size text-fg",
+    "Education"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "I study Computer Engineering a"
+   ],
+   [
+    "DIV",
+    "section-head",
+    "About02 / 04"
+   ],
+   [
+    "H2",
+    "display h3-size text-fg",
+    "Experience"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "From June to August 2026 I was"
+   ],
+   [
+    "DIV",
+    "section-head",
+    "About03 / 04"
+   ],
+   [
+    "H2",
+    "display h3-size text-fg",
+    "What I build"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "I like systems where the hard "
+   ],
+   [
+    "DIV",
+    "section-head",
+    "About04 / 04"
+   ]
+  ]
+ },
+ "trend-radar-desktop": {
+  "sw": 1440,
+  "cw": 1440,
+  "small": [
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "Email",
+    11
+   ],
+   [
+    "A",
+    "LinkedIn",
+    11
+   ],
+   [
+    "BUTTON",
+    "Menu",
+    11
+   ],
+   [
+    "SPAN",
+    "Menu",
+    11
+   ],
+   [
+    "BUTTON",
+    "Close",
+    11
+   ],
+   [
+    "A",
+    "Home",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "SPAN",
+    "Trend Radar",
+    11
+   ],
+   [
+    "P",
+    "01",
+    11
+   ],
+   [
+    "P",
+    "Built by Ahmad Saad \u00b7 06.2026 ",
+    11
+   ],
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "H2",
+    "Overview",
+    11
+   ],
+   [
+    "P",
+    "7 tools",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "Node.js",
+    11
+   ],
+   [
+    "SPAN",
+    "Claude API",
+    11
+   ],
+   [
+    "SPAN",
+    "PostgreSQL",
+    11
+   ],
+   [
+    "SPAN",
+    "Docker",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "REST API",
+    11
+   ],
+   [
+    "SPAN",
+    "Next",
+    11
+   ],
+   [
+    "A",
+    "All projects",
+    11
+   ],
+   [
+    "A",
+    "About Ahmad Saad",
+    11
+   ],
+   [
+    "P",
+    "\u00a9 2026 Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "llms.txt",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ]
+  ],
+  "taps": [
+   [
+    "A",
+    "Home",
+    34,
+    14
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    14
+   ],
+   [
+    "A",
+    "Ahmad Saad",
+    86,
+    14
+   ],
+   [
+    "A",
+    "All projects",
+    103,
+    18
+   ],
+   [
+    "A",
+    "About Ahmad Saad",
+    137,
+    18
+   ],
+   [
+    "A",
+    "About",
+    43,
+    18
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    18
+   ],
+   [
+    "A",
+    "llms.txt",
+    69,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ]
+  ],
+  "h1": {
+   "t": "TREND RADAR",
+   "top": 225.1875,
+   "op": "1",
+   "fs": "100.8px"
+  },
+  "bodyfs": "17px",
+  "heroText": "AHMAD SAAD\nABOUT\nPROJECTS\nEMAIL\nLINKEDIN\nHOME\nPROJECTS\nTREND RADAR\n\n01\n\nTREND RADAR\n\nBUILT BY AHMAD SAAD \u00b7 06.2026 - 08.2026\n\nProduction TikTok trend-detection platform where measurement decides and LLMs describe.\n\nSOURCE ON GITHUB\nOVERVIEW\n\n7 TOOLS\n\nIMPACT\n\nAn estimated $60K in cost savings and a projected 20% increase in engagement rates.\n\nTYPESCRIPT\nNODE.JS\nCLAUDE API\nPOSTGRESQL\nDOCKER\nNEXT.JS\nREST API\n\nA production trend-detection platform built on the official TikTok API for Business. Deterministic signals (caption n-gram clustering, creator spread, adoption curves, freshness) decide ever",
+  "opac0": [
+   [
+    "DIV",
+    "section-head",
+    "Overview7 tools"
+   ],
+   [
+    "DIV",
+    "",
+    "ImpactAn estimated $60K in cos"
+   ],
+   [
+    "UL",
+    "flex flex-wrap gap-2 mt-8",
+    "TypeScriptNode.jsClaude APIPos"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "A production trend-detection p"
+   ]
+  ]
+ },
+ "trend-radar-mobile": {
+  "sw": 390,
+  "cw": 390,
+  "small": [
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "Email",
+    11
+   ],
+   [
+    "A",
+    "LinkedIn",
+    11
+   ],
+   [
+    "BUTTON",
+    "Menu",
+    11
+   ],
+   [
+    "SPAN",
+    "Menu",
+    11
+   ],
+   [
+    "BUTTON",
+    "Close",
+    11
+   ],
+   [
+    "A",
+    "Home",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "SPAN",
+    "Trend Radar",
+    11
+   ],
+   [
+    "P",
+    "01",
+    11
+   ],
+   [
+    "P",
+    "Built by Ahmad Saad \u00b7 06.2026 ",
+    11
+   ],
+   [
+    "A",
+    "Ahmad Saad",
+    11
+   ],
+   [
+    "H2",
+    "Overview",
+    11
+   ],
+   [
+    "P",
+    "7 tools",
+    11
+   ],
+   [
+    "P",
+    "Impact",
+    11
+   ],
+   [
+    "SPAN",
+    "TypeScript",
+    11
+   ],
+   [
+    "SPAN",
+    "Node.js",
+    11
+   ],
+   [
+    "SPAN",
+    "Claude API",
+    11
+   ],
+   [
+    "SPAN",
+    "PostgreSQL",
+    11
+   ],
+   [
+    "SPAN",
+    "Docker",
+    11
+   ],
+   [
+    "SPAN",
+    "Next.js",
+    11
+   ],
+   [
+    "SPAN",
+    "REST API",
+    11
+   ],
+   [
+    "SPAN",
+    "Next",
+    11
+   ],
+   [
+    "A",
+    "All projects",
+    11
+   ],
+   [
+    "A",
+    "About Ahmad Saad",
+    11
+   ],
+   [
+    "P",
+    "\u00a9 2026 Ahmad Saad",
+    11
+   ],
+   [
+    "A",
+    "About",
+    11
+   ],
+   [
+    "A",
+    "Projects",
+    11
+   ],
+   [
+    "A",
+    "llms.txt",
+    11
+   ],
+   [
+    "A",
+    "Source",
+    11
+   ]
+  ],
+  "taps": [
+   [
+    "A",
+    "Home",
+    34,
+    14
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    14
+   ],
+   [
+    "A",
+    "Ahmad Saad",
+    86,
+    14
+   ],
+   [
+    "A",
+    "All projects",
+    103,
+    18
+   ],
+   [
+    "A",
+    "About Ahmad Saad",
+    137,
+    18
+   ],
+   [
+    "A",
+    "About",
+    43,
+    18
+   ],
+   [
+    "A",
+    "Projects",
+    69,
+    18
+   ],
+   [
+    "A",
+    "llms.txt",
+    69,
+    18
+   ],
+   [
+    "A",
+    "Source",
+    51,
+    18
+   ]
+  ],
+  "h1": {
+   "t": "TREND RADAR",
+   "top": 197.8125,
+   "op": "1",
+   "fs": "48px"
+  },
+  "bodyfs": "16px",
+  "heroText": "AHMAD SAAD\nMENU\nHOME\nPROJECTS\nTREND RADAR\n\n01\n\nTREND RADAR\n\nBUILT BY AHMAD SAAD \u00b7 06.2026 - 08.2026\n\nProduction TikTok trend-detection platform where measurement decides and LLMs describe.\n\nSOURCE ON GITHUB\nOVERVIEW\n\n7 TOOLS\n\nIMPACT\n\nAn estimated $60K in cost savings and a projected 20% increase in engagement rates.\n\nTYPESCRIPT\nNODE.JS\nCLAUDE API\nPOSTGRESQL\nDOCKER\nNEXT.JS\nREST API\n\nA production trend-detection platform built on the official TikTok API for Business. Deterministic signals (caption n-gram clustering, creator spread, adoption curves, freshness) decide every verdict; LLMs only desc",
+  "opac0": [
+   [
+    "DIV",
+    "section-head",
+    "Overview7 tools"
+   ],
+   [
+    "DIV",
+    "",
+    "ImpactAn estimated $60K in cos"
+   ],
+   [
+    "UL",
+    "flex flex-wrap gap-2 mt-8",
+    "TypeScriptNode.jsClaude APIPos"
+   ],
+   [
+    "DIV",
+    "prose-body body-lg space-y-5 text-fg/72",
+    "A production trend-detection p"
+   ]
+  ]
+ },
+ "og": {
+  "home": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:Ahmad%2520Saad,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:AI%2520Engineer%2520%25C2%25B7%2520Computer%2520Engineering%2520%2540%2520AUS%2520%25C2%25B7%2520UAE,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2004860
+  ],
+  "about": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:About%2520Ahmad%2520Saad,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:Computer%2520%2526%2520AI%2520Engineer%2520%25C2%25B7%2520UAE,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2001763
+  ],
+  "projects": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:Projects%2520by%2520Ahmad%2520Saad,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:AI%2520systems%252C%2520embedded%2520hardware%252C%2520and%2520computer%2520architecture,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2011786
+  ],
+  "trend-radar": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:Trend%2520Radar,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:A%2520project%2520by%2520Ahmad%2520Saad,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2001820
+  ],
+  "localai": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:LocalAI,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:A%2520project%2520by%2520Ahmad%2520Saad,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2000972
+  ],
+  "mano": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:Mano%2520Basic%2520Computer%2520Simulator,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:A%2520project%2520by%2520Ahmad%2520Saad,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2000769
+  ],
+  "lorawan": [
+   "https://res.cloudinary.com/bucha/image/upload/w_1600,h_836,q_100/l_text:Karla_72_bold:Energy%2520Harvesting%2520LoRaWAN%2520Sensor%2520Node,co_rgb:ffe4e6,c_fit,w_1400,h_220/fl_layer_apply,g_south_west,x_100,y_280/l_text:Karla_36:A%2520project%2520by%2520Ahmad%2520Saad,co_rgb:ffe4e6cc,c_fit,w_1400,h_140/fl_layer_apply,g_south_west,x_100,y_100/grain-gradient_ctrjnp.png",
+   "image/png",
+   2001365
+  ]
+ }
+}

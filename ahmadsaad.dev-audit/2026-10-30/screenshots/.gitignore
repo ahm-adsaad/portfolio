@@ -1,0 +1,12 @@
+# Only the before and after evidence is tracked; the other captures stay local.
+*
+!.gitignore
+!home-desktop.png
+!home-mobile.png
+!about-mobile.png
+!after-home-hero-390.png
+!after-home-hero-1440.png
+!after-home-statement-390.png
+!after-home-statement-1440.png
+!og-home.png
+!verify-og-*.jpg

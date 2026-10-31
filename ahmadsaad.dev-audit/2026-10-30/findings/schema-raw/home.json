@@ -1,0 +1,223 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollegeOrUniversity",
+        "@id": "https://ahmadsaad.dev/#org-aus",
+        "name": "American University of Sharjah",
+        "url": "https://www.aus.edu/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ahmadsaad.dev/#org-samsung-gulf",
+        "name": "Samsung Gulf Electronics",
+        "url": "https://www.samsung.com/ae/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ahmadsaad.dev/#org-elmec",
+        "name": "Electro-Mechanical Company LLC",
+        "url": "https://www.elmec.ae/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ahmadsaad.dev/#org-chief-nest",
+        "name": "Chief Nest",
+        "url": "https://chiefnest.com"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ahmadsaad.dev/#person",
+        "name": "Ahmad Saad",
+        "givenName": "Ahmad",
+        "familyName": "Saad",
+        "url": "https://ahmadsaad.dev/",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://ahmadsaad.dev/#headshot",
+          "url": "https://ahmadsaad.dev/ahmad-saad.jpg",
+          "contentUrl": "https://ahmadsaad.dev/ahmad-saad.jpg",
+          "width": "748",
+          "height": "748",
+          "caption": "Ahmad Saad"
+        },
+        "email": "ahmadd.saad02@gmail.com",
+        "jobTitle": "AI Engineer · Forward Deployed Engineer · Computer Engineering @ AUS",
+        "description": "Computer Engineering senior at the American University of Sharjah shipping production AI systems: LLM pipelines with real cost governance, evaluation, and stakeholders. Forward deployed engineer: technical enough to build the system, comfortable enough to scope it. UAE Golden Visa holder, available January 2027.",
+        "disambiguatingDescription": "Computer engineer and AI engineer based in the UAE, American University of Sharjah.",
+        "sameAs": [
+          "https://github.com/ahm-adsaad",
+          "https://www.linkedin.com/in/ahmaddsaad"
+        ],
+        "alumniOf": {
+          "@id": "https://ahmadsaad.dev/#org-aus"
+        },
+        "affiliation": {
+          "@id": "https://ahmadsaad.dev/#org-aus"
+        },
+        "worksFor": [
+          {
+            "@id": "https://ahmadsaad.dev/#org-chief-nest"
+          },
+          {
+            "@id": "https://ahmadsaad.dev/#org-aus"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Claude Certified Architect: Foundations",
+            "credentialCategory": "certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Anthropic"
+            },
+            "url": "https://www.credly.com/badges/976e4176-241f-4870-83ea-c66f896f64ff"
+          }
+        ],
+        "homeLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AE"
+          }
+        },
+        "knowsAbout": [
+          "Large language model systems",
+          "Retrieval-augmented generation",
+          "Prompt engineering",
+          "Computer vision",
+          "Model fine-tuning",
+          "Technical product management",
+          "Forward deployed engineering",
+          "Python",
+          "TypeScript",
+          "PostgreSQL",
+          "Next.js",
+          "Docker",
+          "Cloudflare Workers"
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "AI Engineer",
+          "occupationLocation": {
+            "@type": "AdministrativeArea",
+            "name": "United Arab Emirates"
+          },
+          "skills": [
+            "TypeScript",
+            "Node.js",
+            "PostgreSQL",
+            "Docker",
+            "Next.js",
+            "Cloudflare Workers",
+            "Anthropic Claude API"
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ahmadsaad.dev/#website",
+        "url": "https://ahmadsaad.dev/",
+        "name": "Ahmad Saad",
+        "description": "Computer Engineering senior building and scoping production AI systems as a forward deployed engineer. UAE Golden Visa holder, available January 2027.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://ahmadsaad.dev/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://ahmadsaad.dev/#profilepage",
+        "url": "https://ahmadsaad.dev/",
+        "name": "Ahmad Saad · AI Engineer in the UAE",
+        "description": "Computer Engineering senior building and scoping production AI systems as a forward deployed engineer. UAE Golden Visa holder, available January 2027.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://ahmadsaad.dev/#website"
+        },
+        "about": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "mainEntity": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://ahmadsaad.dev/#headshot"
+        }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://ahmadsaad.dev/projects/trend-radar#project",
+        "name": "Trend Radar",
+        "description": "Production TikTok trend-detection platform where measurement decides and LLMs describe.",
+        "author": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "url": "https://ahmadsaad.dev/projects/trend-radar",
+        "mainEntityOfPage": "https://ahmadsaad.dev/projects/trend-radar",
+        "image": "https://ahmadsaad.dev/projects/trend-radar.jpg",
+        "keywords": "TypeScript, Node.js, Claude API, PostgreSQL, Docker, Next.js, REST API",
+        "codeRepository": "https://github.com/ahm-adsaad/trend-radar",
+        "programmingLanguage": "TypeScript"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://ahmadsaad.dev/projects/localai#project",
+        "name": "LocalAI",
+        "description": "Private AI for company documents that runs entirely in the browser, with page-level citations and a Playwright audit that proves nothing leaves the device.",
+        "author": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "url": "https://ahmadsaad.dev/projects/localai",
+        "mainEntityOfPage": "https://ahmadsaad.dev/projects/localai",
+        "image": "https://ahmadsaad.dev/projects/localai.jpg",
+        "keywords": "WebGPU, WebLLM, Transformers.js, TypeScript, React, Vite, pdf.js, mammoth, IndexedDB, Vitest, Playwright, GitHub Actions, Cloudflare Workers",
+        "codeRepository": "https://github.com/ahm-adsaad/LocalAI",
+        "programmingLanguage": "TypeScript"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://ahmadsaad.dev/projects/mano-computer-simulator#project",
+        "name": "Mano Basic Computer Simulator",
+        "description": "Cycle-accurate CPU simulator of Mano's Basic Computer with full ISA support and a CLI debugger.",
+        "author": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "url": "https://ahmadsaad.dev/projects/mano-computer-simulator",
+        "mainEntityOfPage": "https://ahmadsaad.dev/projects/mano-computer-simulator",
+        "image": "https://ahmadsaad.dev/projects/mano-computer-simulator.jpg",
+        "keywords": "Python",
+        "codeRepository": "https://github.com/ahm-adsaad/manos-basic-computer-simulator",
+        "programmingLanguage": "Python"
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://ahmadsaad.dev/projects/lorawan-sensor-node#project",
+        "name": "Energy Harvesting LoRaWAN Sensor Node",
+        "description": "Custom 2-layer PCB with an ATMEGA4809 MCU, LoRa transceiver, and an energy harvesting power path.",
+        "author": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "url": "https://ahmadsaad.dev/projects/lorawan-sensor-node",
+        "mainEntityOfPage": "https://ahmadsaad.dev/projects/lorawan-sensor-node",
+        "image": "https://ahmadsaad.dev/projects/lorawan-sensor-node.jpg",
+        "keywords": "EasyEDA, PCB design, Embedded systems"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://ahmadsaad.dev/#project-portfolio",
+        "name": "ahmadsaad.dev",
+        "description": "This site: a personal portfolio with a 3D coverflow project showcase, deployed on Cloudflare Workers.",
+        "author": {
+          "@id": "https://ahmadsaad.dev/#person"
+        },
+        "image": "https://ahmadsaad.dev/projects/portfolio.jpg",
+        "keywords": "Next.js, TypeScript, React, Tailwind CSS",
+        "codeRepository": "https://github.com/ahm-adsaad/portfolio",
+        "programmingLanguage": "TypeScript"
+      }
+    ]
+  }
+]

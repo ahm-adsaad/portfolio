@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "health_score": 72,
+    "business_type": "Personal portfolio of an individual professional (AI engineer and Computer Engineering senior, American University of Sharjah, UAE)",
+    "top_findings": [
+      "Domain effectively absent from the tested search index, even for the query ahmadsaad.dev; no third-party inbound links",
+      "Cloudflare returns 403 to GPTBot, ClaudeBot, CCBot and Amazonbot and the managed robots.txt disallows Google-Extended, blocking Gemini Apps grounding",
+      "h1 on / and /about is two spans with no whitespace, so text extractors read AhmadSaad",
+      "No third-person 'Ahmad Saad is ...' passage and no face or location above the fold on the homepage",
+      "Entity graph thin and partly broken: dangling @id on /about and /projects, sameAs of 2, no alternateName Ahmad Atef Saad, AUS News article not referenced"
+    ],
+    "quick_wins": [
+      "Insert real spaces between the h1 name spans and the statement word spans (15 min)",
+      "Put Ahmad Saad in every meta description and cut the Mano and LoRaWAN titles to 60 characters or fewer (30 min)",
+      "Preload the three hero woff2 files; next/font emits no preload on this build (15 min)",
+      "Switch the share card from a 2 MB q_100 PNG to q_auto,f_jpg with the headshot, about 150 KB (20 min)",
+      "Owner: Search Console domain property, sitemap submit and request indexing for the 7 URLs (30 min)"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical",
+      "score": 86,
+      "what_works": [
+        "All 7 pages return 200 with self-referencing canonicals and one h1",
+        "http and www 301 to the https apex; HSTS preload and security headers on HTML and assets",
+        "Valid 7-URL sitemap with image entries; real 404s with noindex",
+        "Full server rendering; /_next/static immutable; brotli"
+      ],
+      "findings": [
+        {"title": "Edge 403 for several AI crawlers while robots.txt only advises", "severity": "Medium", "description": "GPTBot, ClaudeBot, anthropic-ai, Claude-Web, CCBot, Bytespider and Amazonbot get 403 from Cloudflare; the managed robots.txt and the enforcement do not match.", "recommendation": "Owner action: align Cloudflare Block AI bots, AI Crawl Control and Managed robots.txt with the intended policy."},
+        {"title": "HTML s-maxage of one year (latent)", "severity": "Medium", "description": "Prerendered HTML carries s-maxage=31536000; safe today because each deploy replaces it and Cloudflare does not cache Worker HTML.", "recommendation": "Deferred: changing it needs revalidate, which is forbidden. Never enable a Cache Everything rule for HTML."},
+        {"title": "Two project titles over 60 characters", "severity": "Medium", "description": "Mano 72 and LoRaWAN 77 characters; the '| Ahmad Saad' suffix truncates.", "recommendation": "PLAN Task 4: seoTitle overrides, 52 and 54 characters."},
+        {"title": "Three meta descriptions under 100 characters", "severity": "Medium", "description": "trend-radar 87, mano 95, lorawan 97 characters, reused from the one-line summary.", "recommendation": "PLAN Task 4: seoDescription fields, 141 to 152 characters, naming Ahmad Saad."},
+        {"title": "Text endpoints lack X-Robots-Tag", "severity": "Low", "description": "/llms.txt, /llms-full.txt and /me/*.md are indexable and could compete with the HTML for the name query.", "recommendation": "PLAN Task 8: X-Robots-Tag noindex via the route handler headers."},
+        {"title": "Sitemap lastmod stale", "severity": "Low", "description": "CONTENT_LAST_MODIFIED 2026-10-21 while config changed on 2026-10-30.", "recommendation": "PLAN Task 2: 2026-10-31, moved to config/site.ts and shared with schema and /about."},
+        {"title": "Config hygiene", "severity": "Low", "description": "Manifest theme colour conflicts with the page, FID in webVitalsAttribution, unused remote image hosts, placeholder covers.", "recommendation": "Deferred low-priority cleanup."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 74,
+      "what_works": [
+        "Specific first-person engineering copy with named employers, dates and measured outcomes",
+        "Estimates labelled as estimates; rendered pages already pass the copy rules (no dashes, no banned terms)",
+        "/about opens with a named first-person definition"
+      ],
+      "findings": [
+        {"title": "Homepage prose never states the full name", "severity": "High", "description": "The bio says 'I'm Ahmad'; no self-contained 'Ahmad Saad is ...' answer exists on /.", "recommendation": "PLAN Task 2: 144-word third-person definition leads the homepage About block."},
+        {"title": "Meta descriptions omit the name", "severity": "High", "description": "/ and all four project pages omit 'Ahmad Saad'.", "recommendation": "PLAN Task 4."},
+        {"title": "/me/about.md broken", "severity": "High", "description": "Empty twitter and bluesky links, no email, no education.", "recommendation": "PLAN Task 7: rebuilt from config with key facts, education and contact."},
+        {"title": "/projects index thin", "severity": "Medium", "description": "About 44 words of unique prose; the lede does not name him.", "recommendation": "PLAN Task 2: named 43-word lede."},
+        {"title": "Cross-surface inconsistencies", "severity": "Medium", "description": "Project periods and the IEEE tense differ between pages and endpoints.", "recommendation": "Owner action 14 to confirm, then a follow-up edit."},
+        {"title": "No Result sections on Mano and LoRaWAN", "severity": "Medium", "description": "No measured outcome for two case studies.", "recommendation": "Deferred until the owner supplies figures."},
+        {"title": "Trend Radar implicitly tied to Samsung by identical figures", "severity": "Medium", "description": "The rule 'not tied by name' is met, but the dates and figures match the Samsung entry.", "recommendation": "Owner decision (action 14)."},
+        {"title": "Generic anchors and '1 tools'", "severity": "Low", "description": "Read the case study x8 on /; Mano overview counter reads '1 tools'.", "recommendation": "PLAN Task 4."}
+      ]
+    },
+    {
+      "name": "On-Page",
+      "score": 65,
+      "what_works": [
+        "One h1 per page and correct per-page canonicals",
+        "Every title carries the full name",
+        "No orphan pages; minimum 3 inbound internal links"
+      ],
+      "findings": [
+        {"title": "h1 reads AhmadSaad for text extractors", "severity": "High", "description": "Name spans and statement words have no whitespace between them.", "recommendation": "PLAN Task 1."},
+        {"title": "Unnamed and short descriptions; long titles", "severity": "High", "description": "5 of 7 descriptions omit the name; 2 titles truncate.", "recommendation": "PLAN Task 4."},
+        {"title": "No named body sentence on the homepage", "severity": "High", "description": "The full name appears only in the h1, alt text and JSON-LD.", "recommendation": "PLAN Task 2."},
+        {"title": "Generic internal anchors", "severity": "Low", "description": "Card links and the /about closer use generic text.", "recommendation": "PLAN Tasks 4 and 6."}
+      ]
+    },
+    {
+      "name": "Schema",
+      "score": 71,
+      "what_works": [
+        "One valid server-rendered JSON-LD block per page with stable @ids",
+        "Person with disambiguatingDescription, alumniOf, worksFor, hasCredential",
+        "BreadcrumbList on 6 pages; project nodes shared between home and project pages"
+      ],
+      "findings": [
+        {"title": "Dangling @id references", "severity": "High", "description": "/about references #website; /projects references #person, #website and four project ids, none defined on the page.", "recommendation": "PLAN Task 5: websiteStub, personStub and project nodes."},
+        {"title": "Thin entity anchoring", "severity": "High", "description": "sameAs of 2; no alternateName, knowsLanguage, memberOf, award or subjectOf.", "recommendation": "PLAN Task 5: alternateName Ahmad Atef Saad, Credly in sameAs, languages, Tau Beta Pi, awards, AUS News subjectOf."},
+        {"title": "ImageObject width and height are strings", "severity": "Medium", "description": "String(748) on / and /about.", "recommendation": "PLAN Task 5: numbers."},
+        {"title": "No page dates", "severity": "Medium", "description": "ProfilePage and AboutPage lack dateCreated and dateModified.", "recommendation": "PLAN Task 5: 2026-08-24 and 2026-09-26 from git history, modified 2026-10-31."},
+        {"title": "Noisy jobTitle", "severity": "Low", "description": "Separators and '@ AUS' in jobTitle.", "recommendation": "PLAN Task 4: 'AI Engineer and Forward Deployed Engineer'."}
+      ]
+    },
+    {
+      "name": "Performance",
+      "score": 74,
+      "what_works": [
+        "Desktop passes everywhere; CLS about 0.001",
+        "Hero text in the server HTML and never held at opacity 0",
+        "Video mounts after hydration, respects reduced motion and Save-Data, pauses off-screen",
+        "Self-hosted subset fonts and right-sized WebP images"
+      ],
+      "findings": [
+        {"title": "Mobile home LCP 2.82 s", "severity": "High", "description": "The hero name waits on woff2 files discovered after the CSS; the next/font manifest is empty on this Windows build so no preload is emitted.", "recommendation": "PLAN Task 9: three manual preload links."},
+        {"title": "Hydration long task 0.8 to 1.06 s on mobile", "severity": "High", "description": "TBT about 900 ms under 4x CPU throttle; INP at risk.", "recommendation": "Deferred: needs bundle analysis and nav behaviour testing."},
+        {"title": "Public media uncached", "severity": "Medium", "description": "Headshot, covers, posters and video served max-age=0, must-revalidate.", "recommendation": "PLAN Task 10: one-week max-age plus stale-while-revalidate in public/_headers."},
+        {"title": "Poster downloaded twice", "severity": "Medium", "description": "The video poster attribute fetches an 81 KB jpg on top of the preloaded webp.", "recommendation": "PLAN Task 10."},
+        {"title": "Badge PNG 65 KB at 120 px", "severity": "Low", "description": "Credential artwork larger than needed.", "recommendation": "Deferred."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 56,
+      "what_works": [
+        "Full SSR; retrieval bots (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot) get 200",
+        "Spec-shaped llms.txt with markdown companions",
+        "Citation-ready case studies with specific numbers"
+      ],
+      "findings": [
+        {"title": "Cloudflare opts out of Gemini grounding and model ingestion", "severity": "High", "description": "Google-Extended disallowed; GPTBot, ClaudeBot, CCBot blocked at the edge.", "recommendation": "Owner actions 1 and 2; repo robots route after that."},
+        {"title": "Entity name concatenated for extractors", "severity": "High", "description": "AhmadSaad in h1 textContent.", "recommendation": "PLAN Task 1."},
+        {"title": "No definition passage", "severity": "High", "description": "No quotable third-person answer to 'who is Ahmad Saad'.", "recommendation": "PLAN Tasks 2 and 7."},
+        {"title": "Main-content extraction loses the homepage", "severity": "Medium", "description": "12 article cards; extractors keep 280 of 1,168 words.", "recommendation": "PLAN Task 2: cards become div."},
+        {"title": "Thin llms companions", "severity": "Medium", "description": "Subjectless summary, duplicate summary in llms-full.txt, no key facts or Credly link.", "recommendation": "PLAN Task 7."},
+        {"title": "No visible dates", "severity": "Medium", "description": "No time elements or dateModified anywhere.", "recommendation": "PLAN Tasks 5 and 6."},
+        {"title": "Thin off-site entity graph", "severity": "Medium", "description": "GitHub bio, LinkedIn, Credly and video presence under-filled.", "recommendation": "Owner actions 7 to 12 and 15."}
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 62,
+      "what_works": [
+        "Descriptive alt text naming Ahmad Saad on every content image",
+        "Explicit width and height everywhere; no CLS",
+        "Right-sized WebP covers and headshot; image sitemap"
+      ],
+      "findings": [
+        {"title": "No face on the homepage", "severity": "High", "description": "ProfilePage declares the headshot as primary image but / never shows it.", "recommendation": "PLAN Task 3: 56 px headshot beside 'AI Engineer · Sharjah, UAE'."},
+        {"title": "Share cards text-only and 2 MB", "severity": "Medium", "description": "All 7 og:images are q_100 PNGs, 2.0 MB, no face, 72 px name.", "recommendation": "PLAN Task 11: q_auto,f_jpg with the headshot, about 150 KB."},
+        {"title": "Double poster download", "severity": "Medium", "description": "webp preload plus jpg video poster.", "recommendation": "PLAN Task 10."}
+      ]
+    },
+    {
+      "name": "Off-site and SXO (context, not weighted)",
+      "score": 22,
+      "what_works": [
+        "LinkedIn already ranks #1 for 'ahmad saad american university of sharjah' in the tested index",
+        "AUS News profiled him on 2026-06-22",
+        "GitHub name, blog and location set; four repos link back"
+      ],
+      "findings": [
+        {"title": "Not returned for its own domain name", "severity": "High", "description": "No result for 'ahmadsaad.dev' or any of 17 name queries in the tested US index; absent from Common Crawl.", "recommendation": "Owner actions 4 to 6."},
+        {"title": "AUS article does not link and uses 'Ahmad Atef Saad'", "severity": "High", "description": "The strongest institutional source is disconnected from the site.", "recommendation": "PLAN Task 5 (alternateName, subjectOf), Task 6 (visible link), Owner action 11."},
+        {"title": "GitHub README stale and contradictory", "severity": "Medium", "description": "Present-tense Samsung, a banned model-library term, name only inside an image.", "recommendation": "Owner action 8."},
+        {"title": "LocalAI demo and Credly do not link back", "severity": "Medium", "description": "Cheap self-owned links missing.", "recommendation": "Owner actions 12 and 13."}
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Repo fixes (PLAN.md Tasks 1 to 12)",
+        "timeframe": "This week, one branch, one commit per task",
+        "items": [
+          "Task 1: Put real spaces between the hero name spans and the statement word spans",
+          "Task 2: Lead the homepage About block with a named definition paragraph (plus named /projects lede, div cards, lastmod 2026-10-31)",
+          "Task 3: Show the headshot and the location on the home first screen",
+          "Task 4: Name Ahmad Saad in every meta description, shorten two titles, fix card anchors",
+          "Task 5: Fill out the Person graph and resolve every JSON-LD reference",
+          "Task 6: Date the About page and link the AUS News story",
+          "Task 7: Rewrite llms.txt and the about.md profile around a named definition",
+          "Task 8: Keep the llms and markdown endpoints out of search indexes",
+          "Task 9: Preload the hero fonts",
+          "Task 10: Cache public media for a week and reuse the preloaded webp poster",
+          "Task 11: Put the headshot on the share card and cut it from 2 MB to about 150 KB",
+          "Task 12: Full build chain and preview smoke test"
+        ]
+      },
+      {
+        "name": "Owner actions, discovery and access",
+        "timeframe": "Same week as the deploy",
+        "items": [
+          "Cloudflare: allow GPTBot, ClaudeBot, CCBot, Applebot-Extended; keep Bytespider blocked",
+          "Cloudflare: turn off Managed robots.txt or allow Google-Extended",
+          "Cloudflare: confirm no Cache Everything rule on HTML; enable Crawler Hints",
+          "Google Search Console domain property, sitemap, request indexing for 7 URLs",
+          "Bing Webmaster Tools sitemap"
+        ]
+      },
+      {
+        "name": "Owner actions, entity corroboration",
+        "timeframe": "Weeks 1 to 2",
+        "items": [
+          "GitHub profile, README and repo Website fields",
+          "LinkedIn public profile, website field, headline, Featured, certification",
+          "AUS Communications outreach for a link on aus.edu/node/126616; CITL AI Hub; Tau Beta Pi page",
+          "Credly public profile with website; LocalAI demo links back",
+          "Confirm IEEE tense, project periods, remote stance, Trend Radar figures"
+        ]
+      },
+      {
+        "name": "Follow-up and earned mentions",
+        "timeframe": "Weeks 2 to 8, then monthly",
+        "items": [
+          "Repo robots.txt with Content-Signal once Managed robots.txt is off",
+          "Hydration long-task refactor after measuring the font preload",
+          "dev.to or Medium write-up with canonical; Show HN and awesome list for LocalAI; LocalAI demo video; ORCID",
+          "Monthly incognito check of T1 to T5"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

@@ -1,0 +1,44 @@
+# Ahmad Saad
+
+> Ahmad Saad is an AI engineer and forward deployed engineer based in the United Arab Emirates. He is a Computer Engineering senior at the American University of Sharjah (AUS) with a 3.96 GPA, graduating in December 2026 and available to start in January 2027. He holds a UAE Golden Visa, so no employer sponsorship is required.
+
+Key facts:
+
+- Name: Ahmad Saad. AUS News publishes his name as Ahmad Atef Saad.
+- Based in: Abu Dhabi and Sharjah, United Arab Emirates.
+- Most recent industry role: AI/ML Engineer at Samsung Gulf Electronics, Dubai, June to August 2026. Architected and solely built a production trend intelligence platform for the regional marketing team, at an estimated $60K in avoided tooling spend and a projected 20% increase in engagement rates.
+- Current roles: Web Design and Development Consultant, College of Engineering, AUS (since August 2026). AI Hub Assistant, Center of Innovation in Teaching and Learning, AUS (since November 2024). Account Manager, Chief Nest, remote (since September 2025).
+- Certification: Claude Certified Architect: Foundations, issued by Anthropic. Verification: https://www.credly.com/badges/976e4176-241f-4870-83ea-c66f896f64ff
+- Leadership and honours: President of the AUS Tau Beta Pi chapter (previously Vice President). Tau Beta Pi Scholarship (2026). Academic Merit Scholarship, Dean's List six times, Chancellor's List three times.
+- Languages: English and Arabic.
+- Looking for: technical product management, forward deployed or solutions engineering, AI/ML engineering, and management and strategy.
+- Name note: this Ahmad Saad is a computer engineer and AI engineer in the UAE. He is not Ahmed Saad, the Egyptian singer.
+
+## Me
+
+- [About](https://ahmadsaad.dev/me/about.md): Definition, key facts, education, certification and contact.
+- [Experience](https://ahmadsaad.dev/me/experience.md): Every role with its full description and skills.
+- [Projects](https://ahmadsaad.dev/me/projects.md): Selected projects with technical detail and measured impact.
+
+## Pages
+
+- [About Ahmad Saad](https://ahmadsaad.dev/about): Bio, education, experience, target roles and availability.
+- [Projects](https://ahmadsaad.dev/projects): Index of project case studies.
+- [Trend Radar](https://ahmadsaad.dev/projects/trend-radar): Production TikTok trend-detection platform where measurement decides and LLMs describe.
+- [LocalAI](https://ahmadsaad.dev/projects/localai): Private AI for company documents that runs entirely in the browser, with page-level citations and a Playwright audit that proves nothing leaves the device.
+- [Mano Basic Computer Simulator](https://ahmadsaad.dev/projects/mano-computer-simulator): Cycle-accurate CPU simulator of Mano's Basic Computer with full ISA support and a CLI debugger.
+- [Energy Harvesting LoRaWAN Sensor Node](https://ahmadsaad.dev/projects/lorawan-sensor-node): Custom 2-layer PCB with an ATMEGA4809 MCU, LoRa transceiver, and an energy harvesting power path.
+
+## Profiles
+
+- [GitHub](https://github.com/ahm-adsaad)
+- [LinkedIn](https://www.linkedin.com/in/ahmaddsaad)
+- [Credly](https://www.credly.com/badges/976e4176-241f-4870-83ea-c66f896f64ff)
+
+## Optional
+
+- [Full text](https://ahmadsaad.dev/llms-full.txt): About, experience, projects, and education in one file.
+- [Resume (PDF)](https://ahmadsaad.dev/Ahmad_Saad_CV.pdf): Full CV.
+- [LocalAI live demo](https://localai.ahmadsaad.dev): Runs in any browser with WebGPU.
+- [Repository](https://github.com/ahm-adsaad/portfolio): Source code for this site.
+- [Sitemap](https://ahmadsaad.dev/sitemap.xml): Indexable pages.

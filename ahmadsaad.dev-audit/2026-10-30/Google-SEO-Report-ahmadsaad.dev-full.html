@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 22mm 18mm 25mm 18mm;
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages);
+      font-size: 9pt;
+      color: #6b7280;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+    @bottom-left {
+      content: "Confidential";
+      font-size: 7pt;
+      color: #d6d3cc;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+    @bottom-right {
+      content: "ahmadsaad.dev Google SEO Report";
+      font-size: 8pt;
+      color: #cbd5e1;
+      font-family: 'DejaVu Serif', 'Times New Roman', Georgia, serif;
+    }
+  }
+
+  @page :first {
+    margin: 0;
+    @bottom-left { content: none; }
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  @page toc {
+    @bottom-center {
+      content: counter(page);
+      font-size: 9pt;
+      color: #6b7280;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Times New Roman', 'DejaVu Serif', Georgia, serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: white;
+  }
+
+  /* ─── Title Page (Clean White) ─── */
+  .title-page {
+    page: first;
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1a1a2e;
+    position: relative;
+    padding: 50mm 30mm 40mm 30mm;
+    border-top: 6mm solid #1e3a5f;
+  }
+
+  .title-page .badge {
+    background: #f7f6f3;
+    border: 1px solid #d6d3cc;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 9pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15mm;
+    color: #1e3a5f;
+  }
+
+  .title-page h1 {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-bottom: 5mm;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #1a1a2e;
+  }
+
+  .title-page .subtitle {
+    font-size: 13pt;
+    color: #6b7280;
+    margin-bottom: 12mm;
+    font-weight: 300;
+  }
+
+  .title-page .url {
+    font-size: 12pt;
+    color: #1e3a5f;
+    margin-bottom: 15mm;
+    padding: 4mm 8mm;
+    border: 1px solid #d6d3cc;
+    border-radius: 6px;
+    background: #faf9f7;
+  }
+
+  .title-page .score-box {
+    background: #faf9f7;
+    border: 2px solid #d6d3cc;
+    border-radius: 12px;
+    padding: 6mm 12mm;
+    margin-bottom: 15mm;
+  }
+
+  .title-page .score-number {
+    font-size: 42pt;
+    font-weight: bold;
+    color: #1e3a5f;
+    line-height: 1;
+  }
+
+  .title-page .score-label {
+    font-size: 10pt;
+    color: #6b7280;
+    margin-top: 2mm;
+  }
+
+  .title-page .meta {
+    font-size: 9pt;
+    color: #6b7280;
+    margin-top: 8mm;
+    padding-top: 5mm;
+    border-top: 1px solid #d6d3cc;
+  }
+
+  .title-page .meta span {
+    margin: 0 8px;
+  }
+
+  /* ─── Table of Contents ─── */
+  .toc-page {
+    page: toc;
+    page-break-before: always;
+  }
+
+  .toc-page h2 {
+    font-size: 18pt;
+    color: #1e3a5f;
+    margin-bottom: 8mm;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid #1e3a5f;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .toc-list li {
+    padding: 2mm 0;
+    border-bottom: 1px solid #f1f5f9;
+    overflow: hidden;
+  }
+
+  .toc-list li.toc-section {
+    font-weight: bold;
+    font-size: 11pt;
+    padding-top: 4mm;
+    color: #0f172a;
+  }
+
+  .toc-list li.toc-sub {
+    padding-left: 8mm;
+    font-size: 9.5pt;
+    color: #475569;
+  }
+
+  .toc-score {
+    display: inline-block;
+    float: right;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 9pt;
+    font-weight: bold;
+    color: white;
+  }
+
+  .score-good { background: #2d6a4f; }
+  .score-warn { background: #d4740e; }
+  .score-bad { background: #c53030; }
+
+  /* ─── Section Styles ─── */
+  div.section {
+    page-break-before: always;
+  }
+
+  .section-header {
+    background: #faf9f7;
+    border-left: 4px solid #1e3a5f;
+    padding: 5mm 6mm;
+    margin-bottom: 6mm;
+    page-break-after: avoid;
+  }
+
+  .section-header h2 {
+    font-size: 16pt;
+    color: #0f172a;
+    margin-bottom: 1mm;
+  }
+
+  .section-header .section-score {
+    font-size: 12pt;
+    font-weight: bold;
+    float: right;
+    margin-top: -6mm;
+  }
+
+  h3 {
+    font-size: 12pt;
+    color: #1e3a5f;
+    margin-top: 6mm;
+    margin-bottom: 3mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 1px solid #d6d3cc;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 10.5pt;
+    color: #334155;
+    margin-top: 4mm;
+    margin-bottom: 2mm;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 3mm;
+    color: #334155;
+  }
+
+  .highlight {
+    background: #fef3c7;
+    border-left: 3px solid #d4740e;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .critical-box {
+    background: #fef2f2;
+    border-left: 3px solid #c53030;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .success-box {
+    background: #f0fdf4;
+    border-left: 3px solid #2d6a4f;
+    padding: 3mm 4mm;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4mm 0 6mm 0;
+    font-size: 9pt;
+  }
+
+  thead th {
+    background: #f7f6f3;
+    color: #0f172a;
+    font-weight: bold;
+    padding: 3mm 4mm;
+    text-align: left;
+    border-bottom: 2px solid #d6d3cc;
+    font-size: 9pt;
+  }
+
+  tbody td {
+    padding: 2.5mm 3mm;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #fdfcfa;
+  }
+
+  .status-pass {
+    color: #2d6a4f;
+    font-weight: bold;
+  }
+
+  .status-fail {
+    color: #c53030;
+    font-weight: bold;
+  }
+
+  .status-warn {
+    color: #d4740e;
+    font-weight: bold;
+  }
+
+  .status-partial {
+    color: #4a5568;
+    font-weight: bold;
+  }
+
+  /* ─── Charts ─── */
+  .chart-container {
+    text-align: center;
+    margin: 4mm 0;
+  }
+
+  .chart-container img {
+    max-width: 100%;
+    max-height: 120mm;
+    height: auto;
+  }
+
+  .chart-caption {
+    font-size: 8.5pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 2mm;
+    text-align: center;
+  }
+
+  .chart-half {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: center;
+    margin: 2mm 0;
+  }
+
+  .chart-half img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ─── Two column layout ─── */
+  .two-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 3mm 0;
+  }
+
+  .two-col .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 2mm;
+  }
+
+  .four-col {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 3mm 0;
+  }
+
+  .four-col .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 1.5mm;
+  }
+
+  /* ─── Metric Cards ─── */
+  .metric-card {
+    background: #faf9f7;
+    border: 1px solid #d6d3cc;
+    border-radius: 6px;
+    padding: 2.5mm 3mm;
+    text-align: center;
+    margin: 2mm 0;
+  }
+
+  .metric-card .value {
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .metric-card .label {
+    font-size: 7.5pt;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1mm;
+  }
+
+  /* ─── Action Plan ─── */
+  .action-item {
+    background: #faf9f7;
+    border-radius: 4px;
+    padding: 3mm 4mm;
+    margin: 3mm 0;
+    border-left: 3px solid #cbd5e1;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .action-item.critical {
+    border-left-color: #c53030;
+    background: #fdf2f2;
+  }
+
+  .action-item.high {
+    border-left-color: #d4740e;
+    background: #fdf8ef;
+  }
+
+  .action-item.medium {
+    border-left-color: #1e3a5f;
+    background: #f0f4f8;
+  }
+
+  .action-item.low {
+    border-left-color: #94a3b8;
+  }
+
+  .action-item h4 {
+    margin-top: 0;
+    margin-bottom: 1.5mm;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .action-item .effort {
+    font-size: 8.5pt;
+    color: #64748b;
+    float: right;
+  }
+
+  .priority-tag {
+    display: inline-block;
+    padding: 0.5mm 3mm;
+    border-radius: 3px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: white;
+    margin-right: 2mm;
+    vertical-align: middle;
+  }
+
+  .priority-critical { background: #c53030; }
+  .priority-high { background: #d4740e; }
+  .priority-medium { background: #1e3a5f; }
+  .priority-low { background: #94a3b8; }
+
+  /* ─── Code blocks ─── */
+  .code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 3mm 4mm;
+    border-radius: 4px;
+    font-family: 'DejaVu Sans Mono', monospace;
+    font-size: 8pt;
+    line-height: 1.6;
+    margin: 3mm 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  /* ─── Divider ─── */
+  .divider {
+    border: none;
+    border-top: 1px solid #d6d3cc;
+    margin: 5mm 0;
+  }
+
+  /* ─── Roadmap ─── */
+  .roadmap-phase {
+    background: #faf9f7;
+    border-radius: 6px;
+    padding: 4mm 5mm;
+    margin: 4mm 0;
+    border: 1px solid #d6d3cc;
+    /* allow page breaks to prevent white gaps */
+  }
+
+  .roadmap-phase h4 {
+    margin-top: 0;
+    border-bottom: none;
+    color: #1e3a5f;
+  }
+
+  .roadmap-phase ul {
+    margin: 2mm 0 0 5mm;
+    padding: 0;
+  }
+
+  .roadmap-phase li {
+    margin-bottom: 1.5mm;
+    font-size: 9.5pt;
+    color: #334155;
+  }
+
+  /* ─── Lists ─── */
+  ul {
+    margin-left: 5mm;
+    margin-bottom: 3mm;
+  }
+
+  li {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Data freshness ─── */
+  .data-freshness {
+    font-size: 8pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid #d6d3cc;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ======================================================= TITLE PAGE === -->
+<div class="title-page">
+  <div class="badge">Full SEO Audit Report</div>
+  <h1>ahmadsaad.dev</h1>
+  <div class="subtitle">Prepared by Claude SEO</div>
+  <div class="score-box">
+    <div class="score-number">72<span style="font-size: 20pt; color: #94a3b8;">/100</span></div>
+    <div class="score-label">SEO Health Score</div>
+  </div>
+  <div class="meta">
+    <span>October 31, 2026</span>
+    <span>Full Audit</span>
+  </div>
+</div>
+
+
+<!-- ======================================================= TABLE OF CONTENTS === -->
+<div class="toc-page">
+  <h2>Table of Contents</h2>
+  <ul class="toc-list">
+    <li class="toc-section"><span>1. Executive Summary</span></li>
+    <li class="toc-sub"><span>Key Metrics, Critical Issues &amp; Quick Wins</span></li>
+    <li class="toc-section"><span>2. Audit Categories</span></li>
+    <li class="toc-sub"><span>What Works</span></li>
+    <li class="toc-sub"><span>Findings by Severity</span></li>
+    <li class="toc-section"><span>3. Action Plan</span></li>
+    <li class="toc-sub"><span>Phased Roadmap</span></li>
+    <li class="toc-section"><span>4. Data Sources &amp; Methodology</span></li>
+  </ul>
+</div>
+
+
+<!-- ======================================================= 1. EXECUTIVE SUMMARY === -->
+<div class="section">
+  <div class="section-header">
+    <h2>1. Executive Summary</h2>
+  </div>
+
+  <p>This report presents a comprehensive SEO audit of <strong>ahmadsaad.dev</strong> for a <strong>Personal portfolio of an individual professional (AI engineer and Computer Engineering senior, American University of Sharjah, UAE)</strong> site, generated on October 31, 2026. Findings combine technical, content, schema, performance, visual, and search-readiness evidence as available.</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="metric-card">
+        <div class="value" style="color: #d4740e;">72/100</div>
+        <div class="label">SEO Health Score</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="critical-box">
+    <strong>Critical Issues Found:</strong>
+    <ol>
+      <li><strong>Info:</strong> Domain effectively absent from the tested search index, even for the query ahmadsaad.dev; no third-party inbound links</li>
+      <li><strong>Info:</strong> Cloudflare returns 403 to GPTBot, ClaudeBot, CCBot and Amazonbot and the managed robots.txt disallows Google-Extended, blocking Gemini Apps grounding</li>
+      <li><strong>Info:</strong> h1 on / and /about is two spans with no whitespace, so text extractors read AhmadSaad</li>
+      <li><strong>Info:</strong> No third-person &#x27;Ahmad Saad is ...&#x27; passage and no face or location above the fold on the homepage</li>
+      <li><strong>Info:</strong> Entity graph thin and partly broken: dangling @id on /about and /projects, sameAs of 2, no alternateName Ahmad Atef Saad, AUS News article not referenced</li>
+    </ol>
+  </div>
+
+  <div class="success-box">
+    <strong>Quick Wins:</strong>
+    <ol>
+      <li>Insert real spaces between the h1 name spans and the statement word spans (15 min)</li>
+      <li>Put Ahmad Saad in every meta description and cut the Mano and LoRaWAN titles to 60 characters or fewer (30 min)</li>
+      <li>Preload the three hero woff2 files; next/font emits no preload on this build (15 min)</li>
+      <li>Switch the share card from a 2 MB q_100 PNG to q_auto,f_jpg with the headshot, about 150 KB (20 min)</li>
+      <li>Owner: Search Console domain property, sitemap submit and request indexing for the 7 URLs (30 min)</li>
+    </ol>
+  </div>
+
+</div>
+
+<!-- ======================================================= 2. AUDIT CATEGORIES === -->
+<div class="section">
+  <div class="section-header">
+    <h2>2. Audit Categories</h2>
+  </div>
+
+  <h3>2.1 Technical</h3>
+  <p><strong>Score:</strong> <span class="status-pass">86/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>All 7 pages return 200 with self-referencing canonicals and one h1</li>
+    <li>http and www 301 to the https apex; HSTS preload and security headers on HTML and assets</li>
+    <li>Valid 7-URL sitemap with image entries; real 404s with noindex</li>
+    <li>Full server rendering; /_next/static immutable; brotli</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Edge 403 for several AI crawlers while robots.txt only advises <span class="status-warn">Medium</span></h4>
+    <p>GPTBot, ClaudeBot, anthropic-ai, Claude-Web, CCBot, Bytespider and Amazonbot get 403 from Cloudflare; the managed robots.txt and the enforcement do not match.</p>
+    <p><strong>Recommendation:</strong> Owner action: align Cloudflare Block AI bots, AI Crawl Control and Managed robots.txt with the intended policy.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>HTML s-maxage of one year (latent) <span class="status-warn">Medium</span></h4>
+    <p>Prerendered HTML carries s-maxage=31536000; safe today because each deploy replaces it and Cloudflare does not cache Worker HTML.</p>
+    <p><strong>Recommendation:</strong> Deferred: changing it needs revalidate, which is forbidden. Never enable a Cache Everything rule for HTML.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Two project titles over 60 characters <span class="status-warn">Medium</span></h4>
+    <p>Mano 72 and LoRaWAN 77 characters; the &#x27;| Ahmad Saad&#x27; suffix truncates.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 4: seoTitle overrides, 52 and 54 characters.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Three meta descriptions under 100 characters <span class="status-warn">Medium</span></h4>
+    <p>trend-radar 87, mano 95, lorawan 97 characters, reused from the one-line summary.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 4: seoDescription fields, 141 to 152 characters, naming Ahmad Saad.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Text endpoints lack X-Robots-Tag <span class="status-warn">Low</span></h4>
+    <p>/llms.txt, /llms-full.txt and /me/*.md are indexable and could compete with the HTML for the name query.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 8: X-Robots-Tag noindex via the route handler headers.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Sitemap lastmod stale <span class="status-warn">Low</span></h4>
+    <p>CONTENT_LAST_MODIFIED 2026-10-21 while config changed on 2026-10-30.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 2: 2026-10-31, moved to config/site.ts and shared with schema and /about.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Config hygiene <span class="status-warn">Low</span></h4>
+    <p>Manifest theme colour conflicts with the page, FID in webVitalsAttribution, unused remote image hosts, placeholder covers.</p>
+    <p><strong>Recommendation:</strong> Deferred low-priority cleanup.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.2 Content Quality</h3>
+  <p><strong>Score:</strong> <span class="status-warn">74/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Specific first-person engineering copy with named employers, dates and measured outcomes</li>
+    <li>Estimates labelled as estimates; rendered pages already pass the copy rules (no dashes, no banned terms)</li>
+    <li>/about opens with a named first-person definition</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Homepage prose never states the full name <span class="status-warn">High</span></h4>
+    <p>The bio says &#x27;I&#x27;m Ahmad&#x27;; no self-contained &#x27;Ahmad Saad is ...&#x27; answer exists on /.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 2: 144-word third-person definition leads the homepage About block.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Meta descriptions omit the name <span class="status-warn">High</span></h4>
+    <p>/ and all four project pages omit &#x27;Ahmad Saad&#x27;.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 4.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>/me/about.md broken <span class="status-warn">High</span></h4>
+    <p>Empty twitter and bluesky links, no email, no education.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 7: rebuilt from config with key facts, education and contact.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>/projects index thin <span class="status-warn">Medium</span></h4>
+    <p>About 44 words of unique prose; the lede does not name him.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 2: named 43-word lede.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Cross-surface inconsistencies <span class="status-warn">Medium</span></h4>
+    <p>Project periods and the IEEE tense differ between pages and endpoints.</p>
+    <p><strong>Recommendation:</strong> Owner action 14 to confirm, then a follow-up edit.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No Result sections on Mano and LoRaWAN <span class="status-warn">Medium</span></h4>
+    <p>No measured outcome for two case studies.</p>
+    <p><strong>Recommendation:</strong> Deferred until the owner supplies figures.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Trend Radar implicitly tied to Samsung by identical figures <span class="status-warn">Medium</span></h4>
+    <p>The rule &#x27;not tied by name&#x27; is met, but the dates and figures match the Samsung entry.</p>
+    <p><strong>Recommendation:</strong> Owner decision (action 14).</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Generic anchors and &#x27;1 tools&#x27; <span class="status-warn">Low</span></h4>
+    <p>Read the case study x8 on /; Mano overview counter reads &#x27;1 tools&#x27;.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 4.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.3 On-Page</h3>
+  <p><strong>Score:</strong> <span class="status-warn">65/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>One h1 per page and correct per-page canonicals</li>
+    <li>Every title carries the full name</li>
+    <li>No orphan pages; minimum 3 inbound internal links</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>h1 reads AhmadSaad for text extractors <span class="status-warn">High</span></h4>
+    <p>Name spans and statement words have no whitespace between them.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 1.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Unnamed and short descriptions; long titles <span class="status-warn">High</span></h4>
+    <p>5 of 7 descriptions omit the name; 2 titles truncate.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 4.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No named body sentence on the homepage <span class="status-warn">High</span></h4>
+    <p>The full name appears only in the h1, alt text and JSON-LD.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 2.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Generic internal anchors <span class="status-warn">Low</span></h4>
+    <p>Card links and the /about closer use generic text.</p>
+    <p><strong>Recommendation:</strong> PLAN Tasks 4 and 6.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.4 Schema</h3>
+  <p><strong>Score:</strong> <span class="status-warn">71/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>One valid server-rendered JSON-LD block per page with stable @ids</li>
+    <li>Person with disambiguatingDescription, alumniOf, worksFor, hasCredential</li>
+    <li>BreadcrumbList on 6 pages; project nodes shared between home and project pages</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Dangling @id references <span class="status-warn">High</span></h4>
+    <p>/about references #website; /projects references #person, #website and four project ids, none defined on the page.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 5: websiteStub, personStub and project nodes.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Thin entity anchoring <span class="status-warn">High</span></h4>
+    <p>sameAs of 2; no alternateName, knowsLanguage, memberOf, award or subjectOf.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 5: alternateName Ahmad Atef Saad, Credly in sameAs, languages, Tau Beta Pi, awards, AUS News subjectOf.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>ImageObject width and height are strings <span class="status-warn">Medium</span></h4>
+    <p>String(748) on / and /about.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 5: numbers.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No page dates <span class="status-warn">Medium</span></h4>
+    <p>ProfilePage and AboutPage lack dateCreated and dateModified.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 5: 2026-08-24 and 2026-09-26 from git history, modified 2026-10-31.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Noisy jobTitle <span class="status-warn">Low</span></h4>
+    <p>Separators and &#x27;@ AUS&#x27; in jobTitle.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 4: &#x27;AI Engineer and Forward Deployed Engineer&#x27;.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.5 Performance</h3>
+  <p><strong>Score:</strong> <span class="status-warn">74/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Desktop passes everywhere; CLS about 0.001</li>
+    <li>Hero text in the server HTML and never held at opacity 0</li>
+    <li>Video mounts after hydration, respects reduced motion and Save-Data, pauses off-screen</li>
+    <li>Self-hosted subset fonts and right-sized WebP images</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Mobile home LCP 2.82 s <span class="status-warn">High</span></h4>
+    <p>The hero name waits on woff2 files discovered after the CSS; the next/font manifest is empty on this Windows build so no preload is emitted.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 9: three manual preload links.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Hydration long task 0.8 to 1.06 s on mobile <span class="status-warn">High</span></h4>
+    <p>TBT about 900 ms under 4x CPU throttle; INP at risk.</p>
+    <p><strong>Recommendation:</strong> Deferred: needs bundle analysis and nav behaviour testing.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Public media uncached <span class="status-warn">Medium</span></h4>
+    <p>Headshot, covers, posters and video served max-age=0, must-revalidate.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 10: one-week max-age plus stale-while-revalidate in public/_headers.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Poster downloaded twice <span class="status-warn">Medium</span></h4>
+    <p>The video poster attribute fetches an 81 KB jpg on top of the preloaded webp.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 10.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Badge PNG 65 KB at 120 px <span class="status-warn">Low</span></h4>
+    <p>Credential artwork larger than needed.</p>
+    <p><strong>Recommendation:</strong> Deferred.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.6 AI Search Readiness</h3>
+  <p><strong>Score:</strong> <span class="status-warn">56/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Full SSR; retrieval bots (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot) get 200</li>
+    <li>Spec-shaped llms.txt with markdown companions</li>
+    <li>Citation-ready case studies with specific numbers</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Cloudflare opts out of Gemini grounding and model ingestion <span class="status-warn">High</span></h4>
+    <p>Google-Extended disallowed; GPTBot, ClaudeBot, CCBot blocked at the edge.</p>
+    <p><strong>Recommendation:</strong> Owner actions 1 and 2; repo robots route after that.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Entity name concatenated for extractors <span class="status-warn">High</span></h4>
+    <p>AhmadSaad in h1 textContent.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 1.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No definition passage <span class="status-warn">High</span></h4>
+    <p>No quotable third-person answer to &#x27;who is Ahmad Saad&#x27;.</p>
+    <p><strong>Recommendation:</strong> PLAN Tasks 2 and 7.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Main-content extraction loses the homepage <span class="status-warn">Medium</span></h4>
+    <p>12 article cards; extractors keep 280 of 1,168 words.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 2: cards become div.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Thin llms companions <span class="status-warn">Medium</span></h4>
+    <p>Subjectless summary, duplicate summary in llms-full.txt, no key facts or Credly link.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 7.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>No visible dates <span class="status-warn">Medium</span></h4>
+    <p>No time elements or dateModified anywhere.</p>
+    <p><strong>Recommendation:</strong> PLAN Tasks 5 and 6.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Thin off-site entity graph <span class="status-warn">Medium</span></h4>
+    <p>GitHub bio, LinkedIn, Credly and video presence under-filled.</p>
+    <p><strong>Recommendation:</strong> Owner actions 7 to 12 and 15.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.7 Images</h3>
+  <p><strong>Score:</strong> <span class="status-warn">62/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>Descriptive alt text naming Ahmad Saad on every content image</li>
+    <li>Explicit width and height everywhere; no CLS</li>
+    <li>Right-sized WebP covers and headshot; image sitemap</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>No face on the homepage <span class="status-warn">High</span></h4>
+    <p>ProfilePage declares the headshot as primary image but / never shows it.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 3: 56 px headshot beside &#x27;AI Engineer · Sharjah, UAE&#x27;.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Share cards text-only and 2 MB <span class="status-warn">Medium</span></h4>
+    <p>All 7 og:images are q_100 PNGs, 2.0 MB, no face, 72 px name.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 11: q_auto,f_jpg with the headshot, about 150 KB.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>Double poster download <span class="status-warn">Medium</span></h4>
+    <p>webp preload plus jpg video poster.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 10.</p>
+  </div>
+  <hr class="divider">
+  <h3>2.8 Off-site and SXO (context, not weighted)</h3>
+  <p><strong>Score:</strong> <span class="status-fail">22/100</span></p>
+  <h4>What Works</h4>
+  <ul>
+    <li>LinkedIn already ranks #1 for &#x27;ahmad saad american university of sharjah&#x27; in the tested index</li>
+    <li>AUS News profiled him on 2026-06-22</li>
+    <li>GitHub name, blog and location set; four repos link back</li>
+  </ul>
+  <h4>Findings</h4>
+  <div class="action-item medium">
+    <h4>Not returned for its own domain name <span class="status-warn">High</span></h4>
+    <p>No result for &#x27;ahmadsaad.dev&#x27; or any of 17 name queries in the tested US index; absent from Common Crawl.</p>
+    <p><strong>Recommendation:</strong> Owner actions 4 to 6.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>AUS article does not link and uses &#x27;Ahmad Atef Saad&#x27; <span class="status-warn">High</span></h4>
+    <p>The strongest institutional source is disconnected from the site.</p>
+    <p><strong>Recommendation:</strong> PLAN Task 5 (alternateName, subjectOf), Task 6 (visible link), Owner action 11.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>GitHub README stale and contradictory <span class="status-warn">Medium</span></h4>
+    <p>Present-tense Samsung, a banned model-library term, name only inside an image.</p>
+    <p><strong>Recommendation:</strong> Owner action 8.</p>
+  </div>
+  <div class="action-item medium">
+    <h4>LocalAI demo and Credly do not link back <span class="status-warn">Medium</span></h4>
+    <p>Cheap self-owned links missing.</p>
+    <p><strong>Recommendation:</strong> Owner actions 12 and 13.</p>
+  </div>
+  <hr class="divider">
+</div>
+
+<!-- ======================================================= 3. ACTION PLAN === -->
+<div class="section">
+  <div class="section-header">
+    <h2>3. Action Plan</h2>
+  </div>
+
+  <div class="roadmap-phase">
+    <h4>Repo fixes (PLAN.md Tasks 1 to 12) <span class="effort">This week, one branch, one commit per task</span></h4>
+    <ul>
+      <li>Task 1: Put real spaces between the hero name spans and the statement word spans</li>
+      <li>Task 2: Lead the homepage About block with a named definition paragraph (plus named /projects lede, div cards, lastmod 2026-10-31)</li>
+      <li>Task 3: Show the headshot and the location on the home first screen</li>
+      <li>Task 4: Name Ahmad Saad in every meta description, shorten two titles, fix card anchors</li>
+      <li>Task 5: Fill out the Person graph and resolve every JSON-LD reference</li>
+      <li>Task 6: Date the About page and link the AUS News story</li>
+      <li>Task 7: Rewrite llms.txt and the about.md profile around a named definition</li>
+      <li>Task 8: Keep the llms and markdown endpoints out of search indexes</li>
+      <li>Task 9: Preload the hero fonts</li>
+      <li>Task 10: Cache public media for a week and reuse the preloaded webp poster</li>
+      <li>Task 11: Put the headshot on the share card and cut it from 2 MB to about 150 KB</li>
+      <li>Task 12: Full build chain and preview smoke test</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Owner actions, discovery and access <span class="effort">Same week as the deploy</span></h4>
+    <ul>
+      <li>Cloudflare: allow GPTBot, ClaudeBot, CCBot, Applebot-Extended; keep Bytespider blocked</li>
+      <li>Cloudflare: turn off Managed robots.txt or allow Google-Extended</li>
+      <li>Cloudflare: confirm no Cache Everything rule on HTML; enable Crawler Hints</li>
+      <li>Google Search Console domain property, sitemap, request indexing for 7 URLs</li>
+      <li>Bing Webmaster Tools sitemap</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Owner actions, entity corroboration <span class="effort">Weeks 1 to 2</span></h4>
+    <ul>
+      <li>GitHub profile, README and repo Website fields</li>
+      <li>LinkedIn public profile, website field, headline, Featured, certification</li>
+      <li>AUS Communications outreach for a link on aus.edu/node/126616; CITL AI Hub; Tau Beta Pi page</li>
+      <li>Credly public profile with website; LocalAI demo links back</li>
+      <li>Confirm IEEE tense, project periods, remote stance, Trend Radar figures</li>
+    </ul>
+  </div>
+  <div class="roadmap-phase">
+    <h4>Follow-up and earned mentions <span class="effort">Weeks 2 to 8, then monthly</span></h4>
+    <ul>
+      <li>Repo robots.txt with Content-Signal once Managed robots.txt is off</li>
+      <li>Hydration long-task refactor after measuring the font preload</li>
+      <li>dev.to or Medium write-up with canonical; Show HN and awesome list for LocalAI; LocalAI demo video; ORCID</li>
+      <li>Monthly incognito check of T1 to T5</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ======================================================= DATA SOURCES & METHODOLOGY === -->
+<div class="section" style="text-align: center; padding-top: 15mm;">
+  <hr class="divider">
+  <h3 style="text-align: left;">Data Sources &amp; Methodology</h3>
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Description</th><th>Update Frequency</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>PageSpeed Insights API</td>
+          <td>Lighthouse lab audit (mobile emulation, Moto G Power, slow 4G)</td>
+          <td>Real-time</td></tr>
+      <tr><td>Chrome UX Report (CrUX)</td>
+          <td>28-day rolling field data from real Chrome users</td>
+          <td>Daily ~04:00 UTC</td></tr>
+      <tr><td>CrUX History API</td>
+          <td>25-week p75 trend data per metric</td>
+          <td>Weekly</td></tr>
+      <tr><td>Google Search Console</td>
+          <td>Search Analytics (clicks, impressions, CTR, position)</td>
+          <td>2-3 day lag</td></tr>
+      <tr><td>URL Inspection API</td>
+          <td>Per-URL index status, coverage state, crawl info</td>
+          <td>Real-time (2,000/day)</td></tr>
+    </tbody>
+  </table>
+  <p style="color: #94a3b8; font-size: 9pt; margin-top: 5mm;">
+    Report generated by Claude SEO &mdash; Google SEO Intelligence Skill &mdash; October 31, 2026<br>
+    Methodology based on Google Web Vitals thresholds, Search Console documentation, and Lighthouse scoring algorithms.
+  </p>
+</div>
+
+</body>
+</html>

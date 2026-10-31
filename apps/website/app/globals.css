@@ -714,7 +714,6 @@
   /* Statement: word-by-word scroll-driven opacity */
   .word {
     display: inline-block;
-    margin-right: 0.25em;
   }
 
   /* The range starts the moment a word enters so the dim state is never

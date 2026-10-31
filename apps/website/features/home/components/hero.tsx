@@ -29,7 +29,7 @@ export function Hero() {
         <h1 id="hero-name" className="display hero-size mt-5 md:mt-6">
           <span className="block rise-name" style={stagger(1)}>
             {USER.firstName}
-          </span>
+          </span>{' '}
           <span className="block rise-name" style={stagger(2)}>
             {USER.lastName}
           </span>

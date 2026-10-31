@@ -130,7 +130,7 @@ export default function AboutPage() {
             <h1 id="about-name" className="display h2-size mt-4 text-bone">
               <span className="block rise-name" style={stagger(2)}>
                 {USER.firstName}
-              </span>
+              </span>{' '}
               <span className="block rise-name" style={stagger(3)}>
                 {USER.lastName}
               </span>

@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 const STATEMENT =
   'I build systems that have to prove they work. An AI pipeline, a CPU, a circuit board.';
 
@@ -20,10 +22,11 @@ export function Statement() {
       aria-label="Statement"
     >
       <p className="display-light statement-size mx-auto max-w-[20ch] text-balance text-center text-bone">
-        {words.map(({ key, word }) => (
-          <span key={key} className="word">
-            {word}
-          </span>
+        {words.map(({ key, word }, i) => (
+          <Fragment key={key}>
+            {i > 0 ? ' ' : null}
+            <span className="word">{word}</span>
+          </Fragment>
         ))}
       </p>
     </section>

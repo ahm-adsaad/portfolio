@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { SectionHeader } from '@/components/section-header';
+import { PROFILE_DEFINITION } from '@/config/about';
 
 const FACTS = [
   { label: 'UAE Golden Visa', value: 'no sponsorship needed' },
@@ -24,25 +25,13 @@ export function AboutTeaser() {
 
         <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0">
           <div className="prose-body body-lg space-y-5 text-fg/72" data-reveal>
+            <p>{PROFILE_DEFINITION}</p>
             <p>
-              I&apos;m Ahmad, a Computer Engineering senior at the American
-              University of Sharjah who ships production systems. My work
-              centers on applied AI: LLM systems with real cost governance, real
-              evaluation, and real stakeholders. Most recently at Samsung Gulf
-              Electronics, I architected and solely built a trend intelligence
-              platform for the regional marketing team.
-            </p>
-            <p>
-              I work as a forward deployed engineer: technical enough to build
+              He works as a forward deployed engineer: technical enough to build
               the system, comfortable enough with stakeholders to scope it. That
               includes the product work: turning ambiguous requirements into a
               scoped roadmap, prioritizing what ships first, and measuring
               whether it worked.
-            </p>
-            <p>
-              I hold a UAE Golden Visa, so no employer sponsorship is required.
-              I graduate in December 2026 and I am available to start January
-              2027.
             </p>
           </div>
 
@@ -57,7 +46,7 @@ export function AboutTeaser() {
 
           <p className="mt-10" data-reveal>
             <Link href="/about" className="text-link mono-label text-fg">
-              More about me
+              More about Ahmad Saad
             </Link>
           </p>
         </div>

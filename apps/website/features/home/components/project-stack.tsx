@@ -39,7 +39,7 @@ export function ProjectStack({ projects, showAllLink = false }: Props) {
               style={stagger(i)}
               data-tone="ink"
             >
-              <article className="stack-card-inner">
+              <div className="stack-card-inner">
                 <div className="stack-copy">
                   <p className="mono-label text-apricot">
                     {formatIndex(projectIndex(project))}
@@ -93,7 +93,7 @@ export function ProjectStack({ projects, showAllLink = false }: Props) {
                   project={project}
                   sizes="(min-width: 1024px) 40vw, 100vw"
                 />
-              </article>
+              </div>
             </li>
           );
         })}

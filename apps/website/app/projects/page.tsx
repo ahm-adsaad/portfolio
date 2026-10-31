@@ -111,9 +111,11 @@ export default function ProjectsPage() {
               className="display-light intro-size rise max-w-[40ch] text-bone/88"
               style={stagger(4)}
             >
-              Write-ups of the systems I have built, from production LLM
-              pipelines to a custom PCB. Each one covers the problem, the
-              approach, the architecture, and my role.
+              Case studies by Ahmad Saad, an AI engineer and Computer
+              Engineering senior at the American University of Sharjah: two AI
+              systems, Trend Radar and LocalAI, and two hardware and
+              architecture builds, a Mano Basic Computer simulator and an energy
+              harvesting LoRaWAN sensor node.
             </p>
           </div>
         </div>

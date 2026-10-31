@@ -21,3 +21,11 @@ export const COLLECTION_IDS = [
 
 export const SCROLL_AREA_ID = 'scroll-area-id';
 export const MOBILE_SCROLL_THRESHOLD = 20;
+
+/**
+ * Date of the last visible content change (YYYY-MM-DD). Feeds the sitemap
+ * lastmod, schema dateModified and the "Last updated" line on /about. Bump it
+ * by hand in the same commit that changes visible copy, NOT on every deploy:
+ * a lastmod that churns with each build is a signal Google learns to ignore.
+ */
+export const CONTENT_LAST_MODIFIED = '2026-10-31';

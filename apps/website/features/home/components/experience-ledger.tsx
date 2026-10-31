@@ -81,7 +81,7 @@ export function ExperienceLedger() {
                   ].filter(Boolean);
 
                   return (
-                    <article key={position.id} className="position">
+                    <div key={position.id} className="position">
                       <div className="position-head">
                         <h4 className="font-medium text-fg">
                           {position.title}
@@ -114,7 +114,7 @@ export function ExperienceLedger() {
                           </ul>
                         ) : null}
                       </div>
-                    </article>
+                    </div>
                   );
                 })}
               </div>

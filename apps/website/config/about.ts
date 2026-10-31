@@ -11,6 +11,14 @@ export type AboutSection = {
 export const ABOUT_INTRO =
   "I'm Ahmad Saad, a Computer Engineering senior at the American University of Sharjah in the United Arab Emirates, and I build production AI systems. My work centers on applied AI: LLM systems that run under real cost governance and answer to stakeholders who depend on the output.";
 
+/**
+ * Third-person definition for the homepage About block and the agent
+ * endpoints. Written to be quoted on its own; /about keeps its first-person
+ * intro, so the two never duplicate.
+ */
+export const PROFILE_DEFINITION =
+  'Ahmad Saad is an AI engineer and forward deployed engineer based between Abu Dhabi and Sharjah in the United Arab Emirates. He is a Computer Engineering senior at the American University of Sharjah (AUS), where he holds a 3.96 GPA, is President of the Tau Beta Pi chapter, and graduates in December 2026. From June to August 2026 he was an AI/ML Engineer at Samsung Gulf Electronics in Dubai, where he architected and solely built a production trend intelligence platform for the regional marketing team that replaced external tooling at an estimated $60K in avoided spend. He also built LocalAI, private AI for company documents that runs entirely in the browser. He holds the Claude Certified Architect: Foundations certification from Anthropic, speaks English and Arabic, holds a UAE Golden Visa, so no employer sponsorship is required, and is available to start in January 2027.';
+
 export const ABOUT_SECTIONS: AboutSection[] = [
   {
     heading: 'Education',

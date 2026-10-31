@@ -66,3 +66,19 @@ export const PRESS_MENTIONS: PressMention[] = [
     datePublished: '2026-06-22',
   },
 ];
+
+/**
+ * Key facts for /llms.txt and the about.md profile, one bullet each. Keep
+ * Trend Radar and its figures out of the Samsung line.
+ */
+export const LLMS_KEY_FACTS: string[] = [
+  'Name: Ahmad Saad. AUS News publishes his name as Ahmad Atef Saad.',
+  'Based in: Abu Dhabi and Sharjah, United Arab Emirates.',
+  'Most recent industry role: AI/ML Engineer at Samsung Gulf Electronics, Dubai, June to August 2026. Architected and solely built a production trend intelligence platform for the regional marketing team, at an estimated $60K in avoided tooling spend and a projected 20% increase in engagement rates.',
+  'Current roles: Web Design and Development Consultant, College of Engineering, AUS (since August 2026). AI Hub Assistant, Center of Innovation in Teaching and Learning, AUS (since November 2024). Account Manager, Chief Nest, remote (since September 2025).',
+  'Certification: Claude Certified Architect: Foundations, issued by Anthropic. Verification: https://www.credly.com/badges/976e4176-241f-4870-83ea-c66f896f64ff',
+  "Leadership and honours: President of the AUS Tau Beta Pi chapter (previously Vice President). Tau Beta Pi Scholarship (2026). Academic Merit Scholarship, Dean's List six times, Chancellor's List three times.",
+  'Languages: English and Arabic.',
+  'Looking for: technical product management, forward deployed or solutions engineering, AI/ML engineering, and management and strategy.',
+  'Name note: this Ahmad Saad is a computer engineer and AI engineer in the UAE. He is not Ahmed Saad, the Egyptian singer.',
+];

@@ -2,6 +2,7 @@
  * Markdown renderers shared by the agent-facing endpoints
  * (/llms.txt, /llms-full.txt, /me/*.md). One source of truth: config/*.
  */
+import { LLMS_KEY_FACTS, PROFILE_DEFINITION } from '@/config/about';
 import { CERTIFICATIONS, EDUCATION } from '@/config/education';
 import { experiences } from '@/config/experience';
 import { PROJECTS } from '@/config/projects';
@@ -12,23 +13,39 @@ const period = (start: string, end?: string) =>
 
 const heading = (level: number) => '#'.repeat(level);
 
+const PROFILE_LABELS: Record<keyof typeof USER.social, string> = {
+  github: 'GitHub',
+  linkedin: 'LinkedIn',
+  credly: 'Credly',
+};
+
+/** Non-empty `USER.social` entries, in object order. */
+const profileEntries = () =>
+  (Object.keys(USER.social) as (keyof typeof USER.social)[])
+    .filter((key) => USER.social[key])
+    .map((key) => ({ label: PROFILE_LABELS[key], url: USER.social[key] }));
+
+/** `- [Label](url)` for every public profile. */
+export function formatProfileLinks(): string[] {
+  return profileEntries().map(({ label, url }) => `- [${label}](${url})`);
+}
+
 export function formatAboutMarkdown(level = 2): string {
   const h = heading(level);
   return [
     `${h} About`,
     '',
-    USER.description.trim(),
+    PROFILE_DEFINITION,
     '',
-    `- Name: ${USER.name}`,
-    `- Title: ${USER.jobTitle}`,
-    `- Location: ${USER.location}`,
+    `${h} Key facts`,
+    '',
+    ...LLMS_KEY_FACTS.map((fact) => `- ${fact}`),
+    '',
+    `${h} Contact and profiles`,
+    '',
     `- Email: ${USER.email}`,
     `- Website: ${USER.website}`,
-    ...Object.entries(USER.social)
-      .filter(([, url]) => url)
-      .map(
-        ([name, url]) => `- ${name[0].toUpperCase()}${name.slice(1)}: ${url}`
-      ),
+    ...profileEntries().map(({ label, url }) => `- ${label}: ${url}`),
   ].join('\n');
 }
 

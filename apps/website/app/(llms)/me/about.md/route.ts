@@ -1,31 +1,21 @@
 import { USER } from '@/config/user';
+import {
+  MARKDOWN_HEADERS,
+  formatAboutMarkdown,
+  formatEducationMarkdown,
+} from '@/lib/llms';
 
-const content = `# About
+const content = `# About ${USER.name}
 
-${USER.description.trim()}
+${formatAboutMarkdown(2)}
 
-## Personal Information
+## Education
 
-- First Name: ${USER.firstName}
-- Last Name: ${USER.lastName}
-- Display Name: ${USER.name}
-- Location: ${USER.location}
-- Website: ${USER.website}
-
-## Social Links
-
-${Object.entries(USER.social)
-  .map(([key, value]) => `- [${key}](${value})`)
-  .join('\n')}
-
-\n`;
+${formatEducationMarkdown(3)}
+`;
 
 export const dynamic = 'force-static';
 
 export async function GET() {
-  return new Response(content, {
-    headers: {
-      'Content-Type': 'text/markdown;charset=utf-8',
-    },
-  });
+  return new Response(content, { headers: MARKDOWN_HEADERS });
 }

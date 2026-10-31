@@ -12,7 +12,7 @@ export const FAQ_HEADING = `Questions about ${USER.name}`;
 export const ABOUT_FAQ: FaqItem[] = [
   {
     question: `Is ${USER.fullName} the same person as ${USER.name}?`,
-    answer: `Yes. ${USER.name} is the name he uses professionally, and the American University of Sharjah uses his full name, as AUS News did when it covered his Tau Beta Pi Scholarship in June 2026. He is an AI engineer and Computer Engineering senior at AUS in the United Arab Emirates. He is not Ahmed Saad, the Egyptian singer.`,
+    answer: `Yes. ${USER.name} is the name he uses professionally, and AUS News used his full name when it covered his Tau Beta Pi Scholarship in June 2026. He is an AI engineer and Computer Engineering senior at AUS in the United Arab Emirates. He is not Ahmed Saad, the Egyptian singer.`,
   },
   {
     question: `Is ${USER.name} available for hire?`,

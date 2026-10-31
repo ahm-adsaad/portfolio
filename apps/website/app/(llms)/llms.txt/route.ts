@@ -42,6 +42,7 @@ function generateLlmsContent() {
     '',
     '## Pages',
     '',
+    `- [Home](${USER.website}/): Profile, experience, projects, education and contact.`,
     `- [About ${USER.name}](${USER.website}/about): Bio, education, experience, target roles and availability.`,
     `- [${USER.name} at AUS](${USER.website}/aus): Tau Beta Pi UAE Alpha, the AUS AI Hub, research and AUS News coverage.`,
     `- [CV](${USER.website}/cv): Experience, education, projects, certification and skills on one page.`,

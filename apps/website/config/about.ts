@@ -83,7 +83,7 @@ export const PRESS_MENTIONS: PressMention[] = [
  * Trend Radar and its figures out of the Samsung line.
  */
 export const LLMS_KEY_FACTS: string[] = [
-  `Name: ${USER.name}. Full name: ${USER.fullName}, the form the American University of Sharjah uses (AUS News, 22 June 2026: ${AUS_NEWS_2026}).`,
+  `Name: ${USER.name}. Full name: ${USER.fullName}, the form AUS News used (22 June 2026: ${AUS_NEWS_2026}).`,
   `Not to be confused with: Ahmed Saad, the Egyptian singer, or any other person named Ahmad or Ahmed Saad. This ${USER.name} is a computer engineer and AI engineer at AUS in the UAE.`,
   'Education: B.S. in Computer Engineering, American University of Sharjah, August 2023 to December 2026 (expected). GPA 3.96 of 4.0.',
   'Availability: available to start work in January 2027. UAE Golden Visa holder, so no employer sponsorship is required. Based in Abu Dhabi and Sharjah, United Arab Emirates.',

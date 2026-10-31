@@ -1,11 +1,14 @@
 import { Breadcrumb } from '@/components/breadcrumb';
 import { CredentialBadge } from '@/components/credential-badge';
+import { FaqList, faqPageNode } from '@/components/faq';
 import { Headshot } from '@/components/headshot';
 import { HeroVideo } from '@/components/hero-video';
 import { PillLink } from '@/components/pill-link';
+import { RichText } from '@/components/rich-text';
 import { SectionHeader } from '@/components/section-header';
 import { ABOUT_INTRO, ABOUT_SECTIONS, PRESS_MENTIONS } from '@/config/about';
 import { CERTIFICATIONS } from '@/config/education';
+import { ABOUT_DEFINITION, ABOUT_FAQ, FAQ_HEADING } from '@/config/faq';
 import { ABOUT_PUBLISHED, CONTENT_LAST_MODIFIED } from '@/config/site';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
@@ -13,7 +16,13 @@ import { formatLongDate } from '@/lib/format-long-date';
 import { formatIndex } from '@/lib/project-index';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
-import { personStub, pixels, websiteStub } from '@/lib/seo/project-schema';
+import {
+  HEADSHOT_ID,
+  PERSON_ID,
+  WEBSITE_ID,
+  personGraph,
+  websiteStub,
+} from '@/lib/seo/person';
 import { SITE_URL } from '@/lib/server-url';
 import { stagger } from '@/lib/stagger';
 import Link from 'next/link';
@@ -23,9 +32,9 @@ import type { Graph } from 'schema-dts';
 export const dynamic = 'force-static';
 
 const PATH = '/about';
-const TITLE = `About ${USER.name} | AI Engineer, AUS Computer Engineering`;
-const DESCRIPTION =
-  'Ahmad Saad, an AI engineer and Computer Engineering senior at the American University of Sharjah, formerly at Samsung Gulf Electronics. Available January 2027.';
+const PAGE_URL = `${SITE_URL}${PATH}`;
+const TITLE = `About ${USER.name} (${USER.fullName}) | AI Engineer, AUS`;
+const DESCRIPTION = `${USER.name} (${USER.fullName}) is an AI engineer, a Computer Engineering senior at the American University of Sharjah and President of Tau Beta Pi UAE Alpha.`;
 
 export function generateMetadata(): Metadata {
   return createMetadata({
@@ -35,7 +44,7 @@ export function generateMetadata(): Metadata {
     path: PATH,
     image: createOgImage({
       title: `About ${USER.name}`,
-      meta: 'AI Engineer · Sharjah, UAE',
+      meta: `${USER.fullName} · AUS Computer Engineering`,
     }),
   });
 }
@@ -45,29 +54,24 @@ const jsonLd: Graph = {
   '@graph': [
     {
       '@type': 'AboutPage',
-      '@id': `${SITE_URL}${PATH}#page`,
-      url: `${SITE_URL}${PATH}`,
+      '@id': `${PAGE_URL}#page`,
+      url: PAGE_URL,
       name: TITLE,
       description: DESCRIPTION,
       inLanguage: 'en-US',
-      isPartOf: { '@id': `${SITE_URL}/#website` },
-      mainEntity: { '@id': `${SITE_URL}/#person` },
-      about: { '@id': `${SITE_URL}/#person` },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        '@id': `${SITE_URL}/#headshot`,
-        url: USER.image.profile,
-        width: pixels(USER.image.width),
-        height: pixels(USER.image.height),
-        caption: USER.name,
-      },
-      breadcrumb: { '@id': `${SITE_URL}${PATH}#breadcrumb` },
+      isPartOf: { '@id': WEBSITE_ID },
+      mainEntity: { '@id': PERSON_ID },
+      about: { '@id': PERSON_ID },
+      // The full Person (personGraph) carries the headshot ImageObject.
+      primaryImageOfPage: { '@id': HEADSHOT_ID },
+      hasPart: { '@id': `${PAGE_URL}#faq` },
+      breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
       dateCreated: ABOUT_PUBLISHED,
       dateModified: CONTENT_LAST_MODIFIED,
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': `${SITE_URL}${PATH}#breadcrumb`,
+      '@id': `${PAGE_URL}#breadcrumb`,
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -79,11 +83,12 @@ const jsonLd: Graph = {
           '@type': 'ListItem',
           position: 2,
           name: 'About',
-          item: `${SITE_URL}${PATH}`,
+          item: PAGE_URL,
         },
       ],
     },
-    personStub(),
+    faqPageNode(ABOUT_FAQ, PAGE_URL),
+    ...personGraph(),
     websiteStub(),
   ],
 };
@@ -94,8 +99,13 @@ const linkClass =
 const slug = (heading: string) =>
   heading.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
+const sectionTone = (i: number) => (i % 2 ? 'bone' : 'ink');
+
 export default function AboutPage() {
-  const last = ABOUT_SECTIONS.length - 1;
+  // The Profile section is bone, so the loop starts on ink and the FAQ takes
+  // the tone opposite to the last loop section.
+  const questionsTone =
+    sectionTone(ABOUT_SECTIONS.length - 1) === 'ink' ? 'bone' : 'ink';
 
   return (
     <>
@@ -162,13 +172,39 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section
+        className="section"
+        data-tone="bone"
+        aria-labelledby="about-profile"
+      >
+        <SectionHeader as="p" eyebrow="About" value="Profile" />
+
+        <div className="grid-12">
+          <div className="col-span-12 lg:col-span-5">
+            <h2
+              id="about-profile"
+              className="display h3-size text-fg"
+              data-reveal
+            >
+              Profile
+            </h2>
+          </div>
+
+          <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0">
+            <p className="prose-body body-lg text-fg/72" data-reveal>
+              {ABOUT_DEFINITION}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {ABOUT_SECTIONS.map((section, i) => {
         const id = `about-${slug(section.heading)}`;
         return (
           <section
             key={section.heading}
             className="section"
-            data-tone={i % 2 ? 'ink' : 'bone'}
+            data-tone={sectionTone(i)}
             aria-labelledby={id}
           >
             <SectionHeader
@@ -190,69 +226,103 @@ export default function AboutPage() {
                   data-reveal
                 >
                   {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                    <p key={paragraph.slice(0, 32)}>
+                      <RichText text={paragraph} linkClassName={linkClass} />
+                    </p>
                   ))}
                 </div>
-
-                {i === last ? (
-                  <div
-                    className="mt-12 border-line border-t pt-10"
-                    data-reveal
-                    style={stagger(1)}
-                  >
-                    <p className="prose-body body-lg text-fg/72">
-                      See my{' '}
-                      <Link href="/projects" className={linkClass}>
-                        project case studies
-                      </Link>{' '}
-                      or go back to the{' '}
-                      <Link href="/" className={linkClass}>
-                        homepage
-                      </Link>
-                      .
-                    </p>
-                    {PRESS_MENTIONS.map((mention) => (
-                      <p
-                        key={mention.url}
-                        className="prose-body body-lg mt-5 text-fg/72"
-                      >
-                        {mention.outlet},{' '}
-                        {formatLongDate(mention.datePublished)}:{' '}
-                        <a
-                          href={mention.url}
-                          className={linkClass}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {mention.headline}
-                        </a>
-                        .
-                      </p>
-                    ))}
-                    <div className="mt-8 flex flex-wrap gap-3">
-                      <PillLink href={`mailto:${USER.email}`} variant="fill">
-                        Email
-                      </PillLink>
-                      <PillLink href={USER.social.linkedin} external>
-                        LinkedIn
-                      </PillLink>
-                      <PillLink href={USER.social.github} external>
-                        GitHub
-                      </PillLink>
-                    </div>
-                    <p className="mono-label mt-8 text-fg/56">
-                      Last updated{' '}
-                      <time dateTime={CONTENT_LAST_MODIFIED}>
-                        {formatLongDate(CONTENT_LAST_MODIFIED)}
-                      </time>
-                    </p>
-                  </div>
-                ) : null}
               </div>
             </div>
           </section>
         );
       })}
+
+      <section
+        className="section"
+        data-tone={questionsTone}
+        aria-labelledby="about-questions"
+      >
+        <SectionHeader as="p" eyebrow="About" value="Questions" />
+
+        <div className="grid-12">
+          <div className="col-span-12 lg:col-span-5">
+            <h2
+              id="about-questions"
+              className="display h3-size text-fg"
+              data-reveal
+            >
+              {FAQ_HEADING}
+            </h2>
+          </div>
+
+          <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0">
+            <div data-reveal>
+              <FaqList items={ABOUT_FAQ} />
+            </div>
+
+            <div
+              className="mt-12 border-line border-t pt-10"
+              data-reveal
+              style={stagger(1)}
+            >
+              <p className="prose-body body-lg text-fg/72">
+                See my{' '}
+                <Link href="/projects" className={linkClass}>
+                  project case studies
+                </Link>
+                ,{' '}
+                <Link href="/aus" className={linkClass}>
+                  {USER.name} at AUS
+                </Link>{' '}
+                or the{' '}
+                <Link href="/cv" className={linkClass}>
+                  CV
+                </Link>
+                , or go back to the{' '}
+                <Link href="/" className={linkClass}>
+                  homepage
+                </Link>
+                .
+              </p>
+              {PRESS_MENTIONS.map((mention) => (
+                <p
+                  key={mention.url}
+                  className="prose-body body-lg mt-5 text-fg/72"
+                >
+                  {mention.outlet}, {formatLongDate(mention.datePublished)}:{' '}
+                  <a
+                    href={mention.url}
+                    className={linkClass}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {mention.headline}
+                  </a>
+                  .
+                </p>
+              ))}
+              <div className="mt-8 flex flex-wrap gap-3">
+                <PillLink href={`mailto:${USER.email}`} variant="fill">
+                  Email
+                </PillLink>
+                <PillLink href={USER.social.linkedin} external>
+                  LinkedIn
+                </PillLink>
+                <PillLink href={USER.social.github} external>
+                  GitHub
+                </PillLink>
+                <PillLink href="/cv">CV</PillLink>
+              </div>
+              <p className="mono-label mt-8 text-fg/56">
+                Last updated{' '}
+                <time dateTime={CONTENT_LAST_MODIFIED}>
+                  {formatLongDate(CONTENT_LAST_MODIFIED)}
+                </time>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

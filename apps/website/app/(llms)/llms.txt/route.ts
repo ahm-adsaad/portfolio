@@ -2,9 +2,13 @@ import { NextResponse } from 'next/server';
 
 import { LLMS_KEY_FACTS } from '@/config/about';
 import { PROJECT_PAGES } from '@/config/projects';
-import { SOURCE_CODE_GITHUB_URL } from '@/config/site';
+import { CONTENT_LAST_MODIFIED, SOURCE_CODE_GITHUB_URL } from '@/config/site';
 import { USER } from '@/config/user';
-import { MARKDOWN_HEADERS, formatProfileLinks } from '@/lib/llms';
+import {
+  MARKDOWN_HEADERS,
+  formatPressMarkdown,
+  formatProfileLinks,
+} from '@/lib/llms';
 import { projectPath } from '@/lib/seo/project-schema';
 
 // Force static generation at build time
@@ -20,9 +24,15 @@ function generateLlmsContent() {
     '',
     `> ${USER.description}`,
     '',
+    `Last updated: ${CONTENT_LAST_MODIFIED}`,
+    '',
     'Key facts:',
     '',
     ...LLMS_KEY_FACTS.map((fact) => `- ${fact}`),
+    '',
+    '## Press',
+    '',
+    ...formatPressMarkdown(),
     '',
     '## Me',
     '',
@@ -33,6 +43,8 @@ function generateLlmsContent() {
     '## Pages',
     '',
     `- [About ${USER.name}](${USER.website}/about): Bio, education, experience, target roles and availability.`,
+    `- [${USER.name} at AUS](${USER.website}/aus): Tau Beta Pi UAE Alpha, the AUS AI Hub, research and AUS News coverage.`,
+    `- [CV](${USER.website}/cv): Experience, education, projects, certification and skills on one page.`,
     `- [Projects](${USER.website}/projects): Index of project case studies.`,
     ...PROJECT_PAGES.map(
       (project) =>
@@ -46,7 +58,7 @@ function generateLlmsContent() {
     '## Optional',
     '',
     `- [Full text](${USER.website}/llms-full.txt): About, experience, projects, and education in one file.`,
-    `- [Resume (PDF)](${USER.website}/Ahmad_Saad_CV.pdf): Full CV.`,
+    `- [CV (PDF)](${USER.website}/Ahmad_Saad_CV.pdf): Full CV.`,
     ...(localaiDemo
       ? [
           `- [LocalAI live demo](${localaiDemo}): Runs in any browser with WebGPU.`,

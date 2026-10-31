@@ -2,11 +2,17 @@
  * Markdown renderers shared by the agent-facing endpoints
  * (/llms.txt, /llms-full.txt, /me/*.md). One source of truth: config/*.
  */
-import { LLMS_KEY_FACTS, PROFILE_DEFINITION } from '@/config/about';
+import {
+  LLMS_KEY_FACTS,
+  PRESS_MENTIONS,
+  PROFILE_DEFINITION,
+} from '@/config/about';
 import { CERTIFICATIONS, EDUCATION } from '@/config/education';
 import { experiences } from '@/config/experience';
+import { ABOUT_FAQ } from '@/config/faq';
 import { PROJECTS } from '@/config/projects';
 import { USER } from '@/config/user';
+import { formatLongDate } from '@/lib/format-long-date';
 
 const period = (start: string, end?: string) =>
   `${start} - ${end ?? 'Present'}`;
@@ -127,6 +133,28 @@ export function formatEducationMarkdown(level = 2): string {
           ).join(', ')}`,
         ]
       : []),
+  ].join('\n');
+}
+
+/** `- [headline](url): outlet, date. Profiles <full name>.` per press mention. */
+export function formatPressMarkdown(): string[] {
+  return PRESS_MENTIONS.map(
+    (m) =>
+      `- [${m.headline}](${m.url}): ${m.outlet}, ${formatLongDate(m.datePublished)}. Profiles ${USER.fullName}.`
+  );
+}
+
+/** The /about FAQ, word for word, as `### question` plus answer. */
+export function formatFaqMarkdown(level = 2): string {
+  const h = heading(level);
+  return [
+    `${h} FAQ`,
+    ...ABOUT_FAQ.flatMap((item) => [
+      '',
+      `${h}# ${item.question}`,
+      '',
+      item.answer,
+    ]),
   ].join('\n');
 }
 

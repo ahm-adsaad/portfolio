@@ -13,6 +13,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: Route[] = [
     { path: '/', images: [USER.image.profile] },
     { path: '/about', images: [USER.image.profile] },
+    { path: '/aus' },
+    { path: '/cv' },
     { path: '/projects' },
     ...PROJECT_PAGES.map((project) => ({
       path: projectPath(project),

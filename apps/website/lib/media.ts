@@ -32,7 +32,7 @@ export async function generateBlurUrl(
     }
 
     // plaiceholder (and its sharp native dependency) was dropped to keep the
-    // Cloudflare Worker under the size limit — import it lazily so it only
+    // Cloudflare Worker under the size limit, so import it lazily so it only
     // loads if a blur placeholder is ever actually requested at build time.
     const { getPlaiceholder } = await import('plaiceholder');
     const { base64: blurDataURL } = await getPlaiceholder(buffer, {

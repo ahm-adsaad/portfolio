@@ -32,6 +32,39 @@ if (isr.length > 0) {
   process.exit(1);
 }
 
+// Routes that must be prerendered. A page that silently turns dynamic (or is
+// deleted) is simply absent from the manifest, which the ISR check above
+// cannot see. Update this list when a page is added or removed.
+const EXPECTED_ROUTES = [
+  '/',
+  '/about',
+  '/aus',
+  '/cv',
+  '/projects',
+  '/projects/trend-radar',
+  '/projects/localai',
+  '/projects/mano-computer-simulator',
+  '/projects/lorawan-sensor-node',
+  '/sitemap.xml',
+  '/robots.txt',
+  '/llms.txt',
+  '/llms-full.txt',
+  '/me/about.md',
+  '/me/experience.md',
+  '/me/projects.md',
+];
+const missing = EXPECTED_ROUTES.filter(
+  (route) => !(route in (manifest.routes ?? {}))
+);
+if (missing.length > 0) {
+  console.error('Expected prerendered routes are missing from the manifest:');
+  for (const route of missing) console.error(`  ${route}`);
+  console.error(
+    'A page went dynamic or was removed. Restore force-static, or update EXPECTED_ROUTES.'
+  );
+  process.exit(1);
+}
+
 console.log(
-  `assert-static-prerender: ${Object.keys(manifest.routes ?? {}).length} prerendered routes, none with ISR.`
+  `assert-static-prerender: ${Object.keys(manifest.routes ?? {}).length} prerendered routes, none with ISR, all ${EXPECTED_ROUTES.length} expected routes present.`
 );

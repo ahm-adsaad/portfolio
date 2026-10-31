@@ -8,6 +8,8 @@ import { NavLinks } from './nav-links';
 const LINKS: MenuLink[] = [
   { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
+  { label: 'AUS', href: '/aus' },
+  { label: 'CV', href: '/cv' },
   { label: 'Email', href: `mailto:${USER.email}` },
   { label: 'LinkedIn', href: USER.social.linkedin, external: true },
 ];

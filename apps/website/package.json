@@ -25,7 +25,8 @@
     "preview": "pnpm ensure-next-symlink && opennextjs-cloudflare build && pnpm assert-static-prerender && opennextjs-cloudflare preview",
     "deploy": "pnpm ensure-next-symlink && opennextjs-cloudflare build && pnpm assert-static-prerender && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "assert-static-prerender": "node ./scripts/assert-static-prerender.mjs"
+    "assert-static-prerender": "node ./scripts/assert-static-prerender.mjs",
+    "indexnow": "node ./scripts/indexnow.mjs"
   },
   "dependencies": {
     "@arcjet/ip": "1.0.0-beta.11",

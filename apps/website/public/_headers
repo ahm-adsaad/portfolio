@@ -26,3 +26,8 @@
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 /web-app-manifest-*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# The PDF CV points search engines at the HTML CV. A canonical hint, not a
+# noindex: the PDF stays crawlable and downloadable.
+/Ahmad_Saad_CV.pdf
+  Link: <https://ahmadsaad.dev/cv>; rel="canonical"

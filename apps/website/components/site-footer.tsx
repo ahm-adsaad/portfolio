@@ -25,6 +25,16 @@ export function SiteFooter() {
             </Link>
           </li>
           <li>
+            <Link href="/aus" className="text-link">
+              AUS
+            </Link>
+          </li>
+          <li>
+            <Link href="/cv" className="text-link">
+              CV
+            </Link>
+          </li>
+          <li>
             <a href="/llms.txt" className="text-link">
               llms.txt
             </a>

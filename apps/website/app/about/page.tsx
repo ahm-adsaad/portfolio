@@ -4,11 +4,12 @@ import { Headshot } from '@/components/headshot';
 import { HeroVideo } from '@/components/hero-video';
 import { PillLink } from '@/components/pill-link';
 import { SectionHeader } from '@/components/section-header';
-import { ABOUT_INTRO, ABOUT_SECTIONS } from '@/config/about';
+import { ABOUT_INTRO, ABOUT_SECTIONS, PRESS_MENTIONS } from '@/config/about';
 import { CERTIFICATIONS } from '@/config/education';
 import { ABOUT_PUBLISHED, CONTENT_LAST_MODIFIED } from '@/config/site';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
+import { formatLongDate } from '@/lib/format-long-date';
 import { formatIndex } from '@/lib/project-index';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
@@ -200,9 +201,9 @@ export default function AboutPage() {
                     style={stagger(1)}
                   >
                     <p className="prose-body body-lg text-fg/72">
-                      See the{' '}
+                      See my{' '}
                       <Link href="/projects" className={linkClass}>
-                        projects
+                        project case studies
                       </Link>{' '}
                       or go back to the{' '}
                       <Link href="/" className={linkClass}>
@@ -210,6 +211,24 @@ export default function AboutPage() {
                       </Link>
                       .
                     </p>
+                    {PRESS_MENTIONS.map((mention) => (
+                      <p
+                        key={mention.url}
+                        className="prose-body body-lg mt-5 text-fg/72"
+                      >
+                        {mention.outlet},{' '}
+                        {formatLongDate(mention.datePublished)}:{' '}
+                        <a
+                          href={mention.url}
+                          className={linkClass}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {mention.headline}
+                        </a>
+                        .
+                      </p>
+                    ))}
                     <div className="mt-8 flex flex-wrap gap-3">
                       <PillLink href={`mailto:${USER.email}`} variant="fill">
                         Email
@@ -217,7 +236,16 @@ export default function AboutPage() {
                       <PillLink href={USER.social.linkedin} external>
                         LinkedIn
                       </PillLink>
+                      <PillLink href={USER.social.github} external>
+                        GitHub
+                      </PillLink>
                     </div>
+                    <p className="mono-label mt-8 text-fg/56">
+                      Last updated{' '}
+                      <time dateTime={CONTENT_LAST_MODIFIED}>
+                        {formatLongDate(CONTENT_LAST_MODIFIED)}
+                      </time>
+                    </p>
                   </div>
                 ) : null}
               </div>

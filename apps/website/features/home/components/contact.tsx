@@ -44,9 +44,7 @@ export function Contact() {
         <PillLink href={USER.social.github} external>
           GitHub
         </PillLink>
-        <PillLink href="/Ahmad_Saad_CV.pdf" external>
-          CV (PDF)
-        </PillLink>
+        <PillLink href="/cv">CV</PillLink>
       </div>
     </section>
   );

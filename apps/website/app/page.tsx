@@ -1,7 +1,4 @@
 import { PROJECTS } from '@/config/projects';
-import { PRESS_MENTIONS } from '@/config/about';
-import { CERTIFICATIONS, EDUCATION } from '@/config/education';
-import { experiences } from '@/config/experience';
 import { CONTENT_LAST_MODIFIED, SITE_PUBLISHED } from '@/config/site';
 import { USER } from '@/config/user';
 import { AboutTeaser } from '@/features/home/components/about-teaser';
@@ -15,17 +12,26 @@ import { Statement } from '@/features/home/components/statement';
 import { TechMarquee } from '@/features/home/components/tech-marquee';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
-import { pixels, projectSchema } from '@/lib/seo/project-schema';
 import { createMetadata } from '@/lib/seo/metadata';
+import {
+  HEADSHOT_ID,
+  PERSON_ID,
+  WEBSITE_ID,
+  personGraph,
+} from '@/lib/seo/person';
+import { projectSchema } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import type { Metadata } from 'next/types';
-import type { Graph, ImageObject, Thing } from 'schema-dts';
+import type { Graph, Thing } from 'schema-dts';
 
 // Force static generation at build time
 export const dynamic = 'force-static';
 
-/** Name first: the page has to rank for the bare query "Ahmad Saad". */
-const HOME_TITLE = `${USER.name} · AI Engineer in the UAE`;
+/**
+ * Name first for the bare query, then the full name AUS publishes, then AUS
+ * disambiguated by UAE.
+ */
+const HOME_TITLE = `${USER.name} (${USER.fullName}) · AI Engineer · AUS, UAE`;
 
 export async function generateMetadata(): Promise<Metadata> {
   const description = USER.metaDescription;
@@ -41,141 +47,23 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-const PERSON_ID = `${SITE_URL}/#person`;
-const WEBSITE_ID = `${SITE_URL}/#website`;
 const PROFILE_PAGE_ID = `${SITE_URL}/#profilepage`;
-const orgId = (id: string) => `${SITE_URL}/#org-${id}`;
-const AUS_ID = orgId('aus');
-const HEADSHOT_ID = `${SITE_URL}/#headshot`;
-
-const HEADSHOT: ImageObject = {
-  '@type': 'ImageObject',
-  '@id': HEADSHOT_ID,
-  url: USER.image.profile,
-  contentUrl: USER.image.profile,
-  width: pixels(USER.image.width),
-  height: pixels(USER.image.height),
-  caption: USER.name,
-};
 
 function buildJsonLd(): Graph {
-  // One Organization node per employer with a public URL. AUS is emitted once,
-  // as the university (it is both alma mater and employer).
-  const organizations: Thing[] = experiences
-    .filter((e) => e.companyUrl && e.id !== 'aus')
-    .map((e) => ({
-      '@type': 'Organization',
-      '@id': orgId(e.id),
-      name: e.companyName,
-      url: e.companyUrl,
-    }));
-
-  const currentEmployers = experiences
-    .filter((e) => e.isCurrentEmployer && e.companyUrl)
-    .map((e) => ({ '@id': orgId(e.id) }));
-
-  const flagship = experiences.find((e) => e.id === 'samsung-gulf')
-    ?.positions[0];
-
   // Only projects with a live public URL: schema must never point at a dead link.
   const projects: Thing[] = PROJECTS.flatMap((p) => projectSchema(p) ?? []);
 
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'CollegeOrUniversity',
-        '@id': AUS_ID,
-        name: EDUCATION.school,
-        url: EDUCATION.url,
-      },
-      ...organizations,
-      {
-        '@type': 'Person',
-        '@id': PERSON_ID,
-        name: USER.name,
-        alternateName: 'Ahmad Atef Saad',
-        givenName: USER.firstName,
-        familyName: USER.lastName,
-        url: `${SITE_URL}/`,
-        image: HEADSHOT,
-        email: USER.email,
-        jobTitle: USER.jobTitle,
-        description: USER.description,
-        disambiguatingDescription:
-          'AI engineer and Computer Engineering senior at the American University of Sharjah, UAE, and President of its Tau Beta Pi chapter.',
-        // Every public profile lives in USER.social; empty entries are skipped.
-        sameAs: Object.values(USER.social).filter(Boolean),
-        alumniOf: { '@id': AUS_ID },
-        affiliation: { '@id': AUS_ID },
-        worksFor: currentEmployers,
-        hasCredential: CERTIFICATIONS.map((c) => ({
-          '@type': 'EducationalOccupationalCredential',
-          name: c.name,
-          credentialCategory: 'certification',
-          recognizedBy: { '@type': 'Organization', name: c.issuer },
-          ...(c.url ? { url: c.url } : {}),
-        })),
-        knowsLanguage: [
-          { '@type': 'Language', name: 'English', alternateName: 'en' },
-          { '@type': 'Language', name: 'Arabic', alternateName: 'ar' },
-        ],
-        memberOf: {
-          '@type': 'Organization',
-          name: 'Tau Beta Pi, American University of Sharjah chapter',
-        },
-        award: [
-          'Tau Beta Pi Scholarship (2026)',
-          'Academic Merit Scholarship, American University of Sharjah',
-          "Dean's List (6 times), American University of Sharjah",
-          "Chancellor's List (3 times), American University of Sharjah",
-        ],
-        // Every current mention is published by AUS, which is already in the graph.
-        subjectOf: PRESS_MENTIONS.map((mention) => ({
-          '@type': 'NewsArticle' as const,
-          headline: mention.headline,
-          url: mention.url,
-          datePublished: mention.datePublished,
-          publisher: { '@id': AUS_ID },
-        })),
-        homeLocation: {
-          '@type': 'Place',
-          name: 'Abu Dhabi and Sharjah, United Arab Emirates',
-          address: {
-            '@type': 'PostalAddress',
-            addressCountry: 'AE',
-          },
-        },
-        knowsAbout: [
-          'Large language model systems',
-          'Retrieval-augmented generation',
-          'Prompt engineering',
-          'Computer vision',
-          'Model fine-tuning',
-          'Technical product management',
-          'Forward deployed engineering',
-          'Python',
-          'TypeScript',
-          'PostgreSQL',
-          'Next.js',
-          'Docker',
-          'Cloudflare Workers',
-        ],
-        hasOccupation: {
-          '@type': 'Occupation',
-          name: 'AI Engineer',
-          occupationLocation: {
-            '@type': 'AdministrativeArea',
-            name: 'United Arab Emirates',
-          },
-          skills: flagship?.skills,
-        },
-      },
+      // AUS, every employer and the full Person (lib/seo/person.ts).
+      ...personGraph(),
       {
         '@type': 'WebSite',
         '@id': WEBSITE_ID,
         url: `${SITE_URL}/`,
         name: USER.name,
+        alternateName: [USER.fullName, USER.domain],
         description: USER.metaDescription,
         inLanguage: 'en-US',
         publisher: { '@id': PERSON_ID },

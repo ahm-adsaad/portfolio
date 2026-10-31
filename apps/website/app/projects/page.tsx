@@ -6,12 +6,8 @@ import { ProjectStack } from '@/features/home/components/project-stack';
 import { createOgImage } from '@/lib/createOgImage';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
-import {
-  personStub,
-  projectSchema,
-  projectSchemaId,
-  websiteStub,
-} from '@/lib/seo/project-schema';
+import { personGraph, websiteStub } from '@/lib/seo/person';
+import { projectSchema, projectSchemaId } from '@/lib/seo/project-schema';
 import { SITE_URL } from '@/lib/server-url';
 import { stagger } from '@/lib/stagger';
 import type { Metadata } from 'next/types';
@@ -20,9 +16,9 @@ import type { Graph } from 'schema-dts';
 export const dynamic = 'force-static';
 
 const PATH = '/projects';
-const TITLE = `Projects by ${USER.name}`;
+const TITLE = `Projects by ${USER.name}, AUS Computer Engineering`;
 const DESCRIPTION =
-  'Case studies by Ahmad Saad: a production trend-detection platform, on-device RAG in the browser, a CPU simulator, and an energy harvesting sensor node.';
+  'Case studies by Ahmad Saad, Computer Engineering at AUS: a production trend-detection platform, private in-browser AI, a CPU simulator and a sensor node.';
 
 export function generateMetadata(): Metadata {
   return createMetadata({
@@ -31,7 +27,7 @@ export function generateMetadata(): Metadata {
     description: DESCRIPTION,
     path: PATH,
     image: createOgImage({
-      title: TITLE,
+      title: `Projects by ${USER.name}`,
       meta: 'AI systems, hardware, and architecture',
     }),
   });
@@ -74,7 +70,7 @@ const jsonLd: Graph = {
       ],
     },
     ...PROJECT_PAGES.flatMap((project) => projectSchema(project) ?? []),
-    personStub(),
+    ...personGraph(),
     websiteStub(),
   ],
 };
@@ -122,8 +118,8 @@ export default function ProjectsPage() {
               style={stagger(4)}
             >
               Case studies by Ahmad Saad, an AI engineer and Computer
-              Engineering senior at the American University of Sharjah: two AI
-              systems, Trend Radar and LocalAI, and two hardware and
+              Engineering senior at the American University of Sharjah (AUS):
+              two AI systems, Trend Radar and LocalAI, and two hardware and
               architecture builds, a Mano Basic Computer simulator and an energy
               harvesting LoRaWAN sensor node.
             </p>

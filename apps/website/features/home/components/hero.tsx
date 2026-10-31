@@ -1,6 +1,7 @@
 import { Headshot } from '@/components/headshot';
 import { HeroVideo } from '@/components/hero-video';
 import { PillLink } from '@/components/pill-link';
+import { EDUCATION } from '@/config/education';
 import { USER } from '@/config/user';
 import { stagger } from '@/lib/stagger';
 
@@ -11,6 +12,8 @@ export function Hero() {
       data-tone="ink"
       aria-labelledby="hero-name"
     >
+      {/* No priority here: the H1 text is the LCP on /, so the poster needs
+          no preload or high fetch priority (/about keeps it). */}
       <HeroVideo
         src="/about/drive-1080.mp4"
         srcMobile="/about/drive-720.mp4"
@@ -19,7 +22,6 @@ export function Hero() {
         width={1920}
         height={1080}
         tone="vivid"
-        priority
       />
 
       <div className="hero-copy">
@@ -29,7 +31,7 @@ export function Hero() {
             priority
             className="ring-2 ring-apricot ring-offset-2 ring-offset-ink"
           />
-          <p className="eyebrow">AI Engineer · Sharjah, UAE</p>
+          <p className="eyebrow">AI Engineer · UAE</p>
         </div>
 
         <h1 id="hero-name" className="display hero-size mt-5 md:mt-6">
@@ -41,9 +43,13 @@ export function Hero() {
           </span>
         </h1>
 
+        <p className="mono-label rise mt-5 text-bone/56" style={stagger(3)}>
+          {`${USER.fullName} · Computer Engineering · ${EDUCATION.school}`}
+        </p>
+
         <p
           className="display-light counter-size rise mt-8 max-w-[30ch] text-bone/88 md:mt-10"
-          style={stagger(3)}
+          style={stagger(4)}
         >
           Forward deployed. Builds the system, scopes it with the people who use
           it, ships it.
@@ -51,7 +57,7 @@ export function Hero() {
 
         <div
           className="rise mt-8 flex flex-wrap gap-3 md:mt-10"
-          style={stagger(4)}
+          style={stagger(5)}
         >
           <PillLink href={`mailto:${USER.email}`} variant="fill">
             Email
@@ -59,7 +65,7 @@ export function Hero() {
           <PillLink href={USER.social.linkedin} variant="fill" external>
             LinkedIn
           </PillLink>
-          <PillLink href="/Ahmad_Saad_CV.pdf" variant="fill" external>
+          <PillLink href="/cv" variant="fill">
             CV
           </PillLink>
         </div>
@@ -67,7 +73,7 @@ export function Hero() {
 
       <p
         className="hero-cue rise hidden md:inline-flex"
-        style={stagger(5)}
+        style={stagger(6)}
         aria-hidden="true"
       >
         Scroll

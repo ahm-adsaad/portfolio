@@ -4,6 +4,7 @@ import { Markdown } from '@/components/markdown';
 import { PillLink } from '@/components/pill-link';
 import { ProjectCover } from '@/components/project-cover';
 import { SectionHeader } from '@/components/section-header';
+import { PROJECT_AUTHOR_PREDICATE } from '@/config/about';
 import { PROJECT_PAGES, type Project } from '@/config/projects';
 import { USER } from '@/config/user';
 import { createOgImage } from '@/lib/createOgImage';
@@ -11,9 +12,9 @@ import { formatPeriod } from '@/lib/format-period';
 import { formatIndex, projectIndex } from '@/lib/project-index';
 import { JsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
+import { personStub } from '@/lib/seo/person';
 import {
   projectPath,
-  personStub,
   projectSchema,
   projectTitle,
 } from '@/lib/seo/project-schema';
@@ -300,9 +301,12 @@ export default async function ProjectPage({ params }: { params: Params }) {
           <Link href="/projects" className="text-link">
             All projects
           </Link>
+        </p>
+        <p className="prose-body mt-6 max-w-[60ch] text-fg/72">
           <Link href="/about" className="text-link">
-            About {USER.name}
-          </Link>
+            {USER.name}
+          </Link>{' '}
+          {PROJECT_AUTHOR_PREDICATE}
         </p>
       </section>
     </>

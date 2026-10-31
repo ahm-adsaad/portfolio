@@ -10,12 +10,15 @@ export function Headshot({
   size,
   className,
   priority,
+  alt,
 }: {
   /** Rendered CSS pixel size of the square. */
   size: number;
   className?: string;
   /** Fetch early (eager, high priority) when the headshot is above the fold. */
   priority?: boolean;
+  /** Defaults to the full-name alt; pass one on any page other than / and /about. */
+  alt?: string;
 }) {
   return (
     <picture className="shrink-0">
@@ -27,7 +30,7 @@ export function Headshot({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/ahmad-saad.jpg"
-        alt={USER.name}
+        alt={alt ?? `Headshot of ${USER.name} (${USER.fullName})`}
         width={size}
         height={size}
         decoding="async"

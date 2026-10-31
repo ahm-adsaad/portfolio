@@ -2,8 +2,12 @@ import { type Experience, experiences } from './experience';
 
 export type User = {
   firstName: string;
+  /** Middle name; schema additionalName. */
+  middleName: string;
   lastName: string;
   name: string;
+  /** Full name as AUS publishes it. */
+  fullName: string;
   email: string;
   location: string;
   domain: string;
@@ -31,10 +35,21 @@ export type User = {
   experiences?: Experience[];
 };
 
+// The only place the full name is spelled out. AUS publishes it with the
+// middle name (AUS News, 22 June 2026); every other surface templates
+// USER.fullName / USER.middleName.
+const FIRST_NAME = 'Ahmad';
+const MIDDLE_NAME = 'Atef';
+const LAST_NAME = 'Saad';
+const NAME = `${FIRST_NAME} ${LAST_NAME}`;
+const FULL_NAME = `${FIRST_NAME} ${MIDDLE_NAME} ${LAST_NAME}`;
+
 const USER: User = {
-  firstName: 'Ahmad',
-  lastName: 'Saad',
-  name: 'Ahmad Saad',
+  firstName: FIRST_NAME,
+  middleName: MIDDLE_NAME,
+  lastName: LAST_NAME,
+  name: NAME,
+  fullName: FULL_NAME,
   email: 'ahmadd.saad02@gmail.com',
   domain: 'ahmadsaad.dev',
   jobTitle: 'AI Engineer and Forward Deployed Engineer',
@@ -42,10 +57,9 @@ const USER: User = {
   tagline: 'Building production AI systems',
   twitterHandle: '',
   location: 'Abu Dhabi / Sharjah, United Arab Emirates',
-  description:
-    'Ahmad Saad is an AI engineer and forward deployed engineer based in the United Arab Emirates. He is a Computer Engineering senior at the American University of Sharjah (AUS) with a 3.96 GPA, graduating in December 2026 and available to start in January 2027. He holds a UAE Golden Visa, so no employer sponsorship is required.',
+  description: `${NAME} (${FULL_NAME}) is an AI engineer, forward deployed engineer and Computer Engineering senior at the American University of Sharjah (AUS) in the United Arab Emirates, graduating in December 2026 and available to start work in January 2027. He holds a UAE Golden Visa, so no employer sponsorship is required.`,
   metaDescription:
-    'Ahmad Saad is an AI engineer and forward deployed engineer in the UAE. Computer Engineering senior at AUS, Golden Visa holder, available January 2027.',
+    'Ahmad Saad is an AI and forward deployed engineer in the UAE and a Computer Engineering senior at the American University of Sharjah. Available January 2027.',
   namePronunciationUrl: '',
   social: {
     github: 'https://github.com/ahm-adsaad',

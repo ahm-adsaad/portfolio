@@ -1,7 +1,16 @@
 import type { Project } from '@/config/projects';
-import { USER } from '@/config/user';
+import { CONTENT_LAST_MODIFIED } from '@/config/site';
 import { SITE_URL } from '@/lib/server-url';
 import type { Thing } from 'schema-dts';
+import { PERSON_ID, personStub, pixels, websiteStub } from './person';
+
+export { personStub, pixels, websiteStub };
+
+/** "06.2026" to "2026-06"; a bare year ("2025") stays as it is. */
+const isoMonth = (value: string) => {
+  const [first, second] = value.split('.');
+  return second ? `${second}-${first}` : first;
+};
 
 /** Primary language per public repo; not derivable from the skills list. */
 const PROJECT_LANGUAGE: Record<string, string> = {
@@ -10,31 +19,6 @@ const PROJECT_LANGUAGE: Record<string, string> = {
   'mano-computer-simulator': 'Python',
   portfolio: 'TypeScript',
 };
-
-/**
- * Minimal Person node for subpages. The full Person lives on the homepage;
- * this only names the `@id` so validators on a single page can resolve it.
- */
-export const personStub = () => ({
-  '@type': 'Person' as const,
-  '@id': `${SITE_URL}/#person`,
-  name: USER.name,
-  url: `${SITE_URL}/`,
-});
-
-/** Names the site's `@id` so `isPartOf` resolves on pages without the full WebSite node. */
-export const websiteStub = () => ({
-  '@type': 'WebSite' as const,
-  '@id': `${SITE_URL}/#website`,
-  name: USER.name,
-  url: `${SITE_URL}/`,
-});
-
-/**
- * ImageObject width or height as a plain integer (pixels). schema-dts types
- * these as Text, but the graph must carry numbers, not quoted strings.
- */
-export const pixels = (value: number) => value as unknown as string;
 
 export const projectPath = (project: Project) => `/projects/${project.id}`;
 
@@ -74,7 +58,9 @@ export function projectSchema(project: Project): Thing | null {
     '@id': projectSchemaId(project),
     name: project.title,
     description: project.shortDescription,
-    author: { '@id': `${SITE_URL}/#person` },
+    author: { '@id': PERSON_ID },
+    dateCreated: isoMonth(project.period.start),
+    dateModified: CONTENT_LAST_MODIFIED,
     ...(pageUrl ? { url: pageUrl, mainEntityOfPage: pageUrl } : {}),
     ...(image ? { image } : {}),
     keywords: project.skills.join(', '),

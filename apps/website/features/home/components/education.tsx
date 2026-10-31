@@ -1,7 +1,10 @@
 import { Chip } from '@/components/chip';
 import { CredentialBadge } from '@/components/credential-badge';
 import { SectionHeader } from '@/components/section-header';
+import { PRESS_MENTIONS } from '@/config/about';
 import { CERTIFICATIONS, EDUCATION } from '@/config/education';
+import { formatLongDate } from '@/lib/format-long-date';
+import Link from 'next/link';
 
 export function Education() {
   const [gpa, scale] = EDUCATION.gpa.split('/').map((s) => s.trim());
@@ -60,6 +63,29 @@ export function Education() {
               </li>
             ))}
           </ul>
+
+          {PRESS_MENTIONS.map((mention) => (
+            <p
+              key={mention.url}
+              className="prose-body mt-6 text-bone/72"
+              data-reveal
+            >
+              {`${mention.outlet}, ${formatLongDate(mention.datePublished)}: `}
+              <a
+                href={mention.url}
+                className="underline decoration-apricot underline-offset-4 transition-colors hover:text-apricot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {mention.headline}
+              </a>
+            </p>
+          ))}
+          <p className="mt-6" data-reveal>
+            <Link href="/aus" className="text-link mono-label text-bone">
+              Ahmad Saad at AUS: Tau Beta Pi, AI Hub and research
+            </Link>
+          </p>
 
           {CERTIFICATIONS.length > 0 && (
             <div className="mt-8" data-reveal>

@@ -98,7 +98,7 @@ I architected and built the system on my own, and scoped it directly with the ma
     shortDescription:
       'Production TikTok trend-detection platform where measurement decides and LLMs describe.',
     description:
-      'A production trend-detection platform built on the official TikTok API for Business. Deterministic signals (caption n-gram clustering, creator spread, adoption curves, freshness) decide every verdict; LLMs only describe what the measurements found and never write URLs, IDs, counts, or provenance.\n\nDesign principles: never invent, an unknown value renders as a blank marker with provenance on every figure. No silent discarding, lifecycle stages are tags rather than gates and a safety verdict demotes rather than deletes. Self-calibration over magic constants. Degrade honestly, a failed pull serves the last good state with a stale badge rather than a blank surface.',
+      'Trend Radar is a production trend-detection platform that Ahmad Saad architected and built on his own in 2026, on the official TikTok API for Business. Deterministic signals (caption n-gram clustering, creator spread, adoption curves, freshness) decide every verdict; LLMs only describe what the measurements found and never write URLs, IDs, counts, or provenance.\n\nDesign principles: never invent, an unknown value renders as a blank marker with provenance on every figure. No silent discarding, lifecycle stages are tags rather than gates and a safety verdict demotes rather than deletes. Self-calibration over magic constants. Degrade honestly, a failed pull serves the last good state with a stale badge rather than a blank surface.',
     impact:
       'An estimated $60K in cost savings and a projected 20% increase in engagement rates.',
     isExpanded: true,
@@ -159,7 +159,7 @@ I designed and built LocalAI end to end. The repository is public and the live d
     shortDescription:
       'Private AI for company documents that runs entirely in the browser, with page-level citations and a Playwright audit that proves nothing leaves the device.',
     description:
-      'Private AI for company documents that runs entirely in the browser. Built after conversations with people who were barred from, or afraid of, putting work data into hosted AI: no server, no account, nothing leaves the device, and a Playwright audit proves it. Hybrid retrieval with a cross-encoder reranker, page-level citations, structured extraction, and a CI eval that scores 100% retrieval and 100% single-turn answers on an integrated laptop GPU.',
+      'LocalAI is private AI for company documents that Ahmad Saad has designed and built end to end since August 2026, and it runs entirely in the browser. Built after conversations with people who were barred from, or afraid of, putting work data into hosted AI: no server, no account, nothing leaves the device, and a Playwright audit proves it. Hybrid retrieval with a cross-encoder reranker, page-level citations, structured extraction, and a CI eval that scores 100% retrieval and 100% single-turn answers on an integrated laptop GPU.',
     impact:
       '100% retrieval and 100% single-turn answers on an integrated laptop GPU, with nothing leaving the device.',
   },
@@ -169,7 +169,7 @@ I designed and built LocalAI end to end. The repository is public and the live d
     titleSummary: 'Cycle-Accurate CPU in Python',
     seoTitle: 'Mano Basic Computer Simulator in Python',
     seoDescription:
-      "Ahmad Saad's cycle-accurate simulator of Mano's Basic Computer in Python, with full ISA support, micro-operation control, and a CLI debugger.",
+      'Cycle-accurate Mano Basic Computer simulator in Python by Ahmad Saad, a Computer Engineering student at AUS, with full ISA support and a CLI debugger.',
     caseStudy: `## Problem
 
 Mano's Basic Computer, from M. Morris Mano's *Computer System Architecture*, is the textbook machine many computer engineering students first learn processor design on: a 16-bit accumulator machine with 4096 words of memory, a small register set, and a common bus. On paper it is easy to follow one instruction. It is much harder to see how the control unit sequences micro-operations across many clock cycles, which is exactly where students get lost.
@@ -202,7 +202,7 @@ I wrote the simulator and debugger myself. The source is public on GitHub.`,
     shortDescription:
       "Cycle-accurate CPU simulator of Mano's Basic Computer with full ISA support and a CLI debugger.",
     description:
-      "Cycle-accurate simulator of Mano's Basic Computer with full datapath, complete ISA support, and micro-operation level control, plus a CLI debugger for stepwise execution and state inspection.",
+      "The Mano Basic Computer Simulator is a cycle-accurate Python simulator of Mano's Basic Computer that Ahmad Saad wrote in 2025, with the full datapath, complete ISA support and micro-operation level control, plus a CLI debugger for stepwise execution and state inspection.",
   },
   {
     id: 'lorawan-sensor-node',
@@ -210,7 +210,7 @@ I wrote the simulator and debugger myself. The source is public on GitHub.`,
     titleSummary: 'Custom 2-Layer PCB Design',
     seoTitle: 'Energy Harvesting LoRaWAN Sensor Node PCB',
     seoDescription:
-      "Ahmad Saad's custom 2-layer PCB for an energy harvesting LoRaWAN sensor node: ATMEGA4809 MCU, LoRa radio, AEM10330 PMIC and PPK2 current profiling.",
+      'Energy harvesting LoRaWAN sensor node on a custom 2-layer PCB by Ahmad Saad, a Computer Engineering student at AUS: ATMEGA4809 MCU and AEM10330 PMIC.',
     caseStudy: `## Problem
 
 Environmental sensors in the field are usually limited by their batteries, not their electronics. The goal of this project was a LoRaWAN sensor node that runs from harvested energy, which means every part of the board has to respect a tight power budget, and the power draw has to be measurable rather than assumed.
@@ -249,7 +249,7 @@ I designed the schematic and the layout and had the board fabricated. There is n
     impact:
       'Sustainable, battery-free environmental monitoring powered by harvested energy.',
     description:
-      'Designed and fabricated a 2-layer custom PCB integrating an ATMEGA4809 MCU, XL1276 LoRa transceiver, AEM10330 PMIC, MIC94069 load switch, and BME680/CO sensors. Covered schematic capture, IPC-2221-compliant trace routing, and inline PPK2 measurement headers for current profiling across the LoRaWAN transmission cycle.',
+      'The Energy Harvesting LoRaWAN Sensor Node is a custom 2-layer PCB that Ahmad Saad designed and had fabricated in 2026, in a research group at the American University of Sharjah whose work was supported by an AUS Undergraduate Research Grant. The board integrates an ATMEGA4809 MCU, XL1276 LoRa transceiver, AEM10330 PMIC, MIC94069 load switch, and BME680/CO sensors. Covered schematic capture, IPC-2221-compliant trace routing, and inline PPK2 measurement headers for current profiling across the LoRaWAN transmission cycle.',
   },
   {
     id: 'portfolio',

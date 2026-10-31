@@ -152,7 +152,8 @@ export const experiences: Experience[] = [
       },
       {
         id: 'aus-ai-hub-assistant',
-        title: 'AI Hub Assistant, Center of Innovation in Teaching and Learning',
+        title:
+          'AI Hub Assistant, Center for Innovation in Teaching and Learning',
         employmentPeriod: {
           start: '11.2024',
         },
